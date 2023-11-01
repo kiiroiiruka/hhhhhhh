@@ -8,17 +8,20 @@ serihu=""
 kaunnto=0
 dannraku=1
 nexttext=tkinter.Button(text="始める",bg="red")
+
 def tugihe():
     global dannraku,kaunnto,serihu
-    dannraku=2
+    dannraku+=1
     kaunnto=0
     serihu=""
+    if dannraku==2:
+        Serihu("花川 美琴","⎾いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい⏌")
 class Serihu:
     def __init__(self,name,hatugenn):
         self.hatugenn=hatugenn
         self.name=name
         screen.after(40,self.main)
-       
+        self.time=0
     def main(self):
         global serihu,kaunnto
         if kaunnto < 18*3:
@@ -34,13 +37,13 @@ class Serihu:
         else:
             screen.create_text(18*14+5,402+(kaunnto//18)*14,text=serihu,font=F,fill="white")#そのスクリーンに文字を表示して！
         screen.pack()
-        screen.after(40,self.main)
+        self.time+=1
+        if self.time<100:
+            screen.after(40,self.main)
         nexttext.place(x=30,y=30,width=100,height=50)
+nexttext = tkinter.Button(text="次の文章へ", command=tugihe)
 if dannraku==1:
     Serihu("花川 美琴","⎾ああああああああああああああああああああああああああああああああああああああああああああああああああああ⏌")
-if dannraku==2:
-    Serihu("花川 美琴","⎾いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい⏌")
-nexttext.place(x=30,y=30,width=100,height=50)
-nexttext = tkinter.Button(text="次の文章へ", command=tugihe)
 
 window.mainloop()#←
+
