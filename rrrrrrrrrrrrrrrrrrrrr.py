@@ -1,6 +1,9 @@
 import pgzrun
 moji="abcdefg"
 lis=[]
+#aaaa=["aa",1]
+#aaaa.append("a")
+#print(aaaa)
 def draw():
 
     screen.draw.text(moji,(500,300))
@@ -9,6 +12,7 @@ print("ばあああああああああああああああああああああああ�
 class nam:
     def __init__(self) -> None:
         pass
+    
     def damn(self,aa)-> None:
         return "kdfdsgdsg"
 class man(nam):
@@ -20,7 +24,8 @@ b.damn("asauduyf")
 a=nam()
 print(a)
 for _ in range(0,100):
-    print("aa"+str(_))
+    pass
+    #print("aa"+str(_))
 n=0
 while n<100:
     n+=1
