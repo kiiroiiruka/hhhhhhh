@@ -1,0 +1,46 @@
+当たり判定の作り方
+public class クラス名 : MonoBehaviour
+{
+	[SerializeField] private GameObject 変数;//unity側で当たり判定つけたいオブジェクトを入れる
+
+ 　void Update()
+ 　{
+	 GameObject hitObject = hit.collider.gameObject;
+ 	 if (hitObject == 変数)
+	 {
+		当たったら動くプログラム
+	 }
+ 　}
+}
+
+外部スクリプトの使い方
+public class クラス名 : MonoBehaviour
+{
+  private 外部スクリプト名 変数 ;
+  private void Start()
+  {
+  	変数= FindObjectOfType<外部スクリプト名>();
+  }
+  void Update()
+  {
+	変数.そのスクリプト内の関数();
+  }
+}
+
+ Debug.Log("動作チェック")
+
+オブジェクトの動かし方
+public class クラス名 : MonoBehaviour
+{
+  void Update()
+  {
+　　　if(Input.GetKeyDown(KeyCode.E)){Eキー押したときに１回動作させるプログラム;}
+      if (Input.GetKey(KeyCode.A)){Aキー押している間動作するプログラム;}
+	　　　　
+		transform.position+=transform.right*100;右移動
+        　　　　transform.position-=transform.right*100;左移動
+　　　　　　　　transform.position+=transform.forward*100;前進
+　　　　　　　　transform.position+=transform.forward*100;後進
+		transform.position = Vector3.MoveTowards(100,100,100);座標変更
+　}
+}
