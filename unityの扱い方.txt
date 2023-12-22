@@ -1,0 +1,61 @@
+ーーーーーーーーーーー
+void update()
+{
+
+	Vector3 変数1 = transform.forward;3つの座標情報変数
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, 変数1);
+
+
+	if(Input.GetKeyDown(KeyCode.E)){Eキー押したときに１回動作させるプログラム;}
+	　　　　transform.position+=transform.right*100;右移動
+        　　　　transform.position-=transform.right*100;左移動
+　　　　　　　　transform.position+=transform.forward*100;前進
+　　　　　　　　transform.position+=transform.forward*100;後進
+		transform.position = Vector3.MoveTowards(100,100,100);座標変更
+}
+
+
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+	[SerializeField] private i;外部情報取得変数
+void update()
+	
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+	private bool 変数 = false;ありかなしかの変数
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+	private string 変数;
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+	private int 変数;
+void update()
+
+
+
+ーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+	public GameObject 変数2;オブジェクト情報変数
+void update()
+	変数2.SetActive(!flg);オブジェクト情報変数の使い方
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
+ーーーーーーーーーーー
+（新しい変数は）パソコン側に教えたい知識は、MonoBehaviourの下に作ればいい
+void update()
