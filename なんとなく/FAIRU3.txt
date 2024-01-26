@@ -1,0 +1,7 @@
+#include<stdio.h>
+void main(void)
+{
+	FILE *p;
+	char name[64],yomi[64],address[128];
+	int i=1;
+	fp  fopen("aed-niiza.csv","r");
