@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x ENCODER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="encoder[0]" title="E1" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="1"/>
+		</Control>	
+		
+		<Control name="encoder[1]" title="E2" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="2"/>
+		</Control>	
+
+		<Control name="encoder[2]" title="E3" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="3"/>
+		</Control>	
+
+		<Control name="encoder[3]" title="E4" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="4"/>
+		</Control>	
+
+		<Control name="encoder[4]" title="E5" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="5"/>
+		</Control>	
+
+		<Control name="encoder[5]" title="E6" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="6"/>
+		</Control>	
+
+		<Control name="encoder[6]" title="E7" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="7"/>
+		</Control>	
+
+		<Control name="encoder[7]" title="E8" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="8"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x ENCODER BUTTONS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="encoderButton[0]" title="B1" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="33"/>
+		</Control>	
+
+		<Control name="encoderButton[1]" title="B2" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="34"/>
+		</Control>	
+
+		<Control name="encoderButton[2]" title="B3" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="35"/>
+		</Control>	
+
+		<Control name="encoderButton[3]" title="B4" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="36"/>
+		</Control>	
+
+		<Control name="encoderButton[4]" title="B5" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="37"/>
+		</Control>	
+
+		<Control name="encoderButton[5]" title="B6" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="38"/>
+		</Control>	
+
+		<Control name="encoderButton[6]" title="B7" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="39"/>
+		</Control>	
+
+		<Control name="encoderButton[7]" title="B8" type="button" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="40"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x BUTTON A -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="buttonA[0]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="65"/>
+		</Control>	
+
+		<Control name="buttonA[1]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="66"/>
+		</Control>	
+
+		<Control name="buttonA[2]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="67"/>
+		</Control>	
+
+		<Control name="buttonA[3]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="68"/>
+		</Control>	
+
+		<Control name="buttonA[4]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="69"/>
+		</Control>	
+
+		<Control name="buttonA[5]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="70"/>
+		</Control>	
+
+		<Control name="buttonA[6]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+		<Control name="buttonA[7]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x BUTTON B -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="buttonB[0]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="buttonB[1]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="74"/>
+		</Control>	
+
+		<Control name="buttonB[2]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="75"/>
+		</Control>	
+
+		<Control name="buttonB[3]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="76"/>
+		</Control>	
+
+		<Control name="buttonB[4]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="77"/>
+		</Control>	
+
+		<Control name="buttonB[5]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="78"/>
+		</Control>	
+
+		<Control name="buttonB[6]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="79"/>
+		</Control>	
+
+		<Control name="buttonB[7]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="80"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 24 x Encoder -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="encoderV[0]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="81"/>
+		</Control>	
+
+		<Control name="encoderV[1]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="82"/>
+		</Control>	
+		
+		<Control name="encoderV[2]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="83"/>
+		</Control>	
+
+		<Control name="encoderV[3]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="84"/>
+		</Control>	
+
+		<Control name="encoderV[4]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="85"/>
+		</Control>	
+
+		<Control name="encoderV[5]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="86"/>
+		</Control>	
+
+		<Control name="encoderV[6]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="87"/>
+		</Control>	
+
+		<Control name="encoderV[7]" options="transmit receive nofeedback">
+			<MidiMessage status="Controller" address="88"/>
+		</Control>	
+
+
+		<Control name="encoder[16]" title="Knob 17" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="89"/>
+		</Control>	
+
+		<Control name="encoder[17]" title="Knob 18" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="90"/>
+		</Control>	
+		
+		<Control name="encoder[18]" title="Knob 19" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+
+		<Control name="encoder[19]" title="Knob 20" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="92"/>
+		</Control>	
+
+		<Control name="encoder[20]" title="Knob 21" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>	
+
+		<Control name="encoder[21]" title="Knob 22" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="94"/>
+		</Control>	
+
+		<Control name="encoder[22]" title="Knob 23" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="95"/>
+		</Control>	
+
+		<Control name="encoder[23]" title="Knob 24" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="96"/>
+		</Control>	
+
+
+		<Control name="encoder[24]" title="Knob 25" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="97"/>
+		</Control>	
+
+		<Control name="encoder[25]" title="Knob 26" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="98"/>
+		</Control>	
+		
+		<Control name="encoder[26]" title="Knob 27" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="99"/>
+		</Control>	
+
+		<Control name="encoder[27]" title="Knob 28" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="100"/>
+		</Control>	
+
+		<Control name="encoder[28]" title="Knob 29" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="101"/>
+		</Control>	
+
+		<Control name="encoder[29]" title="Knob 30" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="102"/>
+		</Control>	
+
+		<Control name="encoder[30]" title="Knob 31" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="103"/>
+		</Control>	
+
+		<Control name="encoder[31]" title="Knob 32" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="104"/>
+		</Control>		
+		
+
+        <!-- ******************************************************************************************** -->
+        <!-- 4 x BUTTON RIGHT LOWER CORNER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button0" title="Button 1" type="button" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="105"/>
+		</Control>	
+
+		<Control name="button1" title="Button 2" type="button" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="106"/>
+		</Control>	
+
+		<Control name="button2" title="Button 3" type="button" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="107"/>
+		</Control>	
+
+		<Control name="button3" title="Button 4" type="button" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="108"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 2 x FOOT SWITCH -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="footswitch0" type="button" title="SW1" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="109"/>
+		</Control>	
+
+		<Control name="footswitch1" type="button" title="SW2" options="transmit receive nofeedback public">
+			<MidiMessage status="Controller" address="110"/>
+		</Control>	
+
+		
+	</Controls>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+
+		<DeviceMapping device="MixerConsole">
+			<PlacementBank target="RemoteBank" pagesize="8">
+				<!-- The Channel Strips -->
+				<foreach variable="$channel" count="8">
+					<Strip> 
+						<Value control="encoderV[$channel]"      param="volume"/>
+						<Value control="encoder[$channel]"       param="pan"/>
+						<Value control="encoderButton[$channel]" param="solo"/>
+						<Value control="buttonA[$channel]"       param="mute"/>
+						<Value control="buttonB[$channel]"       param="recordArmed"/>
+					</Strip>
+				</foreach>
+			</PlacementBank>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

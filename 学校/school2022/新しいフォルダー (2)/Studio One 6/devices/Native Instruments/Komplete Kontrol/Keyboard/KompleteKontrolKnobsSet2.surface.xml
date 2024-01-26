@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<Controls>
+
+		<!-- page 3 -->
+		<Control name="Knob[16]" title="Knob 17" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#66"/>
+		</Control>
+		<Control name="Knob[17]" title="Knob 18" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#67"/>
+		</Control>
+		<Control name="Knob[18]" title="Knob 19" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#68"/>
+		</Control>
+		<Control name="Knob[19]" title="Knob 20" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#69"/>
+		</Control>
+		<Control name="Knob[20]" title="Knob 21" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6A"/>
+		</Control>
+		<Control name="Knob[21]" title="Knob 22" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6B"/>
+		</Control>
+		<Control name="Knob[22]" title="Knob 23" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6C"/>
+		</Control>
+		<Control name="Knob[23]" title="Knob 24" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6D"/>
+		</Control>
+
+		<!-- page 4 -->
+		<Control name="Knob[24]" title="Knob 25" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6E"/>
+		</Control>
+		<Control name="Knob[25]" title="Knob 26" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#6F"/>
+		</Control>
+		<Control name="Knob[26]" title="Knob 27" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#70"/>
+		</Control>
+		<Control name="Knob[27]" title="Knob 28" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#71"/>
+		</Control>
+		<Control name="Knob[28]" title="Knob 29" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#72"/>
+		</Control>
+		<Control name="Knob[29]" title="Knob 30" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#73"/>
+		</Control>
+		<Control name="Knob[30]" title="Knob 31" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#74"/>
+		</Control>
+		<Control name="Knob[31]" title="Knob 32" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#75"/>
+		</Control>
+
+	</Controls>
+</ControlSurface>

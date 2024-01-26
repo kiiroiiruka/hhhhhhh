@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="PreSonus Interfaces"/>
+	<Attribute id="Document:SubTitle" value="Record audio from PreSonus interface"/>
+	<Attribute id="Document:Description" value="Record audio straight from all available inputs of your favorite PreSonus audio interface."/>
+	<Attribute id="Document:TemplateHandler" value="{8FAF83B0-6BBA-4A49-88F3-BFEBC6ACBF0D}"/>
+	<Attribute id="Document:Icon" value="icons/Interfaces.svg"/>
+	<Attribute id="Document:MenuPriority" value="60"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="PreSonus-Interfaces"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Audioaufnahme über ein PreSonus-Interface"/>
+		<Attribute id="Document:LocalizedDescription" value="Audioaufnahme von allen verfügbaren Eingängen ihres PreSonus-Audio-Interfaces"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Interfaces de PreSonus"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Grabación de audio desde la interfaz de PreSonus"/>
+		<Attribute id="Document:LocalizedDescription" value="Grabación de audio directamente desde todas las entradas disponibles de su interfaz de audio PreSonus favorita."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Interfaces PreSonus"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Enregistrer du son depuis une interface PreSonus"/>
+		<Attribute id="Document:LocalizedDescription" value="Enregistrer du son directement depuis toutes les entrées disponibles de votre interface audio PreSonus préférée."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Interfacce PreSonus"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Registra l'audio dall'interfaccia PreSonus"/>
+		<Attribute id="Document:LocalizedDescription" value="Registra l'audio direttamente da tutti gli ingressi disponibili della tua interfaccia audio PreSonus preferita."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="PreSonusインターフェース"/>
+		<Attribute id="Document:LocalizedSubTitle" value="PreSonus IFからオーディオを録音"/>
+		<Attribute id="Document:LocalizedDescription" value="お気に入りのPreSonusオーディオインターフェースの使用可能な全入力から直接オーディオを録音する"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="PreSonus 인터페이스"/>
+		<Attribute id="Document:LocalizedSubTitle" value="PreSonus 인터페이스에서 오디오 레코딩"/>
+		<Attribute id="Document:LocalizedDescription" value="선호하는 PreSonus 오디오 인터페이스의 모든 인풋에서 오디오를 직접 레코딩"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Interfaces PreSonus"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Gravar áudio com uma interface PreSonus"/>
+		<Attribute id="Document:LocalizedDescription" value="Gravar áudio direto das entradas disponíveis de sua interface PreSonus favorita."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="PreSonus 接口"/>
+		<Attribute id="Document:LocalizedSubTitle" value="从PreSonus接口录制音频"/>
+		<Attribute id="Document:LocalizedDescription" value="直接从你最喜欢的PreSonus音频接口的所有可用输入中录制音频。"/>
+	<?language?>
+
+</DocumentTemplate>

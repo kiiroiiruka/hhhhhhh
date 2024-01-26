@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Behringer"
+	name="UMX Series"
+	
+	classID="{7175B3B8-86E4-4e87-8C43-09E109B6C90A}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="UMX.surface.xml"
+	
+	imageFile="UMX25.png"
+	textFile="UMX.txt"
+	/>

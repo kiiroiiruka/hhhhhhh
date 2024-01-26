@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFilter>
+
+	<!--
+		NOTE: Secondary templates may differ per flavour. See
+		template specific filefilters in resources folder.
+
+		Play Now: bundle, demo, retail
+		Record Now: bundle, demo, free, retail
+		Produce Beats: bundle, demo, retail
+		Create Content: bundle, demo, free (separate version), retail
+		Import Files: bundle, demo, free, retail
+		PreSonus Interfaces: bundle, demo, retail
+		Demos: bundle, demo, free, retail
+	-->
+
+	<!-- Create Content [free version]: exclude from demo, bundle, retail -->
+	<FileFilter.File name="Create Content.free.songtemplate" key="Application.identity" exclude="studioapp.demo"/>
+	<FileFilter.File name="Create Content.free.songtemplate" key="Application.identity" exclude="studioapp.bundle"/>
+	<FileFilter.File name="Create Content.free.songtemplate" key="Application.identity" exclude="studioapp.bundle.oem"/>
+	<FileFilter.File name="Create Content.free.songtemplate" key="Application.identity" exclude="studioapp.retail"/>
+	<FileFilter.File name="Create Content.free.songtemplate" key="Application.identity" exclude="studioapp.retail.oem"/>
+
+	<!-- Create Content [artist, demo, retail version]: exclude from free -->
+	<FileFilter.File name="Create Content.songtemplate" key="Application.identity" exclude="studioapp.free"/>
+	<FileFilter.File name="Create Content.songtemplate" key="Application.identity" exclude="studioapp.free.oem"/>
+
+	<!-- Interfaces: exclude from free. -->
+	<FileFilter.File name="Interfaces.songtemplate" key="Application.identity" exclude="studioapp.free"/>
+	<FileFilter.File name="Interfaces.songtemplate" key="Application.identity" exclude="studioapp.free.oem"/>
+
+	<!-- Play Now: exclude from free. -->
+	<FileFilter.File name="Play Now.songtemplate" key="Application.identity" exclude="studioapp.free"/>
+	<FileFilter.File name="Play Now.songtemplate" key="Application.identity" exclude="studioapp.free.oem"/>
+
+	<!-- Produce Beats: exclude from free. -->
+	<FileFilter.File name="Produce Beats.songtemplate" key="Application.identity" exclude="studioapp.free"/>
+	<FileFilter.File name="Produce Beats.songtemplate" key="Application.identity" exclude="studioapp.free.oem"/>
+
+</FileFilter>

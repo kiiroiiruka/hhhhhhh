@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="ROLI"
+	name="Seaboard RISE"
+	
+	classID="{AF03E46C-BF39-426C-A215-C70D389DF67A}"
+	category="Keyboard"
+	nativeCode="KeyboardDevice"
+	mpeDevice="1"
+	
+	surfaceFile=""
+		
+	imageFile="Seaboard RISE.png"
+	textFile="Seaboard RISE.txt"
+	
+	skinFile=""
+	formName=""
+	
+	detectorPortName="Seaboard RISE,Seaboard RISE 49"
+	hostDataFile=""	
+/>

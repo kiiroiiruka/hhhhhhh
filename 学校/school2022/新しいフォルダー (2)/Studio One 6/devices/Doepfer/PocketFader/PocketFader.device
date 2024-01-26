@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Doepfer"
+	name="Pocket Fader"
+	
+	classID="{EFEE34D8-D225-42de-906F-A5708CFF0157}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="PocketFader.surface.xml"
+	
+	imageFile="PocketFader.png"
+	textFile="PocketFader.txt"
+	/>

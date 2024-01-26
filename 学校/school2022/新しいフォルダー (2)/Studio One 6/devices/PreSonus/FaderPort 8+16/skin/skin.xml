@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+	<Resources>
+		<Image name="FaderPort8Background"		url="images/FaderPort8.png"/>
+		<Image name="FaderPort16Background" 	url="images/FaderPort16.png"/>
+		
+		<Image name="FP816ButtonsAtlas"	url="images/AtlasButtonsFP8.png"/>
+		
+		<Image name="FaderportAtlas"	url="images/FaderportAtlas.png"/>
+		<ImagePart name="FP816AutoFillButton"	size="0,0,40,80"	image="FaderportAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+<!--		<ImagePart name="FP816AutoFillRedButton"	size="40,0,40,80"	image="FaderportAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>-->
+		<ImagePart name="FP816PagePushButton"	size="80,0,40,80"	image="FaderportAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP816PagePushButtonL"	size="80,0,38,80"	image="FaderportAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP816PagePushButtonR"	size="82,0,38,80"	image="FaderportAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+		
+
+		<ImagePart name="FP816PagePreviousIcon"	size="0,80,60,20"	image="FaderportAtlas" frames="h: normal pressed disabled"/>
+		<ImagePart name="FP816PageNextIcon"	size="60,80,60,20"	image="FaderportAtlas" frames="h: normal pressed disabled"/>
+		
+		<ImagePart name="FP816ButtonOrange"	size="0,0,55,90" 	image="FP816ButtonsAtlas" frames="normal normalOn disabledOn" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP816ButtonBlue"	size="55,0,55,90"	image="FP816ButtonsAtlas" frames="normal normalOn disabledOn" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP816FootSwitch"	size="118,0,32,32"	image="FP816ButtonsAtlas"/>
+	</Resources>
+	
+	<Styles>
+		<Style name="FocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+		</Style>
+		<Style name="FocusValueBoxR" inherit="FocusText">
+			<Color name="backcolor"	color="hsl(0,0,10)"/>
+			<Align name="textalign"		align="right"/>
+		</Style>
+		<Style name="FocusTextL" inherit="FocusText">
+			<Align name="textalign"		align="left"/>
+		</Style>
+		<Style name="FocusTextTransparent" inherit="FocusText">
+			<Color name="textcolor" color="hsl(0,0,0,0)"/>
+		</Style>
+		<Style name="PageTitle">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="normal"/>
+			<Align name="textalign" align="left"/>
+		</Style>
+		<Style name="PageTitleAllowEdit" inherit="PageTitle">
+			<Color name="textcolor" color="hsl(204,40,85)"/>
+		</Style>
+		<Style name="PageTitleBlockEdit" inherit="PageTitle">
+			<Color name="textcolor" color="hsl(204,6,50)"/>
+		</Style>
+		<Style name="ButtonText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,85)"/>
+		</Style>
+		<Style name="UserButtonText" inherit="ButtonText">
+			<Color name="textcolor" color="hsl(0,0,70)"/>
+		</Style>
+		<Style name="FaderText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(200,25,75)"/>
+		</Style>
+		
+		<Style name="FP816ButtonOrange">
+			<Image name="background" image="FP816ButtonOrange"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="FP816ButtonBlue">
+			<Image name="background" image="FP816ButtonBlue"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="Blacktext">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,0)"/>
+		</Style>
+		
+		<Style name="FP816AutoFillButton">
+			<Metric name="padding.left" value="6"/>
+			<Metric name="padding.right" value="6"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,60)"/>
+			<Color name="textcolor.pressed" color="hsl(0,0,10)"/>
+			<Color name="textcolor.on" color="hsl(0,0,10)"/>
+			<Metric name="buttonstyle" value="1"/>
+			<Image name="background" image="FP816AutoFillButton"/>
+		</Style>
+		<Style name="FP816AutoFillButtonDisabled" inherit="FP816AutoFillButton">
+			<Color name="textcolor" color="hsl(0,0,30)"/>
+		</Style>
+		
+		<Style name="FP816PagePushButton">
+			<Metric name="buttonstyle" value="1"/>
+			<Image name="background" image="FP816PagePushButton"/>
+		</Style>
+		<Style name="FP816PagePushButtonL" inherit="FP816PagePushButton">
+			<Image name="background" image="FP816PagePushButtonL"/>
+		</Style>
+		<Style name="FP816PagePushButtonR" inherit="FP816PagePushButton">
+			<Image name="background" image="FP816PagePushButtonR"/>
+		</Style>
+
+	</Styles>
+	
+	<Forms>
+		
+		<Form name="FP816HeaderControls">
+			<Horizontal margin="10" spacing="6" width="960">
+				<using controller="Paging">
+					<Variant name="pagingMode" options="boundvalue">
+						<!-- paging mode: single -->
+						<Horizontal margin="2" spacing="-2">
+							<Space width="6"/>
+							<Toggle name="pagingMode" style="FP816AutoFillButtonDisabled" sizeLimits="83,20,-1,20" title="Auto-Fill"/>
+							<Space width="10"/>
+							<Label title="Page:" height="20" style="FocusTextTransparent"/> <!-- just to have the same space in all languages -->
+							<Space width="10"/>
+							<ValueBox name="pageTitle" width="120" height="20" style="PageTitleAllowEdit" options="fittext transparent hidefocus" tooltip="Page Title"/>
+							<Space width="30"/>
+							<Label title="/" height="20" style="FocusTextTransparent"/>
+							<Space width="30"/>
+							<Button name="prevPage" width="20" height="20" style="FP816PagePushButton" icon="FP816PagePreviousIcon" tooltip="Previous Page" options="hidefocus"/>
+							<Button name="nextPage" width="20" height="20" style="FP816PagePushButton" icon="FP816PageNextIcon" tooltip="Next Page" options="hidefocus"/>
+						</Horizontal>
+						<!-- paging mode multi or auto: provide autofill on/off control -->
+						<Horizontal margin="2" spacing="-2">
+							<Space width="6"/>
+							<Variant name="pagingMode">
+								<!-- single, multi: engage autofill via radio -->
+								<RadioButton name="pagingMode" value="2" style="FP816AutoFillButton" sizeLimits="83,20,-1,20"  title="Auto-Fill"/>
+								<RadioButton name="pagingMode" value="2" style="FP816AutoFillButton" sizeLimits="83,20,-1,20"  title="Auto-Fill"/>
+								<!-- autofill: disengage autofill via toggle  -->
+								<Toggle name="pagingMode" style="FP816AutoFillButton" sizeLimits="83,20,-1,20" title="Auto-Fill"/>
+							</Variant>
+							<Space width="10"/>
+							<Label title="Page:" height="20" style="FocusText"/>
+							<Space width="10"/>
+							<!-- allow or block page title editing -->
+							<Variant name="pagingMode">
+								<!-- single, multi: allow -->
+								<ValueBox name="pageTitle" width="120" height="20" style="PageTitleAllowEdit" options="fittext transparent hidefocus" tooltip="Page Title"/>
+								<ValueBox name="pageTitle" width="120" height="20" style="PageTitleAllowEdit" options="fittext transparent hidefocus" tooltip="Page Title"/>
+								<!-- autofill: block -->
+								<TextBox name="pageTitle" width="120" height="20" style="PageTitleBlockEdit" options="fittext transparent hidefocus" tooltip="Page Name"/>
+							</Variant>
+							<ValueBox name="pageNumber" width="30" height="20" style="FocusValueBoxR" options="hidefocus transparent"/>
+							<Label title="/" height="20" style="FocusText"/>
+							<TextBox name="pageCount" width="30" height="20" style="FocusTextL" options="hidefocus transparent" tooltip="Page Count"/>
+							<Button name="prevPage" width="20" height="20" style="FP816PagePushButton" icon="FP816PagePreviousIcon" tooltip="Previous Page" options="hidefocus"/>
+							<Button name="nextPage" width="20" height="20" style="FP816PagePushButton" icon="FP816PageNextIcon" tooltip="Next Page" options="hidefocus"/>
+						</Horizontal>
+					</Variant>
+				</using>
+				<TextBox name="focusDeviceFullName" size="0,0,100,24" options="transparent" style="FocusText" attach="left right"/>
+			</Horizontal>
+		</Form>
+		
+		<!-- ******************************************************************************************** -->
+		<!-- FaderPort8 -->
+		<!-- ******************************************************************************************** -->
+		
+		<Form name="FaderPort8" image="FaderPort8Background" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+				
+				<View name="FP816HeaderControls"/>
+				
+				<!-- Button 1-8 -->
+				<Horizontal size="28,65" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="8">
+						<View name="FP8Button" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- Fader 1-8 -->
+				<Horizontal size="28,162" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="8">
+						<View name="FP8Fader" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- FootSwitch -->
+				<View size="863,60" name="FP816FootSwitch"/>
+				
+				<!-- User 1-3 -->
+				<Horizontal size="647,58" margin="0" spacing="1">
+					<define buttonName="touchButton" buttonTitle="User 1">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+					<define buttonName="writeButton" buttonTitle="User 2">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+					<define buttonName="readButton" buttonTitle="User 3">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+				</Horizontal>
+				
+				<!-- F1-F4 -->
+				<Horizontal size="647,115" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="4">
+						<define iconIndex="@eval:$i+1" iconLabel="F$iconIndex">
+							<View name="FP816FButton" attach="left right"/>
+						</define>
+					</foreach>
+				</Horizontal>
+				
+				<!-- F5-F8 -->
+				<Horizontal size="647,167" margin="0" spacing="1">
+					<foreach variable="$i" start="4" count="4">
+						<define iconIndex="@eval:$i+1" iconLabel="F$iconIndex">
+							<View name="FP816FButton" attach="left right"/>
+						</define>
+					</foreach>
+				</Horizontal>
+			</using>
+		</Form>
+		
+		<!-- ******************************************************************************************** -->
+		<!-- FaderPort16 -->
+		<!-- ******************************************************************************************** -->
+		
+		<Form name="FaderPort16" image="FaderPort16Background" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+				
+				<View name="FP816HeaderControls"/>
+
+				<!-- Button 1-8 -->
+				<Horizontal size="28,52" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="8">
+						<View name="FP16Button" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- Fader 1-8 -->
+				<Horizontal size="28,112" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="8">
+						<View name="FP16Fader" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- Button 9-15 -->
+				<Horizontal size="28,170" margin="0" spacing="1">
+					<foreach variable="$i" start="8" count="8">
+						<View name="FP16Button" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- Fader 9-15 -->
+				<Horizontal size="28,230" margin="0" spacing="1">
+					<foreach variable="$i" start="8" count="8">
+						<View name="FP16Fader" attach="left right"/>
+					</foreach>
+				</Horizontal>
+				
+				<!-- FootSwitch -->
+				<View size="863,60" name="FP816FootSwitch"/>
+				
+				<!-- User 1-3 -->
+				<Horizontal size="647,58" margin="0" spacing="1">
+					<define buttonName="touchButton" buttonTitle="User 1">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+					<define buttonName="writeButton" buttonTitle="User 2">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+					<define buttonName="readButton" buttonTitle="User 3">
+						<View name="FP816UserButton" attach="left right"/>
+					</define>
+				</Horizontal>
+				
+				<!-- F1-F4 -->
+				<Horizontal size="647,115" margin="0" spacing="1">
+					<foreach variable="$i" start="0" count="4">
+						<define iconIndex="@eval:$i+1" iconLabel="F$iconIndex">
+							<View name="FP816FButton" attach="left right"/>
+						</define>
+					</foreach>
+				</Horizontal>
+				
+				<!-- F5-F8 -->
+				<Horizontal size="647,167" margin="0" spacing="1">
+					<foreach variable="$i" start="4" count="4">
+						<define iconIndex="@eval:$i+1" iconLabel="F$iconIndex">
+							<View name="FP816FButton" attach="left right"/>
+						</define>
+					</foreach>
+				</Horizontal>
+			</using>
+		</Form>
+		
+		<!-- ******************************************************************************************** -->
+		<!-- Buttons and Fader -->
+		<!-- ******************************************************************************************** -->
+		
+		<Form name="FP8Button">
+			<using controller="selectButton[$i]">
+				<View width="70">
+					<Button name="controlValue" size="7,0,56,30" style="FP816ButtonOrange"/>
+					<TextBox name="userAssignment" size="1,34,68,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+				</View>
+			</using>
+		</Form>
+		
+		<Form name="FP16Button">
+			<using controller="selectButton[$i]">
+				<View width="70">
+					<Button name="controlValue" size="7,0,56,30" style="FP816ButtonOrange"/>
+					<TextBox name="userAssignment" size="1,30,68,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+				</View>
+			</using>
+		</Form>
+		
+		<Form name="FP8Fader">
+			<using controller="fader[$i]">
+				<TextBox name="userAssignment" size="0,23,70,18" options="fittext transparent nocontextmenu" style="FaderText"/>
+				<Button name="controlValue" width="70" height="47" options="transparent silenttracking"/>
+			</using>
+		</Form>		
+		
+		<Form name="FP16Fader">
+			<using controller="fader[$i]">
+				<TextBox name="userAssignment" size="0,21,70,18" options="fittext transparent nocontextmenu" style="FaderText"/>
+				<Button name="controlValue" width="70" height="47" options="transparent silenttracking"/>
+			</using>
+		</Form>
+		
+		<Form name="FP816UserButton">
+			<View width="70" height="54">
+				<using controller="$buttonName">
+					<Button name="controlValue" size="7,4,56,30" style="FP816ButtonOrange" title="$buttonTitle"/>
+					<TextBox name="userAssignment" size="1,34,68,18" options="fittext transparent nocontextmenu" style="UserButtonText"/>
+				</using>
+			</View>
+		</Form>
+		
+		
+		<Form name="FP816FButton">
+			<View width="70" height="50">
+				<using controller="$iconLabel">
+					<Button name="controlValue" size="7,0,56,30" style="FP816ButtonBlue" title="$iconLabel"/>
+					<TextBox name="userAssignment" size="1,30,68,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+				</using>
+			</View>
+		</Form>
+		
+		<Form name="FP816FootSwitch">
+			<View width="70" height="50">
+				<using controller="footSwitch">
+					<Button name="controlValue" size="16,0,32,32" options="transparent"/>
+					<ImageView image="FP816FootSwitch" size="16,0,32,32"/>
+					<TextBox name="paramTitle" size="1,32,62,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+				</using>
+			</View>
+		</Form>
+		
+	</Forms>
+</Skin>

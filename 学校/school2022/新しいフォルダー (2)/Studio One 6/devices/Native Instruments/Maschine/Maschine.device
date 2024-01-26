@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDefinition 
+	vendor="Native Instruments"
+	name="Maschine Control"
+
+	classID="{AFC82B97-0B60-4b69-A6AA-E72FCF2B9503}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	imageFile="Maschine.png"
+	textFile="Maschine.txt"
+	surfaceFile="Maschine.surface.xml"
+	
+	attachmentFile="Machine.zip"
+	/>

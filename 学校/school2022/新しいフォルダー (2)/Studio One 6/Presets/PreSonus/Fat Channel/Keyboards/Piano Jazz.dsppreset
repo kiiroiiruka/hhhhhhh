@@ -1,0 +1,59 @@
+{
+	"cid": "{5E91DC8A-E560-4115-98FA-59FB3F215BA1}",
+	"parameters": 
+	{
+		"filter": 
+		{
+			"hpf": 24
+		},
+		"gate": 
+		{
+			"on": 0,
+			"keylisten": 0,
+			"expander": 0,
+			"keyfilter": 40,
+			"threshold": -84,
+			"range": 0,
+			"attack": 2.0000000000000008e-005,
+			"release": 0.068854000000000012
+		},
+		"comp": 
+		{
+			"on": 1,
+			"softknee": 1,
+			"automode": 1,
+			"threshold": -10.980369999999999,
+			"ratio": 1.4379339999999996,
+			"attack": 0.0010290000000000004,
+			"release": 0.051472000000000011,
+			"gain": 3.2941160000000003
+		},
+		"eq": 
+		{
+			"eqallon": 1,
+			"eqgain1": 2.7647110000000006,
+			"eqq1": 0.20999100000000004,
+			"eqfreq1": 119.39172400000001,
+			"eqbandon1": 1,
+			"eqbandop1": 0,
+			"eqgain2": -3.117661,
+			"eqq2": 4,
+			"eqfreq2": 243.54109199999999,
+			"eqbandon2": 1,
+			"eqgain3": 2.1552679999999995,
+			"eqq3": 4,
+			"eqfreq3": 2490.3703610000002,
+			"eqbandon3": 1,
+			"eqgain4": 2.8764249999999993,
+			"eqq4": 0.6176330000000001,
+			"eqfreq4": 9760.4785159999992,
+			"eqbandon4": 1,
+			"eqbandop4": 0
+		},
+		"limit": 
+		{
+			"limiteron": 0,
+			"threshold": 0
+		}
+	}
+}

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="Cutoff" options="receive public">
+			<MidiMessage status="Controller" address="74"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="Resonance" options="receive public">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+		<Control name="knob[2]" title="Attack" options="receive public">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="knob[3]" title="Decay" options="receive public">
+			<MidiMessage status="Controller" address="75"/>
+		</Control>	
+
+		<Control name="knob[4]" title="Release" options="receive public">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+		<Control name="knob[5]" title="Pan" options="receive public">
+			<MidiMessage status="Controller" address="10"/>
+		</Control>	
+
+		<Control name="knob[6]" title="Reverb" options="receive public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+
+		<Control name="knob[7]" title="Chorus" options="receive public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>	
+
+		<!-- Not mapped use U-Control instead -->
+<!--
+		<Control name="knob[8]" title="KN1" options="receive public">
+			<MidiMessage status="Controller" address="74"/>
+		</Control>	
+		
+		<Control name="knob[9]" title="KN2" options="receive public">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+		<Control name="knob[10]" title="KN3" options="receive public">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="knob[11]" title="KN4" options="receive public">
+			<MidiMessage status="Controller" address="75"/>
+		</Control>	
+
+		<Control name="knob[12]" title="KN5" options="receive public">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+		<Control name="knob[13]" title="KN6" options="receive public">
+			<MidiMessage status="Controller" address="10"/>
+		</Control>	
+
+		<Control name="knob[14]" title="KN7" options="receive public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+
+		<Control name="knob[15]" title="KN8" options="receive public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>
+-->		
+		<!-- ******************************************************************************************** -->
+        <!-- 24 x FADER IN 3 LAYERS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[16]" title="Fader 1" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="11" channel="0"/>
+		</Control>	
+
+		<Control name="fader[17]" title="Fader 2" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="76" channel="0"/>
+		</Control>	
+
+		<Control name="fader[18]" title="Fader 3" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="77" channel="0"/>
+		</Control>	
+
+		<Control name="fader[19]" title="Fader 4" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="78" channel="0"/>
+		</Control>	
+
+		<Control name="fader[20]" title="Fader 5" type="fader" options="receive public">
+			<MidiMessage status="NRPN" address="176" channel="0"/>
+		</Control>	
+
+		<Control name="fader[21]" title="Fader 6" type="fader" options="receive public">
+			<MidiMessage status="NRPN" address="177" channel="0"/>
+		</Control>	
+
+		<Control name="fader[22]" title="Fader 7" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="0" channel="0"/>
+		</Control>	
+
+		<Control name="fader[23]" title="Fader 8" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="32" channel="0"/>
+		</Control>
+
+		<!-- Not mapped use U-Control instead -->
+		
+<!--		<Control name="fader[0]" title="CS1" options="receive">
+			<MidiMessage status="Controller" address="7" channel="0"/>
+		</Control>	
+
+		<Control name="fader[1]" title="CS2" options="receive">
+			<MidiMessage status="Controller" address="7" channel="1"/>
+		</Control>	
+
+		<Control name="fader[2]" title="CS3" options="receive">
+			<MidiMessage status="Controller" address="7" channel="2"/>
+		</Control>	
+
+		<Control name="fader[3]" title="CS4" options="receive">
+			<MidiMessage status="Controller" address="7" channel="3"/>
+		</Control>	
+
+		<Control name="fader[4]" title="CS5" options="receive">
+			<MidiMessage status="Controller" address="7" channel="4"/>
+		</Control>	
+
+		<Control name="fader[5]" title="CS6" options="receive">
+			<MidiMessage status="Controller" address="7" channel="5"/>
+		</Control>	
+
+		<Control name="fader[6]" title="CS7" options="receive">
+			<MidiMessage status="Controller" address="7" channel="6"/>
+		</Control>	
+
+		<Control name="fader[7]" title="CS8" options="receive">
+			<MidiMessage status="Controller" address="7" channel="7"/>
+		</Control>
+
+		<Control name="fader[8]" title="CS9" options="receive">
+			<MidiMessage status="Controller" address="7" channel="8"/>
+		</Control>	
+
+		<Control name="fader[9]" title="CS10" options="receive">
+			<MidiMessage status="Controller" address="7" channel="9"/>
+		</Control>	
+
+		<Control name="fader[10]" title="CS11" options="receive">
+			<MidiMessage status="Controller" address="7" channel="10"/>
+		</Control>	
+
+		<Control name="fader[11]" title="CS12" options="receive">
+			<MidiMessage status="Controller" address="7" channel="11"/>
+		</Control>	
+
+		<Control name="fader[12]" title="CS13" options="receive">
+			<MidiMessage status="Controller" address="7" channel="12"/>
+		</Control>	
+
+		<Control name="fader[13]" title="CS14" options="receive">
+			<MidiMessage status="Controller" address="7" channel="13"/>
+		</Control>	
+
+		<Control name="fader[14]" title="CS15" options="receive">
+			<MidiMessage status="Controller" address="7" channel="14"/>
+		</Control>	
+
+		<Control name="fader[15]" title="CS16" options="receive">
+			<MidiMessage status="Controller" address="7" channel="15"/>
+		</Control>	-->
+
+		
+        <!-- ******************************************************************************************** -->
+        <!-- MASTER FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="masterFader" title="Volume" options="receive">
+			<MidiMessage status="Controller" address="7" channel="0"/> <!-- add 39 for master fader -->
+		</Control>	
+
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT CONTROLS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="recordButton" title="REC" options="receive">
+			<MidiMessage status="Controller" address="114" channel="0"/>
+		</Control>	
+
+		<Control name="rtzButton" title="RTZ" options="receive">
+			<MidiMessage status="Controller" address="115" channel="0"/>
+		</Control>	
+
+		<Control name="rewindButton" title="REW" options="receive">
+			<MidiMessage status="Controller" address="116" channel="0"/>
+		</Control>	
+
+		<Control name="ffButton" title="FF" options="receive">
+			<MidiMessage status="Controller" address="117" channel="0"/>
+		</Control>	
+
+		<Control name="stopButton" title="STOP" options="receive">
+			<MidiMessage status="Controller" address="118" channel="0"/>
+		</Control>	
+
+		<Control name="playButton" title="PLAY" options="receive">
+			<MidiMessage status="Controller" address="119" channel="0"/>
+		</Control>	
+
+		<Control name="locate1" title="LOCATE 1" options="receive">
+			<MidiMessage status="Controller" address="112" channel="0"/>
+		</Control>	
+
+		<Control name="locate2" title="LOCATE 2" options="receive">
+			<MidiMessage status="Controller" address="113" channel="0"/>
+		</Control>			
+		
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+
+ 
+		<DeviceMapping device="MixerConsole">
+		    <!-- Map Volume Fader --> <!-- Not mapped use U-Control instead -->
+<!--			<ScrollBank target="RemoteBank" pagesize="16">
+				<foreach variable="$channel" count="16">
+					<Strip> 
+						<Value control="fader[$channel]" param="volume"/>
+					</Strip>
+				</foreach>
+			</ScrollBank>  -->
+			<Bank target="MasterBank">
+				<Strip>
+					<Value control="masterFader" param="volume"/>
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<Command control="playButton"   command.category="Transport" command.name="Start"/>
+			<Command control="stopButton"   command.category="Transport" command.name="Stop"/>
+			<Command control="recordButton" command.category="Transport" command.name="Record"/>
+			<Command control="rtzButton"    command.category="Transport" command.name="Return to Zero"/>
+			<Command control="ffButton"     command.category="Marker"    command.name="Goto Next Marker"/>
+			<Command control="rewindButton" command.category="Marker"    command.name="Goto Previous Marker"/>
+			<Command control="locate1"		command.category="Transport" command.name="Goto Loop Start"/>
+			<Command control="locate2"      command.category="Transport" command.name="Goto Loop End"/>
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Resources -->
+	<!-- ******************************************************************************************** -->
+
+	<Resources>
+		<Image name="CC121Background" url="images/CC121.png"/>
+		<ShapeImage name="KnobArrowDec" url="KnobArrowDecShape" frames="embedded"/>
+		<ShapeImage name="KnobArrowInc" url="KnobArrowIncShape" frames="embedded"/>
+
+		<!-- Raw images -->
+		<Image name="Atlas" url="images/CC121Atlas.png"/>
+		<Image name="ButtonsAtlas" url="images/AtlasButtonsCC121.png"/>
+
+		<!-- Partial images -->
+		<ImagePart name="PreviousPageIcon" size="0,0,60,20" image="Atlas" frames="h: normal pressed disabled"/>
+		<ImagePart name="NextPageIcon" size="60,0,60,20" image="Atlas" frames="h: normal pressed disabled"/>
+		<ImagePart name="EQButton" size="0,0,55,90" image="ButtonsAtlas" frames="normal normalOn disabledOn" tile="stretch-xy" margin="16,7,16,7"/>
+		<ImagePart name="CommandButton" size="55,0,55,90" image="ButtonsAtlas" frames="normal normalOn disabledOn" tile="stretch-xy" margin="16,7,16,7"/>
+	</Resources>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Shapes -->
+	<!-- ******************************************************************************************** -->
+
+	<Shapes>
+
+		<Shape name="KnobArrowIncShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+
+		<Shape name="KnobArrowDecShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+
+	</Shapes>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Styles -->
+	<!-- ******************************************************************************************** -->
+
+	<Styles>
+		<Style name="KnobAssignmentText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(0,0,90)"/>
+		</Style>
+		<Style name="FocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+		</Style>
+		<Style name="PagingText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(0,0,65)"/>
+		</Style>
+		<Style name="EQButton">
+			<Image name="background" image="EQButton"/>
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="EQButtonText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(0,0,0)"/>
+		</Style>
+		<Style name="CommandButton">
+			<Image name="background" image="CommandButton"/>
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="CommandButtonDisabled" inherit="CommandButton">
+			<Color name="textcolor" color="hsl(0,0,40)"/>
+		</Style>
+		<Style name="CommandButtonText" textoptions="wordbreak multiline">
+			<Font name="textfont" themeid="PresonusUI" size="9"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="FootswitchText" textoptions="wordbreak multiline">
+			<Font name="textfont" themeid="PresonusUI" size="9"/>
+			<Color name="textcolor" color="hsl(0,0,60)"/>
+			<Align name="textalign" align="left"/>
+		</Style>
+		<Style name="AutoFillButton">
+			<Metric name="padding.left" value="6"/>
+			<Metric name="padding.right" value="6"/>
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(0,0,40)"/>
+			<Color name="textcolor.pressed" color="hsl(0,0,10)"/>
+			<Color name="textcolor.on" color="hsl(0,0,10)"/>
+			<Metric name="buttonstyle" value="1"/>
+			<Image name="background" image="CommandButton"/>
+		</Style>
+	</Styles>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Forms -->
+	<!-- ******************************************************************************************** -->
+
+	<Forms>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Form: CC121 -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="CC121" image="CC121Background" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+				<TextBox name="focusDeviceFullName" size="24,17,296,24" options="transparent fittext" style="FocusText"/>
+
+				<using controller="Paging">
+					<Horizontal size="32,65" margin="0" spacing="2" attach="left top">
+						<Button name="prevPage" width="20" height="20" icon="PreviousPageIcon" tooltip="Previous Control Link Page" options="hidefocus transparent"/>
+						<TextBox  name="pagingStatus" width="235" height="20" options="transparent hidefocus" tooltip="Active Control Link Page" style="PagingText"/>
+						<Button name="nextPage" width="20" height="20" icon="NextPageIcon" tooltip="Next Control Link Page" options="hidefocus transparent"/>
+					</Horizontal>
+				</using>
+
+				<!-- Auto-fill button: show placeholder in global mapping mode, toggle between multi and auto-fill otherwise. -->
+				<View size="125,94">
+					<using controller="Device">
+						<Variant name="focusMappingActive">
+							<!-- Global mapping mode. -->
+							<Button title="No Plug-In" name="" size="0,0,100,25" tooltip="No Plug-In Selected" options="hidefocus" style="CommandButtonDisabled"/>
+							<!-- Focus mapping mode. -->
+							<using controller="Editor/Paging">
+								<Variant name="pagingMode">
+									<!-- Switch from any paging mode to auto-fill (mode=2) -->
+									<RadioButton name="pagingMode" value="2" style="AutoFillButton" sizeLimits="100,20,-1,25"  title="Auto-Fill"/>
+									<RadioButton name="pagingMode" value="2" style="AutoFillButton" sizeLimits="100,20,-1,25"  title="Auto-Fill"/>
+									<!-- Switch from any paging mode to default (mode=0) -->
+									<Toggle name="pagingMode" style="AutoFillButton" sizeLimits="100,20,-1,25" title="Auto-Fill"/>
+								</Variant>
+							</using>
+						</Variant>
+					</using>
+				</View>
+
+				<Vertical size="33,127" margin="0" spacing="3">
+
+					<!-- Knobs: Row Q -->
+					<Horizontal margin="0" spacing="6" attach="left top">
+						<foreach variable="$i" start="0" count="4">
+							<View name="Knob"/>
+						</foreach>
+					</Horizontal>
+
+					<!-- Knobs: Row F -->
+					<Horizontal margin="0" spacing="6" attach="left top">
+						<foreach variable="$i" start="4" count="4">
+							<View name="Knob"/>
+						</foreach>
+					</Horizontal>
+
+					<!-- Knobs: Row G -->
+					<Horizontal margin="0" spacing="6" attach="left top">
+						<foreach variable="$i" start="8" count="4">
+							<View name="Knob"/>
+						</foreach>
+					</Horizontal>
+
+					<Space height="22"/>
+
+					<!-- EQ Buttons -->
+					<Horizontal margin="0" spacing="2" attach="left top">
+						<foreach variable="$i" start="0" count="4">
+							<View>
+								<using controller="eqButton[$i]">
+									<Button name="controlValue" size="0,0,68,30" style="EQButton"/>
+									<TextBox name="userAssignment" size="10,0,50,30" options="fittext transparent nocontextmenu" style="EQButtonText"/>
+								</using>
+							</View>
+						</foreach>
+					</Horizontal>
+
+					<Space height="40"/>
+
+					<!-- User Command Buttons -->
+					<Horizontal margin="0" spacing="2" attach="left top">
+						<foreach variable="$i" start="0" count="4">
+							<using controller="../UserCommandSection0/Command$i">
+								<View>
+									<Variant name="commandTitle" size="0,0,68,45" tooltip="Right-click to assign or unassign a command."/>
+									<Button name="" size="0,0,68,45" style="CommandButton"/>
+									<TextBox name="commandTitle" size="8,6,52,32" options="fittext nocontextmenu multiline transparent" style="CommandButtonText"/>
+								</View>
+							</using>
+						</foreach>
+					</Horizontal>
+
+					<Space height="14"/>
+
+					<!-- Foot Switch Command -->
+					<Horizontal margin="0" spacing="2" attach="left top">
+						<using controller="../UserCommandSection0/Command4">
+							<View>
+								<Label title="Footswitch" size="70,0,60,38" style="FootswitchText"/>
+								<Variant name="commandTitle" size="122,0,120,38" tooltip="Right-click to assign or unassign a command."/>
+								<TextBox name="commandTitle" size="160,0,80,38" options="fittext nocontextmenu multiline transparent" style="FootswitchText"/>
+							</View>
+						</using>
+					</Horizontal>
+
+				</Vertical>
+			</using>
+		</Form>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Form: Knob -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="Knob">
+			<View width="65">
+				<using controller="eqKnob[$i]">
+					<UpDownButton name="controlValue" options="decrement transparent" size="5,8,28,55" icon="KnobArrowDec"/>
+					<UpDownButton name="controlValue" options="increment transparent" size="32,8,28,55" icon="KnobArrowInc"/>
+					<TextBox name="userAssignment" size="0,59,65,16" options="fittext transparent nocontextmenu" style="KnobAssignmentText"/>
+				</using>
+			</View>
+		</Form>
+
+	</Forms>
+</Skin>

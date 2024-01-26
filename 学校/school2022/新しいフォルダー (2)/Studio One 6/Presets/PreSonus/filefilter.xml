@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FileFilter>
+	<FileFilter.Folder name="Ampire"		key="Ampire.features" include="full"/>
+	<FileFilter.Folder name="Ampire Basic"	key="Ampire.features" include="basic"/>
+</FileFilter>

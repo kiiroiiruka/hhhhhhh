@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Import Files"/>
+	<Attribute id="Document:SubTitle" value="Import files and start mixing"/>
+	<Attribute id="Document:Description" value="Import files from various formats by dragging them on the dropzone and start mixing."/>
+	<Attribute id="Document:Icon" value="icons/ImportFiles.svg"/>
+	<Attribute id="Document:DocumentEventHandler" value="{AC2EF077-6F03-4CFD-81B8-3F8E354341F7}"/>
+	<Attribute id="Document:TemplateHandler" value="{15DBF92D-E3C5-4F6E-B03E-B5F64D04C504}"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.Complete"/>
+	<Attribute id="Document:MenuPriority" value="40"/>
+	<Attribute id="Document:Options" value="DefaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Dateien importieren"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Dateien importieren und mischen"/>
+		<Attribute id="Document:LocalizedDescription" value="Dateien in unterschiedlichen Formaten durch Ziehen und Ablegen im Ablagebereich importieren"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Importar archivos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Importar archivos y empezar a mezclar"/>
+		<Attribute id="Document:LocalizedDescription" value="Importe archivos de varios formatos arrastrándolos a la zona de suelta y empiece a mezclar."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Importer des fichiers"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Importer des fichiers et commencer à mixer"/>
+		<Attribute id="Document:LocalizedDescription" value="Importer des fichiers de différents formats en les faisant glisser sur la zone de dépôt et commencer à mixer."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Importa Files"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Importa i file e inizia a mixare"/>
+		<Attribute id="Document:LocalizedDescription" value="Importa file di vari formati trascinandoli nella dropzone e inizia a mixare."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="ファイルをインポート"/>
+		<Attribute id="Document:LocalizedSubTitle" value="インポートしてミキシングを開始"/>
+		<Attribute id="Document:LocalizedDescription" value="さまざまなフォーマットのファイルをドロップゾーンにドラッグしてインポートし、ミキシングを開始します。"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="파일 임포트"/>
+		<Attribute id="Document:LocalizedSubTitle" value="파일을 임포트하고 믹싱 시작"/>
+		<Attribute id="Document:LocalizedDescription" value="다양한 형식의 파일을 드래그하여 드롭존에 넣어 임포트하고 믹싱 시작"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Importar Arquivos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Importar arquivos e começar a mixar "/>
+		<Attribute id="Document:LocalizedDescription" value="Importe arquivos de diversos formatos arrastando-os e soltando e comece a mixar."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="导入文件"/>
+		<Attribute id="Document:LocalizedSubTitle" value="导入文件并开始混音"/>
+		<Attribute id="Document:LocalizedDescription" value="在拖拽区拖拽文件，从多种格式导入文件，然后开始混音。"/>
+	<?language pl?>
+		<Attribute id="Document:LocalizedTitle" value="Importuj pliki"/>
+	<?language tr?>
+		<Attribute id="Document:LocalizedTitle" value="Dosyaları İçeri Aktar"/>
+	<?language?>
+
+</DocumentTemplate>

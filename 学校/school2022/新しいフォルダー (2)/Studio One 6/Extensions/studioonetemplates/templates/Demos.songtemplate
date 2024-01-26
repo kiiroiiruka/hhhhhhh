@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Demos"/>
+	<Attribute id="Document:SubTitle" value="Demo song(s)"/>
+	<Attribute id="Document:Description" value=""/>
+	<Attribute id="Document:Icon" value="icons/Demos.svg"/>
+	<Attribute id="Document:TemplateHandler" value="{DC17AC41-852D-4BB9-9EA7-17A6129C4EC6}"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.Complete"/>
+	<Attribute id="Document:MenuPriority" value="70"/>
+	<Attribute id="Document:Options" value="DefaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Demos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Demosong(s)"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Demos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Canción(es) Demo"/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Démos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Morceau(x) de démonstration"/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Demo"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Song Demo"/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="デモ"/>
+		<Attribute id="Document:LocalizedSubTitle" value="デモソング"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="데모"/>
+		<Attribute id="Document:LocalizedSubTitle" value="데모 Song"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Demonstrações"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Songs de Demonstração"/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="演示"/>
+		<Attribute id="Document:LocalizedSubTitle" value="演示歌曲"/>
+	<?language?>
+
+</DocumentTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Axiom Pro Keyboard"
+
+	classID="{AD9701DE-DD3C-4f62-A45B-DD7603A5795A}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	surfaceFile="Keyboard/Axiom Pro Keyboard.surface.xml"
+
+	imageFile="Keyboard/Axiom Pro Keyboard.png"
+	textFile="Keyboard/Axiom Pro Keyboard.txt"
+/>

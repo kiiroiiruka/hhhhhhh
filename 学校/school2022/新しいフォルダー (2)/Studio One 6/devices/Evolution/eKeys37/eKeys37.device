@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Evolution"
+	name="eKeys37"
+	
+	classID="{205EDCEA-A0BA-4645-B9C1-104A801E86FA}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	
+	imageFile="eKeys37.png"
+	textFile="eKeys37.txt"
+	/>

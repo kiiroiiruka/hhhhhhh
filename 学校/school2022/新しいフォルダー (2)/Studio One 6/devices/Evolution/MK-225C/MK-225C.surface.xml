@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="1-PAN"        options="receive public">
+			<MidiMessage status="Controller" address="10"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="2-EXPRESSION" options="receive public">
+			<MidiMessage status="Controller" address="11"/>
+		</Control>	
+
+		<Control name="knob[2]" title="3-REVERB"     options="receive public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+
+		<Control name="knob[3]" title="4-CHORUS"     options="receive public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>	
+
+		<Control name="knob[4]" title="5-ATTACK"     options="receive public">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="knob[5]" title="6-RELEASE"    options="receive public">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+		<Control name="knob[6]" title="7-CUT OFF"    options="receive public">
+			<MidiMessage status="Controller" address="74"/>
+		</Control>	
+
+		<Control name="knob[7]" title="8-RESONANCE"  options="receive public">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+	</Controls>
+</ControlSurface>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+	<Resources>
+		<Image name="FP2816ButtonsAtlas"		url="../../Shared/skin/images/AtlasButtonsFP8.png"/>
+
+		<ImagePart name="FP2ButtonOrange"	size="0,0,55,90" 	image="FP2816ButtonsAtlas" frames="normal normalOn disabledOn" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP2ButtonBlue"	size="55,0,55,90"	image="FP2816ButtonsAtlas" frames="normal normalOn disabledOn" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="FP2FootSwitch"	size="118,0,32,32"	image="FP2816ButtonsAtlas"/>
+	</Resources>
+
+	<Styles>
+		<Style name="FocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+		</Style>
+		<Style name="ButtonText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,85)"/>
+		</Style>
+		<Style name="UserButtonText" inherit="ButtonText">
+			<Color name="textcolor" color="hsl(0,0,70)"/>
+		</Style>
+		<Style name="FaderText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(200,25,75)"/>
+		</Style>
+
+		<Style name="FP2ButtonOrange">
+			<Image name="background" image="FP2ButtonOrange"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="FP2ButtonBlue">
+			<Image name="background" image="FP2ButtonBlue"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="Blacktext">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,0)"/>
+		</Style>
+	</Styles>
+
+	<Forms>
+		<!-- ******************************************************************************************** -->
+		<!-- FaderPort2 -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="FaderPort2" image="FaderPort2Background" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+
+				<TextBox name="focusDeviceFullName" size="200,10,300,24" options="transparent" style="FocusText"/>
+
+				<Horizontal size="28,52" margin="0" spacing="1">
+
+					<View width="70" height="50">
+						<using controller="fader">
+							<TextBox name="userAssignment" size="0,25,70,18" options="fittext transparent nocontextmenu" style="FaderText"/>
+							<Button name="controlValue" width="70" height="47" options="transparent silenttracking"/>
+						</using>
+					</View>
+
+					<Space width="34"/>
+
+					<!-- F1-F4 -->
+					<foreach variable="$i" start="0" count="4">
+						<define fbutton="@select:$i:masterButton,clickButton,sectionButton,markerButton" iconIndex="@eval:$i+1" iconLabel="F$iconIndex">
+							<View width="70" height="50">
+								<using controller="$fbutton">
+									<Button name="controlValue" size="7,0,56,30" style="FP2ButtonBlue" title="$iconLabel"/>
+									<TextBox name="userAssignment" size="1,32,68,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+								</using>
+							</View>
+						</define>
+					</foreach>
+
+					<Space width="6"/>
+
+					<!-- FootSwitch -->
+					<View width="70" height="50">
+						<using controller="footSwitch">
+							<Button name="controlValue" size="16,0,32,32" options="transparent"/>
+							<ImageView image="FP2FootSwitch" size="16,0,32,32"/>
+							<TextBox name="paramTitle" size="1,32,62,18" options="fittext transparent nocontextmenu" style="ButtonText"/>
+						</using>
+					</View>
+
+				</Horizontal>
+
+			</using>
+		</Form>
+
+	</Forms>
+</Skin>

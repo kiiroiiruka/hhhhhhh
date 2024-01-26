@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ColorSchemeFile revision="1">
+	<Attributes x:id="Main" hueLevel="0.73888885974884033203125" saturationLevel="0.847775161266326904296875"
+	            luminanceLevel="0.01170957088470458984375" contrastLevel="0.800936758518218994140625" colorInversion="1"/>
+	<Attributes x:id="Arrangement" hueLevel="0.73888885974884033203125" saturationLevel="0.847775161266326904296875"
+	            luminanceLevel="0.5" contrastLevel="0.746511638164520263671875" colorInversion="1"/>
+</ColorSchemeFile>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS FOR FP8 AND FP16 -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Buttons + LEDs -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Assignment Buttons -->
+		<Control name="trackButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#28"/> </Control>
+		<Control name="pluginButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#2B"/> </Control>
+		<Control name="sendButton"      type="trigger" options="receive"> <MidiMessage status="#90" address="#29"/> </Control>
+		<Control name="panButton"       type="trigger" options="receive"> <MidiMessage status="#90" address="#2A"/> </Control>
+
+		<Control name="trackLED"        options="transmit"> <MidiMessage status="#90" address="#28"/> </Control>
+		<Control name="pluginLED"       options="transmit"> <MidiMessage status="#90" address="#2B"/> </Control>
+		<Control name="sendLED"         options="transmit"> <MidiMessage status="#90" address="#29"/> </Control>
+		<Control name="panLED"          options="transmit"> <MidiMessage status="#90" address="#2A"/> </Control>
+
+		<Control name="armButton"       type="trigger" options="receive"> <MidiMessage status="#90" address="#00"/> </Control>
+		<Control name="soloClearButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#01"/> </Control>
+		<Control name="muteClearButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#02"/> </Control>
+
+		<Control name="armLED"          options="transmit"> <MidiMessage status="#90" address="#00"/> </Control>
+		<Control name="soloClearLED"    options="transmit"> <MidiMessage status="#90" address="#01"/> </Control>
+		<Control name="muteClearLED"    options="transmit"> <MidiMessage status="#90" address="#02"/> </Control>		
+
+		<Control name="bypassButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#03"/> </Control>
+		<Control name="macroButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#04"/> </Control>		
+		<Control name="linkButton"      type="trigger" options="receive"> <MidiMessage status="#90" address="#05"/> </Control>
+		
+		<Control name="bypassLEDColor"  type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#03"/> </Control>
+		<Control name="macroLEDColor"	type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#04"/> </Control>
+		<Control name="linkLEDColor"	type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#05"/> </Control>
+
+		<Control name="bypassLED"       options="transmit"> <MidiMessage status="#90" address="#03"/> </Control>
+		<Control name="macroLED"        options="transmit"> <MidiMessage status="#90" address="#04"/> </Control>
+		<Control name="linkLED"         options="transmit"> <MidiMessage status="#90" address="#05"/> </Control>
+
+		<!-- Navigation -->
+		<Control name="Prev" type="trigger" options="receive"> <MidiMessage status="#90" address="#2E"/> </Control>
+		<Control name="Next" type="trigger" options="receive"> <MidiMessage status="#90" address="#2F"/> </Control>
+		<Control name="PrevLED" options="transmit"> <MidiMessage status="#90" address="#2E"/> </Control>
+		<Control name="NextLED" options="transmit"> <MidiMessage status="#90" address="#2F"/> </Control>
+
+		<!-- Small encoder 'Pan/Param' -->
+		<Control name="Encoder" type="relative" options="receive"> <MidiMessage status="#B0" address="#10" options="signed plain"/> </Control>
+		<Control name="PushEncoder" type="trigger"  options="receive"> <MidiMessage status="#90" address="#20"/> </Control>
+
+		<!-- Big encoder (jog wheel) -->
+		<Control name="EncoderBig" type="relative" options="receive"> <MidiMessage status="#B0" address="#3C" options="signed plain"/> </Control>
+		<Control name="PushEncoderBig" type="trigger"  options="receive"> <MidiMessage status="#90" address="#53"/> </Control>
+
+		<!-- F1 - F8 -->
+		<Control name="F1" title="F1"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#36"/> </Control>
+		<Control name="F2" title="F2"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#37"/> </Control>
+		<Control name="F3" title="F3"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#38"/> </Control>
+		<Control name="F4" title="F4"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#39"/> </Control>
+		<Control name="F5" title="F5"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3A"/> </Control>
+		<Control name="F6" title="F6"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3B"/> </Control>
+		<Control name="F7" title="F7"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3C"/> </Control>
+		<Control name="F8" title="F8"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3D"/> </Control>
+
+		<Control name="F1LED" options="transmit"> <MidiMessage status="#90" address="#36"/> </Control>
+		<Control name="F2LED" options="transmit"> <MidiMessage status="#90" address="#37"/> </Control>
+		<Control name="F3LED" options="transmit"> <MidiMessage status="#90" address="#38"/> </Control>
+		<Control name="F4LED" options="transmit"> <MidiMessage status="#90" address="#39"/> </Control>
+		<Control name="F5LED" options="transmit"> <MidiMessage status="#90" address="#3A"/> </Control>
+		<Control name="F6LED" options="transmit"> <MidiMessage status="#90" address="#3B"/> </Control>
+		<Control name="F7LED" options="transmit"> <MidiMessage status="#90" address="#3C"/> </Control>
+		<Control name="F8LED" options="transmit"> <MidiMessage status="#90" address="#3D"/> </Control>
+
+		<!-- Bank Selectors -->
+		<Control name="AudioButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#3E"/> </Control>
+		<Control name="VIButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#3F"/> </Control>
+		<Control name="BusButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#40"/> </Control>
+		<Control name="VCAButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#41"/> </Control>
+		<Control name="AllButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#42"/> </Control>
+
+		<Control name="AudioButtonLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#3E"/> </Control>
+		<Control name="VIButtonLEDColor"    type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#3F"/> </Control>
+		<Control name="BusButtonLEDColor"   type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#40"/> </Control>
+		<Control name="VCAButtonLEDColor"   type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#41"/> </Control>
+		<Control name="AllButtonLEDColor"   type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#42"/> </Control>
+
+		<Control name="AudioButtonLED"  options="transmit"> <MidiMessage status="#90" address="#3E"/> </Control>
+		<Control name="VIButtonLED"     options="transmit"> <MidiMessage status="#90" address="#3F"/> </Control>
+		<Control name="BusButtonLED"    options="transmit"> <MidiMessage status="#90" address="#40"/> </Control>
+		<Control name="VCAButtonLED"    options="transmit"> <MidiMessage status="#90" address="#41"/> </Control>
+		<Control name="AllButtonLED"    options="transmit"> <MidiMessage status="#90" address="#42"/> </Control>
+
+		<!-- Modifiers-->
+		<Control name="shiftButtonLeft"    type="trigger" options="receive">  <MidiMessage status="#90" address="#46"/> </Control>
+		<Control name="shiftButtonLeftLED" type="trigger" options="transmit"> <MidiMessage status="#90" address="#46"/> </Control>
+		<Control name="shiftButtonRight"     type="trigger" options="receive">  <MidiMessage status="#90" address="#06"/> </Control>
+		<Control name="shiftButtonRightLED"  type="trigger" options="transmit"> <MidiMessage status="#90" address="#06"/> </Control>
+
+		<!-- Automation -->
+		<Control name="latchButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#4E"/> </Control>
+		<Control name="trimButton"  type="trigger" options="receive"> <MidiMessage status="#90" address="#4C"/> </Control>
+		<Control name="offButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#4F"/> </Control>
+		<Control name="touchButton" title="User 1" type="trigger" options="receive public"> <MidiMessage status="#90" address="#4D"/> </Control>
+		<Control name="writeButton" title="User 2" type="trigger" options="receive public"> <MidiMessage status="#90" address="#4B"/> </Control>
+		<Control name="readButton"  title="User 3" type="trigger" options="receive public"> <MidiMessage status="#90" address="#4A"/> </Control>
+
+		<Control name="latchLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4E"/> </Control>
+		<Control name="trimLEDColor"  type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4C"/> </Control>
+		<Control name="offLEDColor"   type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4F"/> </Control>
+		<Control name="touchLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4D"/> </Control>
+		<Control name="writeLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4B"/> </Control>
+		<Control name="readLEDColor"  type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4A"/> </Control>
+
+		<Control name="latchLED"   options="transmit"> <MidiMessage status="#90" address="#4E"/> </Control>
+		<Control name="trimLED"    options="transmit"> <MidiMessage status="#90" address="#4C"/> </Control>
+		<Control name="offLED"     options="transmit"> <MidiMessage status="#90" address="#4F"/> </Control>
+		<Control name="touchLED"   options="transmit"> <MidiMessage status="#90" address="#4D"/> </Control>
+		<Control name="writeLED"   options="transmit"> <MidiMessage status="#90" address="#4B"/> </Control>
+		<Control name="readLED"    options="transmit"> <MidiMessage status="#90" address="#4A"/> </Control>
+
+		<!-- Transport -->
+		<Control name="loopButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#56"/> </Control>	
+		<Control name="rewindButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#5B"/> </Control>
+		<Control name="ffButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#5C"/> </Control>
+		<Control name="stopButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#5D"/> </Control>
+		<Control name="playButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#5E"/> </Control>
+		<Control name="recordButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#5F"/> </Control>
+
+		<Control name="loopLED"   options="transmit"> <MidiMessage status="#90" address="#56"/> </Control>
+		<Control name="rewindLED" options="transmit"> <MidiMessage status="#90" address="#5B"/> </Control>
+		<Control name="ffLED"     options="transmit"> <MidiMessage status="#90" address="#5C"/> </Control>
+		<Control name="stopLED"   options="transmit"> <MidiMessage status="#90" address="#5D"/> </Control>
+		<Control name="playLED"   options="transmit"> <MidiMessage status="#90" address="#5E"/> </Control>
+		<Control name="recordLED" options="transmit"> <MidiMessage status="#90" address="#5F"/> </Control>
+
+		<Control name="footSwitch" title="Footswitch" type="button" options="receive public"> <MidiMessage status="#90" address="#66"/> </Control>
+
+		<!-- Time code overlay on scribble strips -->
+		<Control name="timeCodeOverlay" options="transmit"/>
+		<Control name="timeCodeFormat" options="transmit"/>
+		<Control name="timeCode" options="transmit fastupdate"/>
+
+	</Controls>
+
+</ControlSurface>

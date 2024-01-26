@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Evolution"
+	name="MK-225C"
+	
+	classID="{3DFE94A0-8BB4-451c-B44F-EE591484162C}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MK-225C.surface.xml"
+	
+	imageFile="MK-225C.png"
+	textFile="MK-225C.txt"
+	/>

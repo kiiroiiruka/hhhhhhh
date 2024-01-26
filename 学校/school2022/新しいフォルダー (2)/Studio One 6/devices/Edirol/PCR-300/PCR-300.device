@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDefinition 
+	vendor="Edirol"
+	name="PCR-300 Keyboard"
+
+	classID="{F3830D6C-6DEB-48b4-88B0-4E4EE294D7C7}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	surfaceFile="PCR-300.surface.xml"
+
+	imageFile="PCR-300.png"
+	textFile="PCR-300.txt"
+	/>

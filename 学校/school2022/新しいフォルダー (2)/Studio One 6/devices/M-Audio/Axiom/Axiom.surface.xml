@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+	
+	
+        <!-- ******************************************************************************************** -->
+        <!-- 9 * Sliders 49, 61 models only -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="Slider 1" type="fader" options="receive public"> <MidiMessage status="#B0" address="#6E"/> </Control>
+		<Control name="fader[1]" title="Slider 2" type="fader" options="receive public"> <MidiMessage status="#B0" address="#6F"/> </Control>
+		<Control name="fader[2]" title="Slider 3" type="fader" options="receive public"> <MidiMessage status="#B0" address="#70"/> </Control>
+		<Control name="fader[3]" title="Slider 4" type="fader" options="receive public"> <MidiMessage status="#B0" address="#71"/> </Control>
+		<Control name="fader[4]" title="Slider 5" type="fader" options="receive public"> <MidiMessage status="#B0" address="#72"/> </Control>
+		<Control name="fader[5]" title="Slider 6" type="fader" options="receive public"> <MidiMessage status="#B0" address="#73"/> </Control>
+		<Control name="fader[6]" title="Slider 7" type="fader" options="receive public"> <MidiMessage status="#B0" address="#74"/> </Control>
+		<Control name="fader[7]" title="Slider 8" type="fader" options="receive public"> <MidiMessage status="#B0" address="#75"/> </Control>
+		<Control name="masterFader" type="fader" options="receive"> <MidiMessage status="#B0" address="#76"/> </Control>
+ 
+		<!-- ******************************************************************************************** -->
+        <!-- 9 * Select buttons + LEDs 49, 61 models only -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="select[0]" title="1" type="button" options="receive public"> <MidiMessage status="#B0" address="#34"/> </Control>
+		<Control name="select[1]" title="2" type="button" options="receive public"> <MidiMessage status="#B0" address="#35"/> </Control>
+		<Control name="select[2]" title="3" type="button" options="receive public"> <MidiMessage status="#B0" address="#36"/> </Control>
+		<Control name="select[3]" title="4" type="button" options="receive public"> <MidiMessage status="#B0" address="#37"/> </Control>
+		<Control name="select[4]" title="A" type="button" options="receive public"> <MidiMessage status="#B0" address="#38"/> </Control>
+		<Control name="select[5]" title="B" type="button" options="receive public"> <MidiMessage status="#B0" address="#39"/> </Control>
+		<Control name="select[6]" title="C" type="button" options="receive public"> <MidiMessage status="#B0" address="#3A"/> </Control>
+		<Control name="select[7]" title="D" type="button" options="receive public"> <MidiMessage status="#B0" address="#3B"/> </Control>
+		<Control name="selectFlip" type="button" options="receive"> <MidiMessage status="#B0" address="#3C"/> </Control>
+
+		                     
+        <!-- ******************************************************************************************** -->
+        <!-- 9 x Encoders  -->
+        <!-- ******************************************************************************************** -->
+
+		<!-- Note: Encoders send a sign bit for increment/decrement and the number of ticks -->
+		
+		<Control name="encoder[0]" title="B1" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#66" options="complement plain"/>
+		</Control>	
+		
+		<Control name="encoder[1]" title="B2" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#67" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[2]" title="B3" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#68" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[3]" title="B4" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#69" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[4]" title="B5" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#6A" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[5]" title="B6" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#6B" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[6]" title="B7" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#6C" options="complement plain"/>
+		</Control>	
+
+		<Control name="encoder[7]" title="B8" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#6D" options="complement plain"/>
+		</Control>	
+
+
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT CONTROLS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="loopButton"   type="trigger" options="receive"> <MidiMessage status="#B0" address="#14"/> </Control>	
+		<Control name="rewindButton" type="trigger" options="receive"> <MidiMessage status="#B0" address="#15"/> </Control>
+		<Control name="ffButton"     type="trigger" options="receive"> <MidiMessage status="#B0" address="#16"/> </Control>
+		<Control name="stopButton"   type="trigger" options="receive"> <MidiMessage status="#B0" address="#17"/> </Control>
+		<Control name="playButton"   type="trigger" options="receive"> <MidiMessage status="#B0" address="#18"/> </Control>
+		<Control name="recordButton" type="trigger" options="receive"> <MidiMessage status="#B0" address="#19"/> </Control>		
+		
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+	
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+ 
+		<DeviceMapping device="MixerConsole">
+
+			<ScrollBank target="RemoteBank" pagesize="8">
+				<foreach variable="$channel" count="8">
+					<Strip> 
+						<Value  control="fader[$channel]" param="volume"/>				
+					</Strip>
+				</foreach>
+			</ScrollBank>
+			
+			<Bank target="MasterBank">
+				<Strip>
+					<Value control="masterFader" param="volume"/>
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+		
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+				
+			<Command control="loopButton"			command.category="Transport" command.name="Toggle Loop"/>
+			<Command control="playButton"			command.category="Transport" command.name="Start"/>
+			<Command control="stopButton"			command.category="Transport" command.name="Stop"/>
+			<Command control="recordButton"			command.category="Transport" command.name="Record"/>
+			<Command control="rewindButton"			command.category="Transport" command.name="Rewind"/>
+			<Command control="ffButton"				command.category="Transport" command.name="Forward"/>
+			
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- METRONOME MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			<Value control="selectFlip" param="clickOn"/>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

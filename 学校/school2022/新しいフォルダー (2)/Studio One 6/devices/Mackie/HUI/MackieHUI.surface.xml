@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- Faders -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="0" options="msblsb"/> </Control>
+		<Control name="fader[1]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="1" options="msblsb"/> </Control>
+		<Control name="fader[2]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="2" options="msblsb"/> </Control>
+		<Control name="fader[3]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="3" options="msblsb"/> </Control>
+		<Control name="fader[4]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="4" options="msblsb"/> </Control>
+		<Control name="fader[5]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="5" options="msblsb"/> </Control>
+		<Control name="fader[6]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="6" options="msblsb"/> </Control>
+		<Control name="fader[7]" type="fader" options="transmit receive"> <MidiMessage status="Controller" address="7" options="msblsb"/> </Control>
+			
+		<Control name="faderTouch[0]" type="trigger" options="receive"/>
+		<Control name="faderTouch[1]" type="trigger" options="receive"/>
+		<Control name="faderTouch[2]" type="trigger" options="receive"/>
+		<Control name="faderTouch[3]" type="trigger" options="receive"/>
+		<Control name="faderTouch[4]" type="trigger" options="receive"/>
+		<Control name="faderTouch[5]" type="trigger" options="receive"/>
+		<Control name="faderTouch[6]" type="trigger" options="receive"/>
+		<Control name="faderTouch[7]" type="trigger" options="receive"/>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- VU Meter -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="meter[0][0]" options="transmit fastupdate"/>
+		<Control name="meter[0][1]" options="transmit fastupdate"/>
+		<Control name="meter[1][0]" options="transmit fastupdate"/>
+		<Control name="meter[1][1]" options="transmit fastupdate"/>
+		<Control name="meter[2][0]" options="transmit fastupdate"/>
+		<Control name="meter[2][1]" options="transmit fastupdate"/>
+		<Control name="meter[3][0]" options="transmit fastupdate"/>
+		<Control name="meter[3][1]" options="transmit fastupdate"/>
+		<Control name="meter[4][0]" options="transmit fastupdate"/>
+		<Control name="meter[4][1]" options="transmit fastupdate"/>
+		<Control name="meter[5][0]" options="transmit fastupdate"/>
+		<Control name="meter[5][1]" options="transmit fastupdate"/>
+		<Control name="meter[6][0]" options="transmit fastupdate"/>
+		<Control name="meter[6][1]" options="transmit fastupdate"/>
+		<Control name="meter[7][0]" options="transmit fastupdate"/>
+		<Control name="meter[7][1]" options="transmit fastupdate"/>
+		
+		<!-- stereo controls (not on device) -->
+		<Control name="stereo[0]" options="transmit"/>
+		<Control name="stereo[1]" options="transmit"/>
+		<Control name="stereo[2]" options="transmit"/>
+		<Control name="stereo[3]" options="transmit"/>
+		<Control name="stereo[4]" options="transmit"/>
+		<Control name="stereo[5]" options="transmit"/>
+		<Control name="stereo[6]" options="transmit"/>
+		<Control name="stereo[7]" options="transmit"/>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- Channel Buttons + LEDs -->
+        <!-- ******************************************************************************************** -->
+
+		<!-- Record Ready -->
+		<Control name="record[0]" type="trigger" options="transmit receive"/>
+		<Control name="record[1]" type="trigger" options="transmit receive"/>
+		<Control name="record[2]" type="trigger" options="transmit receive"/>
+		<Control name="record[3]" type="trigger" options="transmit receive"/>
+		<Control name="record[4]" type="trigger" options="transmit receive"/>
+		<Control name="record[5]" type="trigger" options="transmit receive"/>
+		<Control name="record[6]" type="trigger" options="transmit receive"/>
+		<Control name="record[7]" type="trigger" options="transmit receive"/>
+
+		<!-- Solo -->
+		<Control name="solo[0]" type="trigger" options="transmit receive"/>
+		<Control name="solo[1]" type="trigger" options="transmit receive"/>
+		<Control name="solo[2]" type="trigger" options="transmit receive"/>
+		<Control name="solo[3]" type="trigger" options="transmit receive"/>
+		<Control name="solo[4]" type="trigger" options="transmit receive"/>
+		<Control name="solo[5]" type="trigger" options="transmit receive"/>
+		<Control name="solo[6]" type="trigger" options="transmit receive"/>
+		<Control name="solo[7]" type="trigger" options="transmit receive"/>
+		
+		<!-- Mute -->
+		<Control name="mute[0]" type="trigger" options="transmit receive"/>
+		<Control name="mute[1]" type="trigger" options="transmit receive"/>
+		<Control name="mute[2]" type="trigger" options="transmit receive"/>
+		<Control name="mute[3]" type="trigger" options="transmit receive"/>
+		<Control name="mute[4]" type="trigger" options="transmit receive"/>
+		<Control name="mute[5]" type="trigger" options="transmit receive"/>
+		<Control name="mute[6]" type="trigger" options="transmit receive"/>
+		<Control name="mute[7]" type="trigger" options="transmit receive"/>
+
+		<!-- Select -->
+		<Control name="select[0]" type="trigger" options="transmit receive"/>
+		<Control name="select[1]" type="trigger" options="transmit receive"/>
+		<Control name="select[2]" type="trigger" options="transmit receive"/>
+		<Control name="select[3]" type="trigger" options="transmit receive"/>
+		<Control name="select[4]" type="trigger" options="transmit receive"/>
+		<Control name="select[5]" type="trigger" options="transmit receive"/>
+		<Control name="select[6]" type="trigger" options="transmit receive"/>
+		<Control name="select[7]" type="trigger" options="transmit receive"/>
+
+		<!-- Inserts -->
+		<Control name="insert[0]" type="trigger" options="transmit receive"/>
+		<Control name="insert[1]" type="trigger" options="transmit receive"/>
+		<Control name="insert[2]" type="trigger" options="transmit receive"/>
+		<Control name="insert[3]" type="trigger" options="transmit receive"/>
+		<Control name="insert[4]" type="trigger" options="transmit receive"/>
+		<Control name="insert[5]" type="trigger" options="transmit receive"/>
+		<Control name="insert[6]" type="trigger" options="transmit receive"/>
+		<Control name="insert[7]" type="trigger" options="transmit receive"/>
+
+		<Control name="hasInserts[0]" options="transmit"/>
+		<Control name="hasInserts[1]" options="transmit"/>
+		<Control name="hasInserts[2]" options="transmit"/>
+		<Control name="hasInserts[3]" options="transmit"/>
+		<Control name="hasInserts[4]" options="transmit"/>
+		<Control name="hasInserts[5]" options="transmit"/>
+		<Control name="hasInserts[6]" options="transmit"/>
+		<Control name="hasInserts[7]" options="transmit"/>
+
+		<!-- V-Select -->
+		<Control name="vpotSelect[0]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[1]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[2]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[3]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[4]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[5]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[6]" type="trigger" options="receive"/>
+		<Control name="vpotSelect[7]" type="trigger" options="receive"/>				
+
+        <!-- ******************************************************************************************** -->
+        <!-- V-Pots -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="vpot[0]" type="relative" options="receive"/>
+		<Control name="vpot[1]" type="relative" options="receive"/>
+		<Control name="vpot[2]" type="relative" options="receive"/>
+		<Control name="vpot[3]" type="relative" options="receive"/>
+		<Control name="vpot[4]" type="relative" options="receive"/>
+		<Control name="vpot[5]" type="relative" options="receive"/>
+		<Control name="vpot[6]" type="relative" options="receive"/>
+		<Control name="vpot[7]" type="relative" options="receive"/>
+
+		<Control name="ledRing[0]" options="transmit"/>
+		<Control name="ledRing[1]" options="transmit"/>
+		<Control name="ledRing[2]" options="transmit"/>
+		<Control name="ledRing[3]" options="transmit"/>
+		<Control name="ledRing[4]" options="transmit"/>
+		<Control name="ledRing[5]" options="transmit"/>
+		<Control name="ledRing[6]" options="transmit"/>
+		<Control name="ledRing[7]" options="transmit"/>
+
+        <!-- ******************************************************************************************** -->
+        <!-- Plug-Encoder -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="plugVpot[0]" type="relative" title="Plug-in Encoder 1" options="receive public" />
+		<Control name="plugVpot[1]" type="relative" title="Plug-in Encoder 2" options="receive public" />
+		<Control name="plugVpot[2]" type="relative" title="Plug-in Encoder 3" options="receive public" />
+		<Control name="plugVpot[3]" type="relative" title="Plug-in Encoder 4" options="receive public" />
+
+		<Control name="plugLedRing[0]" options="transmit"/>
+		<Control name="plugLedRing[1]" options="transmit"/>
+		<Control name="plugLedRing[2]" options="transmit"/>
+		<Control name="plugLedRing[3]" options="transmit"/>
+
+		<Control name="plugSelect[0]"  type="trigger" options="receive"/>
+		<Control name="plugSelect[1]"  type="trigger" options="receive"/>
+		<Control name="plugSelect[2]"  type="trigger" options="receive"/>
+		<Control name="plugSelect[3]"  type="trigger" options="receive"/>
+
+		<Control name="plugTextTop[0]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextTop[1]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextTop[2]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextTop[3]" type="textdisplay" options="transmit public"/>
+
+		<Control name="plugTextBottom[0]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextBottom[1]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextBottom[2]" type="textdisplay" options="transmit public"/>
+		<Control name="plugTextBottom[3]" type="textdisplay" options="transmit public"/>
+
+        <!-- ******************************************************************************************** -->
+        <!-- Num Pad -->
+        <!-- ******************************************************************************************** -->
+
+
+		<Control name="NumPad Clear"		type="trigger" options="receive"/>
+		<Control name="NumPad ="			type="trigger" options="receive"/>
+		<Control name="NumPad -"			type="trigger" options="receive"/>
+		<Control name="NumPad +"			type="trigger" options="receive"/>
+		<Control name="NumPad 7"			type="trigger" options="receive"/>
+		<Control name="NumPad 8"			type="trigger" options="receive"/>
+		<Control name="NumPad 9"			type="trigger" options="receive"/>
+		<Control name="NumPad 4"			type="trigger" options="receive"/>
+		<Control name="NumPad 5"			type="trigger" options="receive"/>
+		<Control name="NumPad 6"			type="trigger" options="receive"/>
+		<Control name="NumPad 1"			type="trigger" options="receive"/>
+		<Control name="NumPad 2"			type="trigger" options="receive"/>
+		<Control name="NumPad 3"			type="trigger" options="receive"/>
+		<Control name="NumPad 0"			type="trigger" options="receive"/>
+		<Control name="NumPad Enter"		type="trigger" options="receive"/>
+
+		<!-- F1 - F8 -->
+		<Control name="F1"		title="F1"	type="trigger" options="transmit receive public"/>
+		<Control name="F2"		title="F2"	type="trigger" options="transmit receive public"/>
+		<Control name="F3"		title="F3"	type="trigger" options="transmit receive public"/>
+		<Control name="F4"		title="F4"	type="trigger" options="transmit receive public"/>
+		<Control name="F5"		title="F5"	type="trigger" options="transmit receive public"/>
+		<Control name="F6"		title="F6"	type="trigger" options="transmit receive public"/>
+		<Control name="F7"		title="F7"	type="trigger" options="transmit receive public"/>
+		<Control name="F8"		title="F8"	type="trigger" options="transmit receive public"/>
+
+		<!-- Window -->
+		<Control name="transport"			type="trigger" options="transmit receive"/>
+		<Control name="mixWindow"			type="trigger" options="transmit receive"/>
+		<Control name="altWindow"			type="trigger" options="transmit receive"/>
+		<Control name="editWindow"			type="trigger" options="transmit receive"/>
+		<Control name="markerWindow"		type="trigger" options="transmit receive"/>
+		<Control name="statusWindow"		type="trigger" options="transmit receive"/>
+
+		<!-- Edit -->
+		<Control name="editPaste"			type="trigger" options="transmit receive"/>
+		<Control name="editCut"				type="trigger" options="transmit receive"/>
+		<Control name="editCapture"			type="trigger" options="transmit receive"/>
+		<Control name="editDelete"			type="trigger" options="transmit receive"/>
+		<Control name="editCopy"			type="trigger" options="transmit receive"/>
+		<Control name="editSplit"			type="trigger" options="transmit receive"/>
+
+		<!-- Encoder assign -->
+		<Control name="pan"					type="trigger" options="receive"/>
+		<Control name="sendA"				type="trigger" options="receive"/>
+		<Control name="sendB"				type="trigger" options="receive"/>
+		<Control name="sendC"				type="trigger" options="receive"/>
+		<Control name="sendD"				type="trigger" options="receive"/>
+		<Control name="sendE"				type="trigger" options="receive"/>
+		<Control name="assignIn"			type="trigger" options="receive"/>
+		<Control name="assignOut"			type="trigger" options="receive"/>
+
+		<Control name="panLED"			options="transmit"/>
+		<Control name="sendALED"		options="transmit"/>
+		<Control name="sendBLED"		options="transmit"/>
+		<Control name="sendCLED"		options="transmit"/>
+		<Control name="sendDLED"		options="transmit"/>
+		<Control name="sendELED"		options="transmit"/>
+		<Control name="assignInLED"		options="transmit"/>
+		<Control name="assignOutLED"	options="transmit"/>
+		
+		<Control name="bypassLED"	options="transmit"/>
+		
+		<!-- Auto Enable Group -->
+		<Control name="autoEnablePlugin"	type="trigger" options="receive"/>
+		<Control name="autoEnablePan"		type="trigger" options="receive"/>
+		<Control name="autoEnableFader"		type="trigger" options="receive"/>
+		<Control name="autoEnableSendMute"	type="trigger" options="receive"/>
+		<Control name="autoEnableSend"		type="trigger" options="receive"/>
+		<Control name="autoEnableMute"		type="trigger" options="receive"/>
+
+		<!-- Auto Mode Group -->
+		<Control name="trim"				type="trigger" options="receive"/>
+		<Control name="latch"				type="trigger" options="receive"/>
+		<Control name="read"				type="trigger" options="receive"/>
+		<Control name="off"					type="trigger" options="receive"/>
+		<Control name="write"				type="trigger" options="receive"/>
+		<Control name="touch"				type="trigger" options="receive"/>
+		
+		<Control name="trimLED"				options="transmit"/>
+		<Control name="latchLED"			options="transmit"/>
+		<Control name="readLED"				options="transmit"/>
+		<Control name="offLED"				options="transmit"/>
+		<Control name="writeLED"			options="transmit"/>
+		<Control name="touchLED"			options="transmit"/>
+		
+		<!-- Fader Banks -->
+		<Control name="bankLeft"			type="trigger" options="receive"/>
+		<Control name="bankRight"			type="trigger" options="receive"/>
+		<Control name="channelLeft"			type="trigger" options="receive"/>
+		<Control name="channelRight"		type="trigger" options="receive"/>
+
+ 		<!-- Command group -->
+		<Control name="save"				type="trigger" options="receive"/>
+		<Control name="undo"				type="trigger" options="receive"/>
+		<Control name="tool"				type="trigger" options="receive"/>
+		<Control name="editMode"			type="trigger" options="receive"/>
+		<Control name="shift"				type="trigger" options="receive"/>
+		<Control name="alt"					type="trigger" options="receive"/>
+		<Control name="option"				type="trigger" options="receive"/>
+		<Control name="control"				type="trigger" options="receive"/>
+
+		<Control name="saveLED" options="transmit"/>
+		<Control name="undoLED" options="transmit"/>
+
+		<!-- Transport -->
+		<Control name="audition"			type="trigger" options="transmit receive"/>
+		<Control name="pre"					type="trigger" options="transmit receive"/>
+		<Control name="post"				type="trigger" options="transmit receive"/>
+		<Control name="in"					type="trigger" options="receive"/>	
+		<Control name="out"					type="trigger" options="receive"/>
+		<Control name="preLED"				options="transmit"/>	
+		<Control name="inLED"				options="transmit"/>	
+		<Control name="outLED"				options="transmit"/>
+
+		<Control name="rtz"					type="trigger" options="receive"/>
+		<Control name="end"					type="trigger" options="receive"/>
+		<Control name="online"				type="trigger" options="receive"/>
+		<Control name="cycle"				type="trigger" options="receive"/>
+		<Control name="quickPunch"			type="trigger" options="receive"/>
+		<Control name="cycleLED"			options="transmit"/>
+
+		<Control name="rewind"				type="trigger" options="receive"/>
+		<Control name="ff"					type="trigger" options="receive"/>
+		<Control name="stop"				type="trigger" options="receive"/>
+		<Control name="play"				type="trigger" options="receive"/>
+		<Control name="record"				type="trigger" options="receive"/>
+		<Control name="rewindLED"			options="transmit"/>
+		<Control name="ffLED"				options="transmit"/>
+		<Control name="stopLED"				options="transmit"/>
+		<Control name="playLED"				options="transmit"/>
+		<Control name="recordLED"			options="transmit"/>
+
+		<!-- Navigation -->
+		<Control name="up"					type="trigger" options="receive"/>
+		<Control name="down"				type="trigger" options="receive"/>
+		<Control name="left"				type="trigger" options="receive"/>
+		<Control name="right"				type="trigger" options="receive"/>
+		<Control name="zoom"				type="trigger" options="receive"/>
+		<Control name="shuttle"				type="trigger" options="receive"/>
+		<Control name="scrub"				type="trigger" options="receive"/>
+		<Control name="zoomLED"				options="transmit"/>
+
+		<!--  Foot switches -->	
+		<Control name="footSwitch1" type="" options="receive" > <MidiMessage status="#90" address="#66"/> </Control>
+		<Control name="footSwitch2" type="" options="receive" > <MidiMessage status="#90" address="#67"/> </Control>	
+		
+		<!-- Display LEDs -->
+		<Control name="timecodeLED" options="transmit"/>
+		<Control name="feetLED"		options="transmit"/>
+		<Control name="beatLED"		options="transmit"/>
+		<Control name="anysoloLED"	options="transmit"/>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- Displays -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="textCell[0]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[1]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[2]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[3]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[4]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[5]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[6]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[7]" type="textdisplay" options="transmit public"/>
+		
+		<!-- editor displays (not on device) -->
+		<Control name="editorCell[0]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[1]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[2]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[3]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[4]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[5]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[6]" type="textdisplay" options="transmit public"/>
+		<Control name="editorCell[7]" type="textdisplay" options="transmit public"/>
+
+		<Control name="timeCode"	options="transmit fastupdate"/>
+
+		<Control name="selectText"	options="transmit"/>
+
+		<!-- ******************************************************************************************** -->
+        <!-- Jog/Scrub -->
+        <!-- ******************************************************************************************** -->
+	
+		<Control name="wheel"       type="relative" options="receive"> <MidiMessage status="Controller" address="#0D"/> </Control>
+		<Control name="scrub"		type="trigger"  options="transmit receive"/>
+		<Control name="jog"			type="trigger"  options="transmit receive"/>
+	</Controls>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<Strip name="plugVpot[0]">
+					<Relative control="plugVpot[0]"  param="value"/>
+					<Value control="plugLedRing[0]"  param="value"/>
+					<DefaultValue control="plugSelect[0]" param="value"/>
+					<String control="plugTextTop[0]" param="title"/>
+					<String control="plugTextBottom[0]" param="value"/>
+				</Strip>
+				<Strip name="plugVpot[1]">
+					<Relative control="plugVpot[1]"  param="value"/>
+					<Value control="plugLedRing[1]"  param="value"/>
+					<DefaultValue control="plugSelect[1]" param="value"/>
+					<String control="plugTextTop[1]" param="title"/>
+					<String control="plugTextBottom[1]" param="value"/>
+				</Strip>
+				<Strip name="plugVpot[2]">
+					<Relative control="plugVpot[2]"  param="value"/>
+					<Value control="plugLedRing[2]"  param="value"/>
+					<DefaultValue control="plugSelect[2]" param="value"/>
+					<String control="plugTextTop[2]" param="title"/>
+					<String control="plugTextBottom[2]" param="value"/>
+				</Strip>
+				<Strip name="plugVpot[3]">
+					<Relative control="plugVpot[3]"  param="value"/>
+					<Value control="plugLedRing[3]"  param="value"/>
+					<DefaultValue control="plugSelect[3]" param="value"/>
+					<String control="plugTextTop[3]" param="title"/>
+					<String control="plugTextBottom[3]" param="value"/>
+				</Strip>
+				<Strip name="F1"><Toggle control="F1" param="value" options="above"/></Strip>
+				<Strip name="F2"><Toggle control="F2" param="value" options="above"/></Strip>
+				<Strip name="F3"><Toggle control="F3" param="value" options="above"/></Strip>
+				<Strip name="F4"><Toggle control="F4" param="value" options="above"/></Strip>
+				<Strip name="F5"><Toggle control="F5" param="value" options="above"/></Strip>
+				<Strip name="F6"><Toggle control="F6" param="value" options="above"/></Strip>
+				<Strip name="F7"><Toggle control="F7" param="value" options="above"/></Strip>
+				<Strip name="F8"><Toggle control="F8" param="value" options="above"/></Strip>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			<Command control="F1" command.category="Console"   	command.name="Show Inputs"/>		
+			<Command control="F2" command.category="Console"   	command.name="Show Track"/>
+			<Command control="F3" command.category="View"      	command.name="Console"/>			
+			<Command control="F4" command.category="Console"   	command.name="Open Channel"/>      
+			<Command control="F5" command.category="Console"   	command.name="Add Insert"/>		
+			<Command control="F6" command.category="Console"   	command.name="Add Send"/>		
+			<Command control="F7" command.category="Console"   	command.name="Show Channel Editor"/>	
+			<Command control="F8" command.category="View"   	command.name="Toggle Floating Windows"/>
+
+			<Command control="NumPad 1"		command.category="Marker"	command.name="Recall Marker 1"/>		
+			<Command control="NumPad 2"		command.category="Marker"	command.name="Recall Marker 2"/>
+			<Command control="NumPad 3"		command.category="Marker"	command.name="Recall Marker 3"/>
+			<Command control="NumPad 4"		command.category="Marker"	command.name="Recall Marker 4"/>
+			<Command control="NumPad 5"		command.category="Marker"	command.name="Recall Marker 5"/>
+			<Command control="NumPad 6"		command.category="Marker"	command.name="Recall Marker 6"/>
+			<Command control="NumPad 7"		command.category="Marker"	command.name="Recall Marker 7"/>
+			<Command control="NumPad 8"		command.category="Marker"	command.name="Recall Marker 8"/>
+			<Command control="NumPad 9"		command.category="Marker"	command.name="Recall Marker 9"/>			
+			
+			<Command control="transport"	command.category="View"			command.name="Toggle Optional Views"/>		
+			<Command control="mixWindow"	command.category="View"			command.name="Console"/>
+			<Command control="altWindow"	command.category="View"			command.name="Browser"/>
+			<Command control="editWindow"	command.category="View"			command.name="Editor"/>
+			<Command control="markerWindow"	command.category="View"			command.name="Open Marker Track"/>
+			<Command control="statusWindow"	command.category="View"			command.name="Inspector"/>
+
+			<Variant control="zoom" options="lock" statusled="zoomLED">
+				<!-- [Zoom] not pressed -->
+				<Group>
+					<Command control="up"    command.category="Navigation" command.name="Up"    options="autorepeat"/>
+					<Command control="down"  command.category="Navigation" command.name="Down"  options="autorepeat"/>
+					<Command control="left"  command.category="Navigation" command.name="Left"  options="autorepeat"/>
+					<Command control="right" command.category="Navigation" command.name="Right" options="autorepeat"/>	
+				</Group>
+				
+				<!-- [Zoom] pressed -->
+				<Group>
+					<Command control="up"    command.category="Zoom" command.name="Zoom Out Vertical"/>
+					<Command control="down"  command.category="Zoom" command.name="Zoom In Vertical"/>
+					<Command control="left"  command.category="Zoom" command.name="Zoom Out"/>
+					<Command control="right" command.category="Zoom" command.name="Zoom In"/>	
+				</Group>
+			</Variant>
+
+			<Command control="footSwitch1"	command.category="Transport" command.name="Toggle Start"/>
+			<Command control="footSwitch2"	command.category="Transport" command.name="Record"/>
+
+			<Command control="editPaste"	command.category="Edit" command.name="Paste"/>
+			<Command control="editCut"		command.category="Edit" command.name="Cut"/>
+			<Command control="editCapture"	command.category="Edit" command.name="Select"/>
+			<Command control="editDelete"	command.category="Edit" command.name="Delete"/>
+			<Command control="editCopy"		command.category="Edit" command.name="Copy"/>
+			<Command control="editSplit"	command.category="Edit" command.name="Split at Cursor"/>
+			
+			<Command control="NumPad Enter"  command.category="Navigation" command.name="Enter"/>
+
+			<Variant control="shift">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Command control="undo" command.category="Edit" command.name="Undo"/>				
+					<Command control="save" command.category="File" command.name="Save"/>
+					<Command control="tool" command.category="Toolbar" command.name="Next Tool"/>
+					<Command control="editMode" command.category="Toolbar" command.name="Previous Tool"/>
+				</Group>
+				
+				<!-- [Shift] pressed -->
+				<Group>
+					<Command control="undo" command.category="Edit" command.name="Redo"/>
+					<Command control="save" command.category="File" command.name="Save As"/>					
+				</Group>
+			</Variant>
+			
+			<!-- ******************************************************************************************** -->
+			<!-- Script interaction -->
+			<!-- ******************************************************************************************** -->
+
+			<String control="selectText" param="assignMode"/>
+			
+			<Radio control="pan" 		param="assignMode" value="0"/> <!-- kPanMode -->
+			<Radio control="panLED"		param="assignMode" value="0"/>
+			
+			<Radio control="sendA"		param="assignMode" value="1"/> <!-- kSendModeA -->
+			<Radio control="sendALED"	param="assignMode" value="1"/>
+			
+			<Radio control="sendB"		param="assignMode" value="2"/> <!-- kSendModeB -->
+			<Radio control="sendBLED"	param="assignMode" value="2"/>
+
+			<Radio control="sendC" 		param="assignMode" value="3"/> <!-- kSendModeC -->
+			<Radio control="sendCLED"	param="assignMode" value="3"/>
+
+			<Radio control="sendD" 		param="assignMode" value="4"/> <!-- kSendModeD -->
+			<Radio control="sendDLED"	param="assignMode" value="4"/>
+
+			<Radio control="sendE" 		param="assignMode" value="5"/> <!-- kSendModeE -->
+			<Radio control="sendELED"	param="assignMode" value="5"/>
+			
+			<Radio control="assignIn" 		param="assignMode" value="6"/> <!-- kInputMode -->
+			<Radio control="assignInLED"	param="assignMode" value="6"/>
+
+			<Radio control="assignOut" 		param="assignMode" value="7"/> <!-- kOutputMode -->
+			<Radio control="assignOutLED"	param="assignMode" value="7"/>
+			
+			<Value control="bypassLED" param="bypassMode"/> <!-- Bypass LED (always on) -->
+									
+			<!-- Channel strips connected to alias parameters -->
+			<foreach variable="$ch" count="8">
+				<String control="textCell[$ch]"			param="labelString$ch"/>
+				<String control="editorCell[$ch]"		param="editorString$ch"/> <!-- for editor -->
+
+				<Relative control="vpot[$ch]"           param="potValue$ch"/>
+				<Value control="ledRing[$ch]"           param="potValue$ch"/>
+				<DefaultValue control="vpotSelect[$ch]" param="potValue$ch"/>
+			</foreach>
+						
+		</Global>
+        
+		<!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<!-- 8 Channel Strips -->
+			<PlacementBank target="RemoteBank" pagesize="8" name="ChannelBankElement">
+				<foreach variable="$ch" count="8">
+					<Strip onConnect="onConnectChannel($ch)"> 
+						<!-- Sends (used for script interaction) -->
+						<Bank target="Sends" name="SendsBankElement">
+							<foreach variable="$sendIndex" count="5">
+								<Strip onConnect="onConnectChannelSend($ch,$sendIndex)"/>
+							</foreach>
+						</Bank>
+									
+						<Value control="fader[$ch]"				param="volume"/>
+						<Touch control="faderTouch[$ch]"		param="volume"/>
+													
+						<!-- Note: pots + displays are connected to alias parameters -->
+
+						<Value control="meter[$ch][0]"          param="level1"/>
+						<Value control="meter[$ch][1]"          param="level2"/>
+						<Value control="stereo[$ch]"            param="stereo"/>
+
+						<Toggle control="record[$ch]"           param="recordArmed"/>
+						<Toggle control="solo[$ch]"             param="solo" options="momentary"/>
+						<Toggle control="mute[$ch]"             param="mute" options="momentary"/>
+						<Toggle control="select[$ch]"           param="selected"/>
+						
+						<using device="Inserts">
+							<Toggle control="insert[$ch]"       param="bypassAll"/>
+							<Value control="hasInserts[$ch]"    param="hasSlots"/>
+						</using>
+					</Strip>
+				</foreach>
+
+				<!-- Bank Scroll Buttons -->
+				<ScrollButton control="channelLeft"  direction="stepleft"/>
+				<ScrollButton control="channelRight" direction="stepright"/>
+				<ScrollButton control="bankLeft"     direction="pageleft"/>
+				<ScrollButton control="bankRight"    direction="pageright"/>				
+			</PlacementBank>
+			
+			
+			<!-- Automation Modes for the selected channel -->			
+			<ScrollBank target="FollowBank" pagesize="1" name="MixerAutomation">
+				<Strip> 
+					<!-- Automation Mode -->
+					<!--				
+					<Radio control="trim"			param="automationMode" value="5"/>
+					<Radio control="trimLED"		param="automationMode" value="5"/>
+					-->
+					<Radio control="off"		    param="automationMode" value="0"/>
+					<Radio control="offLED"		    param="automationMode" value="0"/>
+					
+					<Radio control="read"		    param="automationMode" value="1"/>
+					<Radio control="readLED"		param="automationMode" value="1"/>
+
+					<Radio control="touch"			param="automationMode" value="2"/>
+					<Radio control="touchLED"		param="automationMode" value="2"/>
+
+					<Radio control="latch"			param="automationMode" value="3"/>
+					<Radio control="latchLED"		param="automationMode" value="3"/>
+					
+					<Radio control="write"			param="automationMode" value="4"/>
+					<Radio control="writeLED"		param="automationMode" value="4"/>
+					
+				</Strip>
+			</ScrollBank>
+			
+			<Value  control="anysoloLED"     param="anySolo"/>
+		</DeviceMapping>
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<Radio control="timecodeLED"		param="primaryTimeFormat" value="3"/>
+			<Radio control="feetLED"			param="primaryTimeFormat" value="5"/>
+			<Radio control="beatLED"			param="primaryTimeFormat" value="2"/>
+
+			<Segmented control="timeCode" param="primaryTime"/>
+							
+			<Relative control="wheel"  param="freeCursorTime"/>
+		
+			<Command control="cycle"   command.category="Transport" command.name="Toggle Loop"/>
+			<Value control="cycleLED"  param="loop"/>
+
+			<Command control="pre"     command.category="Transport" command.name="Preroll"/>
+			<Value  control="preLED"   param="preroll"/>
+			
+			<Command control="in"      command.category="Transport" command.name="Autopunch"/>
+			<Value  control="inLED"    param="punch"/>
+			<Command control="out"	   command.category="Transport" command.name="Autopunch"/>
+			<Value  control="outLED"   param="punch"/>
+
+			<Command control="play"    command.category="Transport" command.name="Start"/>
+			<Value control="playLED"   param="start"/>
+						
+			<Command control="stop"    command.category="Transport" command.name="Stop"/>
+			<Value control="stopLED"   param="stop"/>
+			
+			<Command control="rtz"     command.category="Transport" command.name="Return to Zero"/>
+
+			<Command control="end"     command.category="Transport" command.name="Goto Loop End"/>
+			
+			<Toggle control="record"   param="record"/>
+			<Value control="recordLED" param="record"/>
+			
+			<Touch control="rewind"    param="rewind"/>			
+			<Value control="rewindLED" param="rewind"/>
+			
+			<Touch control="ff"        param="fastForward"/>					
+			<Value control="ffLED"     param="fastForward"/>				
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

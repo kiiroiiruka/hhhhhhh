@@ -1,0 +1,43 @@
+import pgzrun
+TITLE='GAME'
+WIDTH=1000
+HEIGHT=1000
+
+a=Actor('a.png',topleft=(0,0))#a=キャラクター(自分)
+a1=3#aのスピード
+
+
+def draw():
+    screen.clear()
+    global a1
+    
+    a.draw()
+def update():
+    global a1
+
+    if	keyboard.down:
+        if  a.y<1000:
+            a.y += a1
+        
+    if	keyboard.up:
+        if  a.y>0:
+            a.y -= a1
+        
+    if	keyboard.right:
+        if  a.x<1000:
+            a.x += a1
+        
+    if	keyboard.left:
+        if  a.x>0:
+            a.x -= a1
+        
+pgzrun.go()
+            
+        
+            
+        
+    
+    
+    
+    
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 6 x ENCODERS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="encoder[0]" title="Encoder 1" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#1C" channel="#02"/>
+		</Control>
+
+		<Control name="encoder[1]" title="Encoder 2" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#1D" channel="#02"/>
+		</Control>
+
+		<Control name="encoder[2]" title="Encoder 3" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#1E" channel="#02"/>
+		</Control>
+
+		<Control name="encoder[3]" title="Encoder 4" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#1F" channel="#02"/>
+		</Control>
+
+		<Control name="encoder[4]" title="Encoder 5" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#20" channel="#02"/>
+		</Control>
+
+		<Control name="encoder[5]" title="Encoder 6" type="knob" options="receive public">
+			<MidiMessage status="#B0" address="#21" channel="#02"/>
+		</Control>
+
+	</Controls>
+
+</ControlSurface>

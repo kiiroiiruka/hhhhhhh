@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Radium49/61 new model"
+	
+	classID="{624079B8-98FE-4754-8F4B-1E2A8AD206C3}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="RadiumNew.surface.xml"
+	
+	imageFile="Radium49.png"
+	textFile="Radium.txt"
+	/>

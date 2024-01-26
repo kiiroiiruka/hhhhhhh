@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="FaderPort"
+	
+	classID="{A0C16DFE-2D4A-4cf8-AF46-21DE6294C277}"
+	category="Surface"
+	nativeCode="FaderPort"
+	surfaceFile="faderport.surface.xml"
+	
+	scriptFile="faderport.js"
+	scriptFile.functionName="createInstance"
+	
+	imageFile="FaderPort.png"
+	textFile="FaderPort.txt"
+	
+	skinFile="skin/"
+	formName="FaderPort"
+	
+	detectorPortName="FaderPort"
+	/>

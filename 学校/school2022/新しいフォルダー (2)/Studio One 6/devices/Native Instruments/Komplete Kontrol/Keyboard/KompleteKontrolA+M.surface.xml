@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<Files>
+		<File url="KompleteKontrolKnobsSet1.surface.xml"/>
+		<File url="KompleteKontrolKnobsSet2.surface.xml"/>
+	</Files>
+</ControlSurface>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Behringer"
+	name="BCF2000"
+	
+	classID="{008F5092-5FE1-40a0-AD05-253535D7F918}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="BCF2000.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="BCF2000.png"
+	textFile="BCF2000.txt"
+	/>

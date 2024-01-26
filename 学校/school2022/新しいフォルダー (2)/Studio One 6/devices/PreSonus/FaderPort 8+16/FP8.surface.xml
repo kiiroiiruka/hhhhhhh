@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Files -->
+	<!-- ******************************************************************************************** -->
+
+	<Files>
+		<File url="FP8FaderBank.surface.xml"/>
+		<File url="FPCommonControls.surface.xml"/>
+		<File url="FPCommonMappings.surface.xml"/>
+	</Files>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Remote Paging Sections -->
+	<!-- ******************************************************************************************** -->
+
+	<Sections>
+		<GenericSection name="main" rows="1" columns="8">
+			<foreach variable="$i" count="8">
+				<Slot control="fader[$i]" row="0" column="$i"/>
+			</foreach>
+		</GenericSection>
+		<GenericSection name="mainbuttons" rows="1" columns="8">
+			<foreach variable="$i" count="8">
+				<Slot control="selectButton[$i]" row="0" column="$i"/>
+			</foreach>
+		</GenericSection>
+	</Sections>
+
+</ControlSurface>

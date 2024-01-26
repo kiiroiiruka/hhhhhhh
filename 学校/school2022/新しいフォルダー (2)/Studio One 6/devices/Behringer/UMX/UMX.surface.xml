@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="R1" options="receive public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="R2" options="receive public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>	
+
+		<Control name="knob[2]" title="R3" options="receive public">
+			<MidiMessage status="Controller" address="74"/>
+		</Control>	
+
+		<Control name="knob[3]" title="R4" options="receive public">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+		<Control name="knob[4]" title="R5" options="receive public">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="knob[5]" title="R6" options="receive public">
+			<MidiMessage status="Controller" address="75"/>
+		</Control>	
+
+		<Control name="knob[6]" title="R7" options="receive public">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+		<Control name="knob[7]" title="R8" options="receive public">
+			<MidiMessage status="Controller" address="10"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x  BUTTON -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button[0]" title="B1" type="button" options="receive  public">
+			<MidiMessage status="Controller" address="97"/>
+		</Control>	
+
+		<Control name="button[1]" title="B2" type="button" options="receive public">
+			<MidiMessage status="Controller" address="96"/>
+		</Control>	
+
+		<Control name="button[2]" title="B3" type="button" options="receive public">
+			<MidiMessage status="Controller" address="66"/>
+		</Control>	
+
+		<Control name="button[3]" title="B4" type="button" options="receive public">
+			<MidiMessage status="Controller" address="67"/>
+		</Control>	
+
+		<Control name="button[4]" title="B5" type="button" options="receive public">
+			<MidiMessage status="Controller" address="80"/>
+		</Control>	
+
+		<Control name="button[5]" title="B6" type="button" options="receive public">
+			<MidiMessage status="Controller" address="81"/>
+		</Control>	
+
+		<!--  Behringer  assigns  this two buttons with a special behavior so we cant use it! -->
+		<Control name="button[6]" title="B7" type="button" options="receive public">
+			<MidiMessage status="Controller" address="82"/>
+		</Control>	
+
+		<Control name="button[7]" title="B8" type="button" options="receive public">
+			<MidiMessage status="Controller" address="83"/>
+		</Control>	
+
+	</Controls>
+
+</ControlSurface>

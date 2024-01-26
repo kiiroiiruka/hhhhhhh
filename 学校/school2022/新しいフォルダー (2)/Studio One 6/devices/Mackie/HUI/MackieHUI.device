@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Mackie"
+	name="HUI"
+	family="MackieFamily"
+	
+	classID="{DD428900-E2B0-477a-B27C-2730D0F373A6}"
+	category="Surface"
+	
+	nativeCode="MackieHUI"
+	surfaceFile="MackieHUI.surface.xml"
+	surfacePlacementSize="8"
+	
+	scriptFile="MackieHUI.js"
+	scriptFile.functionName="createInstance"
+
+	imageFile="MackieHUI.png"
+	textFile="MackieHUI.txt"
+
+	skinFile="skin/"
+	formName="MackieHUI"
+	/>

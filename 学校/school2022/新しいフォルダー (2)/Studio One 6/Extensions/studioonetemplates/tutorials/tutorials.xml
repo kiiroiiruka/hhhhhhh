@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HelpTutorialCollection
+	contentType="application/x.ccl-skin"
+	content="./content/;./content.package">
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Create Content' Template -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.CreateContent"
+		title="Create a podcast with or without video"
+		title-de="Podcast mit optionalem Video erstellen"
+		eventHandler="{41546B6D-03B5-431B-A7B4-3882AFCC4252}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="CreateContent.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="CreateContent.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="CreateContent.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="CreateContent.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="CreateContent.Step5"/>
+	</HelpTutorial>
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Create Content' Template (free version) -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.CreateContent.free"
+		title="Create a podcast"
+		title-de="Podcast erstellen"
+		eventHandler="{41546B6D-03B5-431B-A7B4-3882AFCC4252}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="CreateContent.free.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="CreateContent.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="CreateContent.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="CreateContent.free.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="CreateContent.Step5"/>
+	</HelpTutorial>
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Getting Started' Global Tutorial -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.GettingStarted"
+		title="Getting started with Studio One"
+		title-de="Mit Studio One starten"
+		title-es="Arrancando con Studio One"
+		title-fr="Démarrer avec Studio One"
+		title-it="Come iniziare con Studio One"
+		title-ja="Studio Oneをはじめよう"
+		title-ko="스튜디오원 시작하기"
+		title-pt="Começando no Studio One"
+		title-zh="从 Studio One 开始"
+		eventHandler="{3A20A644-8046-40ED-8005-2863D535B8CD}"
+		category="global">
+		<HelpTutorial.Step
+			id="Step1"
+			content="GettingStarted.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="GettingStarted.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="GettingStarted.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="GettingStarted.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="GettingStarted.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="GettingStarted.Step6"/>
+		<HelpTutorial.Step
+			id="Step7"
+			content="GettingStarted.Step7"/>
+	</HelpTutorial>
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Play Now' Template -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.PlayNow.VirtualInstrument.Drums"
+		title="Play a virtual instrument"
+		title-de="Ein virtuelles Instrument spielen"
+		eventHandler="{2ACB5E77-988B-4257-99F2-2E6BCC44A530}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="PlayNow.VirtualInstrument.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="PlayNow.VirtualInstrument.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="PlayNow.VirtualInstrument.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="PlayNow.VirtualInstrument.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="PlayNow.VirtualInstrument.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="PlayNow.VirtualInstrument.Step6"/>
+	</HelpTutorial>
+
+	<HelpTutorial id="PreSonus.StudioOne.PlayNow.VirtualInstrument.Piano"
+	title="Play a virtual instrument"
+	title-de="Ein virtuelles Instrument spielen"
+	eventHandler="{2ACB5E77-988B-4257-99F2-2E6BCC44A530}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="PlayNow.VirtualInstrument.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="PlayNow.VirtualInstrument.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="PlayNow.VirtualInstrument.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="PlayNow.VirtualInstrument.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="PlayNow.VirtualInstrument.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="PlayNow.VirtualInstrument.Step6"/>
+	</HelpTutorial>
+
+	<HelpTutorial id="PreSonus.StudioOne.PlayNow.VirtualInstrument.Synth"
+	title="Play a virtual instrument"
+	title-de="Ein virtuelles Instrument spielen"
+	eventHandler="{2ACB5E77-988B-4257-99F2-2E6BCC44A530}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="PlayNow.VirtualInstrument.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="PlayNow.VirtualInstrument.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="PlayNow.VirtualInstrument.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="PlayNow.VirtualInstrument.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="PlayNow.VirtualInstrument.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="PlayNow.VirtualInstrument.Step6"/>
+	</HelpTutorial>
+
+	<HelpTutorial id="PreSonus.StudioOne.PlayNow.Guitar"
+		title="Play a guitar"
+		title-de="Gitarre spielen"
+		eventHandler="{2ACB5E77-988B-4257-99F2-2E6BCC44A530}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="PlayNow.Guitar.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="PlayNow.Guitar.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="PlayNow.Guitar.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="PlayNow.Guitar.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="PlayNow.Guitar.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="PlayNow.Guitar.Step6"/>
+		<HelpTutorial.Step
+			id="Step7"
+			content="PlayNow.Guitar.Step7"/>
+	</HelpTutorial>
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Produce Beats' Template -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.ProduceBeats"
+		title="Build a new beat from scratch"
+		title-de="Einen neuen Beat erstellen"
+		eventHandler="{66925F38-7984-4EC6-BB47-873F609C68E0}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="ProduceBeats.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="ProduceBeats.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="ProduceBeats.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="ProduceBeats.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="ProduceBeats.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="ProduceBeats.Step6"/>
+	</HelpTutorial>
+
+	<!-- ******************************************************************************************** -->
+	<!-- 'Record Now' Template -->
+	<!-- ******************************************************************************************** -->
+
+	<HelpTutorial id="PreSonus.StudioOne.RecordNow.FullBand"
+		title="New audio recording"
+		title-de="Neue Aufnahme"
+		eventHandler="{12464D7D-F836-489A-AD7D-B7C80CBE83FC}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="RecordNow.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="RecordNow.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="RecordNow.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="RecordNow.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="RecordNow.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="RecordNow.Step6"/>
+	</HelpTutorial>
+
+	<HelpTutorial id="PreSonus.StudioOne.RecordNow.GuitarAndVocal"
+		title="New audio recording"
+		title-de="Neue Aufnahme"
+		eventHandler="{12464D7D-F836-489A-AD7D-B7C80CBE83FC}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="RecordNow.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="RecordNow.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="RecordNow.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="RecordNow.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="RecordNow.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="RecordNow.Step6"/>
+	</HelpTutorial>
+
+	<HelpTutorial id="PreSonus.StudioOne.RecordNow.SingleTrack"
+		title="New audio recording"
+		title-de="Neue Aufnahme"
+		eventHandler="{12464D7D-F836-489A-AD7D-B7C80CBE83FC}">
+		<HelpTutorial.Step
+			id="Step1"
+			content="RecordNow.Step1"/>
+		<HelpTutorial.Step
+			id="Step2"
+			content="RecordNow.Step2"/>
+		<HelpTutorial.Step
+			id="Step3"
+			content="RecordNow.Step3"/>
+		<HelpTutorial.Step
+			id="Step4"
+			content="RecordNow.Step4"/>
+		<HelpTutorial.Step
+			id="Step5"
+			content="RecordNow.Step5"/>
+		<HelpTutorial.Step
+			id="Step6"
+			content="RecordNow.Step6"/>
+	</HelpTutorial>
+
+</HelpTutorialCollection>

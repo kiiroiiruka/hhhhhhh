@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Doepfer"
+	name="Pocket Control"
+	
+	classID="{A68CA6CD-F4D5-4d8e-A7D0-BB92533E5639}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="PocketControl.surface.xml"
+	
+	imageFile="PocketControl.png"
+	textFile="PocketControl.txt"
+	/>

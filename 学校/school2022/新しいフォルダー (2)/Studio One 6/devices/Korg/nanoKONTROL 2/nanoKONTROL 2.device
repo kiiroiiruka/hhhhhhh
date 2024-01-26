@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="KORG"
+	name="nanoKONTROL 2"
+	family="MackieFamily"
+	
+	classID="{5E5EB1BD-D2EC-45b6-88B5-71F1FE12D5CB}"
+	category="Surface"
+	
+	nativeCode="MackieControl"
+	surfaceFile="nanoKONTROL 2.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="nanoKONTROL 2.png"
+	textFile="nanoKONTROL 2.txt"
+	
+	hostDataFile="KORG nanoKONTROL 2.surfacedata"	
+	/>

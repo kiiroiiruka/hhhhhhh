@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS FOR FP2 -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- FADER/ENCODER/FOOTSWITCH -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader" title="Fader" type="fader" options="transmit receive public"> <MidiMessage status="#E0" channel="0"/> </Control>
+				
+		<Control name="faderTouch" type="trigger" options="receive"> <MidiMessage status="#90" address="#68"/> </Control>
+		
+	    <Control name="encoder" type="relative" options="receive"> <MidiMessage status="#B0" address="#10" options="signed plain"/> </Control>
+		<Control name="pushEncoder" type="trigger"  options="receive"> <MidiMessage status="#90" address="#20"/> </Control>
+		
+		<Control name="footSwitch" title="Footswitch" type="button" options="receive public"> <MidiMessage status="#90" address="#66"/> </Control>
+		    
+		<!-- ******************************************************************************************** -->
+        <!-- Buttons + LEDs -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="armButton"	type="trigger" options="receive"> <MidiMessage status="#90" address="#00"/> </Control>
+		<Control name="soloButton"	type="trigger" options="receive"> <MidiMessage status="#90" address="#08"/> </Control>
+		<Control name="muteButton"	type="trigger" options="receive"> <MidiMessage status="#90" address="#10"/> </Control>
+
+		<Control name="armLED"	options="transmit"> <MidiMessage status="#90" address="#00"/> </Control>
+		<Control name="soloLED"	options="transmit"> <MidiMessage status="#90" address="#08"/> </Control>
+		<Control name="muteLED" options="transmit"> <MidiMessage status="#90" address="#10"/> </Control>		
+
+		<Control name="bypassButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#03"/> </Control>
+		<Control name="bypassLED"       options="transmit"> <MidiMessage status="#90" address="#03"/> </Control>
+				
+		<!-- Navigation Section -->
+		<Control name="Prev" type="trigger" options="receive"> <MidiMessage status="#90" address="#2E"/> </Control>
+		<Control name="Next" type="trigger" options="receive"> <MidiMessage status="#90" address="#2F"/> </Control>
+		<Control name="PrevLED" options="transmit"> <MidiMessage status="#90" address="#2E"/> </Control>
+		<Control name="NextLED" options="transmit"> <MidiMessage status="#90" address="#2F"/> </Control>
+		
+		<Control name="linkButton"		type="trigger" options="receive"> <MidiMessage status="#90" address="#05"/> </Control>
+		<Control name="panButton" 		type="trigger" options="receive"> <MidiMessage status="#90" address="#2A"/> </Control>
+		<Control name="channelButton" 	type="trigger" options="receive"> <MidiMessage status="#90" address="#36"/> </Control>
+		<Control name="scrollButton"	type="trigger" options="receive"> <MidiMessage status="#90" address="#38"/> </Control>
+		
+		<Control name="masterButton"	title="F1"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3A"/> </Control>
+		<Control name="clickButton"		title="F2"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3B"/> </Control>
+		<Control name="sectionButton"	title="F3"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3C"/> </Control>
+		<Control name="markerButton"	title="F4"	type="trigger" options="receive public"> <MidiMessage status="#90" address="#3D"/> </Control>
+		
+		<Control name="linkLED"		options="transmit"> <MidiMessage status="#90" address="#05"/> </Control>
+		<Control name="panLED"		options="transmit"> <MidiMessage status="#90" address="#2A"/> </Control>
+		<Control name="channelLED"	options="transmit"> <MidiMessage status="#90" address="#36"/> </Control>
+		<Control name="scrollLED"	options="transmit"> <MidiMessage status="#90" address="#38"/> </Control>
+		
+		<Control name="linkLEDColor"	type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#05"/> </Control>
+		<Control name="panLEDColor"		type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#2A"/> </Control>
+		<Control name="channelLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#36"/> </Control>
+		<Control name="scrollLEDColor" 	type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#38"/> </Control>
+		
+		<Control name="masterLED"	options="transmit"> <MidiMessage status="#90" address="#3A"/> </Control>
+		<Control name="clickLED"	options="transmit"> <MidiMessage status="#90" address="#3B"/> </Control>
+		<Control name="sectionLED"	options="transmit"> <MidiMessage status="#90" address="#3C"/> </Control>
+		<Control name="markerLED"	options="transmit"> <MidiMessage status="#90" address="#3D"/> </Control>		
+
+		<!-- Modifiers-->
+		<Control name="shiftButton"	type="trigger" options="receive">  <MidiMessage status="#90" address="#46"/> </Control>
+		<Control name="shiftLED"	type="trigger" options="transmit"> <MidiMessage status="#90" address="#46"/> </Control>
+
+		<!-- Automation -->
+		<Control name="touchButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#4D"/> </Control>
+		<Control name="writeButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#4B"/> </Control>
+		<Control name="readButton"  type="trigger" options="receive"> <MidiMessage status="#90" address="#4A"/> </Control>
+		
+		<Control name="touchLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4D"/> </Control>
+		<Control name="writeLEDColor" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4B"/> </Control>
+		<Control name="readLEDColor"  type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#4A"/> </Control>
+
+		<Control name="touchLED"   options="transmit"> <MidiMessage status="#90" address="#4D"/> </Control>
+		<Control name="writeLED"   options="transmit"> <MidiMessage status="#90" address="#4B"/> </Control>
+		<Control name="readLED"    options="transmit"> <MidiMessage status="#90" address="#4A"/> </Control>
+		
+		<!-- Transport -->
+		<Control name="loopButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#56"/> </Control>	
+		<Control name="rewindButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#5B"/> </Control>
+		<Control name="ffButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#5C"/> </Control>
+		<Control name="stopButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#5D"/> </Control>
+		<Control name="playButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#5E"/> </Control>
+		<Control name="recordButton" type="trigger" options="receive"> <MidiMessage status="#90" address="#5F"/> </Control>
+		
+		<Control name="loopLED"   options="transmit"> <MidiMessage status="#90" address="#56"/> </Control>
+		<Control name="rewindLED" options="transmit"> <MidiMessage status="#90" address="#5B"/> </Control>
+		<Control name="ffLED"     options="transmit"> <MidiMessage status="#90" address="#5C"/> </Control>
+		<Control name="stopLED"   options="transmit"> <MidiMessage status="#90" address="#5D"/> </Control>
+		<Control name="playLED"   options="transmit"> <MidiMessage status="#90" address="#5E"/> </Control>
+		<Control name="recordLED" options="transmit"> <MidiMessage status="#90" address="#5F"/> </Control>
+		
+	</Controls>
+		
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+	
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+			
+				<Strip name="fader">
+					<Value control="fader" param="value" options="above"/>
+					<Touch control="faderTouch" param="value" options="above"/>
+				</Strip>
+												
+				<Strip name="masterButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="masterButton" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="clickButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="clickButton" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="sectionButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="sectionButton" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="markerButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="markerButton" param="value" options="above"/></ParamVariant></Strip>
+				
+				<Strip name="footSwitch">
+					<Value control="footSwitch" param="value" options="above"/>
+				</Strip>
+				
+			</Bank>
+		</GenericMapping>
+		
+		<RecentParamMapping onConnect="updateLinkState">
+			
+			<ParamVariant using="@global" param="encoderMode" name="EncoderRecentMappingElement">
+				<Group value="1">  <!-- must be kLinkMode -->
+					<Relative control="encoder" param="value"/>
+					<DefaultValue control="pushEncoder" param="value"/>
+				</Group>				
+				<Group value="0,2,3,4,5,6,7,8"/> <!-- no encoder mapping here for other modes -->
+			</ParamVariant>
+			
+		</RecentParamMapping>
+		
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING (script interaction) -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			
+			<Toggle control="shiftButton" param="shiftModifier" options="momentary"/>
+			<Value control="shiftLED" param="shiftModifier"/>
+			
+			<Status control="Prev" control2="PrevLED"/>
+			<Status control="Next" control2="NextLED"/>
+						
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<PlainValue control="touchLEDColor" param="autoTouchColor"/>
+					<PlainValue control="writeLEDColor" param="autoWriteColor"/>
+					<PlainValue control="readLEDColor"  param="autoReadColor"/>
+				</Group>
+				<Group>
+					<PlainValue control="touchLEDColor" param="autoLatchColor"/>
+					<PlainValue control="writeLEDColor" param="autoTrimColor"/>
+					<PlainValue control="readLEDColor"  param="autoOffColor"/>
+					
+					<Command control="Prev" command.category="Edit" command.name="Undo"/>
+					<Command control="Next" command.category="Edit" command.name="Redo"/>				
+				</Group>
+			</ParamVariant>
+			
+			<!-- Encoder mode selection -->
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<!--
+					<Radio control="linkButton" param="encoderMode" value="1" options="toggle" offvalue="0"/>					
+					<Radio control="panButton" param="encoderMode" value="2" options="toggle" offvalue="0"/> 
+					<Radio control="channelButton" param="encoderMode" value="3" options="toggle" offvalue="0"/>
+					-->
+
+					<Radio control="scrollButton" param="encoderMode" value="4" options="toggle" offvalue="0"/> <!-- kScrollMode -->
+					
+					<Radio control="masterButton" param="encoderMode" value="6" options="toggle" offvalue="0"/> <!-- kMasterMode -->
+					<Radio control="masterLED" param="encoderMode" value="6"/>
+					
+					<!-- click button is handled separately -->
+					
+					<Radio control="sectionButton" param="encoderMode" value="7" options="toggle" offvalue="0"/> <!-- kSectionMode -->
+					<Radio control="sectionLED" param="encoderMode" value="7"/>
+					
+					<Radio control="markerButton" param="encoderMode" value="8" options="toggle" offvalue="0"/> <!-- kMarkerMode -->
+					<Radio control="markerLED" param="encoderMode" value="8"/>
+				</Group>
+				<Group>
+					<Radio control="scrollButton" param="encoderMode" value="5" options="toggle" offvalue="4"/> <!-- kZoomMode (off: back to kScrollMode) -->					
+					
+					<!--
+					<Toggle control="linkButton" param="lockEncoder"/>
+					<Toggle control="panButton" param="flipEncoder"/>
+					<Toggle control="channelButton" param="lockChannel"/>
+					-->
+				</Group>
+			</ParamVariant>
+
+			<!-- call script for special handling of Link/Pan/Channel buttons -->
+			<Push control="linkButton" param="linkButtonHandler"/>
+			<Push control="panButton" param="panButtonHandler"/>
+			<Push control="channelButton" param="channelButtonHandler"/>
+			
+			<Radio control="linkLED" param="encoderMode" value="1"/>
+			<Radio control="panLED" param="encoderMode" value="2"/>
+			<!--
+			<Radio control="channelLED" param="encoderMode" value="3"/>
+			-->
+			<Value control="channelLED" param="channelModeOrLock"/> <!-- keep LED on while channel is locked -->
+			<Value control="scrollLED" param="scrollZoomMode"/>
+			
+			<PlainValue control="linkLEDColor" param="linkColor"/>
+			<PlainValue control="panLEDColor" param="panFlipColor"/>
+			<PlainValue control="channelLEDColor" param="channelLinkColor"/>
+			<PlainValue control="scrollLEDColor" param="scrollZoomColor"/>
+			
+			<ParamVariant param="encoderMode" name="MainEncoderModeMapping">
+				
+				<!-- kNavigationMode -->
+				<Group value="0">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Navigation" command.name="Left" options="autorepeat"/>
+							<Command control="Next" command.category="Navigation" command.name="Right" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<Command control="pushEncoder" command.category="Navigation" command.name="Enter"/>
+					<Command control="encoder" command.category="Navigation" command.name="Down" command2.category="Navigation" command2.name="Up"/>
+				</Group>
+
+				<!-- kLinkMode -->
+				<Group value="1">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Console" command.name="Previous Channel" options="autorepeat"/>
+							<Command control="Next" command.category="Console" command.name="Next Channel" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<!-- link mode for encoder is handled in RecentParamMapping -->
+				</Group>
+
+				<!-- kPanMode -->
+				<Group value="2">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Console" command.name="Previous Channel" options="autorepeat"/>
+							<Command control="Next" command.category="Console" command.name="Next Channel" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<!-- pan mode for encoder is handled in channel strip mapping incl. flip -->
+				</Group>
+
+				<!-- kChannelMode -->
+				<Group value="3">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Console" command.name="Previous Channel" options="autorepeat"/>
+							<Command control="Next" command.category="Console" command.name="Next Channel" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<Invoke control="pushEncoder" onReceive="updateLockedChannel"/>
+					<Command control="encoder"	command.category="Console" command.name="Next Channel" 
+												command2.category="Console" command2.name="Previous Channel"/>		
+				</Group>
+								
+				<!-- kScrollMode -->
+				<Group value="4">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Navigation" command.name="Previous Track" options="autorepeat"/>
+							<Command control="Next" command.category="Navigation" command.name="Next Track" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<Command control="pushEncoder" command.category="View" command.name="Fit Timeline to Contents"/>
+					<using device="device:///TransportPanel">
+						<Relative control="encoder" param="freeCursorTime"/>
+					</using>
+				</Group>
+
+				<!-- kZoomMode -->
+				<Group value="5">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Zoom" command.name="Zoom Out Vertical" options="autorepeat"/>
+							<Command control="Next" command.category="Zoom" command.name="Zoom In Vertical" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<Command control="pushEncoder" command.category="Zoom" command.name="Undo Zoom"/>	
+					<Command control="encoder" command.category="Zoom" command.name="Zoom In" command2.category="Zoom" command2.name="Zoom Out"/>
+				</Group>
+
+				<!-- kMasterMode -->
+				<Group value="6">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Console" command.name="Previous Channel" options="autorepeat"/>
+							<Command control="Next" command.category="Console" command.name="Next Channel" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<using device="device:///MixerConsole">
+						<Bank target="MasterBank" name="MasterBankElement">
+							<Strip>
+								<Relative control="encoder" param="volume"/>
+								<DefaultValue control="pushEncoder" param="volume"/>
+							</Strip>
+						</Bank>
+					</using>					
+				</Group>
+
+				<!-- kSectionMode -->
+				<Group value="7">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Arranger" command.name="Goto Previous Section" options="autorepeat"/>
+							<Command control="Next" command.category="Arranger" command.name="Goto Next Section" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<!-- Push currently unassigned -->
+					<Command control="encoder" command.category="Edit" command.name="Nudge" command2.category="Edit" command2.name="Nudge Back"/>
+				</Group>
+				
+				<!-- kMarkerMode -->
+				<Group value="8">
+					<ParamVariant param="shiftModifier">
+						<Group>
+							<Command control="Prev" command.category="Marker" command.name="Goto Previous Marker" options="autorepeat"/>
+							<Command control="Next" command.category="Marker" command.name="Goto Next Marker" options="autorepeat"/>
+						</Group>
+						<Group/> <!-- reserved for undo handling (see above) -->
+					</ParamVariant>
+					<Command control="pushEncoder" command.category="Marker" command.name="Insert"/>
+					<using device="device:///TransportPanel">
+						<Relative control="encoder" param="freeCursorTime"/>
+					</using>
+				</Group>
+				
+			</ParamVariant>
+						
+		</Global>
+
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			
+			<ScrollBank target="FollowBank" name="ChannelBankElement">
+				<!-- The Channel Strip -->
+				<Strip onConnect="updateChannelLockState"> 
+								
+					<!-- Note: fader flip will overwrite volume mapping below -->
+					<Value control="fader" param="volume"/>
+					<Touch control="faderTouch" param="volume"/>
+					
+					<ParamVariant using="@global" param="encoderMode" name="EncoderPanMappingElement">
+						<Group value="2"> <!-- must be kPanMode -->						
+							<ParamVariant using="@global" param="flipEncoder">						
+								<Group>
+									<Relative control="encoder" param="pan"/>	
+									<DefaultValue control="pushEncoder" param="pan"/>
+								</Group>
+								<Group>
+									<Value control="fader" param="pan"/>
+									<Touch control="faderTouch" param="pan"/>
+									<Relative control="encoder" param="volume"/>	
+									<DefaultValue control="pushEncoder" param="volume"/>
+								</Group>
+							</ParamVariant>							
+						</Group>
+						<Group value="0,1,3,4,5,6,7,8"/> <!-- no encoder mapping here for other modes -->
+					</ParamVariant>
+					
+					<ParamVariant using="@global" param="shiftModifier">
+						<!-- [Shift] not pressed -->
+						<Group>
+							<Toggle control="muteButton" param="mute" options="momentary"/>
+							<Value  control="muteLED"    param="mute"/>
+					
+							<Toggle control="soloButton" param="solo" options="momentary"/>
+							<Value  control="soloLED"    param="solo"/>
+
+							<Toggle control="armButton" param="recordArmed"/>
+							<Value  control="armLED"    param="recordArmed"/>
+							
+							<using device="Inserts">
+								<Toggle control="bypassButton" param="bypassAll"/>
+								<Value  control="bypassLED"    param="bypassAll"/>
+							</using>
+							
+							<!-- Automation Mode -->
+							<Radio control="readButton"  param="automationMode" value="1" options="toggle"/>
+							<Radio control="readLED"     param="automationMode" value="1"/>
+
+							<Radio control="writeButton" param="automationMode" value="4" options="toggle"/>
+							<Radio control="writeLED"    param="automationMode" value="4"/>
+
+							<Radio control="touchButton" param="automationMode" value="2" options="toggle"/>
+							<Radio control="touchLED"    param="automationMode" value="2"/>			
+						</Group>
+						
+						<!-- [Shift] pressed -->
+						<Group>
+							<using device="device:///MixerConsole">
+
+								<Toggle control="muteButton" param="anyMute"/>
+								<Value  control="muteLED"    param="anyMute"/>
+						
+								<Toggle control="soloButton" param="anySolo"/>
+								<Value  control="soloLED"    param="anySolo"/>
+							</using>
+
+							<Command control="armButton" command.category="Track" command.name="Arm All Audio Tracks"/>
+						
+							<using device="device:///FXMaster">
+								<Toggle control="bypassButton"  param="bypassAll"/>
+								<Value control="bypassLED"  	param="bypassAll"/>
+							</using>
+							
+							<!-- Automation Mode -->
+							<Radio control="readButton"  param="automationMode" value="0" options="toggle"/>
+							<Radio control="readLED"     param="automationMode" value="0"/>
+
+							<!--
+							<Radio control="writeButton" param="automationMode" value="5" options="toggle"/>
+							<Radio control="writeLED"    param="automationMode" value="5"/>
+							-->
+
+							<Radio control="touchButton" param="automationMode" value="3" options="toggle"/>
+							<Radio control="touchLED"    param="automationMode" value="3"/>						
+						</Group>
+					</ParamVariant>			
+
+				</Strip>
+			</ScrollBank>	
+			
+		</DeviceMapping>
+	
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel" name="TransportMapping">
+
+			<Toggle control="footSwitch" param="record"/>
+		
+			<!-- <Toggle control="loopButton" param="loop"/> -->
+			<Command control="loopButton" command.category="Transport" command.name="Toggle Loop"/>
+			<Value control="loopLED"     param="loop"/>
+
+			<!-- <Toggle control="playButton"  param="start"/> -->
+			<Command control="playButton" command.category="Transport" command.name="Toggle Start" command.args="Pause=1"/>
+			<Value control="playLED"      param="start"/>
+						
+			<!-- <Toggle control="stopButton"  param="stop"/> -->
+			<Command control="stopButton" command.category="Transport" command.name="Stop"/>
+			<Value control="stopLED"      param="stop"/>
+			
+			<Value control="recordLED"    param="record"/>
+			<Value control="ffLED"        param="fastForward"/>
+			<Value control="rewindLED"    param="rewind"/>
+		
+			<Variant control="rewindButton">
+				<Touch control="ffButton" param="fastForward"/>
+				<Push  control="ffButton" param="returnToZero"/> <!-- [Fast Forward] + [Rewind] = Return To Zero -->
+			</Variant>
+			
+			<Touch control="rewindButton"  param="rewind"/>
+			<Toggle control="recordButton" param="record"/>
+
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- METRONOME MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			
+			<ParamVariant using="@global" param="shiftModifier">
+				<Toggle control="clickButton" param="clickOn"/>
+			</ParamVariant>
+			<Value control="clickLED" param="clickOn"/>
+			
+		</DeviceMapping>
+
+	</Mappings>	
+
+</ControlSurface>

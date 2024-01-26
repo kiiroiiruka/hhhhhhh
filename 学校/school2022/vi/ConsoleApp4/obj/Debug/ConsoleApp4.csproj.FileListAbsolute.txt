@@ -1,0 +1,7 @@
+U:\school2022\vi\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+U:\school2022\vi\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+U:\school2022\vi\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+U:\school2022\vi\ConsoleApp4\obj\Debug\ConsoleApp4.csprojAssemblyReference.cache
+U:\school2022\vi\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
+U:\school2022\vi\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+U:\school2022\vi\ConsoleApp4\obj\Debug\ConsoleApp4.pdb

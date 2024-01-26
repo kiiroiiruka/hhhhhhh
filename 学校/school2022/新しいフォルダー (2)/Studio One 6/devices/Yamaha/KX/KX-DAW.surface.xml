@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+		<!-- ******************************************************************************************** -->
+        <!-- Encoders -->
+        <!-- ******************************************************************************************** -->
+
+		<!-- Note: Encoders send a sign bit for increment/decrement and the number of ticks -->
+		<Control name="encoder[0]" title="Cutoff" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="16" options="signed plain"/>
+		</Control>	
+		
+		<Control name="encoder[1]" title="Resonance" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="17" options="signed plain"/>
+		</Control>	
+
+		<Control name="encoder[2]" title="Pan" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="18" options="signed plain"/>
+		</Control>			
+		
+		<Control name="encoder[3]" title="Level" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="19" options="signed plain"/>
+		</Control>
+
+		<Control name="encoder[4]" title="Assign 1" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="20" options="signed plain"/>
+		</Control>
+		
+		<Control name="encoder[5]" title="Assign 2" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="21" options="signed plain"/>
+		</Control>
+		
+		<Control name="encoder[6]" title="Assign 3" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="22" options="signed plain"/>
+		</Control>
+
+		<Control name="encoder[7]" title="Assign 4" options="receive public" type="relative">
+			<MidiMessage status="Controller" address="23" options="signed plain"/>
+		</Control>
+	
+	
+		<!-- ******************************************************************************************** -->
+        <!-- BUTTONS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="VSTiButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#3D"/> </Control>
+		<Control name="AddButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#3C"/> </Control>
+		<Control name="AButton"       title="A" type="trigger" options="receive public"> <MidiMessage status="#90" address="#36"/> </Control>
+		<Control name="BButton"       title="B" type="trigger" options="receive public"> <MidiMessage status="#90" address="#37"/> </Control>
+		<Control name="ASSIGN1Button" title="ASSIGN1" type="trigger" options="receive public"> <MidiMessage status="#90" address="#38"/> </Control>
+		<Control name="ASSIGN2Button" title="ASSIGN2" type="trigger" options="receive public"> <MidiMessage status="#90" address="#39"/> </Control>
+		<Control name="muteButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#3A"/> </Control>
+		<Control name="soloButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#3B"/> </Control>
+		<Control name="DECButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#3E"/> </Control>
+		<Control name="INCButton"     type="trigger" options="receive"> <MidiMessage status="#90" address="#3F"/> </Control>
+		<Control name="rewindButton"  type="trigger" options="receive"> <MidiMessage status="#90" address="#5B"/> </Control>
+		<Control name="ffButton"      type="trigger" options="receive"> <MidiMessage status="#90" address="#5C"/> </Control>
+		<Control name="cycleButton"   type="trigger" options="receive"> <MidiMessage status="#90" address="#56"/> </Control>
+		<Control name="stopButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#5D"/> </Control>
+		<Control name="playButton"    type="trigger" options="receive"> <MidiMessage status="#90" address="#5E"/> </Control>
+		<Control name="recordButton"  type="trigger" options="receive"> <MidiMessage status="#90" address="#5F"/> </Control>
+
+		
+	</Controls>	
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<Strip name="encoder[0]"><Relative control="encoder[0]" param="value" options="above"/></Strip>
+				<Strip name="encoder[1]"><Relative control="encoder[1]" param="value" options="above"/></Strip>
+				<Strip name="encoder[2]"><Relative control="encoder[2]" param="value" options="above"/></Strip>
+				<Strip name="encoder[3]"><Relative control="encoder[3]" param="value" options="above"/></Strip>
+				<Strip name="encoder[4]"><Relative control="encoder[4]" param="value" options="above"/></Strip>
+				<Strip name="encoder[5]"><Relative control="encoder[5]" param="value" options="above"/></Strip>
+				<Strip name="encoder[6]"><Relative control="encoder[6]" param="value" options="above"/></Strip>
+				<Strip name="encoder[7]"><Relative control="encoder[7]" param="value" options="above"/></Strip>
+				
+				<Strip name="AButton"><Toggle control="AButton" param="value" options="above"/></Strip>
+				<Strip name="BButton"><Toggle control="BButton" param="value" options="above"/></Strip>
+				<Strip name="ASSIGN1Button"><Toggle control="ASSIGN1Button" param="value" options="above"/></Strip>
+				<Strip name="ASSIGN2Button"><Toggle control="ASSIGN2Button" param="value" options="above"/></Strip>					
+			</Bank>
+		</GenericMapping>			
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			<Command control="VSTiButton"    command.category="Console"           command.name="Show Instrument Editor"/>		
+			<Command control="AddButton"     command.category="Track"             command.name="Add Instrument Track"/>
+			<Command control="AButton"       command.category="View"              command.name="Editor"/>
+			<Command control="BButton"       command.category="View"              command.name="Console"/>
+			<Command control="DECButton"     command.category="Presets"           command.name="Previous"/>
+			<Command control="INCButton"     command.category="Presets"           command.name="Next"/>
+			<Command control="ASSIGN1Button" command.category="Event"             command.name="Quantize"/>
+			<Command control="ASSIGN2Button" command.category="Edit"              command.name="Delete"/>
+			<Command control="muteButton"    command.category="Track"             command.name="Mute"/>
+			<Command control="soloButton"    command.category="Track"             command.name="Solo"/>
+		</Global>
+        
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+				
+			<Toggle control="cycleButton"  param="loop"/>
+			<Toggle control="playButton"   param="start"/>					
+			<Toggle control="stopButton"   param="stop"/>				
+			<Touch  control="ffButton"     param="fastForward"/>				
+			<Touch  control="rewindButton" param="rewind"/>
+			<Toggle control="recordButton" param="record"/>
+					
+		</DeviceMapping>
+
+	</Mappings>
+</ControlSurface>

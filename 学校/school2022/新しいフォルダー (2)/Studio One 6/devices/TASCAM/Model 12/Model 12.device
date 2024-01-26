@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="TASCAM"
+	name="Model 12"
+	family="MackieFamily"
+
+	classID="{10770B13-2E37-4619-9633-350C79163EB5}"
+	category="Surface"
+
+	nativeCode="MackieControl"
+	surfaceFile="../../Mackie/Control/MackieControl.surface.xml"
+	surfacePlacementSize="8"
+
+	scriptFile="../../Mackie/Control/MackieControl.js"
+	scriptFile.functionName="createInstance"
+
+	imageFile="Model 12.png"
+	textFile="Model 12.txt"
+
+	skinFile="../../Mackie/Control/skin/"
+	formName="MackieControl"
+/>

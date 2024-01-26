@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDefinition 
+	vendor="Edirol"
+	name="PCR-300 V-Link Control"
+
+	classID="{C829AFC6-AC3B-4e6c-9F7F-5C0605CFFD33}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="PCR-300V-Link.surface.xml"
+
+	imageFile="PCR-V-Link.png"
+	textFile="PCR-V-Link.txt"
+	/>

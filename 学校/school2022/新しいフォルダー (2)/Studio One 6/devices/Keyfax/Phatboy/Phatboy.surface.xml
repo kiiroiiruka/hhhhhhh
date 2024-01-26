@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!--  13 x KNOB -->
+        <!-- ******************************************************************************************** -->
+		<Control name="knob[0]" title="1-FILTER CUTOFF" options="receive public">
+			<MidiMessage status="Controller" address="1"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="2-RESONACE" options="receive public">
+			<MidiMessage status="Controller" address="2"/>
+		</Control>	
+
+		<Control name="knob[2]" title="3-VIBRATO RATE" options="receive public">
+			<MidiMessage status="Controller" address="3"/>
+		</Control>	
+
+		<Control name="knob[3]" title="4-VIBRATO DEPTH" options="receive public">
+			<MidiMessage status="Controller" address="4"/>
+		</Control>	
+
+		<Control name="knob[4]" title="5-VIBRATO DELAY" options="receive public">
+			<MidiMessage status="Controller" address="5"/>
+		</Control>	
+
+		<Control name="knob[5]" title="6-REVERB" options="receive public">
+			<MidiMessage status="Controller" address="6"/>
+		</Control>	
+
+		<Control name="knob[6]" title="7-CHORUS" options="receive public">
+			<MidiMessage status="Controller" address="7"/>
+		</Control>	
+
+		<Control name="knob[7]" title="8-ATTACK" options="receive public">
+			<MidiMessage status="Controller" address="8"/>
+		</Control>	
+
+		<Control name="knob[8]" title="9-DECAY" options="receive public">
+			<MidiMessage status="Controller" address="9"/>
+		</Control>	
+
+		<Control name="knob[9]" title="10-SUSTAIN" options="receive public">
+			<MidiMessage status="Controller" address="10"/>
+		</Control>	
+
+		<Control name="knob[10]" title="11-REALEASE" options="receive public">
+			<MidiMessage status="Controller" address="11"/>
+		</Control>	
+
+		<Control name="knob[11]" title="12-PAN" options="receive public">
+			<MidiMessage status="Controller" address="12"/>
+		</Control>	
+
+		<Control name="knob[12]" title="13-VOLUME" options="receive public">
+			<MidiMessage status="Controller" address="13"/>
+		</Control>
+		
+	</Controls>
+	
+</ControlSurface>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Axiom Pro"
+
+	classID="{9E670957-4EF7-401a-926B-EF2E0921327F}"
+	category="Surface"
+
+	nativeCode="JSControlSurfaceDevice"
+	classFile="DAW/AxiomProMidiDevice.js"
+	classFile.functionName="createAxiomProDeviceInstance"
+
+	surfaceFile="DAW/Axiom Pro.surface.xml"
+	scriptFile="DAW/AxiomProComponent.js"
+	scriptFile.functionName="createAxiomProComponentInstance"
+
+	imageFile="DAW/Axiom Pro.png"
+	textFile="DAW/Axiom Pro.txt"
+/>

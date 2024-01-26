@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<Resources>
+		<Image name="FaderPort2Background" url="images/FaderPort2.png"/>
+	</Resources>
+
+	<Includes>
+		<Include url="../../Shared/skin/skin.xml"/>
+	</Includes>
+
+</Skin>

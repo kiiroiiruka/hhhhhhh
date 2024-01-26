@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Acorn Instruments"
+	name="MasterKey 25/49/61"
+	
+	classID="{4D36E96C-E325-11CE-BFC1-08002BE10318}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MasterKey 49.surface.xml"
+	
+	imageFile="MasterKey 49.png"
+	textFile="MasterKey 49.txt"
+	/>

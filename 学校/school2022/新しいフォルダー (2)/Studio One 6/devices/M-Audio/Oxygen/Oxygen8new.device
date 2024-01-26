@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Oxygen8 new model"
+	
+	classID="{E97F642F-0267-4c9f-AC88-074071967ED8}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="Oxygen8new.surface.xml"
+	
+	imageFile="Oxygen8.png"
+	textFile="Oxygen8.txt"
+	/>

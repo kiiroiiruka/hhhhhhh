@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="AKAI"
+	name="MPD18"
+	
+	classID="{A6CEFF4A-F7AA-465f-B996-45CF63FE7726}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MPD18.surface.xml"
+	
+	imageFile="MPD18.png"
+	textFile="MPD18.txt"
+	/>

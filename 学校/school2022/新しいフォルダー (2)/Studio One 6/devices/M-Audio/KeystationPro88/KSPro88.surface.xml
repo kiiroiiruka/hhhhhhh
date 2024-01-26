@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 24 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="B10" options="receive" type="knob"> <MidiMessage status="Controller" address="#55"/> </Control>
+		<Control name="knob[1]" title="B11" options="receive" type="knob"> <MidiMessage status="Controller" address="#56"/> </Control>
+		<Control name="knob[2]" title="B12" options="receive" type="knob"> <MidiMessage status="Controller" address="#57"/> </Control>
+		<Control name="knob[3]" title="B13" options="receive" type="knob"> <MidiMessage status="Controller" address="#58"/> </Control>
+		<Control name="knob[4]" title="B14" options="receive" type="knob"> <MidiMessage status="Controller" address="#59"/> </Control>
+		<Control name="knob[5]" title="B15" options="receive" type="knob"> <MidiMessage status="Controller" address="#5A"/> </Control>
+		<Control name="knob[6]" title="B16" options="receive" type="knob"> <MidiMessage status="Controller" address="#66"/> </Control>
+		<Control name="knob[7]" title="B17" options="receive" type="knob"> <MidiMessage status="Controller" address="#67"/> </Control>
+		<Control name="knob[8]" title="B18" options="receive public" type="knob"> <MidiMessage status="Controller" address="#68"/> </Control>
+		<Control name="knob[9]" title="B19" options="receive public" type="knob"> <MidiMessage status="Controller" address="#69"/> </Control>
+		<Control name="knob[10]" title="B20" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6A"/> </Control>
+		<Control name="knob[11]" title="B21" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6B"/> </Control>
+		<Control name="knob[12]" title="B22" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6C"/> </Control>
+		<Control name="knob[13]" title="B23" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6D"/> </Control>
+		<Control name="knob[14]" title="B24" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6E"/> </Control>
+		<Control name="knob[15]" title="B25" options="receive public" type="knob"> <MidiMessage status="Controller" address="#6F"/> </Control>
+		<Control name="knob[16]" title="B26" options="receive public" type="knob"> <MidiMessage status="Controller" address="#70"/> </Control>
+		<Control name="knob[17]" title="B27" options="receive public" type="knob"> <MidiMessage status="Controller" address="#71"/> </Control>
+		<Control name="knob[18]" title="B28" options="receive public" type="knob"> <MidiMessage status="Controller" address="#72"/> </Control>
+		<Control name="knob[19]" title="B29" options="receive public" type="knob"> <MidiMessage status="Controller" address="#73"/> </Control>
+		<Control name="knob[20]" title="B30" options="receive public" type="knob"> <MidiMessage status="Controller" address="#74"/> </Control>
+		<Control name="knob[21]" title="B31" options="receive public" type="knob"> <MidiMessage status="Controller" address="#75"/> </Control>
+		<Control name="knob[22]" title="B32" options="receive public" type="knob"> <MidiMessage status="Controller" address="#76"/> </Control>
+		<Control name="knob[23]" title="B33" options="receive public" type="knob"> <MidiMessage status="Controller" address="#77"/> </Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- 9 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="Fader C1" options="receive"> <MidiMessage status="Controller" address="#4B"/> </Control>
+		<Control name="fader[1]" title="Fader C2" options="receive"> <MidiMessage status="Controller" address="#4C"/> </Control>
+		<Control name="fader[2]" title="Fader C3" options="receive"> <MidiMessage status="Controller" address="#4D"/> </Control>
+		<Control name="fader[3]" title="Fader C4" options="receive"> <MidiMessage status="Controller" address="#4E"/> </Control>
+		<Control name="fader[4]" title="Fader C5" options="receive"> <MidiMessage status="Controller" address="#4F"/> </Control>
+		<Control name="fader[5]" title="Fader C6" options="receive"> <MidiMessage status="Controller" address="#50"/> </Control>
+		<Control name="fader[6]" title="Fader C7" options="receive"> <MidiMessage status="Controller" address="#51"/> </Control>
+		<Control name="fader[7]" title="Fader C8" options="receive"> <MidiMessage status="Controller" address="#52"/> </Control>
+		<Control name="fader[8]" title="Fader C9" options="receive"> <MidiMessage status="Controller" address="#53"/> </Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- 17 x BUTTON -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button[9]" title="B44" options="receive public" type="button"> <MidiMessage status="Controller" address="#1B"/> </Control>
+		<Control name="button[10]" title="B45" options="receive public" type="button"> <MidiMessage status="Controller" address="#1C"/> </Control>
+		<Control name="button[11]" title="B46" options="receive public" type="button"> <MidiMessage status="Controller" address="#1D"/> </Control>
+		<Control name="button[12]" title="B47" options="receive public" type="button"> <MidiMessage status="Controller" address="#1E"/> </Control>
+		<Control name="button[13]" title="B48" options="receive public" type="button"> <MidiMessage status="Controller" address="#1F"/> </Control>
+		<Control name="button[14]" title="B49" options="receive public" type="button"> <MidiMessage status="Controller" address="#20"/> </Control>
+		<Control name="button[15]" title="B50" options="receive public" type="button"> <MidiMessage status="Controller" address="#21"/> </Control>
+		<Control name="button[16]" title="B51" options="receive public" type="button"> <MidiMessage status="Controller" address="#22"/> </Control>
+		<Control name="button[0]" title="C52" options="receive"> <MidiMessage status="Controller" address="#23"/> </Control>
+		<Control name="button[1]" title="C53" options="receive"> <MidiMessage status="Controller" address="#24"/> </Control>
+		<Control name="button[2]" title="C54" options="receive"> <MidiMessage status="Controller" address="#25"/> </Control>
+		<Control name="button[3]" title="C55" options="receive"> <MidiMessage status="Controller" address="#26"/> </Control>
+		<Control name="button[4]" title="C56" options="receive"> <MidiMessage status="Controller" address="#27"/> </Control>
+		<Control name="button[5]" title="C57" options="receive"> <MidiMessage status="Controller" address="#28"/> </Control>
+		<Control name="button[6]" title="C58" options="receive"> <MidiMessage status="Controller" address="#29"/> </Control>
+		<Control name="button[7]" title="C59" options="receive"> <MidiMessage status="Controller" address="#2A"/> </Control>
+		<Control name="button[8]" title="C60" options="receive"> <MidiMessage status="Controller" address="#2B"/> </Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT CONTROLS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="record" options="receive"> <MidiMessage status="Controller" address="#1A"/> </Control>
+
+		<Control name="rewind" options="receive"> <MidiMessage status="Controller" address="#16"/> </Control>
+
+		<Control name="ff" options="receive"> <MidiMessage status="Controller" address="#17"/> </Control>
+
+		<Control name="stop" options="receive"> <MidiMessage status="Controller" address="#18"/> </Control>
+
+		<Control name="play" options="receive"> <MidiMessage status="Controller" address="#19"/> </Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole">
+			<Bank target="RemoteBank" pagesize="8">
+				<!-- The Channel Strips -->
+				<foreach variable="$channel" count="8">
+					<Strip> 
+						<Value control="fader[$channel]"  param="volume"/>
+						<Value control="knob[$channel]"   param="pan"/>
+						<Value control="button[$channel]" param="mute"/>
+					</Strip>
+				</foreach>
+			</Bank>
+			<Bank target="MasterBank">
+				<Strip>
+					<Value control="fader[8]" param="volume"/>
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<Toggle control="play"   param="start"/>
+			<Toggle control="stop"   param="stop"/>
+			<Toggle control="record" param="record"/>
+			<Touch  control="ff"     param="fastForward"/>
+			<Touch  control="rewind"    param="rewind"/>
+
+		</DeviceMapping>
+		
+		<!-- ******************************************************************************************** -->
+        <!-- METRONOME MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			<Value control="button[8]" param="clickOn"/>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

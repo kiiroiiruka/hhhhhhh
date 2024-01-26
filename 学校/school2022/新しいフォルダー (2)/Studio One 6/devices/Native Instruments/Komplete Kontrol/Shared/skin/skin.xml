@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<Resources>
+		<Image name="KompleteDeviceSurfaceToggle"	url="images/KompleteToggle.png" frames="normal normalOn pressed pressedOn" tile="tile-xy" margin="15,7,15,13"/>
+		<Image name="KompleteDeviceSurfaceKnobCap" 	url="images/KompleteKnobCap5fCycle.png" frames="t:3x2 5"/>
+		<ImagePart name="KompleteDeviceSurfaceKnobSingle" 	image="KompleteDeviceSurfaceKnobCap" size="0,0,70,70"/>
+		<Image name="KompleteDeviceSurfaceKnobBG" 	url="images/KompleteKnobBasis.png">
+			<ImageFilter name="tint"	color="hsl(210,15,90)"/>
+		</Image>
+
+		<Image name="KompleteGridTexture"  			url="images/KompleteGrid.png"/>
+		<ImagePart name="KompleteGridFirst"  		image="KompleteGridTexture" size="0,1,727,84"/>
+		<ImagePart name="KompleteGridSecond"		image="KompleteGridTexture" size="0,45,727,84"/>
+		<ImagePart name="KompleteGridThird"			image="KompleteGridTexture" size="0,100,727,84"/>
+		<ImagePart name="KompleteGridFourth"		image="KompleteGridTexture" size="0,139,727,84"/>
+		<Image name="KompleteGlassTexture"  		url="images/KompleteGlass.png"/>
+
+		<ImagePart name="KompleteGlassTop" 			image="KompleteGlassTexture" size="0,35,727,38"/>
+		<ImagePart name="KompleteGlassToggleTop"  	image="KompleteGlassTexture" size="0,35,727,100"/>
+		<ImagePart name="KompleteGlassFirst" 		image="KompleteGlassTexture" size="0,120,727,32"/>
+		<ImagePart name="KompleteGlassSecond" 		image="KompleteGlassTexture" size="0,140,727,32"/>
+		<ImagePart name="KompleteGlassThird" 		image="KompleteGlassTexture" size="0,160,727,32"/>
+		<ImagePart name="KompleteGlassFourth" 		image="KompleteGlassTexture" size="0,180,727,32"/>
+		<ImagePart name="KompleteGlassDAWHeader"  	image="KompleteGlassTexture" size="0,35,727,106"/>
+	</Resources>
+
+	<Styles>
+		<Style name="KompleteDeviceSurfaceText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Align name="textalign" align="center"/>
+			<Color name="backcolor"	color="@Main.DeviceSurfaceControlBackcolor"/>
+			<Color name="textcolor" color="@Main.LabelColor.Secondary.NoInvert"/>
+		</Style>
+		<Style name="KompleteDeviceSurfaceSmallText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Align name="textalign" align="center"/>
+			<Color name="textcolor" color="@Main.LabelColor.Secondary.NoInvert"/>
+		</Style>
+		<Style name="KompleteDeviceSurfaceTriggerCaptionText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Align name="textalign" align="left top"/>
+			<Color name="textcolor" color="white"/>
+		</Style>
+		<Style name="KompleteDeviceSurfaceKnob">
+			<Image name="background"	image="KompleteDeviceSurfaceKnobBG"/>
+			<Image name="foreground"	image="KompleteDeviceSurfaceKnobCap"/>
+			<Metric name="framecount"	value="95"/>
+			<Metric name="overlay.filmstrip"	value="1"/>
+			<Metric name="circle"	value="1"/>
+			<Metric name="margin"	value="7"/>
+			<Metric name="strokewidth"	value="4"/>
+			<Color name="hilitecolor" color="hsl(0,0,85)"/>
+			<Color name="backcolor" color="green"/>
+		</Style>
+
+		<Style name="KompleteDeviceSurfaceToggle">
+			<Image name="background"	image="KompleteDeviceSurfaceToggle"/>
+		</Style>
+
+		<Style name="KompleteDeviceSurfaceFocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="@Main.DeviceSurfaceFocusTextColor"/>
+			<Metric name="padding.left"	value="10"/>
+			<Metric name="padding.right"	value="10"/>
+			<Align name="textalign"	align="center"/>
+		</Style>
+	</Styles>
+
+	<Forms>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Komplete Kontrol EDITOR -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="KompleteKontrol_A+M" style="Standard.DeviceSurfaceBackground">
+			<Vertical margin="5" spacing="0">
+				<ImageView image="KompleteGlassTop"/>
+				<ImageView image="KompleteGridFirst"/>
+				<ImageView image="KompleteGlassFirst"/>
+				<ImageView image="KompleteGridSecond"/>
+				<ImageView image="KompleteGlassSecond"/>
+				<ImageView image="KompleteGridThird"/>
+				<ImageView image="KompleteGlassThird"/>
+				<ImageView image="KompleteGridFourth"/>
+				<ImageView image="KompleteGlassFourth"/>
+			</Vertical>
+			<Vertical margin="5" spacing="-5">
+				<using controller="ControlSurface/Editor">
+					<Space height="10"/>
+					<TextBox name="focusDeviceFullName" size="0,0,727,31" options="transparent" style="KompleteDeviceSurfaceFocusText" attach="left right top"/>
+					<Space height="10"/>
+					<Table columns="8" margin="6" spacing="5">
+						<foreach variable="$i" start="0" count="32">
+							<View name="KompleteKontrolKnob"/>
+						</foreach>
+					</Table>
+				</using>
+				<View name="skin:///Devices/SurfaceKeyboardView" width="727" attach="left right bottom"/>
+			</Vertical>
+		</Form>
+
+		<Form name="KompleteKontrol_S" style="Standard.DeviceSurfaceBackground">
+			<Vertical margin="5" spacing="0">
+				<ImageView image="KompleteGlassToggleTop"/>
+				<ImageView image="KompleteGridFirst"/>
+				<ImageView image="KompleteGlassFirst"/>
+				<ImageView image="KompleteGridSecond"/>
+				<ImageView image="KompleteGlassSecond"/>
+			</Vertical>
+			<Vertical margin="5" spacing="-5">
+				<using controller="ControlSurface/Editor">
+					<Space height="10"/>
+					<TextBox name="focusDeviceFullName" size="0,0,727,31" options="transparent" style="KompleteDeviceSurfaceFocusText" attach="left right top"/>
+
+					<Horizontal margin="6" spacing="5">
+						<foreach variable="$i" start="0" count="8">
+							<View name="KompleteKontrolButton"/>
+						</foreach>
+					</Horizontal>
+
+					<Table columns="8" margin="6" spacing="5">
+						<foreach variable="$i" start="0" count="16">
+							<View name="KompleteKontrolKnob"/>
+						</foreach>
+					</Table>
+				</using>
+				<Space height="5"/>
+				<View name="skin:///Devices/SurfaceKeyboardView" width="727" attach="left right bottom"/>
+			</Vertical>
+		</Form>
+
+		<!-- Provide UI for user assignable buttons UNDO, REDO and QUANTIZE -->
+		<Form name="KompleteKontrol_DAW" style="Standard.DeviceSurfaceBackground" >
+			<Vertical margin="5" spacing="0">
+				<ImageView image="KompleteGlassDAWHeader"/>
+			</Vertical>
+			<Vertical margin="5" spacing="-5">
+				<using controller="ControlSurface/Editor">
+					<Space height="10"/>
+					<TextBox name="focusDeviceFullName" size="0,0,727,31" options="transparent" style="KompleteDeviceSurfaceFocusText" attach="left right top"/>
+					<Horizontal margin="6" spacing="5">
+						<using controller="Undo">
+							<View name="KompleteKontrolTriggerButton"/>
+						</using>
+						<using controller="Redo">
+							<View name="KompleteKontrolTriggerButton"/>
+						</using>
+						<using controller="Quantize">
+							<View name="KompleteKontrolTriggerButton"/>
+						</using>
+					</Horizontal>
+				</using>
+			</Vertical>
+		</Form>
+
+		<!-- Display button with illuminated on/off state -->
+		<Form name="KompleteKontrolButton">
+			<using controller="Button[$i]">
+				<View size="0,0,85,60">
+					<Toggle name="controlValue" size="0,0,85,32" style="KompleteDeviceSurfaceToggle"/>
+					<TextBox name="paramTitle" size="5,38,75,20" options="transparent fittext" style="KompleteDeviceSurfaceSmallText"/>
+				</View>
+			</using>
+		</Form>
+
+		<!-- Trigger button -->
+		<Form name="KompleteKontrolTriggerButton">
+			<View size="0,0,85,60">
+				<Toggle name="controlValue" size="0,0,85,32" style="KompleteDeviceSurfaceToggle"/>
+				<TextBox name="controlTitle" size="6,5,85,32" options="transparent fittext" style="KompleteDeviceSurfaceTriggerCaptionText"/>
+				<TextBox name="paramTitle" size="5,38,75,20" options="transparent fittext" style="KompleteDeviceSurfaceSmallText"/>
+			</View>
+		</Form>
+
+		<!-- Generic knob -->
+		<Form name="KompleteKontrolKnob">
+			<using controller="Knob[$i]">
+				<View size="0,0,85,111">
+					<Knob name="controlValue" size="12,7,60,60" style="KompleteDeviceSurfaceKnob"/>
+					<ValueBox name="controlValue" size="5,80,75,18" options="transparent" style="KompleteDeviceSurfaceSmallText"/>
+					<TextBox name="paramTitle" size="5,93,75,18" options="transparent fittext" style="KompleteDeviceSurfaceSmallText"/>
+				</View>
+			</using>
+		</Form>
+	</Forms>
+</Skin>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="FaderPort 16"
+	
+	classID="{D4CAB3CE-3D0A-4052-9D80-0C8CDC424614}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+	classFile="FPMidiDevice.js"
+	classFile.functionName="createFP16DeviceInstance"
+	
+	surfaceFile="FP16.surface.xml"
+	surfaceFile.variables="$FADER_COUNT=16;"
+	surfacePlacementSize="16"
+	scriptFile="FPComponent.js"
+	scriptFile.functionName="createFP16ComponentInstance"
+
+	globalMappingPageCount="1"
+	autoMappingSupported="1"
+
+	imageFile="FP16.png"
+	textFile="FP16.txt"
+		
+	skinFile="skin/"
+	formName="FaderPort16"
+		
+	detectorPortName="PreSonus FP16"
+	hostDataFile="PreSonus FaderPort 16.surfacedata"	
+/>

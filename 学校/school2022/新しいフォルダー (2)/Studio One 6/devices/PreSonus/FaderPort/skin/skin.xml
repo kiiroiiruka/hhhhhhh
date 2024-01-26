@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>	
+	<Resources>
+		<Image name="FaderPort" 	url="faderport.png"/>
+		<Image name="FaderBack" 	url="faderback.png"/>
+		<Image name="FaderHandle" 	url="faderhandle.png"/>
+		<Image name="ButtonUser" 	url="button_user.png" 	frames="normal pressed normalOn pressedOn"/>
+		<Image name="ButtonBank" 	url="button_bank.png" 	frames="normal pressed normalOn pressedOn"/>
+		<Image name="ButtonFollow" 	url="button_follow.png" frames="normal pressed normalOn pressedOn"/>
+		<Image name="ButtonOutput" 	url="button_output.png" frames="normal pressed normalOn pressedOn"/>
+		<Image name="EncoderL" 		url="panwheelL.png" 	frames="normal pressed"/>
+		<Image name="EncoderR" 		url="panwheelR.png" 	frames="normal pressed"/>
+		<Image name="Footswitch" 	url="Footswitch.png" 	/>
+	</Resources>
+	
+	<Styles>
+		<Style name="EndlessDial">
+			<Image name="buttonUp"   image="EncoderR"/>
+			<Image name="buttonDown" image="EncoderL"/>
+		</Style>
+		
+		<Style name="Fader">
+			<Image name="vBack" 	image="FaderBack"/>
+			<Image name="vHandle" 	image="FaderHandle"/>
+		</Style>		
+		
+		<Style name="TextBoldBright">
+			<Font  name="textfont"   themeid="PresonusUI" size="11" style="bold"/>
+			<Color name="textcolor"  color="#dce2e5" />
+		</Style>			
+		
+		<Style name="TextBold">
+			<Font  name="textfont"   themeid="PresonusUI" size="10" style="bold"/>
+			<Color name="textcolor"  color="#9fa6ae" />
+		</Style>		
+		
+		<Style name="Text">
+			<Font  name="textfont"   themeid="PresonusUI" size="10"/>
+			<Color name="textcolor"  color="#9fa6ae" />
+		</Style>
+		
+		<Style name="TextDark" inherit="Text">
+			<Color name="textcolor"  color="#293035" />		
+		</Style>
+	</Styles>
+	
+        <!-- ******************************************************************************************** -->
+	    <!-- FADERPORT EDITOR -->
+	    <!-- ******************************************************************************************** -->
+	
+	<Forms>
+		<Form name="FaderPort" size="0,0,260,365" image="FaderPort" datatarget="ControlSurface/Editor/ControlList">			
+			<using controller="ControlSurface/Editor">
+				<!-- FOCUS DEVICE -->
+				<TextBox name="focusDeviceName" 	size="94,53,120,14" options="transparent fittext" style="TextBold" />
+				<TextBox name="focusDeviceFolder" 	size="94,67,120,14" options="transparent fittext" style="TextBold" />
+
+				<!-- FADER -->
+				<using controller="fader">
+					<Slider name="controlValue" size="50,50,22,270" style="Fader" options="globalmode vertical transparent directupdate"/>
+					<TextBox name="paramTitle" 	size="30,320,60,14" options="fittext transparent" style="Text"/>
+				</using>
+					
+				<!-- ENCODER -->
+				<using controller="encoder">
+					<UpDownBox 	name="controlValue" size="92,93,46,41"	options="horizontal" style="EndlessDial"/>
+					<TextBox 	name="paramTitle" 	size="80,137,72,14"	options="transparent fittext" style="Text"/>
+				</using>
+
+				<!-- USER BUTTON -->
+				<using controller="userButton">
+					<Button name="controlValue" size="168,103,39,23" image="ButtonUser"/>
+					<TextBox name="paramTitle"	size="150,137,72,14" options="transparent fittext" style="Text"/>
+				</using>
+
+				<!-- FOOTSWITCH-->
+				<using controller="footSwitch">
+					<Button name="controlValue" size="176,170,23,23" image="Footswitch"/>
+					<TextBox name="paramTitle" size="96,188,72,14" options="transparent fittext" style="TextDark"/>
+				</using>
+				
+				<!-- FADERPORT OPTIONS -->
+				<View size="100,158">
+					<using controller="faderDisplay">
+						<TextBox name="controlValue" size="0,168,125,15" options="transparent fittext" style="TextBoldBright"/>
+					</using>
+					
+					<using controller="Device">
+						<RadioButton name="bankList" value="0" size="62,52,49,23" image="ButtonFollow"/>
+						<RadioButton name="bankList" value="1" size="62,83,49,23" image="ButtonBank"/>
+						<RadioButton name="bankList" value="2" size="62,116,49,23" image="ButtonOutput"/>
+					</using>
+				</View>
+			</using>
+		</Form>
+
+	</Forms>
+</Skin>

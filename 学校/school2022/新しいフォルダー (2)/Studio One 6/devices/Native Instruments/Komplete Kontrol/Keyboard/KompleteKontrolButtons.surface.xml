@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<Controls>
+		<Control name="Button[0]" title="Button 1" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#70" options="plain"/>
+		</Control>
+		<Control name="Button[1]" title="Button 2" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#71" options="plain" />
+		</Control>
+		<Control name="Button[2]" title="Button 3" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#72" options="plain" />
+		</Control>
+		<Control name="Button[3]" title="Button 4" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#73" options="plain" />
+		</Control>
+		<Control name="Button[4]" title="Button 5" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#74" options="plain" />
+		</Control>
+		<Control name="Button[5]" title="Button 6" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#75" options="plain" />
+		</Control>
+		<Control name="Button[6]" title="Button 7" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#76" options="plain" />
+		</Control>
+		<Control name="Button[7]" title="Button 8" type="button" options="receive public">
+			<MidiMessage status="#B0" channel="#00" address="#77" options="plain" />
+		</Control>
+	</Controls>
+</ControlSurface>

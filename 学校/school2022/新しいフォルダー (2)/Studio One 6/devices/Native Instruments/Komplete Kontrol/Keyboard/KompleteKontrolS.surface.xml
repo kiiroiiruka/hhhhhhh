@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<Files>
+		<!-- S Mk2 only -->
+		<File url="KompleteKontrolButtons.surface.xml"/>
+		<!-- Mk1 and Mk2 -->
+		<File url="KompleteKontrolKnobsSet1.surface.xml"/>
+	</Files>
+</ControlSurface>

@@ -1,0 +1,7 @@
+U:\school2022\vi\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+U:\school2022\vi\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+U:\school2022\vi\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+U:\school2022\vi\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+U:\school2022\vi\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+U:\school2022\vi\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+U:\school2022\vi\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

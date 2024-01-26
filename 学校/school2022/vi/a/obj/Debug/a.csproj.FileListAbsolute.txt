@@ -1,0 +1,9 @@
+U:\school2022\vi\a\bin\Debug\a.exe.config
+U:\school2022\vi\a\bin\Debug\a.exe
+U:\school2022\vi\a\bin\Debug\a.pdb
+U:\school2022\vi\a\obj\Debug\a.csprojAssemblyReference.cache
+U:\school2022\vi\a\obj\Debug\a.Properties.Resources.resources
+U:\school2022\vi\a\obj\Debug\a.csproj.GenerateResource.cache
+U:\school2022\vi\a\obj\Debug\a.csproj.CoreCompileInputs.cache
+U:\school2022\vi\a\obj\Debug\a.exe
+U:\school2022\vi\a\obj\Debug\a.pdb

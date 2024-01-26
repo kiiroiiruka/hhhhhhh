@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+	    <!-- ******************************************************************************************** -->
+        <!-- 8 x KNOBS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="C1" options="receive public">
+			<MidiMessage status="#B0" address="#5B"/>
+		</Control>
+		<Control name="knob[1]" title="C2" options="receive public">
+			<MidiMessage status="#B0" address="#5D"/>
+		</Control>
+		<Control name="knob[2]" title="C3" options="receive public">
+			<MidiMessage status="#B0" address="#05"/>
+		</Control>
+		<Control name="knob[3]" title="C4" options="receive public">
+			<MidiMessage status="#B0" address="#0A"/>
+		</Control>
+		<Control name="knob[4]" title="C5" options="receive public">
+			<MidiMessage status="#B0" address="#47"/>
+		</Control>
+		<Control name="knob[5]" title="C6" options="receive public">
+			<MidiMessage status="#B0" address="#4A"/>
+		</Control>
+		<Control name="knob[6]" title="C7" options="receive public">
+			<MidiMessage status="#B0" address="#54"/>
+		</Control>
+		<Control name="knob[7]" title="C8" options="receive public">
+			<MidiMessage status="#B0" address="#07"/>
+		</Control>
+	
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT BUTTONS -->
+        <!-- ******************************************************************************************** -->
+	
+		<Control name="loopButton" type="trigger" title="C11 Loop" options="receive">
+			<MidiMessage status="MMC" address="3"/>
+		</Control>
+		<Control name="rewindButton" type="trigger" title="C12 Rewind" options="receive">
+			<MidiMessage status="MMC" address="5"/>
+		</Control>
+		<Control name="ffButton" type="trigger" title="C13 Forward" options="receive">
+			<MidiMessage status="MMC" address="4"/>
+		</Control>
+		<Control name="stopButton" type="trigger" title="C14 Stop" options="receive">
+			<MidiMessage status="MMC" address="1"/>
+		</Control>
+		<Control name="playButton" type="trigger" title="C15 Play" options="receive">
+			<MidiMessage status="MMC" address="2"/>
+		</Control>		
+		<Control name="recordButton" type="trigger" title="C16 Record" options="receive">
+			<MidiMessage status="MMC" address="6"/>
+		</Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<Command control="loopButton"	command.category="Transport" command.name="Toggle Loop"/>
+			<Command control="playButton"	command.category="Transport" command.name="Start"/>
+			<Command control="stopButton"	command.category="Transport" command.name="Stop"/>
+			<Command control="recordButton"	command.category="Transport" command.name="Record"/>
+			<Command control="rewindButton" command.category="Transport" command.name="Rewind"/>
+			<Command control="ffButton"     command.category="Transport" command.name="Forward"/>
+
+		</DeviceMapping>
+	</Mappings>
+
+</ControlSurface>

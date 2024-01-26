@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaInformation>
+	<Attribute id="Package:ID" value="presonus.studioone.presonusstore.$platform"/>
+	<Attribute id="Package:Name" value="PreSonus Services Support"/>
+	<Attribute id="Package:Description" value="Support for PreSonus Shop and Exchange"/>
+	<Attribute id="Package:Version" value="3.0.0.$revision"/>
+	<Attribute id="Package:Vendor" value="PreSonus Software Ltd."/>
+	<Attribute id="Package:Website" value="https://www.presonus.software"/>
+
+	<?language de?>
+	<Attribute id="Package:LocalizedName" value="PreSonus-Dienste-Unterstützung"/>
+	<Attribute id="Package:LocalizedDescription" value="Unterstützung für PreSonus-Shop und Exchange"/>
+	<?language es?>
+	<Attribute id="Package:LocalizedName" value="Soporte Servicios PreSonus"/>
+	<Attribute id="Package:LocalizedDescription" value="Soporte para tienda PreSonus Shop y Exchange"/>
+	<?language fr?>
+	<Attribute id="Package:LocalizedName" value="Prise en charge du service PreSonus"/>
+	<Attribute id="Package:LocalizedDescription" value="Prise en charge de la boutique PreSonus et de PreSonus Exchange"/>
+	<?language ja?>
+	<Attribute id="Package:LocalizedName" value="PreSonusクラウドサポート"/>
+	<Attribute id="Package:LocalizedDescription" value="PreSonusショップおよびExchangeのサポート"/>
+	<?language pt?>
+	<Attribute id="Package:LocalizedName" value="Suporte à Nuvem PreSonus"/>
+	<Attribute id="Package:LocalizedDescription" value="Suporte à Loja PreSonus e ao Exchange"/>
+	<?language zh?>
+	<Attribute id="Package:LocalizedName" value="PreSonus 云支持"/>
+	<Attribute id="Package:LocalizedDescription" value="支持PreSonus商店和Exchange"/>
+	<?language?>
+</MetaInformation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Ozone"
+	
+	classID="{1CB5BEE4-A9AF-479b-80D2-FD065A3FC7A5}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="Oxygen8new.surface.xml"
+	
+	imageFile="Ozone.png"
+	textFile="Ozone.txt"
+	/>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstallManifest>
+	<InstallFile>
+		 <RequiredApp id="studioapp.*" minVersion="6.0.0.0" maxVersion="6.10.10.100000"/> 
+	</InstallFile>
+</InstallManifest>

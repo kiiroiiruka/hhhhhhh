@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 10 x FOOT BUTTONS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="encoderButton[0]" title="1" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#00"/>
+		</Control>
+
+		<Control name="encoderButton[1]" title="2" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#01"/>
+		</Control>
+
+		<Control name="encoderButton[2]" title="3" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#02"/>
+		</Control>
+
+		<Control name="encoderButton[3]" title="4" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#03"/>
+		</Control>
+
+		<Control name="encoderButton[4]" title="5" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#04"/>
+		</Control>
+
+		<Control name="encoderButton[5]" title="6" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#05"/>
+		</Control>
+
+		<Control name="encoderButton[6]" title="7" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#06"/>
+		</Control>
+
+		<Control name="encoderButton[7]" title="8" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#07"/>
+		</Control>
+
+		<Control name="encoderButton[8]" title="9" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#08"/>
+		</Control>
+
+		<Control name="encoderButton[9]" title="10" type="trigger" options="receive public">
+			<MidiMessage status="#C0" address="#09"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 2 x Pedal -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="pedal[0]" title="Pedal A" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="27"/>
+		</Control>
+
+		<Control name="pedal[1]" title="Pedal B" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="7"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 2 x FOOT SWITCH -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="footswitch[0]" type="button" title="SW1" options="receive public">
+			<MidiMessage status="Controller" address="109"/>
+		</Control>
+
+		<Control name="footswitch[1]" type="button" title="SW2" options="receive public">
+			<MidiMessage status="Controller" address="110"/>
+		</Control>
+
+	</Controls>
+
+</ControlSurface>

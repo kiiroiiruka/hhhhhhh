@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Edirol"
+	name="PCR-30/50/80"
+	
+	classID="{4207B499-0141-44fc-B0DE-32266C73A605}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="PCR.surface.xml"
+	
+	imageFile="PCR-30.png"
+	textFile="PCR.txt"
+	/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="CME"
+	name="UF Series"
+	
+	classID="{285DC9DB-71E4-4559-8C98-59A024F6454A}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="UF.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="UF5.png"
+	textFile="UF.txt"
+	/>

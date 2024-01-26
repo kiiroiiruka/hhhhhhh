@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SurfaceData surfaceID="{DED30111-D88D-4CAF-BE44-7786CCDB4AA9}" revision="2">
+	<SurfaceDeviceAssignment deviceID="{7AB144CA-3F02-427D-BA9A-58A7AF476234}" friendlyName="UserCommandAssignment">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="commandSection0.command0" value="Track|Add Audio Track (stereo)"/>
+				<Association key="commandSection0.command1" value="Audio|Edit with Melodyne"/>
+				<Association key="commandSection0.command2" value="Audio|Remove Melodyne"/>
+				<Association key="commandSection0.command3" value="Zoom|Zoom to Loop"/>
+				<Association key="commandSection0.command4" value="Zoom|Zoom to Selection Horizontally"/>
+				<Association key="commandSection0.command5" value="Transport|Tap Tempo"/>
+			</SurfaceAssignmentPage>
+			<SurfaceAssignmentPage>
+				<Association key="commandSection0.command0" value="Instrument Parts|Convert Pattern to Part"/>
+				<Association key="commandSection0.command1" value="Instrument Parts|Convert Part to Pattern"/>
+				<Association key="commandSection0.command2" value="Pattern|Clear Pattern"/>
+				<Association key="commandSection0.command3" value="View|Drum View"/>
+				<Association key="commandSection0.command4" value="View|Piano View"/>
+				<Association key="commandSection0.command5" value="View|Score View"/>
+			</SurfaceAssignmentPage>
+			<SurfaceAssignmentPage>
+				<Association key="commandSection0.command0" value="View|Scratch Pad"/>
+				<Association key="commandSection0.command1" value="View|Toggle Detached Editor"/>
+				<Association key="commandSection0.command2" value="View|Track List"/>
+				<Association key="commandSection0.command3" value="View|Open Chord Track"/>
+				<Association key="commandSection0.command4" value="View|Chord Selector"/>
+				<Association key="commandSection0.command5" value="Audio|Apply Chords from Chord Track"/>
+			</SurfaceAssignmentPage>
+			<SurfaceAssignmentPage>
+				<Association key="commandSection0.command0" value="Show|Next Patch"/>
+				<Association key="commandSection0.command1" value="Show|Next Setlist Item"/>
+				<Association key="commandSection0.command2" value="Show|Loop Setlist Item"/>
+				<Association key="commandSection0.command3" value="Show|Previous Patch"/>
+				<Association key="commandSection0.command4" value="Show|Previous Setlist Item"/>
+				<Association key="commandSection0.command5" value="Show|Perform"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{22222222-2222-2222-2222-222222222222}" friendlyName="Channel Controls">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="AudioChannelMacroControlSet/float-1"/>
+				<Association key="knob[1]" value="AudioChannelMacroControlSet/float-2"/>
+				<Association key="knob[2]" value="AudioChannelMacroControlSet/float-3"/>
+				<Association key="knob[3]" value="AudioChannelMacroControlSet/float-4"/>
+				<Association key="knob[4]" value="AudioChannelMacroControlSet/float-5"/>
+				<Association key="knob[5]" value="AudioChannelMacroControlSet/float-6"/>
+				<Association key="knob[6]" value="AudioChannelMacroControlSet/float-7"/>
+				<Association key="knob[7]" value="AudioChannelMacroControlSet/float-8"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}" friendlyName="Ampire">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<List x:id="subdevices">
+					<SurfaceAssignmentData folder="amp" deviceID="{71B4D5DC-5308-4F6F-BFC7-8A2948BFEA43}" friendlyName="MCM 800">
+						<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.presence"/>
+						<Association key="knob[1]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.bass"/>
+						<Association key="knob[2]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.middle"/>
+						<Association key="knob[3]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.treble"/>
+						<Association key="knob[4]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.master"/>
+						<Association key="knob[5]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.preampvolume"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="cab" deviceID="{30C0DE0C-4350-0000-414D-504952450000}" friendlyName="Ampire 4x12 M65"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp7" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{995F339E-2341-4F49-AD9F-FE2FDE911ADB}" friendlyName="MP Ninety"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{995F339E-2341-4F49-AD9F-FE2FDE911ADB}" friendlyName="MP Ninety"/>
+					<SurfaceAssignmentData folder="amp" deviceID="{4FB264B6-CE6D-48C5-BB56-3EDB89BE7725}" friendlyName="Dual Amplifier">
+						<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redpresence"/>
+						<Association key="knob[1]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redmaster"/>
+						<Association key="knob[2]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redgain"/>
+						<Association key="knob[3]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redbass"/>
+						<Association key="knob[4]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redmid"/>
+						<Association key="knob[5]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.redtreble"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="cab" deviceID="{30C0E20E-4350-0000-414D-504952450000}" friendlyName="Ampire 2x12 VC 30"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{995F339E-2341-4F49-AD9F-FE2FDE911ADB}" friendlyName="MP Ninety"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{D6B2DD74-0EE0-4A21-9E64-0135C96583C3}" friendlyName="PAE Chorus 1"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{ACBEC854-7CE9-4A78-9BF1-53E12CF49B04}" friendlyName="Pan"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{63EE9686-5245-4212-AF83-3F6311192F42}" friendlyName="Reverb"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{23EF7C12-6BCE-4AC2-B518-4401F7145847}" friendlyName="Tremolo"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{AC8F30A6-8A24-44E3-8B73-C3D55FC1614F}" friendlyName="Tube Dreamer"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{40FC219D-6D44-4DC3-9D88-1D40D2821F3C}" friendlyName="Tube Driver"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{995F339E-2341-4F49-AD9F-FE2FDE911ADB}" friendlyName="MP Ninety"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{D6B2DD74-0EE0-4A21-9E64-0135C96583C3}" friendlyName="PAE Chorus 1"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{ACBEC854-7CE9-4A78-9BF1-53E12CF49B04}" friendlyName="Pan"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{63EE9686-5245-4212-AF83-3F6311192F42}" friendlyName="Reverb"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{23EF7C12-6BCE-4AC2-B518-4401F7145847}" friendlyName="Tremolo"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{AC8F30A6-8A24-44E3-8B73-C3D55FC1614F}" friendlyName="Tube Dreamer"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{40FC219D-6D44-4DC3-9D88-1D40D2821F3C}" friendlyName="Tube Driver"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{D6B2DD74-0EE0-4A21-9E64-0135C96583C3}" friendlyName="PAE Chorus 1"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{ACBEC854-7CE9-4A78-9BF1-53E12CF49B04}" friendlyName="Pan"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{63EE9686-5245-4212-AF83-3F6311192F42}" friendlyName="Reverb"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{23EF7C12-6BCE-4AC2-B518-4401F7145847}" friendlyName="Tremolo"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{AC8F30A6-8A24-44E3-8B73-C3D55FC1614F}" friendlyName="Tube Dreamer"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{40FC219D-6D44-4DC3-9D88-1D40D2821F3C}" friendlyName="Tube Driver"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="amp" deviceID="{3939AAE9-2EDF-477E-AC44-7F6115AA7853}" friendlyName="VC30">
+						<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vib_speed"/>
+						<Association key="knob[1]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vib_trem"/>
+						<Association key="knob[2]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vol_trem"/>
+						<Association key="knob[3]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vol_normal"/>
+						<Association key="knob[4]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vol_bril"/>
+						<Association key="knob[5]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.treble"/>
+						<Association key="knob[6]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.bass"/>
+						<Association key="knob[7]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.cut"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="amp" deviceID="{C981653D-AE55-45B1-9711-131A129B0664}" friendlyName="Blackface Twin">
+						<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.nvolume"/>
+						<Association key="knob[1]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.ntreble"/>
+						<Association key="knob[2]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.nmiddle"/>
+						<Association key="knob[3]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.nbass"/>
+						<Association key="knob[4]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vvolume"/>
+						<Association key="knob[5]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vtreble"/>
+						<Association key="knob[6]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vmiddle"/>
+						<Association key="knob[7]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vbass"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="amp" deviceID="{DC8890A7-7563-4F94-82EF-4125CBF7FF40}" friendlyName="Amp STV">
+						<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vol1"/>
+						<Association key="knob[1]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.treble1"/>
+						<Association key="knob[2]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.mid1"/>
+						<Association key="knob[3]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.bass1"/>
+						<Association key="knob[4]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.vol2"/>
+						<Association key="knob[5]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.treble2"/>
+						<Association key="knob[6]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/amp.bass2"/>
+					</SurfaceAssignmentData>
+				</List>
+			</SurfaceAssignmentPage>
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{B6407C28-0F92-4538-9E7F-9B867B3FEA74}/controls.wah"/>
+				<List x:id="subdevices">
+					<SurfaceAssignmentData folder="stomp1" deviceID="{ACBEC854-7CE9-4A78-9BF1-53E12CF49B04}" friendlyName="Pan"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp7" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{D6B2DD74-0EE0-4A21-9E64-0135C96583C3}" friendlyName="PAE Chorus 1"/>
+					<SurfaceAssignmentData folder="cab" deviceID="{30C0E20E-4350-0000-414D-504952450000}" friendlyName="Ampire 2x12 VC 30"/>
+					<SurfaceAssignmentData folder="amp" deviceID="{71B4D5DC-5308-4F6F-BFC7-8A2948BFEA43}" friendlyName="MCM 800"/>
+					<SurfaceAssignmentData folder="amp" deviceID="{3939AAE9-2EDF-477E-AC44-7F6115AA7853}" friendlyName="VC30"/>
+				</List>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}" friendlyName="Analog Delay">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/beatsnu"/>
+				<Association key="knob[7]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/mix"/>
+				<Association key="knob[1]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/time"/>
+				<Association key="knob[2]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/speed"/>
+				<Association key="knob[3]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/inertia"/>
+				<Association key="knob[4]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/lfowidth"/>
+				<Association key="knob[5]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/feedback"/>
+				<Association key="knob[6]" value="{68B3EB20-DEDC-4809-B23C-BE5BACA5413C}/width"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BEC73D38-7954-42A0-9504-038B23046FAB}" friendlyName="Autofilter">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/cutoff"/>
+				<Association key="knob[1]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/spread"/>
+				<Association key="knob[2]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/drive"/>
+				<Association key="knob[3]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/reso"/>
+				<Association key="knob[4]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/envelopespeed"/>
+				<Association key="knob[5]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/lfobeatsnu"/>
+				<Association key="knob[6]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/gain"/>
+				<Association key="knob[7]" value="{BEC73D38-7954-42A0-9504-038B23046FAB}/depth"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BFBEA41B-679A-41F2-AACA-ED9D51137412}" friendlyName="Beat Delay">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/mix"/>
+				<Association key="knob[0]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/cross"/>
+				<Association key="knob[1]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/inpan"/>
+				<Association key="knob[2]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/beatsnu"/>
+				<Association key="knob[3]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/offset"/>
+				<Association key="knob[4]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/pingfactor"/>
+				<Association key="knob[5]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/feedback"/>
+				<Association key="knob[6]" value="{BFBEA41B-679A-41F2-AACA-ED9D51137412}/width"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{8B2715B1-A03A-4BD7-AE59-AFE4DE020929}" friendlyName="Binaural Pan">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{8B2715B1-A03A-4BD7-AE59-AFE4DE020929}/stereowidth"/>
+				<Association key="knob[1]" value="{8B2715B1-A03A-4BD7-AE59-AFE4DE020929}/pan"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BC7319ED-C40D-3C40-8015-34502212C1B8}" friendlyName="Bitcrusher">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/drive"/>
+				<Association key="knob[1]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/bitDepth"/>
+				<Association key="knob[2]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/downsample"/>
+				<Association key="knob[3]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/clipping"/>
+				<Association key="knob[4]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/clippingMode"/>
+				<Association key="knob[5]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/gain"/>
+				<Association key="knob[7]" value="{BC7319ED-C40D-3C40-8015-34502212C1B8}/mix"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}" friendlyName="Channel Strip">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/lcfreq"/>
+				<Association key="knob[1]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/compress"/>
+				<Association key="knob[2]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/expand"/>
+				<Association key="knob[7]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/gain"/>
+				<Association key="knob[3]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/speed"/>
+				<Association key="knob[4]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/gain1"/>
+				<Association key="knob[5]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/gain2"/>
+				<Association key="knob[6]" value="{B2C316FC-97E8-46AD-BBC4-7ACC455C18CC}/gain3"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}" friendlyName="Chorus">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/depth"/>
+				<Association key="knob[6]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/hifreq"/>
+				<Association key="knob[5]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/lofreq"/>
+				<Association key="knob[4]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/stereo"/>
+				<Association key="knob[3]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/lfowidth"/>
+				<Association key="knob[2]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/lfospeed"/>
+				<Association key="knob[0]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/delay0"/>
+				<Association key="knob[1]" value="{9340FE84-5B79-45AA-9C3E-5AB9B01F2955}/lfoShape"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}" friendlyName="Compressor">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/threshold"/>
+				<Association key="knob[1]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/ratio"/>
+				<Association key="knob[2]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/knee"/>
+				<Association key="knob[7]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/mix"/>
+				<Association key="knob[5]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/ingain"/>
+				<Association key="knob[6]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/gain"/>
+				<Association key="knob[3]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/attack"/>
+				<Association key="knob[4]" value="{54F19B72-352C-4AA5-A2AF-67F86F30D6BE}/release"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}" friendlyName="Dual Pan">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/inbalance"/>
+				<Association key="knob[1]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/panlaw"/>
+				<Association key="knob[2]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/linkedwidth"/>
+				<Association key="knob[3]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/linkedpan"/>
+				<Association key="knob[4]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/leftpan"/>
+				<Association key="knob[5]" value="{0C3A0AD2-20DD-4B12-A1CF-AD03D8408EAD}/rightpan"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}" friendlyName="Expander">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/highthresh"/>
+				<Association key="knob[1]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/range"/>
+				<Association key="knob[2]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/ratio"/>
+				<Association key="knob[3]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/attack"/>
+				<Association key="knob[4]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/release"/>
+				<Association key="knob[5]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/filterlow"/>
+				<Association key="knob[6]" value="{831A0046-BD71-45BF-A419-6FC90D6E9F2F}/filterhigh"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}" friendlyName="Fat Channel">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/limit.threshold"/>
+				<Association key="knob[0]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/filter.hpf"/>
+				<Association key="knob[1]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/gate.threshold"/>
+				<List x:id="subdevices">
+					<SurfaceAssignmentData folder="comp" deviceID="{AFEE6684-5985-4D29-81E6-661F4F07C2CE}" friendlyName="StudioLive Compressor">
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.gain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{870D04F7-212E-4F9C-ADBB-39A97216433F}" friendlyName="StudioLive Compressor XT">
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.ratio"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{983BF658-011F-4E91-827F-6A0F66A40D89}" friendlyName="StudioLive EQ">
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain4"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain2"/>
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain1"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{A0A8A068-14F0-4B04-BB6F-AF8329D0E8EE}" friendlyName="StudioLive EQ XT 4 Band">
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain4"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain2"/>
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.eqgain1"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{7F8A4262-D377-48E3-9D48-15D82C400A71}" friendlyName="StudioLive Tube Compressor">
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.gain"/>
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.peak"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{1F831EC1-B8AC-4EE9-AD53-54227AF53D58}" friendlyName="StudioLive FET Compressor">
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.input"/>
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.output"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{C0730CBB-5135-4558-9222-C40BDBA036ED}" friendlyName="StudioLive Passive EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.bboost"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.batten"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.mboost"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{E1C5E024-C5CD-473C-B08A-6EC177812E01}" friendlyName="StudioLive Vintage EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowmidgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.higain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{85DD5632-A536-49FF-894A-9329FC1124E4}" friendlyName="StudioLive FC-670">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.timeconstant"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{A0FAF452-D664-4BA2-90FC-6BD4AC469B29}" friendlyName="StudioLive VT1 EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowmidgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highmidgain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{FEF33155-7A9E-4F4E-B209-CFE86DDAFC8E}" friendlyName="StudioLive Brit Comp">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.ratio"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{C38F9E1A-0127-4BB8-9377-40C545A50328}" friendlyName="StudioLive Classic Compressor">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.ratio"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{F0BD22BB-5FE8-4279-8B05-D089B4D7B0BB}" friendlyName="StudioLive Comp 160">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.compression"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{23F9C088-08BE-4259-9DCE-38720AE5DE73}" friendlyName="StudioLive Everest C100A">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.gainred"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.gain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{6A372968-AFA7-4A3F-805D-A09A4AE15777}" friendlyName="StudioLive RC500 Comp">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.makeup"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{C3C32BBC-42E2-41A7-99B5-EA1D62F897B5}" friendlyName="StudioLive The Tube CB">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.ratio"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="comp" deviceID="{AF35E448-40EC-4C5A-A05C-B40A5AC0A42F}" friendlyName="StudioLive VT1 Comp">
+						<Association key="knob[3]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.ratio"/>
+						<Association key="knob[2]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/comp.threshold"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{CBDD0DD3-C5EF-495A-B4C7-92EC5E8FE146}" friendlyName="StudioLive Alpine EQ-550">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.midgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highgain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{B4D3497E-4B1C-4CFA-B859-A918C17CDA03}" friendlyName="StudioLive Baxandall EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowfreq"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highgain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{63ADDF9B-0EC7-430A-AEBE-62B4CB5FBBD6}" friendlyName="StudioLive RC500 EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.midgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highgain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{03819C3F-DC16-4B7B-B521-14B4042192F2}" friendlyName="StudioLive Solar 69">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.bassgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.midgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.10kGain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{09B38119-3945-40D1-BA33-2FA19620DAB0}" friendlyName="StudioLive The Tube Midrange EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.midgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highgain"/>
+					</SurfaceAssignmentData>
+					<SurfaceAssignmentData folder="eq" deviceID="{4635DE88-C3D2-4645-BC4D-8DFD116D6914}" friendlyName="StudioLive Vintage 3-band EQ">
+						<Association key="knob[4]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.lowgain"/>
+						<Association key="knob[5]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.midgain"/>
+						<Association key="knob[6]" value="{5E91DC8A-E560-4115-98FA-59FB3F215BA1}/eq.highgain"/>
+					</SurfaceAssignmentData>
+				</List>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{AC97B789-7D8F-4585-A308-56C98374BD4C}" friendlyName="Flanger">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/lfowidth"/>
+				<Association key="knob[2]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/lfospeed"/>
+				<Association key="knob[1]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/beatsnu"/>
+				<Association key="knob[3]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/feedback"/>
+				<Association key="knob[4]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/speed"/>
+				<Association key="knob[5]" value="{AC97B789-7D8F-4585-A308-56C98374BD4C}/depth"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}" friendlyName="Gate">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/highthresh"/>
+				<Association key="knob[1]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/hysteresis"/>
+				<Association key="knob[2]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/range"/>
+				<Association key="knob[3]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/attack"/>
+				<Association key="knob[4]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/release"/>
+				<Association key="knob[6]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/filterlow"/>
+				<Association key="knob[7]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/filterhigh"/>
+				<Association key="knob[5]" value="{132C0E1F-06FD-4C96-BD65-678C04FE1C92}/hold"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{C80A56CC-912C-416C-834B-68A9B1A83420}" friendlyName="Groove Delay">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[3]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/beats4"/>
+				<Association key="knob[2]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/beats3"/>
+				<Association key="knob[1]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/beats2"/>
+				<Association key="knob[0]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/beats1"/>
+				<Association key="knob[7]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/mix"/>
+				<Association key="knob[5]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/feedback"/>
+				<Association key="knob[6]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/lfobeatsnu"/>
+				<Association key="knob[4]" value="{C80A56CC-912C-416C-834B-68A9B1A83420}/beatlength"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{DF958D90-0196-434F-ADC3-1FC2BB7F4AF6}" friendlyName="Level Meter">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{61B18D53-26FA-4220-8614-89944A1990EC}" friendlyName="Limiter">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{61B18D53-26FA-4220-8614-89944A1990EC}/ingain"/>
+				<Association key="knob[1]" value="{61B18D53-26FA-4220-8614-89944A1990EC}/ceiling"/>
+				<Association key="knob[2]" value="{61B18D53-26FA-4220-8614-89944A1990EC}/thresholdrel"/>
+				<Association key="knob[3]" value="{61B18D53-26FA-4220-8614-89944A1990EC}/release"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{E4D7D911-0608-4B46-ABA3-2E345399A5AC}" friendlyName="Mixtool">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{E4D7D911-0608-4B46-ABA3-2E345399A5AC}/gain"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}" friendlyName="Mixverb">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/predelay"/>
+				<Association key="knob[1]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/size"/>
+				<Association key="knob[2]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/damp"/>
+				<Association key="knob[3]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/highthresh"/>
+				<Association key="knob[4]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/gaterel"/>
+				<Association key="knob[5]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/width"/>
+				<Association key="knob[7]" value="{FEB6F7CB-36CA-4CBA-9090-42B7C76F4158}/mix"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}" friendlyName="Multiband Dynamics">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/corner1"/>
+				<Association key="knob[1]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/corner2"/>
+				<Association key="knob[2]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/corner3"/>
+				<Association key="knob[3]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/corner4"/>
+				<Association key="knob[7]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/mix"/>
+				<Association key="knob[6]" value="{701812B1-7B20-4C95-BECB-D7C2ACF954ED}/gain"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}" friendlyName="Open AIR">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/mix"/>
+				<Association key="knob[6]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/gain"/>
+				<Association key="knob[5]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/erlrbalance"/>
+				<Association key="knob[2]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/crossfeed"/>
+				<Association key="knob[3]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/crossdelay"/>
+				<Association key="knob[4]" value="{507EFD36-8B20-4A37-A8C2-36FFC4D30ED1}/crossasym"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{0E890247-B39D-41AE-A9A3-647C30BB5C16}" friendlyName="Phaser">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/rangeMin"/>
+				<Association key="knob[1]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/rangeMax"/>
+				<Association key="knob[2]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/speed"/>
+				<Association key="knob[3]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/beatsnu"/>
+				<Association key="knob[4]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/feedback"/>
+				<Association key="knob[5]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/stages"/>
+				<Association key="knob[7]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/depth"/>
+				<Association key="knob[6]" value="{0E890247-B39D-41AE-A9A3-647C30BB5C16}/spread"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{073C4094-E062-4FB5-8328-74608DD1A3A4}" friendlyName="Pro EQ">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/lcfreq"/>
+				<Association key="knob[1]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/lfgain"/>
+				<Association key="knob[2]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/lmfgain"/>
+				<Association key="knob[3]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/mfgain"/>
+				<Association key="knob[4]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/hmfgain"/>
+				<Association key="knob[5]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/hfgain"/>
+				<Association key="knob[6]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/hcfreq"/>
+				<Association key="knob[7]" value="{073C4094-E062-4FB5-8328-74608DD1A3A4}/gain"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{03518B56-3075-4B49-91B5-5489CA84175F}" friendlyName="RC500">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/comp.threshold"/>
+				<Association key="knob[1]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/comp.attack"/>
+				<Association key="knob[2]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/comp.release"/>
+				<Association key="knob[3]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/pre.gain"/>
+				<Association key="knob[4]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/master.volume"/>
+				<Association key="knob[5]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/eq.higain"/>
+				<Association key="knob[6]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/eq.midgain"/>
+				<Association key="knob[7]" value="{03518B56-3075-4B49-91B5-5489CA84175F}/eq.logain"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{EB8C4ED5-615C-44EA-8F93-757181647AC8}" friendlyName="RedlightDist">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/ingain"/>
+				<Association key="knob[1]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/drive"/>
+				<Association key="knob[2]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/low"/>
+				<Association key="knob[3]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/high"/>
+				<Association key="knob[4]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/bias"/>
+				<Association key="knob[6]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/outgain"/>
+				<Association key="knob[7]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/mix"/>
+				<Association key="knob[5]" value="{EB8C4ED5-615C-44EA-8F93-757181647AC8}/stages"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{29C71194-B29A-40C0-9A35-9053DB6F596C}" friendlyName="Room Reverb">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/mix"/>
+				<Association key="knob[6]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/erlrbalance"/>
+				<Association key="knob[0]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/predelayoffset"/>
+				<Association key="knob[1]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/lengthoffset"/>
+				<Association key="knob[2]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/roomsize"/>
+				<Association key="knob[3]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/damping"/>
+				<Association key="knob[4]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/population"/>
+				<Association key="knob[5]" value="{29C71194-B29A-40C0-9A35-9053DB6F596C}/smoothness"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{072BAC58-596A-4D6A-8F01-978B96E4BF36}" friendlyName="Rotor">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{072BAC58-596A-4D6A-8F01-978B96E4BF36}/drive"/>
+				<Association key="knob[1]" value="{072BAC58-596A-4D6A-8F01-978B96E4BF36}/hornQ"/>
+				<Association key="knob[2]" value="{072BAC58-596A-4D6A-8F01-978B96E4BF36}/micDistance"/>
+				<Association key="knob[3]" value="{072BAC58-596A-4D6A-8F01-978B96E4BF36}/balance"/>
+				<Association key="knob[4]" value="{072BAC58-596A-4D6A-8F01-978B96E4BF36}/spread"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{36322412-AD90-4EE0-B63C-37929566B081}" friendlyName="Scope">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{36322412-AD90-4EE0-B63C-37929566B081}/levelScale"/>
+				<Association key="knob[1]" value="{36322412-AD90-4EE0-B63C-37929566B081}/levelOff"/>
+				<Association key="knob[2]" value="{36322412-AD90-4EE0-B63C-37929566B081}/secondOffset"/>
+				<Association key="knob[3]" value="{36322412-AD90-4EE0-B63C-37929566B081}/secondOffset"/>
+				<Association key="knob[4]" value="{36322412-AD90-4EE0-B63C-37929566B081}/thirdScale"/>
+				<Association key="knob[6]" value="{36322412-AD90-4EE0-B63C-37929566B081}/fourthScale"/>
+				<Association key="knob[5]" value="{36322412-AD90-4EE0-B63C-37929566B081}/thirdOffset"/>
+				<Association key="knob[7]" value="{36322412-AD90-4EE0-B63C-37929566B081}/fourthOffset"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}" friendlyName="Tone Generator">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/wave"/>
+				<Association key="knob[1]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/freq"/>
+				<Association key="knob[2]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/modlen"/>
+				<Association key="knob[3]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/shift"/>
+				<Association key="knob[4]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/modtargetfreq"/>
+				<Association key="knob[7]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/level"/>
+				<Association key="knob[6]" value="{A1C299EA-7586-4B51-95A0-9BCFE682DE9C}/outmode"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B34E203A-82A9-4D07-83AD-691860665E9A}" friendlyName="Tricomp">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[1]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/low"/>
+				<Association key="knob[2]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/lowcorner"/>
+				<Association key="knob[3]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/high"/>
+				<Association key="knob[4]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/highcorner"/>
+				<Association key="knob[7]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/mix"/>
+				<Association key="knob[6]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/outgain"/>
+				<Association key="knob[0]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/compress"/>
+				<Association key="knob[5]" value="{B34E203A-82A9-4D07-83AD-691860665E9A}/speed"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{4F748A80-0D49-4E8A-A558-B120D824512B}" friendlyName="Tuner">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{4F748A80-0D49-4E8A-A558-B120D824512B}/calibration"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}" friendlyName="VT1">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[7]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/master.volume"/>
+				<Association key="knob[6]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/comp.makeup"/>
+				<Association key="knob[5]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/comp.release"/>
+				<Association key="knob[4]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/comp.attack"/>
+				<Association key="knob[3]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/comp.ratio"/>
+				<Association key="knob[2]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/comp.threshold"/>
+				<Association key="knob[0]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/pre.hpffreq"/>
+				<Association key="knob[1]" value="{BE1EFD56-00F9-4F62-B668-BFED4E8C5DA6}/pre.gainselect"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B05B181C-6417-4441-A6F4-CC3E780548AD}" friendlyName="VU Meter">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{B05B181C-6417-4441-A6F4-CC3E780548AD}/sens"/>
+				<Association key="knob[1]" value="{B05B181C-6417-4441-A6F4-CC3E780548AD}/scale"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{345D7412-977D-4364-A79B-5981F249AAC3}" friendlyName="X-Trem">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{345D7412-977D-4364-A79B-5981F249AAC3}/depth"/>
+				<Association key="knob[1]" value="{345D7412-977D-4364-A79B-5981F249AAC3}/lfobeatsnu"/>
+				<Association key="knob[2]" value="{345D7412-977D-4364-A79B-5981F249AAC3}/lfospeed"/>
+				<Association key="knob[3]" value="{345D7412-977D-4364-A79B-5981F249AAC3}/lfotype"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{64C0D0A1-F21A-42AF-8E30-40FF97591363}" friendlyName="Console Shaper">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{64C0D0A1-F21A-42AF-8E30-40FF97591363}/drive"/>
+				<Association key="knob[1]" value="{64C0D0A1-F21A-42AF-8E30-40FF97591363}/noise"/>
+				<Association key="knob[2]" value="{64C0D0A1-F21A-42AF-8E30-40FF97591363}/crosstalk"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}" friendlyName="CTC-1">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/drive"/>
+				<Association key="knob[2]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/noise"/>
+				<Association key="knob[4]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/crosstalk"/>
+				<Association key="knob[5]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/character"/>
+				<Association key="knob[7]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/master"/>
+				<Association key="knob[6]" value="{91E6C8D6-0BEA-4A19-BED2-F2694B164B86}/preampType"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}" friendlyName="Mai Tai">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/filter.cutoff"/>
+				<Association key="knob[1]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/filter.resonance"/>
+				<Association key="knob[3]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/adsr2.decay"/>
+				<Association key="knob[2]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/modulationTable.cell1.amount"/>
+				<Association key="knob[4]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/osc1.stereowidth"/>
+				<Association key="knob[5]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/character1.eqcolour"/>
+				<Association key="knob[6]" value="{B625F134-4485-4A50-A3C8-C9CF0C5495E1}/verbFx.mix"/>
+				<Association key="knob[7]" value="Control/7"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}" friendlyName="Multi Instrument">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-1"/>
+				<Association key="knob[1]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-2"/>
+				<Association key="knob[2]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-3"/>
+				<Association key="knob[3]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-4"/>
+				<Association key="knob[4]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-5"/>
+				<Association key="knob[5]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-6"/>
+				<Association key="knob[6]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-7"/>
+				<Association key="knob[7]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-8"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}" friendlyName="Mojito">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/tune"/>
+				<Association key="knob[1]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/sawSquareOsc1"/>
+				<Association key="knob[2]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/pulseWidthOsc1"/>
+				<Association key="knob[3]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/fltCutoff"/>
+				<Association key="knob[4]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/fltResonance"/>
+				<Association key="knob[5]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/fltEnvelope"/>
+				<Association key="knob[7]" value="Control/7"/>
+				<Association key="knob[6]" value="{19C6BEAB-1A48-4338-BB04-14A9AC1FCC05}/ampEnvDecay"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}" friendlyName="Presence">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/filter.cutoff"/>
+				<Association key="knob[2]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/modulationTable.cell1.amount"/>
+				<Association key="knob[1]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/filter.resonance"/>
+				<Association key="knob[3]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/adsr2.decay"/>
+				<Association key="knob[4]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/transpose"/>
+				<Association key="knob[5]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/lfo1.frequency"/>
+				<Association key="knob[6]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9A}/verbFx.mix"/>
+				<Association key="knob[7]" value="Control/7"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}" friendlyName="Impact">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.wave-amp.dbOffset"/>
+				<Association key="knob[1]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.wave-amp.pan"/>
+				<Association key="knob[2]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.adsrMain.decay"/>
+				<Association key="knob[3]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.wave.transpose"/>
+				<Association key="knob[4]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.filter.cutoff"/>
+				<Association key="knob[5]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.filter.resonance"/>
+				<Association key="knob[6]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.filterAdsr.attack"/>
+				<Association key="knob[7]" value="{3713E26C-2FCA-4024-9F25-17E9D2BE2B9B}/focus.modulation.filterAdsrAmount"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{C37BC9D1-6BD1-46A7-A60C-B13438666448}" friendlyName="SampleOne">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[4]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/filter.cutoff"/>
+				<Association key="knob[5]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/filter.resonance"/>
+				<Association key="knob[0]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/filterAdsr.attack"/>
+				<Association key="knob[1]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/filterAdsr.decay"/>
+				<Association key="knob[2]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/filterAdsr.sustain"/>
+				<Association key="knob[3]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/modulation.filterAdsrAmount"/>
+				<Association key="knob[7]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/modulation.filterLfoAmount"/>
+				<Association key="knob[6]" value="{C37BC9D1-6BD1-46A7-A60C-B13438666448}/lfo.beatlength"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BC9129B4-EC67-41B8-96DE-EC128D5FE54D}" friendlyName="Pedalboard"
+	                         autofill="0" activePage="0">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{BC9129B4-EC67-41B8-96DE-EC128D5FE54D}/controls.wah"/>
+				<List x:id="subdevices">
+					<SurfaceAssignmentData folder="stomp1" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{9A0147E4-B67C-46B4-BA8A-786996F0D8F4}" friendlyName="Equalizer"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{C5881966-568C-4EF6-825E-E6E0C739EE70}" friendlyName="FAT"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{B37FE59D-CEFD-4A23-A667-022CCA77EC6F}" friendlyName="Modulation"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{995F339E-2341-4F49-AD9F-FE2FDE911ADB}" friendlyName="MP Ninety"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{D6B2DD74-0EE0-4A21-9E64-0135C96583C3}" friendlyName="PAE Chorus 1"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp6" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp7" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{5C2EDAFD-DFF7-4517-BAD3-617F8AB4F393}" friendlyName="Big Fuzz"/>
+					<SurfaceAssignmentData folder="stomp8" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp1" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp7" deviceID="{E7DFD20D-B552-456C-94E7-15AFEC3B020C}" friendlyName="Delay"/>
+					<SurfaceAssignmentData folder="stomp2" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp3" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp4" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+					<SurfaceAssignmentData folder="stomp5" deviceID="{DCAC5B0A-947A-420C-9A37-FBC81AFA144B}" friendlyName="Wah Wah"/>
+				</List>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}" friendlyName="Arpeggiator"
+												 activePage="0">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/holdMode"/>
+				<Association key="knob[1]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/velocityMode"/>
+				<Association key="knob[2]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/velocity"/>
+				<Association key="knob[3]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/gateTime"/>
+				<Association key="knob[4]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/playRate"/>
+				<Association key="knob[5]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/octaveRange"/>
+				<Association key="knob[6]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/playMode"/>
+				<Association key="knob[7]" value="{BDD2D6E5-3819-41B4-BF91-7B832DAAFA0B}/swing"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}" friendlyName="Chorder" activePage="0">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.clearAll"/>
+				<Association key="knob[1]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.copy"/>
+				<Association key="knob[2]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.paste"/>
+				<Association key="knob[3]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.learnInputPitch"/>
+				<Association key="knob[4]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.transpose"/>
+				<Association key="knob[5]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.loKey"/>
+				<Association key="knob[6]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.hiKey"/>
+				<Association key="knob[7]" value="{D2D9B002-12FC-4F1D-AFDA-70336D1DC108}/chorder.learnMode"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{33333333-3333-3333-3333-333333333333}" friendlyName="Macro Controls"
+													 activePage="0">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="knob[0]" value="GlobalMacroControlSet/float-1"/>
+				<Association key="knob[1]" value="GlobalMacroControlSet/float-2"/>
+				<Association key="knob[2]" value="GlobalMacroControlSet/float-3"/>
+				<Association key="knob[3]" value="GlobalMacroControlSet/float-4"/>
+				<Association key="knob[4]" value="GlobalMacroControlSet/float-5"/>
+				<Association key="knob[5]" value="GlobalMacroControlSet/float-6"/>
+				<Association key="knob[6]" value="GlobalMacroControlSet/float-7"/>
+				<Association key="knob[7]" value="GlobalMacroControlSet/float-8"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+</SurfaceData>

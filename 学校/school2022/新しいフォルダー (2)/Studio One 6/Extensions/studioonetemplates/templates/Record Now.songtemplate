@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Record Now"/>
+	<Attribute id="Document:SubTitle" value="New audio recording"/>
+	<Attribute id="Document:Description" value="Record audio on single or multiple tracks and capture your ideas."/>
+	<Attribute id="Document:TemplateHandler" value="{9935B8BC-3265-4C61-8B82-69401A433504}"/>
+	<Attribute id="Document:DocumentEventHandler" value="{5D0F0A7A-7C70-4723-A344-983E3DC886CE}"/>
+	<Attribute id="Document:Icon" value="icons/RecordNow.svg"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.AudioEditing"/>
+	<Attribute id="Document:MenuPriority" value="20"/>
+	<Attribute id="Document:Options" value="DefaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Jetzt aufnehmen"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Neue Audioaufnahme"/>
+		<Attribute id="Document:LocalizedDescription" value="Einzel- oder Mehrspuraudioaufnahme zum Festhalten von Ideen"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Grabar ahora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Nueva grabación de audio"/>
+		<Attribute id="Document:LocalizedDescription" value="Grabe audio en una o varias pistas y capture sus ideas."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Enregistrer maintenant"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Nouvel enregistrement audio"/>
+		<Attribute id="Document:LocalizedDescription" value="Enregistrer du son sur une ou plusieurs pistes et capturer vos idées."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Registra ora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Nuova registrazione audio"/>
+		<Attribute id="Document:LocalizedDescription" value="Registra l'audio su tracce singole o multiple e cattura le tue idee."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="今すぐ録音"/>
+		<Attribute id="Document:LocalizedSubTitle" value="新規オーディオ録音"/>
+		<Attribute id="Document:LocalizedDescription" value="ひとつまたは複数のトラックにオーディオを録音してアイデアをキャプチャしましょう。"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="지금 레코딩"/>
+		<Attribute id="Document:LocalizedSubTitle" value="새 오디오 레코딩"/>
+		<Attribute id="Document:LocalizedDescription" value="하나 혹은 여러 트랙에 오디오를 녹음하면서 떠오르는 아이디어를 캡처합니다."/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Gravar Agora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Nova gravação de áudio"/>
+		<Attribute id="Document:LocalizedDescription" value="Grave áudio em uma ou multiplas pistas e registre suas idéias."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="开始录音"/>
+		<Attribute id="Document:LocalizedSubTitle" value="新音频录音"/>
+		<Attribute id="Document:LocalizedDescription" value="在单个或多个轨道上录音并捕捉您的想法。"/>
+	<?language?>
+
+</DocumentTemplate>

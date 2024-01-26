@@ -1,0 +1,528 @@
+import pgzrun
+import random
+import winsound
+
+WIDHT =700
+HEIGHT=490
+
+a=Actor('k',topleft=(0,0))      #a=マップ
+a1=2	                        #aの移動スピード
+a2=4	                        #aの走る際の体力ゲージ
+a3=61	                        #aの走る際の体力の変化の度合い(疲れ)
+a4=1                            #aの走る際の体力の変化の度合い(回復)
+a5=0	                        #ストッパー
+a6=0	                        #ストッパー2
+a7=0
+#b=Actor('b',topleft=(0,0))     #b=敵キャラ
+#b1=2	                        #bの移動スピード
+c=Actor('a',topleft=(0,0))      #c=メインキャラ
+c1=1	                        #ｃの持ち物画面絵の切り替え
+d1=50	                        #d1=HP
+e1=0	                        #e=時間
+e2=0	                        #e1を６０で割る
+f1=0	                        #f1=音
+g=Actor('g',topleft=(0,600))	#ｇ＝スタート画面
+g1=1
+g2=0
+h1=1	                        #h＝持ち物画
+j=Actor('j',topleft=(150,0))    #j=ボタン画像
+j2=Actor('j2',topleft=(150,0))  #ボタン画像(押したときの奴)
+j1=0	                        #ボタンクリック時の大きさ
+j3=0
+j4=Actor('j4',topleft=(150,70))    
+j5=Actor('j5',topleft=(150,140))  
+i=Actor('i',topleft=(730,0))    #ホーム画面画像
+l1=0	                        #壁にめり込むバグの対処
+l2=1
+l3=0
+l4=0
+l5=0
+l6=0
+l7=0
+l=Actor('l',topleft=(0,0))      #l=壁llllllllllllllllllllllllllll
+m=Actor('m',topleft=(0,0))      #m=マップ移動mmmmmmmmmmmmmmmmmmmmmmmm
+mm=Actor('m',topleft=(0,0))     #m=マップ移動（帰り）mmmmmmmmmmmmmmmmmmmmmmmm
+m1=0
+n1=0	                        #n=スクリーンテキスト　表示する速さ
+n2=0	                        #n=スクリーンテキスト　表示している位置
+n3=5
+n4=0	                        #n4=段落数
+n5=0	                        #n5=どこの部分のテキストなのかの分別]
+n6=0	                        #n6によって定められたテキストの表示
+n=Actor('n',topleft=(0,0))      #文字隠す四角
+nn=Actor('nn',topleft=(0,0))    #テロップの四角いところ
+nnn=Actor('n',topleft=(0,0))    #テロップの四角いところ
+o=Actor('o',topleft=(0,0))      #O=テキスト表示させる位置にある画像
+#アイテム画像↓
+#pp1=Actor('p',topleft=(0,0))    #p=手持ちのアイテム
+#pp2=Actor('p',topleft=(0,0))
+#pp3=Actor('p',topleft=(0,0))
+#pp4=Actor('p',topleft=(0,0))
+#アイテム画像↑
+p1=0	                        #p1=アイテムを手に入れた表示
+p2=0
+p4=0	                        #持ち物欄の表示位置
+p5=1000
+p6=1000
+p7=1000
+p8=0
+p9=0
+p10=0
+p11=0
+p12=0
+#スタート画面↓
+q=Actor('q',topleft=(0,0))
+qq=Actor('qq',topleft=(0,0))
+qq1=Actor('qq1',topleft=(0,0))
+q1=0#ゲームのシーンq1=0スタート画面ｑ１＝１ゲームｑ１＝３以上　テキスト
+q2=0
+#スタート画面↑
+
+p1p=0#1アイテム１
+p1pp=120#2回ゲットを防ぐストッパー
+
+p2p=0
+p2pp=120
+
+p3p=0
+p3pp=120
+
+p4p=0
+p4pp=120
+
+p5p=0
+p5pp=120
+
+p6p=0
+p6pp=120
+
+def draw():
+    global a1,a3
+    global c1
+    global e1
+    global j1#ボタン
+    global l4#壁
+    global n1,n2,n3,n4,n5,n6#スクリーン表示テキスト
+    global p1,p2,p1p,p4,p5,p6,p7,p8,p9,p10,p11,p12#持ち物
+    global p1pp,p2pp,p3pp,p4pp,p5pp,p6pp#2回ゲットを防ぐストッパー
+    global q1,q2#スタート画面
+    screen.clear()
+    screen.fill((108,100,55))##画面の背景の色を調整
+    if q1<1:
+        q.draw()
+        qq.topleft=(300,160)
+        qq.draw()
+        if q1==-1:
+            q2+=1
+            if q2==30:
+                q1=3
+            qq1.topleft=(300,160)
+            qq1.draw()
+        screen.draw.text("START",(354,180),fontname='coure.fon',owidth=0.4,color="WHITE",fontsize=1000)
+    #マップ出入り口↓
+    if q1==3:
+        n3=0
+        n5=2
+        n4=3#　←そのテキストの段落数設定
+        n6=1#　←テキスト表示する際は1にする
+        
+    
+    if q1==1:
+        if m1==0:#mmmmmmmmmmmmm
+             a.draw()
+             l.topleft=(a.x-100,a.y-193)#マップ⓪の障害物
+             l.draw()#壁llllllllllllllllllllllllllllllllllllllll#マップ⓪の障害物
+             m.topleft=a.topleft#マップ⓪の出口
+             m.draw()
+            #テキストが表示される障害物↓
+             o.topleft=(a.x+200,a.y+200)
+             o.draw()
+            #テキストが表示される障害物↑
+        #if m1==1:#mmmmmmmmmmmmm
+           
+        #if m1==2:#mmmmmmmmmmmmm
+        
+        #if m1==3:#mmmmmmmmmmmmm
+        
+        #if m1==4:#mmmmmmmmmmmmm
+    #マップ出入り口↑
+        screen.draw.text("home[a] rist[s]",(0,440),owidth=1.5,color="WHITE",fontsize=55)
+        screen.draw.text("check[d]",(400,440),owidth=1.5,color="WHITE",fontsize=55)
+        screen.draw.text("o",(700-(a.x/10),+50-(a.y/10)),owidth=1.5,color="GREEN",fontsize=30)
+        if a2==4:
+            screen.draw.text("--------",(180,-10),owidth=1.5,color="LIGHT BLUE",fontsize=50)
+        if a2==3:
+            screen.draw.text("------",(180,-10),owidth=1.5,color="LIGHT BLUE",fontsize=50)
+        if a2==2:
+            screen.draw.text("----",(180,-10),owidth=1.5,color="LIGHT BLUE",fontsize=50)
+        if a2==1:
+            screen.draw.text("--",(180,-10),owidth=1.5,color="YELLOW",fontsize=50)
+        if a2==0:
+            screen.draw.text("-",(180,-10),owidth=1.5,color="RED",fontsize=50)
+        screen.draw.text("physical strength",(0,0),owidth=1.5,color="GREEN",fontsize=30)
+        screen.draw.text("HP "+str(d1),(275,0),owidth=1.5,color="PINK",fontsize=35)
+        screen.draw.text("seconds "+str(e2),(0,30),owidth=1,gcolor="LIGHT BLUE",color="GRAY",fontsize=35)
+        c.x=400
+        c.y=300
+        c.draw()
+    #リスト↓
+        i.draw()
+        if h1==2:
+            j4.draw()
+            j5.draw()
+            if j1==0: 
+                j.draw()
+            if j1==1: 
+                j2.draw()
+        if h1!=2:
+            screen.draw.text("ITEM",(735,0),owidth=1.5,color="WHITE",fontsize=30)
+            screen.draw.text("[s]",(735,40),owidth=1.5,color="WHITE",fontsize=55)
+        if h1==2:
+            screen.draw.text("┌持ち物┐┌─目─標─┐",(300,10),fontname='a.ttc',owidth=1,gcolor="GRAY",ocolor="BLACK",color="WHITE",fontsize=40)
+            screen.draw.text("└───┘└─────┘",(300,450),fontname='a.ttc',owidth=1,gcolor="GRAY",ocolor="BLACK",color="WHITE",fontsize=40)
+
+            if p1p==1:#p1pのアイテムを使用したら＋１させる、ー１するとまたアイテムが出現してしまう
+                screen.draw.text(" ろうそく",(338,20+1*50),fontname='a.ttc',owidth=1,ocolor="BLACK",color="GRAY",fontsize=25)#p1p==1のアイテム
+            if p2p==1:
+                screen.draw.text(" ろうそく",(338,20+2*50),fontname='a.ttc',owidth=1,ocolor="BLACK",color="GRAY",fontsize=25)#p2p==1のアイテム
+            if p3p==1:
+                screen.draw.text(" ろうそく",(338,20+3*50),fontname='a.ttc',owidth=1,ocolor="BLACK",color="GRAY",fontsize=25)#p3p==1のアイテム
+            
+        
+        g.draw()
+        if g1==2:
+            screen.draw.text("[save][stop][play]",(400,-10),owidth=1.5,color="WHITE",fontsize=50)
+    #リスト↑
+        if l1==1 and l4<1 and l5!=1:
+             screen.draw.text("moguru[^][v]",(400,-10),owidth=1.5,color="WHITE",fontsize=50)
+        if l3>1 and l.colliderect(c):
+            l4+=1
+            screen.draw.text("throw",(400,-10),owidth=1.5,gcolor="WHITE",color="LIGHT BLUE",fontsize=50)
+        if d1==0:
+            screen.clear()
+            screen.draw.text("GAME OVER",(350,400),owidth=1.5,gcolor="RED",color="BLUE",fontsize=100)
+        if l5==1 and l4<1:
+            screen.draw.text("x x x",(400,-10),owidth=1,color="RED",fontsize=60)
+
+
+    #テキスト表示↓
+         #アイテム獲得表示↓
+        
+    if p2>0 and n5==1 and p1pp>0:
+            screen.draw.text("ろうそくを手に入れた",(0,200),fontname='a.ttc',owidth=1,color="WHITE",fontsize=30)
+            p1p=1#アイテム手に入れた野を持ち物欄の部分に表示させる
+            p1pp-=1
+            p2-=1
+            
+         #アイテム獲得表示↑
+    if n3<5:
+        nn.topleft=(0,300)
+        nn.draw()#←文章が上に乗る
+        if keyboard.d and n3==4 and n4==1:
+            n3=5
+            n4=0
+            n6=0
+            #n5=0
+            if p1==1:#アイテム獲得
+                p2=120#アイテム獲得
+                p1=0#←アイテム獲得モードから通常モードに
+                p4+=1#手持ちのアイテム欄の何行目に表示するか
+        if keyboard.d and n3==4 and n4>1:
+            n3=0
+            n4-=1
+            n6+=1
+        #テキスト↓
+    if n5==1:
+            if n6==1:
+                screen.draw.text("GAME OVER",(350,400),owidth=1.5,gcolor="RED",color="BLUE",fontsize=100)
+            if n6==2:#n5==1のセリフ段落n4を２にしたときはn6==2までのセリフを書く
+                screen.draw.text("aaaaaa",(350,400),owidth=1.5,gcolor="RED",color="BLUE",fontsize=100)
+    if n5==2:#始まりの文章
+            if n6==1:
+                screen.draw.text("僕はいったい何を考えているのだろう",(0,300),fontname='a.ttc',owidth=1.5,gcolor="RED",color="BLUE",fontsize=50)
+                screen.draw.text("僕はいったい何を考えているのだろう",(0,350),fontname='a.ttc',owidth=1.5,gcolor="RED",color="BLUE",fontsize=50)
+            if n6==2:#n5==1のセリフ段落n4を２にしたときはn6==2までのセリフを書く
+                screen.draw.text("aaaaaa",(350,400),owidth=1.5,gcolor="RED",color="BLUE",fontsize=100)
+            if n6==3:#n5==1のセリフ段落n4を２にしたときはn6==2までのセリフを書く
+                screen.draw.text("aaaaaa",(350,400),owidth=1.5,gcolor="RED",color="BLUE",fontsize=100)
+        #if n5==3:
+        #if n5==4:
+        #if n5==5:
+        #if n5==6:               
+        #if n5==7:
+        #if n5==8:
+        #if n5==9:
+        #if n5==10:
+        #if n5==11:               
+        #if n5==12:
+        #if n5==13:
+        #if n5==14:
+        #if n5==15:
+        #if n5==16:               
+        #if n5==17:
+        #if n5==18:
+        #if n5==19:
+        #if n5==20:
+        #テキスト↑
+    if n3<4:
+        if n1!=5:#nnnnnnnnnnnnnnnnnnn
+            n.topleft=(n2*50,310+n3*40)
+            nnn.topleft=(0,350+n3*40)
+            n1+=1
+            n.draw()
+            nnn.draw()
+    #                if n4!=1:
+    #                   screen.draw.text("seconds "+str(e2),(200,30),owidth=1,gcolor="LIGHT BLUE",color="WHITE",fontsize=35)
+    #                   if n4!=1:
+    #                       screen.draw.text("seconds "+str(e2),(200,30),owidth=1,gcolor="LIGHT BLUE",color="WHITE",fontsize=35)
+
+                            #n5=0#文章を出し終わったらn5を0に戻す
+
+
+        if n1==5:
+            n2+=1
+            n1=0
+            if n2==15:
+                   n2=0
+                   n3+=1
+    #テキスト表示↑
+
+def update():
+    global a1,a3,a2,a4,a5	#メインキャラ
+    global c1	                #障害物
+    global e1,e2	        #時間
+    global f1	                #BGM
+    global g1,g2	        #リスト画面①
+    global h1                   #リスト画面②
+    global j1,j3
+    global l1,l2,l3,l4,l5,l6,l7	#壁バグ
+    global d1
+    global m1	                #マップ移動
+    global n1,n2,n3,n4,n5
+    global q1	                #スタート画面
+#操作↓(メイン)
+    if q1==1:
+            if d1!=0:
+                if n6==0:#文章が出てる間は動かない
+                    if l2==0:
+                        l3+=1
+                        if l3==20:
+                            l2=1
+                            l3=0
+                            if l4>0:
+                                d1-=1
+                            l5=0
+                            #めり込むバグ
+                    if l2==1:
+                        if not l.colliderect(c):#llllllllllllllllllllllllllllll
+                                l1=0
+                                l4=0
+                        if keyboard.down:
+                            #if a.y<600:
+                                l7=a.y
+                                a.y-=a1
+                                a3+=1
+                                if a3%60==0 and a2>0 and a1==4:
+                                    a2-=1        #キャラクターのスタミナ減らす
+                                    if keyboard.up:
+                                        a2+=1
+                                        a4+=1
+                                        a3=61
+                                        if a3==61:
+                                            if a4%81==0 and a2<4:  #疲れている状態から60/80秒間キーが押されてない状態だったら
+                                                a2+=1	            #キャラクターのスタミナ回復
+                                if l.colliderect(c):#マップ内の障害物とぶつかったら    a.y+=a1 lllllllllllllllllllllllllll←障害物増やす時
+                                    a.y+=a1
+                                    if l1==1:
+                                        a.y-=30
+                                    a.y+=a1
+                                    l2=0
+                                    l1=1
+                                    l5=1
+                                    if l7>a.y:#
+                                        a.y+=30+a1#
+                                
+                                
+                               
+
+                        if keyboard.up:
+                            #if a.y>0:
+                                l7=a.y#
+                                a.y+=a1
+                                a3+=1
+                                if a3%60==0 and a2>0 and a1==4:
+                                    a2-=1        #キャラクターのスタミナ減らす
+                                    if keyboard.down:
+                                        a2+=1
+                                        a4+=1
+                                        a3=61
+                                        if a3==61:
+                                            if a4%81==0 and a2<4:  #疲れている状態から60/80秒間キーが押されてない状態だったら
+                                                a2+=1	            #キャラクターのスタミナ回復
+                                if l.colliderect(c):#マップ内の障害物とぶつかったら    a.y-=a1 llllllllllllllllllll
+                                    a.y-=a1
+                                    if l1==1:
+                                        a.y+=30
+                                    a.y-=a1
+                                    l2=0
+                                    l1=1
+                                    l5=1
+                                    if l7<a.y:#
+                                        a.y-=30+a1#
+                               
+                        if keyboard.left:
+                            #if a.x>0:
+                                a.x+=a1
+                                a3+=1
+                                if a3%60==0 and a2>0 and a1==4:
+                                    a2-=1        #キャラクターのスタミナ減らす
+                                    if keyboard.right:
+                                        a2+=1
+                                        a4+=1
+                                        a3=61
+                                        if a3==61:
+                                            if a4%81==0 and a2<4:  #疲れている状態から60/80秒間キーが押されてない状態だったら
+                                                    a2+=1	            #キャラクターのスタミナ回復
+                                if l.colliderect(c):#マップ内の障害物とぶつかったら   a.x-=a1 llllllllllllllllllll
+                                    a.x-=a1
+                                    if l1==1:
+                                        a.x+=30
+                                    a.x-=a1
+                                    l2=0
+                                    l1=1
+                                    
+                        if keyboard.right:
+                            #if a.x<800:   
+                                a.x-=a1
+                                a3+=1
+                                if a3%60==0 and a2>0 and a1==4:
+                                    a2-=1       #キャラクターのスタミナ減らす
+                                    if keyboard.left:
+                                        a2+=1
+                                        a4+=1
+                                        a3=61
+                                        if a3==61:
+                                            if a4%81==0 and a2<4:  #疲れている状態から60/80秒間キーが押されてない状態だったら
+                                                a2+=1	            #キャラクターのスタミナ回復
+                                if l.colliderect(c):#マップ内の障害物とぶつかったら      a.x+=a1 llllllllllllllllllll
+                                    a.x+=a1
+                                    if l1==1:
+                                        a.x-=30
+                                    a.x+=a1
+                                    l2=0
+                                    l1=1
+                        
+                        if keyboard.space:
+                            a1=4
+                            if keyboard.up and keyboard.right:
+                                a1=2
+                            if keyboard.down and keyboard.left:
+                                a1=2
+                            if a5>1 and a2>0 and a1==4:
+                                a2-=1
+                                a5=0
+                        else:
+                            a1=2
+                            a4+=1
+                            a3=61
+                            a5+=1
+                            if a3==61:
+                                if a4%81==0 and a2<4:  #疲れている状態から60/80秒間キーが押されてない状態だったら
+                                    a2+=1	            #キャラクターのスタミナ回復
+                                   
+                             
+                        if a2==0:
+                            a1=1
+#操作↑
+                if not a.colliderect(c):#マップ内からはみ出そうなら
+                    if keyboard.down:
+                         a.y+=a1
+                    if keyboard.up:
+                         a.y-=a1
+                    if keyboard.left:
+                         a.x-=a1
+                    if keyboard.right:
+                         a.x+=a1
+                e1+=1
+                if e1%60==0:
+                    e2+=1
+                if f1==0:
+                    winsound.PlaySound('BGM.wav',winsound.SND_ASYNC)
+                    f1=1
+                if m.colliderect(c):#mmmmmmmmmmmmmmmmmmmm
+                    m1+=1
+                if mm.colliderect(c):#mmmmmmmmmmmmmmmmmmmm
+                    m1-=1
+#リスト系↓ 
+            if keyboard.a and g1==1 and h1==1:
+                g1=0
+
+            if  g1==0:
+                g2+=1
+                g.y-=30
+                if g2==20:
+                    g1=2
+                    g2=0
+                    
+            if keyboard.a and g1==2:
+                g1=3
+
+            if  g1==3 or g1==-1: 
+                g1=-1
+                g2+=1
+                g.y+=30
+                if g2==20:
+                       g2=0
+                       g1=1
+
+            if keyboard.s and h1==1 and g1==1:
+                h1=0
+
+            if  h1==0:
+                g2+=1
+                i.x-=30
+                if g2==20:
+                    h1=2
+                    g2=0
+                    
+            if keyboard.s and h1==2:
+                h1=3
+
+            if  h1==3 or h1==-1: 
+                h1=-1
+                g2+=1
+                i.x+=30
+                if g2==20:
+                       g2=0
+                       h1=1
+#リスト系↑
+
+#マウス系↓
+            if j1==1:
+                j3+=1
+def on_mouse_down(pos):
+    global h1,j1,j3,q1#リスト画面②
+    if h1==2:
+        if j.collidepoint(pos):
+            j1=1
+                       
+        if j1==1 and j3>=10:
+            if j2.collidepoint(pos):
+               j1=0
+               j3=0
+    if qq.collidepoint(pos):
+            q1=-1
+#テキスト系↓
+def on_key_down(key):#nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+    global n3,n4,n5,n6,p1
+
+    if key==keys.D and n3==5 and o.colliderect(c) and n4==0  and  n6==0:#oとぶつかったときにｄキーを押したときそれがどの場所のテキストかを感知、その場所のテキスト表示のアドレス情報をif文の中に ┐
+        n3=0                                                             #             ↓                                                                                                              │
+        n5=1#　←その場所のテキストのアドレス　                          o.colliderect(c)が指定したテキストを表示                                                                             　│←テキストの当たり判定情報
+        n4=2#　←そのテキストの段落数設定
+        n6=1#　←テキスト表示する際は1にする
+        p1=1#　←その場所でアイテムが手に入る場合はこれをつける
+#テキスト系↑
+        
+pgzrun.go()
+    

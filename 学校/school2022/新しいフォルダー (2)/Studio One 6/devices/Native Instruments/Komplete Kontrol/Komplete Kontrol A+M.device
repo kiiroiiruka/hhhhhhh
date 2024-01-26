@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Native Instruments"
+	name="Komplete Kontrol A/M"
+	
+	classID="{D63AC2E6-2BAD-4A45-95BA-B5E1101AE1DA}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	surfaceFile="Keyboard/KompleteKontrolA+M.surface.xml"
+		
+	detectorPortName="Komplete Kontrol A25 MIDI,Komplete Kontrol A25,Komplete Kontrol A49 MIDI,Komplete Kontrol A49,Komplete Kontrol A61 MIDI,Komplete Kontrol A61,Komplete Kontrol M32 MIDI,Komplete Kontrol M32"
+	imageFile="Shared/KompleteKontrolA.png"
+	textFile="Keyboard/KompleteKontrol.txt"
+	hostDataFile="Keyboard/KompleteKontrolA+M.surfacedata"
+
+	skinFile="Shared/skin/"
+	formName="KompleteKontrol_A+M"
+/>

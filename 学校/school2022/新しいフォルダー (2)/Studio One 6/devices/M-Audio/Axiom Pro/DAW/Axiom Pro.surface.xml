@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 9 * Sliders 49, 61 models only -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#21"/>
+		</Control>
+		<Control name="fader[1]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#22"/>
+		</Control>
+		<Control name="fader[2]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#23"/>
+		</Control>
+		<Control name="fader[3]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#24"/>
+		</Control>
+		<Control name="fader[4]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#25"/>
+		</Control>
+		<Control name="fader[5]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#26"/>
+		</Control>
+		<Control name="fader[6]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#27"/>
+		</Control>
+		<Control name="fader[7]" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#28"/>
+		</Control>
+		<Control name="masterFader" type="fader" options="transmit receive">
+			<MidiMessage status="#B0" address="#29"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 9 * Select buttons + LEDs 49, 61 models only -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="select[0]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#31"/>
+		</Control>
+		<Control name="select[1]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#32"/>
+		</Control>
+		<Control name="select[2]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#33"/>
+		</Control>
+		<Control name="select[3]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#34"/>
+		</Control>
+		<Control name="select[4]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#35"/>
+		</Control>
+		<Control name="select[5]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#36"/>
+		</Control>
+		<Control name="select[6]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#37"/>
+		</Control>
+		<Control name="select[7]" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#38"/>
+		</Control>
+		<Control name="selectFlip" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#39"/>
+		</Control>
+
+		<Control name="selectLED[0]" options="transmit">
+			<MidiMessage status="#B0" address="#31"/>
+		</Control>
+		<Control name="selectLED[1]" options="transmit">
+			<MidiMessage status="#B0" address="#32"/>
+		</Control>
+		<Control name="selectLED[2]" options="transmit">
+			<MidiMessage status="#B0" address="#33"/>
+		</Control>
+		<Control name="selectLED[3]" options="transmit">
+			<MidiMessage status="#B0" address="#34"/>
+		</Control>
+		<Control name="selectLED[4]" options="transmit">
+			<MidiMessage status="#B0" address="#35"/>
+		</Control>
+		<Control name="selectLED[5]" options="transmit">
+			<MidiMessage status="#B0" address="#36"/>
+		</Control>
+		<Control name="selectLED[6]" options="transmit">
+			<MidiMessage status="#B0" address="#37"/>
+		</Control>
+		<Control name="selectLED[7]" options="transmit">
+			<MidiMessage status="#B0" address="#38"/>
+		</Control>
+		<Control name="selectFlipLED" options="transmit">
+			<MidiMessage status="#B0" address="#39"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 9 x Encoders (send back the absolute value to the display FeedBack) -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Note: Encoders send a sign bit for increment/decrement and the number of ticks -->
+
+		<Control name="encoder[0]" title="E1" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#11" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[1]" title="E2" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#12" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[2]" title="E3" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#13" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[3]" title="E4" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#14" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[4]" title="E5" options=" receive public" type="relative">
+			<MidiMessage status="#B0" address="#15" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[5]" title="E6" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#16" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[6]" title="E7" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#17" options="complement plain"/>
+		</Control>
+
+		<Control name="encoder[7]" title="E8" options="receive public" type="relative">
+			<MidiMessage status="#B0" address="#18" options="complement plain"/>
+		</Control>
+
+		<Control name="encoderFB[0]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#11"/>
+		</Control>
+		<Control name="encoderFB[1]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#12"/>
+		</Control>
+		<Control name="encoderFB[2]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#13"/>
+		</Control>
+		<Control name="encoderFB[3]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#14"/>
+		</Control>
+		<Control name="encoderFB[4]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#15"/>
+		</Control>
+		<Control name="encoderFB[5]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#16"/>
+		</Control>
+		<Control name="encoderFB[6]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#17"/>
+		</Control>
+		<Control name="encoderFB[7]" options="transmit">
+			<MidiMessage status="#B0" channel="15" address="#18"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Numerical Keypad -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="button[0]" title="1" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#61"/>
+		</Control>
+		<Control name="button[1]" title="2" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#62"/>
+		</Control>
+		<Control name="button[2]" title="3" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#63"/>
+		</Control>
+		<Control name="button[3]" title="4" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#64"/>
+		</Control>
+		<Control name="button[4]" title="5" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#65"/>
+		</Control>
+		<Control name="button[5]" title="6" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#66"/>
+		</Control>
+		<Control name="button[6]" title="7" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#67"/>
+		</Control>
+		<Control name="button[7]" title="8" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#68"/>
+		</Control>
+		<Control name="button[8]" title="9" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#69"/>
+		</Control>
+		<Control name="button[9]" title="-" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#6A"/>
+		</Control>
+		<Control name="button[10]" title="0" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#6B"/>
+		</Control>
+		<Control name="button[11]" title="+" type="trigger" options="receive public">
+			<MidiMessage status="#B0" address="#6C"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT CONTROLS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="loopButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#71"/>
+		</Control>
+		<Control name="rewindButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#72"/>
+		</Control>
+		<Control name="ffButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#73"/>
+		</Control>
+		<Control name="stopButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#74"/>
+		</Control>
+		<Control name="playButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#75"/>
+		</Control>
+		<Control name="recordButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#76"/>
+		</Control>
+
+		<Control name="loopLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#71"/>
+		</Control>
+		<Control name="rewindLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#72"/>
+		</Control>
+		<Control name="ffLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#73"/>
+		</Control>
+		<Control name="stopLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#74"/>
+		</Control>
+		<Control name="playLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#75"/>
+		</Control>
+		<Control name="recordLED" type="trigger" options="transmit">
+			<MidiMessage status="#B0" address="#76"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- F-Keys -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="F1" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#6D"/>
+		</Control>
+		<Control name="F2" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#6E"/>
+		</Control>
+		<Control name="F3" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#6F"/>
+		</Control>
+		<Control name="F4" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#0C"/>
+		</Control>
+		<Control name="F5" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#0D"/>
+		</Control>
+		<Control name="F6" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#0E"/>
+		</Control>
+		<Control name="F7" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#0F"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Soft-Keys -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="soft1" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#4A"/>
+		</Control>
+		<Control name="soft2" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#4B"/>
+		</Control>
+		<Control name="soft3" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#4C"/>
+		</Control>
+		<Control name="soft4" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#4D"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Displays -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="softText[0]" type="textdisplay" options="transmit"/>
+		<Control name="softText[1]" type="textdisplay" options="transmit"/>
+		<Control name="softText[2]" type="textdisplay" options="transmit"/>
+		<Control name="softText[3]" type="textdisplay" options="transmit"/>
+
+		<Control name="graphicsText[0]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[1]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[2]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[3]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[4]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[5]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[6]" type="textdisplay" options="transmit"/>
+		<Control name="graphicsText[7]" type="textdisplay" options="transmit"/>
+
+		<Control name="topText" type="textdisplay" options="transmit"/>
+		<Control name="parameterText" type="textdisplay" options="transmit"/>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<foreach variable="$i" count="8">
+					<Strip name="encoder[$i]">
+						<Relative control="encoder[$i]" param="value" options="above"/>
+						<Value control="encoderFB[$i]" param="value" options="above"/>
+						<!-- TODO Not connected in release version, why? Clear missing? Enable and test with hardware.
+							<String control="graphicsText[$i]" param="title" options="above"/>-->
+					</Strip>
+				</foreach>
+				<foreach variable="$i" count="12">
+					<Strip name="button[$i]">
+						<Toggle control="button[$i]" param="value" options="above"/>
+					</Strip>
+				</foreach>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+			<!-- 1, 2, 3 -->
+			<Command control="button[0]" command.category="File" command.name="Save"/>
+			<Command control="button[1]" command.category="Edit" command.name="Undo"/>
+			<Command control="button[2]" command.category="View" command.name="Console"/>
+			<!-- 4, 5, 6 -->
+			<Command control="button[3]" command.category="Edit" command.name="Duplicate"/>
+			<Command control="button[4]" command.category="Transport" command.name="Return to Zero"/>
+			<Command control="button[5]" command.category="Transport" command.name="Loop Selection"/>
+			<!-- 7, 8, 9 -->
+			<Command control="button[6]" command.category="Transport" command.name="Autopunch"/>
+			<Command control="button[7]" command.category="Transport" command.name="Goto Loop Start"/>
+			<Command control="button[8]" command.category="Transport" command.name="Goto Loop End"/>
+			<!-- -, 0, + -->
+			<Command control="button[9]" command.category="Zoom" command.name="Zoom Out"/>
+			<Command control="button[10]" command.category="Console" command.name="Show Instrument Editor"/>
+			<Command control="button[11]" command.category="Zoom" command.name="Zoom In"/>
+			<!-- Soft buttons -->
+			<Command control="soft1" command.category="Presets" command.name="Previous"/>
+			<Command control="soft2" command.category="Presets" command.name="Next"/>
+			<Command control="soft3" command.category="Devices" command.name="Previous Device in Rack"/>
+			<Command control="soft4" command.category="Devices" command.name="Next Device in Rack"/>
+			<!-- Function buttons, TODO: F1, F6, F7 -->
+			<Command control="F2" command.category="Navigation" command.name="Previous Track"/>
+			<Command control="F3" command.category="Navigation" command.name="Next Track"/>
+			<Command control="F4" command.category="Track" command.name="Mute"/>
+			<Command control="F5" command.category="Track" command.name="Solo"/>
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole">
+			<ScrollBank target="RemoteBank" pagesize="8" name="MixerBank">
+				<foreach variable="$i" count="8">
+					<Strip>
+						<Value control="fader[$i]" param="volume"/>
+						<Toggle control="select[$i]" param="selected"/>
+						<Value control="selectLED[$i]" param="selected"/>
+					</Strip>
+				</foreach>
+
+				<!-- Bank Scroll Buttons -->
+				<ScrollButton control="F6" direction="pageleft"/>
+				<ScrollButton control="F7" 	direction="pageright"/>
+			</ScrollBank>
+
+			<!-- Bank for channel/track name -->
+			<!--ScrollBank target="FollowBank" pagesize="1" name="ChannelName">
+				<Strip>
+					<String control="topText" param="label"/>
+				</Strip>
+			</ScrollBank-->
+
+			<Bank target="MasterBank">
+				<Strip>
+					<Value control="masterFader" param="volume"/>
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+			<!-- Loop -->
+			<Toggle control="loopButton" param="loop"/>
+			<Value control="loopLED" param="loop"/>
+			<!-- Play -->
+			<Toggle control="playButton" param="start"/>
+			<Value control="playLED" param="start"/>
+			<!-- Stop -->
+			<Toggle control="stopButton" param="stop"/>
+			<Value control="stopLED" param="stop"/>
+			<!-- Fast forward -->
+			<Touch control="ffButton" param="fastForward"/>
+			<Value control="ffLED" param="fastForward"/>
+			<!-- Rewind -->
+			<Touch control="rewindButton" param="rewind"/>
+			<Value control="rewindLED" param="rewind"/>
+			<!-- Record -->
+			<Toggle control="recordButton" param="record"/>
+			<Value control="recordLED" param="record"/>
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- METRONOME MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			<Toggle control="selectFlip" param="clickOn"/>
+			<Value control="selectFlipLED" param="clickOn"/>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

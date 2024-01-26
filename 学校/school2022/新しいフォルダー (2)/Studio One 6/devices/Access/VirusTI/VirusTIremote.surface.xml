@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!--  All Controls -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="Rate" options="receive public">
+			<MidiMessage status="Controller" address="51"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="Shape" options="receive public">
+			<MidiMessage status="Controller" address="59"/>
+		</Control>	
+
+		<Control name="knob[2]" title="Wave Select" options="receive public">
+			<MidiMessage status="Controller" address="63"/>
+		</Control>			
+		
+		<Control name="knob[3]" title="Semitone" options="receive public">
+			<MidiMessage status="Controller" address="55"/>
+		</Control>
+
+		<Control name="knob[4]" title="Detune" options="receive public">
+			<MidiMessage status="Controller" address="39"/>
+		</Control>
+		
+		<Control name="knob[5]" title="Osc Balance" options="receive public">
+			<MidiMessage status="Controller" address="43"/>
+		</Control>
+		
+		<Control name="knob[6]" title="Cutoff" options="receive public">
+			<MidiMessage status="Controller" address="38"/>
+		</Control>
+
+		<Control name="knob[7]" title="Resonance" options="receive public">
+			<MidiMessage status="Controller" address="42"/>
+		</Control>
+		
+		<Control name="knob[8]" title="Env Amount" options="receive public">
+			<MidiMessage status="Controller" address="49"/>
+		</Control>
+		
+		<Control name="knob[9]" title="Filter Bal" options="receive public">
+			<MidiMessage status="Controller" address="41"/>
+		</Control>
+
+		<Control name="knob[10]" title="FM Amount" options="receive public">
+			<MidiMessage status="Controller" address="35"/>
+		</Control>
+
+		<Control name="knob[11]" title="Sub Osc Vol" options="receive public">
+			<MidiMessage status="Controller" address="47"/>
+		</Control>
+
+		<Control name="knob[12]" title="Cutoff 2" options="receive public">
+			<MidiMessage status="Controller" address="34"/>
+		</Control>
+
+		<Control name="knob[13]" title="Send" options="receive public">
+			<MidiMessage status="Controller" address="60"/>
+		</Control>
+		
+		<Control name="knob[14]" title="Time/Color" options="receive public">
+			<MidiMessage status="Controller" address="56"/>
+		</Control>
+		
+		<Control name="knob[15]" title="Feedback" options="receive public">
+			<MidiMessage status="Controller" address="40"/>
+		</Control>
+		
+		<Control name="knob[16]" title="Osc Vol" options="receive public">
+			<MidiMessage status="Controller" address="50"/>
+		</Control>
+		
+		<Control name="knob[17]" title="Attack" options="receive public">
+			<MidiMessage status="Controller" address="46"/>
+		</Control>
+		
+		<Control name="knob[18]" title="Decay" options="receive public">
+			<MidiMessage status="Controller" address="57"/>
+		</Control>
+
+		<Control name="knob[19]" title="Sustain" options="receive public">
+			<MidiMessage status="Controller" address="53"/>
+		</Control>
+		
+		<Control name="knob[20]" title="Release" options="receive public">
+			<MidiMessage status="Controller" address="37"/>
+		</Control>
+		
+		<Control name="knob[21]" title="Type/Mix" options="receive public">
+			<MidiMessage status="Controller" address="52"/>
+		</Control>
+		
+		<Control name="knob[22]" title="Intensity" options="receive public">
+			<MidiMessage status="Controller" address="36"/>
+		</Control>
+
+		<Control name="knob[23]" title="Value 1" options="receive public">
+			<MidiMessage status="Controller" address="32"/>
+		</Control>
+
+		<Control name="knob[24]" title="Value 2" options="receive public">
+			<MidiMessage status="Controller" address="44"/>
+		</Control>
+
+		<Control name="knob[25]" title="Value 3" options="receive public">
+			<MidiMessage status="Controller" address="58"/>
+		</Control>
+		
+		<Control name="knob[26]" title="Noise Vol" options="receive public">
+			<MidiMessage status="Controller" address="62"/>
+		</Control>
+		
+		<Control name="knob[27]" title="Attack" options="receive public">
+			<MidiMessage status="Controller" address="54"/>
+		</Control>
+		
+		<Control name="knob[28]" title="Decay" options="receive public">
+			<MidiMessage status="Controller" address="61"/>
+		</Control>
+
+		<Control name="knob[29]" title="Sustain" options="receive public">
+			<MidiMessage status="Controller" address="45"/>
+		</Control>
+		
+		<Control name="knob[30]" title="Release" options="receive public">
+			<MidiMessage status="Controller" address="33"/>
+		</Control>
+	</Controls>
+</ControlSurface>

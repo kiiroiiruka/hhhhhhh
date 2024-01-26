@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+  <Controls>
+	
+	<!-- Screen Master Buttons -->
+		
+    <Control name="ControlButton" title="[B5]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="4" address="#51" />
+    </Control>
+    <Control name="StepButton" title="Link" type="button" options="receive">
+      <MidiMessage status="#B0" channel="6" address="#11" />
+    </Control>
+    <Control name="BrowseButton" title="[Browse] " type="button" options="receive">
+      <MidiMessage status="#B0" channel="2" address="#11" />
+    </Control>
+    <Control name="Sampling" title="[Sampling]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="3" address="#11" />
+    </Control>
+	<Control name="SnapButton" title="[A1]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="0" address="#50" />
+    </Control>
+    <Control name="AutoWriteButton" title="[A2]" type="button" options="receive ">
+      <MidiMessage status="#B0" channel="1" address="#50" />
+    </Control>
+	
+	<!-- Soft buttons 1 - 8 -->
+	
+    <Control name="SoftButton[1]" title="[SB-1]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="4" address="#11" />
+    </Control>    
+    <Control name="SoftButton[2]" title="[SB-2]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="5" address="#11" />
+    </Control>    
+	<Control name="SoftButton[3]" title="[SB-3]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="1" address="#53" />
+    </Control>    <!-- Pads / Buttons A1 to B9 -->
+    <Control name="SoftButton[4]" title="[SB-4]" type="button" options="receive ">
+      <MidiMessage status="#B0" channel="0" address="#53" />
+    </Control>   
+ 	<Control name="SoftButton[5]" title="[SB-5]" type="button" options="receive ">
+      <MidiMessage status="#B0" channel="2" address="#50" />
+    </Control>
+    <Control name="SoftButton[6]" title="[SB-6]" type="button" options="receive ">
+      <MidiMessage status="#B0" channel="3" address="#50" />
+    </Control>
+    <Control name="SoftButton[7]" title="[SB-7]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="3" address="#51" />
+    </Control>
+    <Control name="SoftButton[8]" title="[SB-8]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="2" address="#51" />
+    </Control>
+
+    <!-- Rotarys R1 to R9 -->
+
+    <Control name="Encoder[0]" title="[R1]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="0" address="#10" />
+    </Control>
+    <Control name="Encoder[1]" title="[R2]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="1" address="#10" />
+    </Control>
+    <Control name="Encoder[2]" title="[R3]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="2" address="#10" />
+    </Control>
+    <Control name="Encoder[3]" title="[R4]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="3" address="#10" />
+    </Control>
+    <Control name="Encoder[4]" title="[R5]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="4" address="#10" />
+    </Control>
+    <Control name="Encoder[5]" title="[R6]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="5" address="#10" />
+    </Control>
+    <Control name="Encoder[6]" title="[R7]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="6" address="#10" />
+    </Control>
+    <Control name="Encoder[7]" title="[R8]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="7" address="#10" />
+    </Control>
+    <Control name="Encoder[8]" title="[R9]" type="knob" options="receive public">
+      <MidiMessage status="#B0" channel="0" address="#12" />
+	</Control>
+	
+	<!-- Pad Master Buttons -->
+
+    <Control name="SceneButton" title="[A8]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="7" address="#50" />
+    </Control>
+    <Control name="PatternButton" title="[C1]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="0" address="#52" />
+    </Control>
+   	<Control name="PadModeButton" title="[C2]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="1" address="#52" />
+    </Control>	    
+    <Control name="NavigateButton" title="[A5]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="4" address="#50" />
+    </Control>
+    <Control name="DuplicateButton" title="[B8]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="7" address="#51" />
+    </Control>
+    <Control name="SelectButton" title="[B1]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="0" address="#51" />
+    </Control>
+    <Control name="SoloButton" title="[B2]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="1" address="#51" />
+    </Control>
+    <Control name="MuteButton" title="[B7]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="6" address="#51" />
+    </Control>
+
+
+ 
+	<!-- Trasport Buttons -->
+
+    <Control name="RestartButton" title="[A7]" type="button" options="receive ">
+      <MidiMessage status="#B0" channel="6" address="#50" />
+    </Control>
+   	<Control name="LeftButton" title="[A6]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="5" address="#50" />
+    </Control>
+    <Control name="RightButton" title="[B6]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="5" address="#51" />
+    </Control>
+    <Control name="GridButton" title="[L1]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="8" address="#52" />
+    </Control>
+    <Control name="playButton" title="[L3]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="14" address="#52" />
+    </Control>
+    <Control name="RecButton" title="[L4]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="10" address="#52" />
+    </Control>
+    <Control name="EraseButton" title="[C3]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="2" address="#52" />
+    </Control>
+
+	<!-- Master Section Controls -->
+	
+    <Control name="VolumeKnob" title="Volume" type="fader" options="receive public">
+      <MidiMessage status="#B0" channel="0" address="#11" />
+    </Control>
+    <Control name="TempoKnob" title="Tempo" type="fader" options="receive public">
+      <MidiMessage status="#B0" channel="1" address="#11" />
+    </Control>
+    <Control name="SwingKnob" title="Swing" type="fader" options="receive public">
+      <MidiMessage status="#B0" channel="7" address="#11" />
+    </Control>
+    <Control name="NoteRepeat" title="[L2]" type="button" options="receive">
+      <MidiMessage status="#B0" channel="13" address="#52" />
+    </Control>
+
+
+    <!-- PCR Value Encoder-->
+    <Control name="dial" title="[VALUE]" type="relative" options="receive">
+      <MidiMessage status="#B0" channel="8" address="#53" options="signed" />
+    </Control>
+
+  </Controls>
+  <Templates>
+    <!-- ******************************************************************************************** -->
+    <!-- CHANNEL STRIP TEMPLATE -->
+    <!-- ******************************************************************************************** -->
+    <Template name="ChannelStrip">
+      <String control="faderDisplay" param="label" />
+      <!-- virtual channel label -->
+      <Value control="VolumeKnob" param="volume" />
+      <Value control="TempoKnob" param="pan" />
+      <Touch control="faderTouch" param="volume" />
+      <Variant control="shiftButton" options="lock" statusled="shiftLED">
+        <!-- [Shift] not pressed -->
+        <Group></Group>
+        <!-- [Shift] pressed -->
+        <Group></Group>
+      </Variant>
+      <Toggle control="MuteButton" param="mute" />
+      <Value control="muteLED" param="mute" />
+      <Toggle control="SoloButton" param="solo" />
+      <Value control="soloLED" param="solo" />
+      <Toggle control="SelectButton" param="recordArmed" />
+      <Value control="recordArmLED" param="recordArmed" />
+      <!-- Automation Mode -->
+      <Radio control="readButton" param="automationMode" value="1" options="toggle" />
+      <Radio control="readLED" param="automationMode" value="1" />
+      <Radio control="writeButton" param="automationMode" value="4" options="toggle" />
+      <Radio control="writeLED" param="automationMode" value="4" />
+      <Radio control="touchButton" param="automationMode" value="2" options="toggle" />
+      <Radio control="touchLED" param="automationMode" value="2" />
+    </Template>
+  </Templates>
+  <!-- ******************************************************************************************** -->
+  <!-- SURFACE MAPPINGS -->
+  <!-- ******************************************************************************************** -->
+  <Mappings>
+    <!-- ******************************************************************************************** -->
+    <!-- GLOBAL MAPPING -->
+    <!-- ******************************************************************************************** -->
+    <Global>
+      <Command control="PatternButton" command.category="Event" command.name="Quantize 50%" />
+      <Command control="PadModeButton" command.category="Event" command.name="Restore Timing" />
+      <Command control="NavigateButton" command.category="Musical Functions" command.name="Delete Double Notes" />
+      <Command control="EraseButton" command.category="Edit" command.name="Delete" />
+      <Command control="SceneButton" command.category="Transport" command.name="Loop Selection Snapped" />
+      <Command control="DuplicateButton" command.category="Edit" command.name="Duplicate" />
+      <Command control="SoftButton[4]" command.category="Edit" command.name="Redo" />
+      <Command control="SoftButton[3]" command.category="Edit" command.name="Undo" />
+      <Command control="SoftButton[6]" command.category="Automation" command.name="Toggle Read" />
+      <Command control="SoftButton[7]" command.category="Automation" command.name="Touch" />
+      <Command control="SoftButton[5]" command.category="Marker" command.name="Insert" />
+      <Command control="SoftButton[1]" command.category="Presets" command.name="Previous" />
+      <Command control="SoftButton[2]" command.category="Presets" command.name="Next" />
+      <Command control="SoftButton[8]" command.category="Automation" command.name="Show Current Parameter" />
+      <Command control="ControlButton" command.category="Console" command.name="Show Channel Editor" />
+      <Command control="StepButton" command.category="Devices" command.name="Assign Current Parameter" />
+    </Global>
+    <!-- ******************************************************************************************** -->
+    <!-- TRANSPORT MAPPING -->
+    <!-- ******************************************************************************************** -->
+    <DeviceMapping device="TransportPanel">
+      <!--	<Relative control="dial" param="freeCursorTime"/> -->
+      <!--<Toggle control="playButton" param="start" />-->
+      <Toggle control="NoteRepeat" param="loop" />
+      <Command control="LeftButton" command.category="Navigation" command.name="Left" />
+      <Command control="RightButton" command.category="Navigation" command.name="Right" />
+      <Command control="RestartButton" command.category="Transport" command.name="Goto Loop Start" />
+      <Command control="playButton" command.category="Transport" command.name="Toggle Start" />
+      <Command control="RestartButton" command.category="Transport" command.name="GoTo Loop Start" />
+      <Command control="GridButton" command.category="Transport" command.name="Click" />
+      <Toggle control="RecButton" param="record" />
+    </DeviceMapping>
+    <!--********************************************************************************************-->
+    <!--MIXER MAPPING-->
+    <!--********************************************************************************************-->
+    <DeviceMapping device="MixerConsole" name="MixerMapping">
+      <ScrollBank target="FollowBank" pagesize="8" name="MixerBank">
+        <!-- The Channel Strip -->
+        <Strip>
+          <include template="ChannelStrip" />
+        </Strip>
+        <Group>
+          <Command control="BrowseButton" command.category="Devices" command.name="Previous Device in Rack" />
+          <Command control="Sampling" command.category="Devices" command.name="Next Device in Rack" />
+        </Group>
+        <Variant control="shiftButton" statusled="shiftLED" options="lock">
+          <!-- [Shift] not pressed -->
+          <Group>
+            <ScrollButton control="SnapButton" direction="stepleft" />
+            <ScrollButton control="AutoWriteButton" direction="stepright" />
+          </Group>
+          <!-- [Shift] pressed -->
+        </Variant>
+      </ScrollBank>
+      <Variant control="shiftButton" statusled="shiftLED" options="lock">
+        <!-- [Shift] not pressed -->
+        <Group>
+          <Toggle control="userButton" param="anySolo" />
+          <Value control="userLED" param="anySolo" />
+        </Group>
+        <!-- [Shift] pressed -->
+        <Group></Group>
+      </Variant>
+    </DeviceMapping>
+  </Mappings>
+</ControlSurface>

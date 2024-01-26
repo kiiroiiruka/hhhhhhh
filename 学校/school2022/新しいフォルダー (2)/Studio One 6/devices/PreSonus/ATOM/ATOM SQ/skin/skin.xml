@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Resources -->
+	<!-- ******************************************************************************************** -->
+
+	<Resources>
+		<Image name="AtomSQBackground" url="images/AtomSQ.png"/>
+		<ShapeImage name="AtomSQKnobArrowDec" url="AtomSQKnobArrowDecShape" frames="embedded"/>
+		<ShapeImage name="AtomSQKnobArrowInc" url="AtomSQKnobArrowIncShape" frames="embedded"/>
+
+		<Image name="AtomSQAtlas" url="images/AtomSQAtlas.png"/>
+		<!-- Image size matches button element size, tile settings just for safety. -->
+		<Image name="AtomSQButton" url="images/AtomSQButton.png" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="ATOMSQAutoFillButton" size="0,0,40,80" image="AtomSQAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+
+		<ImagePart name="AtomSQPagePreviousIcon" size="0,80,60,20" image="AtomSQAtlas" frames="h: normal pressed disabled"/>
+		<ImagePart name="AtomSQPageNextIcon" size="60,80,60,20" image="AtomSQAtlas" frames="h: normal pressed disabled"/>
+	</Resources>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Shapes -->
+	<!-- ******************************************************************************************** -->
+
+	<Shapes>
+
+		<Shape name="AtomSQKnobArrowIncShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+
+		<Shape name="AtomSQKnobArrowDecShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+
+	</Shapes>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Styles -->
+	<!-- ******************************************************************************************** -->
+
+	<Styles>
+
+		<Style name="AtomSQText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,90)"/>
+		</Style>
+
+		<Style name="ScreenCellText" textoptions="wordbreak">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,90)"/>
+		</Style>
+
+		<Style name="ScreenCellTextUnassigned" textoptions="wordbreak" inherit="ScreenCellText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor"  color="hsl(204,15,60)"/>
+		</Style>
+
+		<Style name="ScreenCellCenterText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="textcolor" color="hsl(191,17,60)"/>
+		</Style>
+
+		<Style name="FocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+		</Style>
+
+		<Style name="PagingStatusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="normal"/>
+			<Color name="textcolor" color="hsl(0,0,57)"/>
+		</Style>
+
+		<Style name="PageTitle">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="normal"/>
+			<Align name="textalign" align="left"/>
+			<Color name="backcolor" color="hsl(0,100,0)"/>
+		</Style>
+
+		<Style name="PageTitleUser" inherit="PageTitle">
+			<Color name="textcolor" color="hsl(204,40,85)"/>
+			<Color name="backcolor" color="hsl(210,22,23)"/>
+		</Style>
+
+		<Style name="PageTitleAutofill" inherit="PageTitle">
+			<Color name="textcolor" color="hsl(0,0,57)"/>
+		</Style>
+
+		<Style name="AtomSQButtonText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,15)"/>
+		</Style>
+
+		<Style name="AtomSQButton">
+			<Image name="background" image="AtomSQButton"/>
+		</Style>
+
+		<Style name="ATOMSQAutoFillButton">
+			<Metric name="padding.left" value="6"/>
+			<Metric name="padding.right" value="6"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,60)"/>
+			<Color name="textcolor.pressed" color="hsl(0,0,10)"/>
+			<Color name="textcolor.on" color="hsl(0,0,10)"/>
+			<Metric name="buttonstyle" value="1"/>
+			<Image name="background" image="ATOMSQAutoFillButton"/>
+		</Style>
+
+		<Style name="ATOMSQAutoFillButtonDisabled" inherit="ATOMSQAutoFillButton">
+			<Color name="textcolor" color="hsl(0,0,30)"/>
+		</Style>
+
+		<!-- Slider: make transparent by removing background, 'transparent' option has no effect. -->
+		<Style name="TouchStrip">
+			<Image name="background" image=""/>
+		</Style>
+
+	</Styles>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Forms -->
+	<!-- ******************************************************************************************** -->
+
+	<Forms>
+
+		<Form name="Atom SQ" image="AtomSQBackground" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+				<TextBox name="focusDeviceFullName" size="138,12,580,24" options="transparent" style="FocusText"/>
+				<Space height="4"/>
+
+				<Horizontal size="16,40" margin="0" spacing="2">
+
+					<!-- Left outer column -->
+					<Vertical size="0,0" margin="0" spacing="0">
+						<Space height="14"/>
+
+						<!-- Knobs: Row 1 -->
+						<Horizontal size="12,0" margin="0" spacing="2" attach="left top">
+							<foreach variable="$i" start="0" count="4">
+								<View width="100">
+									<using controller="knob[$i]">
+										<UpDownButton name="controlValue" options="decrement transparent" size="22,8,28,55" icon="AtomSQKnobArrowDec"/>
+										<UpDownButton name="controlValue" options="increment transparent" size="50,8,28,55" icon="AtomSQKnobArrowInc"/>
+										<TextBox name="userAssignment" size="1,71,100,16" options="fittext transparent nocontextmenu" style="AtomSQText"/>
+									</using>
+								</View>
+							</foreach>
+						</Horizontal>
+
+						<!-- Knobs: Row 2 -->
+						<Horizontal size="12,0" margin="0" spacing="2" attach="left top">
+							<foreach variable="$i" start="4" count="4">
+								<View width="100">
+									<using controller="knob[$i]">
+										<UpDownButton name="controlValue" options="decrement transparent" size="22,8,28,55" icon="AtomSQKnobArrowDec"/>
+										<UpDownButton name="controlValue" options="increment transparent" size="50,8,28,55" icon="AtomSQKnobArrowInc"/>
+										<TextBox name="userAssignment" size="1,71,100,16" options="fittext transparent nocontextmenu" style="AtomSQText"/>
+									</using>
+								</View>
+							</foreach>
+						</Horizontal>
+
+						<!-- Touchstrip (Control Link mode) -->
+						<View size="12,0">
+							<using controller="controlLinkTouchStrip">
+								<Slider name="controlValue" options="transparent nocontextmenu" size="69,16,269,28" style="TouchStrip" tooltip="Touchstrip (Control Link mode)"/>
+								<TextBox name="userAssignment" size="69,48,269,16" options="fittext transparent nocontextmenu" style="AtomSQText"/>
+							</using>
+						</View>
+
+					</Vertical>
+
+					<Space width="23"/>
+
+					<!-- Right outer column -->
+					<Vertical margin="10" spacing="0">
+
+						<!-- Screen buttons, upper row row -->
+						<Horizontal size="0,0" margin="2" spacing="3">
+							<foreach variable="$i" start="0" count="3">
+								<View name="LcdButtonTopRow" attach="left right"/>
+							</foreach>
+						</Horizontal>
+
+						<Space height="10"/>
+
+						<!-- Firmware version display. -->
+						<using controller="Device">
+							<TextBox name="firmware" size="0,0,240,20" options="transparent" style="ScreenCellCenterText" tooltip="Firmware version"/>
+						</using>
+
+						<Space height="27"/>
+
+						<!-- Screen buttons, lower row-->
+						<Horizontal size="0,0" margin="2" spacing="3">
+							<foreach variable="$i" start="3" count="3">
+								<View name="LcdButtonBottomRow" attach="left right"/>
+							</foreach>
+						</Horizontal>
+					</Vertical>
+				</Horizontal>
+
+				<!-- Footer: knobs paging status. -->
+				<using controller="Paging">
+					<Variant name="pagingMode" size="20,317,425,26" options="boundvalue">
+						<!-- Paging mode: single. -->
+						<Horizontal margin="2" spacing="-2" attach="hfit">
+							<Space width="6"/>
+							<Toggle name="pagingMode" style="ATOMSQAutoFillButtonDisabled" sizeLimits="83,20,-1,20" title="Auto-Fill"/>
+							<Space width="10"/>
+							<Label title="Page:" height="20" style="PagingStatusText"/>
+							<!-- Just to have the same space in all languages. -->
+							<Space width="10"/>
+							<!-- Make a bit wider to make up for the missing page count information. -->
+							<ValueBox name="pageTitle" width="234" height="20" style="PageTitleUser" options="fittext transparent hidefocus" tooltip="Page Title"/>
+							<Button name="prevPage" width="20" height="20"  icon="AtomSQPagePreviousIcon" tooltip="Previous Page" options="transparent hidefocus"/>
+							<Button name="nextPage" width="20" height="20" icon="AtomSQPageNextIcon" tooltip="Next Page" options="transparent hidefocus"/>
+						</Horizontal>
+						<!-- Paging mode: multi or auto. Provide autofill on/off controls. -->
+						<Horizontal margin="2" spacing="-2" attach="hfit">
+							<Space width="6"/>
+							<Variant name="pagingMode">
+								<!-- Single or multi paging mode mode: engage autofill via radio button. -->
+								<RadioButton name="pagingMode" value="2" style="ATOMSQAutoFillButton" sizeLimits="83,20,-1,20"  title="Auto-Fill"/>
+								<RadioButton name="pagingMode" value="2" style="ATOMSQAutoFillButton" sizeLimits="83,20,-1,20"  title="Auto-Fill"/>
+								<!-- Autofill paging mode: disengage autofill via toggle button. -->
+								<Toggle name="pagingMode" style="ATOMSQAutoFillButton" sizeLimits="83,20,-1,20" title="Auto-Fill"/>
+							</Variant>
+							<Space width="10"/>
+							<Label title="Page:" height="20" style="PagingStatusText"/>
+							<Space width="10"/>
+							<!-- For autofill paging mode, use TextBox to prevent the user from editing the page title. -->
+							<Variant name="pagingMode">
+								<ValueBox name="pageTitle" width="170" height="20" style="PageTitleUser" options="fittext transparent hidefocus" tooltip="Page Title"/>
+								<ValueBox name="pageTitle" width="170" height="20" style="PageTitleUser" options="fittext transparent hidefocus" tooltip="Page Title"/>
+								<TextBox name="pageTitle" width="170" height="20" style="PageTitleAutofill" options="fittext transparent hidefocus" tooltip="Page Name"/>
+							</Variant>
+							<ValueBox name="pageNumber" width="30" height="20" style="PagingStatusText" options="hidefocus transparent"/>
+							<Label title="/" height="20" style="PagingStatusText"/>
+							<TextBox name="pageCount" width="30" height="20" style="PagingStatusText" options="hidefocus transparent" tooltip="Page Count"/>
+							<Button name="prevPage" width="20" height="20" icon="AtomSQPagePreviousIcon" tooltip="Previous Page" options="hidefocus transparent"/>
+							<Button name="nextPage" width="20" height="20" icon="AtomSQPageNextIcon" tooltip="Next Page" options="hidefocus transparent"/>
+						</Horizontal>
+					</Variant>
+				</using>
+
+				<!-- Footer: user commands paging status. -->
+				<using controller="../UserCommandSection0/Paging">
+					<Horizontal size="470,317" margin="2" spacing="-2" attach="hfit">
+						<Label title="Page:" height="20" style="PagingStatusText"/>
+						<Space width="10"/>
+						<ValueBox name="pageTitle" width="122" height="20" style="PageTitleUser" options="fittext transparent hidefocus" tooltip="Commands Page Title"/>
+						<Space width="4"/>
+						<ValueBox name="pageNumber" width="10" height="20" style="PagingStatusText" options="hidefocus transparent"/>
+						<Label title="/" height="20" style="PagingStatusText"/>
+						<TextBox name="pageCount" width="10" height="20" style="PagingStatusText" options="hidefocus transparent" tooltip="Page Count"/>
+						<Space width="10"/>
+						<Button name="prevPage" width="20" height="20" icon="AtomSQPagePreviousIcon" tooltip="Previous Page" options="hidefocus transparent"/>
+						<Button name="nextPage" width="20" height="20" icon="AtomSQPageNextIcon" tooltip="Next Page" options="hidefocus transparent"/>
+					</Horizontal>
+				</using>
+
+			</using>
+		</Form>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Sub Form Definitions -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="LcdButtonTopRow">
+			<using controller="../UserCommandSection0">
+				<using controller="Command$i">
+					<View>
+						<Button name="" size="0,3,76,32" style="AtomSQButton"/>
+						<Label title="User" size="0,3,65,32" style="AtomSQButtonText"/>
+						<TextBox name="commandNumber" size="37,3,30,32" options="fittext transparent nocontextmenu" style="AtomSQButtonText"/>
+						<Variant name="commandTitle" size="0,3,76,32" tooltip="Right-click to assign or unassign a command."/>
+						<Variant name="commandAssigned">
+							<Label title="Right-click to assign" size="0,47,76,47" options="transparent fittext nocontextmenu multiline" style="ScreenCellTextUnassigned"/>
+							<TextBox name="commandTitle" size="0,47,76,47" options="transparent fittext nocontextmenu multiline" style="ScreenCellText"/>
+						</Variant>
+					</View>
+				</using>
+			</using>
+		</Form>
+
+		<Form name="LcdButtonBottomRow">
+			<using controller="../UserCommandSection0">
+				<using controller="Command$i">
+					<View>
+						<Variant name="commandAssigned">
+							<Label title="Right-click to assign" size="0,0,76,47" options="transparent fittext nocontextmenu multiline" style="ScreenCellTextUnassigned"/>
+							<TextBox name="commandTitle" size="0,0,76,47" options="transparent fittext nocontextmenu multiline" style="ScreenCellText"/>
+						</Variant>
+						<Variant name="commandTitle" size="0,59,76,32" tooltip="Right-click to assign or unassign a command."/>
+						<Button name="" size="0,59,76,32" style="AtomSQButton"/>
+						<Label title="User" size="0,59,65,32" style="AtomSQButtonText"/>
+						<TextBox name="commandNumber" size="37,59,30,32" options="fittext transparent nocontextmenu" style="AtomSQButtonText"/>
+					</View>
+				</using>
+			</using>
+		</Form>
+
+	</Forms>
+</Skin>

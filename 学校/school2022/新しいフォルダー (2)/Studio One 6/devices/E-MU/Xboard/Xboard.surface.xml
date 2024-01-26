@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+	    <!-- ******************************************************************************************** -->
+        <!-- 1 x FADER -->
+        <!-- ******************************************************************************************** -->
+		<!-- 
+		<Control name="fader" title="Master Fader" options="receive">
+			<MidiMessage status="Controller" address="xx"/>
+		</Control>	
+                     -->
+		<!-- ******************************************************************************************** -->
+        <!-- 16 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="1" options="receive public">
+			<MidiMessage status="Controller" address="21"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="2" options="receive public">
+			<MidiMessage status="Controller" address="22"/>
+		</Control>	
+
+		<Control name="knob[2]" title="3" options="receive public">
+			<MidiMessage status="Controller" address="23"/>
+		</Control>	
+
+		<Control name="knob[3]" title="4" options="receive public">
+			<MidiMessage status="Controller" address="24"/>
+		</Control>	
+
+		<Control name="knob[4]" title="5" options="receive public">
+			<MidiMessage status="Controller" address="25"/>
+		</Control>	
+
+		<Control name="knob[5]" title="6" options="receive public">
+			<MidiMessage status="Controller" address="26"/>
+		</Control>	
+
+		<Control name="knob[6]" title="7" options="receive public">
+			<MidiMessage status="Controller" address="27"/>
+		</Control>	
+
+		<Control name="knob[7]" title="8" options="receive public">
+			<MidiMessage status="Controller" address="28"/>
+		</Control>	
+
+		<Control name="knob[8]" title="9" options="receive  public">
+			<MidiMessage status="Controller" address="70"/>
+		</Control>	
+
+		<Control name="knob[9]" title="10" options="receive public">
+			<MidiMessage status="Controller" address="71"/>
+		</Control>	
+
+		<Control name="knob[10]" title="11" options="receive public">
+			<MidiMessage status="Controller" address="72"/>
+		</Control>	
+
+		<Control name="knob[11]" title="12" options="receive public">
+			<MidiMessage status="Controller" address="73"/>
+		</Control>	
+
+		<Control name="knob[12]" title="13" options="receive public">
+			<MidiMessage status="Controller" address="91"/>
+		</Control>	
+
+		<Control name="knob[13]" title="14" options="receive public">
+			<MidiMessage status="Controller" address="93"/>
+		</Control>	
+
+		<Control name="knob[14]" title="15" options="receive public">
+			<MidiMessage status="Controller" address="82"/>
+		</Control>	
+
+		<Control name="knob[15]" title="16" options="receive public">
+			<MidiMessage status="Controller" address="83"/>
+		</Control>	
+
+	</Controls>
+
+</ControlSurface>

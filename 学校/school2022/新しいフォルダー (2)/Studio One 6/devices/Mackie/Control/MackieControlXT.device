@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Mackie"
+	name="Control Extender"
+	family="MackieFamily"
+	
+	classID="{A20A453D-ABCD-40fa-98B9-12125612CC29}"
+	category="Surface"
+	
+	nativeCode="MackieExtender"
+	surfaceFile="MackieControlXT.surface.xml"
+	surfacePlacementSize="8"
+
+	scriptFile="MackieControlXT.js"
+	scriptFile.functionName="createInstance"
+	
+	imageFile="MackieControlXT.png"
+	textFile="MackieControlXT.txt"
+
+	skinFile="skin/"
+	formName="MackieControlXT"
+	/>

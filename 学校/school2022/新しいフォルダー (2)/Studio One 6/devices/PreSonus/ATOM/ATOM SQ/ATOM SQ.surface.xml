@@ -1,0 +1,3048 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ******************************************************************************************** -->
+<!-- ATOM SQ Surface Control Definitions and Mappings -->
+<!-- Copyright (c) 2019 PreSonus Software Ltd. -->
+<!-- ******************************************************************************************** -->
+
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL CONTROLS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="shiftButton" type="button" options="receive">
+			<MidiMessage status="#B0" address="#1F"/>
+		</Control>
+		<Control name="shiftButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#1F"/>
+		</Control>
+
+		<!-- Left out: Setup Button, Logo LED -->
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x FUNCTION BUTTONS (A,B,..,H) -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="sustainEventGenerator" options="transmit fastupdate"/>
+
+		<Control name="bankButton[0]" title="Bank A" type="button" options="receive">
+			<MidiMessage status="#B0" address="#00"/>
+		</Control>
+		<Control name="bankButtonLED[0]" options="transmit">
+			<MidiMessage status="#B0" address="#00"/>
+		</Control>
+		<Control name="bankButtonLEDColor[0]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#00"/>
+		</Control>
+
+		<Control name="bankButton[1]" title="Bank B" type="button" options="receive">
+			<MidiMessage status="#B0" address="#01"/>
+		</Control>
+		<Control name="bankButtonLED[1]" options="transmit">
+			<MidiMessage status="#B0" address="#01"/>
+		</Control>
+		<Control name="bankButtonLEDColor[1]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#01"/>
+		</Control>
+
+		<Control name="bankButton[2]" title="Bank C" type="button" options="receive">
+			<MidiMessage status="#B0" address="#02"/>
+		</Control>
+		<Control name="bankButtonLED[2]" options="transmit">
+			<MidiMessage status="#B0" address="#02"/>
+		</Control>
+		<Control name="bankButtonLEDColor[2]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#02"/>
+		</Control>
+
+		<Control name="bankButton[3]" title="Bank D" type="button" options="receive">
+			<MidiMessage status="#B0" address="#03"/>
+		</Control>
+		<Control name="bankButtonLED[3]" options="transmit">
+			<MidiMessage status="#B0" address="#03"/>
+		</Control>
+		<Control name="bankButtonLEDColor[3]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#03"/>
+		</Control>
+
+		<Control name="bankButton[4]" title="Bank E" type="button" options="receive">
+			<MidiMessage status="#B0" address="#04"/>
+		</Control>
+		<Control name="bankButtonLED[4]" options="transmit">
+			<MidiMessage status="#B0" address="#04"/>
+		</Control>
+		<Control name="bankButtonLEDColor[4]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#04"/>
+		</Control>
+
+		<Control name="bankButton[5]" title="Bank F" type="button" options="receive">
+			<MidiMessage status="#B0" address="#05"/>
+		</Control>
+		<Control name="bankButtonLED[5]" options="transmit">
+			<MidiMessage status="#B0" address="#05"/>
+		</Control>
+		<Control name="bankButtonLEDColor[5]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#05"/>
+		</Control>
+
+		<Control name="bankButton[6]" title="Bank G" type="button" options="receive">
+			<MidiMessage status="#B0" address="#06"/>
+		</Control>
+		<Control name="bankButtonLED[6]" options="transmit">
+			<MidiMessage status="#B0" address="#06"/>
+		</Control>
+		<Control name="bankButtonLEDColor[6]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#06"/>
+		</Control>
+
+		<Control name="bankButton[7]" title="Bank H" type="button" options="receive">
+			<MidiMessage status="#B0" address="#07"/>
+		</Control>
+		<Control name="bankButtonLED[7]" options="transmit">
+			<MidiMessage status="#B0" address="#07"/>
+		</Control>
+		<Control name="bankButtonLEDColor[7]" type="rgb" options="transmit fastupdate">
+			<Handler class="ButtonColorLEDHandler" address="#07"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="stopButton" title="Stop" type="button" options="receive">
+			<MidiMessage status="#B0" address="#6F"/>
+		</Control>
+		<Control name="stopButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#6F"/>
+		</Control>
+
+		<Control name="playButton" title="Play" type="button" options="receive">
+			<MidiMessage status="#B0" address="#6D"/>
+		</Control>
+		<Control name="playButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#6D"/>
+		</Control>
+		<Control name="playButtonLEDColor" type="rgb" options="transmit">
+			<Handler class="ButtonColorLEDHandler" address="#6D"/>
+		</Control>
+
+		<Control name="recordButton" title="Record" type="button" options="receive">
+			<MidiMessage status="#B0" address="#6B"/>
+		</Control>
+
+		<Control name="recordButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#6B"/>
+		</Control>
+
+		<Control name="clickButton" title="Metronome" type="button" options="receive">
+			<MidiMessage status="#B0" address="#69"/>
+		</Control>
+		<Control name="clickButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#69"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- MODE BUTTONS (buttons left to display)-->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="songModeButton" title="Song" type="button" options="receive">
+			<MidiMessage status="#B0" address="#20"/>
+		</Control>
+		<Control name="songModeButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#20"/>
+		</Control>
+
+		<Control name="instrumentModeButton" title="Instance" type="button" options="receive">
+			<MidiMessage status="#B0" address="#21"/>
+		</Control>
+		<Control name="instrumentModeButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#21"/>
+		</Control>
+
+		<Control name="editorModeButton" title="Edit" type="button" options="receive">
+			<MidiMessage status="#B0" address="#22"/>
+		</Control>
+		<Control name="editorModeButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#22"/>
+		</Control>
+
+		<Control name="userModeButton" title="User" type="button" options="receive">
+			<MidiMessage status="#B0" address="#23"/>
+		</Control>
+		<Control name="userModeButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#23"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- 6x DISPLAY BUTTONS (above, below display)-->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="lcdButton[0]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#24"/>
+		</Control>
+		<Control name="lcdButtonLED[0]" options="transmit">
+			<MidiMessage status="#B0" address="#24"/>
+		</Control>
+
+		<Control name="lcdButton[1]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#25"/>
+		</Control>
+		<Control name="lcdButtonLED[1]" options="transmit">
+			<MidiMessage status="#B0" address="#25"/>
+		</Control>
+
+		<Control name="lcdButton[2]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#26"/>
+		</Control>
+		<Control name="lcdButtonLED[2]" options="transmit">
+			<MidiMessage status="#B0" address="#26"/>
+		</Control>
+
+		<!-- row below lcd -->
+		<Control name="lcdButton[3]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#27"/>
+		</Control>
+		<Control name="lcdButtonLED[3]" options="transmit">
+			<MidiMessage status="#B0" address="#27"/>
+		</Control>
+
+		<Control name="lcdButton[4]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#28"/>
+		</Control>
+		<Control name="lcdButtonLED[4]" options="transmit">
+			<MidiMessage status="#B0" address="#28"/>
+		</Control>
+
+		<Control name="lcdButton[5]" type="button" options="receive">
+			<MidiMessage status="#B0" address="#29"/>
+		</Control>
+		<Control name="lcdButtonLED[5]" options="transmit">
+			<MidiMessage status="#B0" address="#29"/>
+		</Control>
+
+		<!-- virtual button controls for generic mapping / skin, delegate controlled in user mode. -->
+		<Control name="lcdUserButton[0]" title="User 1" type="trigger" options="receive"/>
+		<Control name="lcdUserButton[1]" title="User 2" type="trigger" options="receive"/>
+		<Control name="lcdUserButton[2]" title="User 3" type="trigger" options="receive"/>
+		<Control name="lcdUserButton[3]" title="User 4" type="trigger" options="receive"/>
+		<Control name="lcdUserButton[4]" title="User 5" type="trigger" options="receive"/>
+		<Control name="lcdUserButton[5]" title="User 6" type="trigger" options="receive"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- NAVIGATION BUTTONS (above, below display)-->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="arrowUpButton" type="button" options="receive">
+			<MidiMessage status="#B0" address="#57"/>
+		</Control>
+		<Control name="arrowUpButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#57"/>
+		</Control>
+
+		<Control name="arrowDownButton" type="button" options="receive">
+			<MidiMessage status="#B0" address="#59"/>
+		</Control>
+		<Control name="arrowDownButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#59"/>
+		</Control>
+
+		<Control name="arrowLeftButton" type="button" options="receive">
+			<MidiMessage status="#B0" address="#5A"/>
+		</Control>
+		<Control name="arrowLeftButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#5A"/>
+		</Control>
+
+		<Control name="arrowRightButton" type="button" options="receive">
+			<MidiMessage status="#B0" address="#66"/>
+		</Control>
+		<Control name="arrowRightButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#66"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- STRIP + LEDs -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- touch strip continuous input-->
+		<Control name="touchStrip" options="receive"/>
+		<!-- provide strip touch on/off via sustain CC -->
+		<Control name="sustainTouch" options="receive">
+			<MidiMessage status="#B0" address="#40"/>
+		</Control>
+
+		<!-- touch strip output -->
+		<Control name="pitchBendEventGenerator" options="transmit fastupdate"/>
+		<Control name="modulationEventGenerator" options="transmit fastupdate"/>
+		<Control name="expressionEventGenerator" options="transmit fastupdate"/>
+		<Control name="breathControlEventGenerator" options="transmit fastupdate"/>
+
+		<!-- touch strip delegatable control for use with control link -->
+		<Control name="controlLinkTouchStrip" title="Touchstrip" options="receive fastupdate public pageable"/>"
+
+		<!-- controls for single dot and fill up LED style -->
+		<Control name="touchStripSingleLED" options="transmit fastupdate"/>
+		<Control name="touchStripMultiLED" options="transmit fastupdate"/>
+
+		<!-- 25x strip LED: addresses 38h to 4Fh -->
+		<Control name="stripLED[0]" options="transmit">
+			<MidiMessage status="#B0" address ="#37"/>
+		</Control>
+		<Control name="stripLED[1]" options="transmit">
+			<MidiMessage status="#B0" address ="#38"/>
+		</Control>
+		<Control name="stripLED[2]" options="transmit">
+			<MidiMessage status="#B0" address ="#39"/>
+		</Control>
+		<Control name="stripLED[3]" options="transmit">
+			<MidiMessage status="#B0" address ="#3A"/>
+		</Control>
+		<Control name="stripLED[4]" options="transmit">
+			<MidiMessage status="#B0" address ="#3B"/>
+		</Control>
+		<Control name="stripLED[5]" options="transmit">
+			<MidiMessage status="#B0" address ="#3C"/>
+		</Control>
+		<Control name="stripLED[6]" options="transmit">
+			<MidiMessage status="#B0" address ="#3D"/>
+		</Control>
+		<Control name="stripLED[7]" options="transmit">
+			<MidiMessage status="#B0" address ="#3E"/>
+		</Control>
+		<Control name="stripLED[8]" options="transmit">
+			<MidiMessage status="#B0" address ="#3F"/>
+		</Control>
+		<Control name="stripLED[9]" options="transmit">
+			<MidiMessage status="#B0" address ="#40"/>
+		</Control>
+		<Control name="stripLED[10]" options="transmit">
+			<MidiMessage status="#B0" address ="#41"/>
+		</Control>
+		<Control name="stripLED[11]" options="transmit">
+			<MidiMessage status="#B0" address ="#42"/>
+		</Control>
+		<Control name="stripLED[12]" options="transmit">
+			<MidiMessage status="#B0" address ="#43"/>
+		</Control>
+		<Control name="stripLED[13]" options="transmit">
+			<MidiMessage status="#B0" address ="#44"/>
+		</Control>
+		<Control name="stripLED[14]" options="transmit">
+			<MidiMessage status="#B0" address ="#45"/>
+		</Control>
+		<Control name="stripLED[15]" options="transmit">
+			<MidiMessage status="#B0" address ="#46"/>
+		</Control>
+		<Control name="stripLED[16]" options="transmit">
+			<MidiMessage status="#B0" address ="#47"/>
+		</Control>
+		<Control name="stripLED[17]" options="transmit">
+			<MidiMessage status="#B0" address ="#48"/>
+		</Control>
+		<Control name="stripLED[18]" options="transmit">
+			<MidiMessage status="#B0" address ="#49"/>
+		</Control>
+		<Control name="stripLED[19]" options="transmit">
+			<MidiMessage status="#B0" address ="#4A"/>
+		</Control>
+		<Control name="stripLED[20]" options="transmit">
+			<MidiMessage status="#B0" address ="#4B"/>
+		</Control>
+		<Control name="stripLED[21]" options="transmit">
+			<MidiMessage status="#B0" address ="#4C"/>
+		</Control>
+		<Control name="stripLED[22]" options="transmit">
+			<MidiMessage status="#B0" address ="#4D"/>
+		</Control>
+		<Control name="stripLED[23]" options="transmit">
+			<MidiMessage status="#B0" address ="#4E"/>
+		</Control>
+		<Control name="stripLED[24]" options="transmit">
+			<MidiMessage status="#B0" address ="#4F"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- WHEEL + LEFT/RIGHT -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="wheelKnob" title="Wheel" type="relative" options="receive">
+			<MidiMessage status="#B0" address="#1D" options="signed plain"/>
+		</Control>
+
+		<Control name="wheelLeftButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#2A"/>
+		</Control>
+		<Control name="wheelLeftButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#2A"/>
+		</Control>
+
+		<Control name="wheelRightButton" type="trigger" options="receive">
+			<MidiMessage status="#B0" address="#2B"/>
+		</Control>
+		<Control name="wheelRightButtonLED" options="transmit">
+			<MidiMessage status="#B0" address="#2B"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x KNOBS -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Row 1, left to right -->
+		<Control name="knob[0]" title="Knob 1" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#0E" options="signed plain"/>
+		</Control>
+		<Control name="knob[1]" title="Knob 2" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#0F" options="signed plain"/>
+		</Control>
+		<Control name="knob[2]" title="Knob 3" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#10" options="signed plain"/>
+		</Control>
+		<Control name="knob[3]" title="Knob 4" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#11" options="signed plain"/>
+		</Control>
+
+		<!-- Row 2, left to right -->
+		<Control name="knob[4]" title="Knob 5" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#12" options="signed plain"/>
+		</Control>
+		<Control name="knob[5]" title="Knob 6" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#13" options="signed plain"/>
+		</Control>
+		<Control name="knob[6]" title="Knob 7" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#14" options="signed plain"/>
+		</Control>
+		<Control name="knob[7]" title="Knob 8" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#15" options="signed plain"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- PADS -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Bottom row -->
+		<!-- 1 -->
+		<Control name="pad[0][0]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#24" options="through"/>
+		</Control>
+		<Control name="padLED[0][0]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#24"/>
+		</Control>
+		<Control name="padLEDColor[0][0]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#24"/>
+		</Control>
+
+		<!-- 2 -->
+		<Control name="pad[0][1]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#25" options="through"/>
+		</Control>
+		<Control name="padLED[0][1]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#25"/>
+		</Control>
+		<Control name="padLEDColor[0][1]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#25"/>
+		</Control>
+
+		<!-- 3 -->
+		<Control name="pad[0][2]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#26" options="through"/>
+		</Control>
+		<Control name="padLED[0][2]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#26"/>
+		</Control>
+		<Control name="padLEDColor[0][2]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#26"/>
+		</Control>
+
+		<!-- 4 -->
+		<Control name="pad[0][3]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#27" options="through"/>
+		</Control>
+		<Control name="padLED[0][3]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#27"/>
+		</Control>
+		<Control name="padLEDColor[0][3]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#27"/>
+		</Control>
+
+		<!-- 5 -->
+		<Control name="pad[0][4]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#28" options="through"/>
+		</Control>
+		<Control name="padLED[0][4]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#28"/>
+		</Control>
+		<Control name="padLEDColor[0][4]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#28"/>
+		</Control>
+
+		<!-- 6 -->
+		<Control name="pad[0][5]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#29" options="through"/>
+		</Control>
+		<Control name="padLED[0][5]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#29"/>
+		</Control>
+		<Control name="padLEDColor[0][5]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#29"/>
+		</Control>
+
+		<!-- 7 -->
+		<Control name="pad[0][6]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2A" options="through"/>
+		</Control>
+		<Control name="padLED[0][6]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2A"/>
+		</Control>
+		<Control name="padLEDColor[0][6]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2A"/>
+		</Control>
+
+		<!-- 8 -->
+		<Control name="pad[0][7]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2B" options="through"/>
+		</Control>
+		<Control name="padLED[0][7]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2B"/>
+		</Control>
+		<Control name="padLEDColor[0][7]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2B"/>
+		</Control>
+
+		<!-- 9 -->
+		<Control name="pad[0][8]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2C" options="through"/>
+		</Control>
+		<Control name="padLED[0][8]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2C"/>
+		</Control>
+		<Control name="padLEDColor[0][8]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2C"/>
+		</Control>
+
+		<!-- 10 -->
+		<Control name="pad[0][9]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2D" options="through"/>
+		</Control>
+		<Control name="padLED[0][9]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2D"/>
+		</Control>
+		<Control name="padLEDColor[0][9]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2D"/>
+		</Control>
+
+		<!-- 11 -->
+		<Control name="pad[0][10]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2E" options="through"/>
+		</Control>
+		<Control name="padLED[0][10]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2E"/>
+		</Control>
+		<Control name="padLEDColor[0][10]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2E"/>
+		</Control>
+
+		<!-- 12 -->
+		<Control name="pad[0][11]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#2F" options="through"/>
+		</Control>
+		<Control name="padLED[0][11]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#2F"/>
+		</Control>
+		<Control name="padLEDColor[0][11]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#2F"/>
+		</Control>
+
+		<!-- 13 -->
+		<Control name="pad[0][12]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#30" options="through"/>
+		</Control>
+		<Control name="padLED[0][12]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#30"/>
+		</Control>
+		<Control name="padLEDColor[0][12]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#30"/>
+		</Control>
+
+		<!-- 14 -->
+		<Control name="pad[0][13]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#31" options="through"/>
+		</Control>
+		<Control name="padLED[0][13]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#31"/>
+		</Control>
+		<Control name="padLEDColor[0][13]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#31"/>
+		</Control>
+
+		<!-- 15 -->
+		<Control name="pad[0][14]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#32" options="through"/>
+		</Control>
+		<Control name="padLED[0][14]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#32"/>
+		</Control>
+		<Control name="padLEDColor[0][14]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#32"/>
+		</Control>
+
+		<!-- 16 -->
+		<Control name="pad[0][15]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#33" options="through"/>
+		</Control>
+		<Control name="padLED[0][15]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#33"/>
+		</Control>
+		<Control name="padLEDColor[0][15]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#33"/>
+		</Control>
+
+
+		<!-- Top row -->
+		<!-- 1 -->
+		<Control name="pad[1][0]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#34" options="through"/>
+		</Control>
+		<Control name="padLED[1][0]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#34"/>
+		</Control>
+		<Control name="padLEDColor[1][0]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#34"/>
+		</Control>
+
+		<!-- 2 -->
+		<Control name="pad[1][1]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#35" options="through"/>
+		</Control>
+		<Control name="padLED[1][1]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#35"/>
+		</Control>
+		<Control name="padLEDColor[1][1]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#35"/>
+		</Control>
+
+		<!-- 3 -->
+		<Control name="pad[1][2]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#36" options="through"/>
+		</Control>
+		<Control name="padLED[1][2]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#36"/>
+		</Control>
+		<Control name="padLEDColor[1][2]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#36"/>
+		</Control>
+		[
+		<!-- 4 -->
+		<Control name="pad[1][3]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#37" options="through"/>
+		</Control>
+		<Control name="padLED[1][3]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#37"/>
+		</Control>
+		<Control name="padLEDColor[1][3]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#37"/>
+		</Control>
+
+		<!-- 5 -->
+		<Control name="pad[1][4]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#38" options="through"/>
+		</Control>
+		<Control name="padLED[1][4]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#38"/>
+		</Control>
+		<Control name="padLEDColor[1][4]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#38"/>
+		</Control>
+
+		<!-- 6 -->
+		<Control name="pad[1][5]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#39" options="through"/>
+		</Control>
+		<Control name="padLED[1][5]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#39"/>
+		</Control>
+		<Control name="padLEDColor[1][5]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#39"/>
+		</Control>
+
+		<!-- 7 -->
+		<Control name="pad[1][6]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3A" options="through"/>
+		</Control>
+		<Control name="padLED[1][6]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3A"/>
+		</Control>
+		<Control name="padLEDColor[1][6]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3A"/>
+		</Control>
+
+		<!-- 8 -->
+		<Control name="pad[1][7]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3B" options="through"/>
+		</Control>
+		<Control name="padLED[1][7]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3B"/>
+		</Control>
+		<Control name="padLEDColor[1][7]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3B"/>
+		</Control>
+
+		<!-- 9 -->
+		<Control name="pad[1][8]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3C" options="through"/>
+		</Control>
+		<Control name="padLED[1][8]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3C"/>
+		</Control>
+		<Control name="padLEDColor[1][8]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3C"/>
+		</Control>
+
+		<!-- 10 -->
+		<Control name="pad[1][9]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3D" options="through"/>
+		</Control>
+		<Control name="padLED[1][9]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3D"/>
+		</Control>
+		<Control name="padLEDColor[1][9]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3D"/>
+		</Control>
+
+		<!-- 11 -->
+		<Control name="pad[1][10]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3E" options="through"/>
+		</Control>
+		<Control name="padLED[1][10]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3E"/>
+		</Control>
+		<Control name="padLEDColor[1][10]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3E"/>
+		</Control>
+
+		<!-- 12 -->
+		<Control name="pad[1][11]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#3F" options="through"/>
+		</Control>
+		<Control name="padLED[1][11]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#3F"/>
+		</Control>
+		<Control name="padLEDColor[1][11]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#3F"/>
+		</Control>
+
+		<!-- 13 -->
+		<Control name="pad[1][12]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#40" options="through"/>
+		</Control>
+		<Control name="padLED[1][12]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#40"/>
+		</Control>
+		<Control name="padLEDColor[1][12]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#40"/>
+		</Control>
+
+		<!-- 14 -->
+		<Control name="pad[1][13]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#41" options="through"/>
+		</Control>
+		<Control name="padLED[1][13]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#41"/>
+		</Control>
+		<Control name="padLEDColor[1][13]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#41"/>
+		</Control>
+
+		<!-- 15 -->
+		<Control name="pad[1][14]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#42" options="through"/>
+		</Control>
+		<Control name="padLED[1][14]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#42"/>
+		</Control>
+		<Control name="padLEDColor[1][14]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#42"/>
+		</Control>
+
+		<!-- 16 -->
+		<Control name="pad[1][15]" type="trigger" options="receive">
+			<MidiMessage status="NoteTrigger" address="#43" options="through"/>
+		</Control>
+		<Control name="padLED[1][15]" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#43"/>
+		</Control>
+		<Control name="padLEDColor[1][15]" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#43"/>
+		</Control>
+
+		<!-- Pads: navigation +/- -->
+		<!-- Pad '+' -->
+		<Control name="padPlus" type="trigger" options="receive"/>
+		<Control name="padPlusLED" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#00"/>
+		</Control>
+		<Control name="padPlusLEDColor" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#00"/>
+		</Control>
+
+		<!-- Pad '-' -->
+		<Control name="padMinus" type="trigger" options="receive"/>
+		<Control name="padMinusLED" options="transmit fastupdate">
+			<MidiMessage status="#90" address="#01"/>
+		</Control>
+		<Control name="padMinusLEDColor" type="rgb" options="transmit fastupdate">
+			<Handler class="PadColorLEDHandler" address="#01"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Pad Pressure as CC, replaces poly pressure, must be engaged in firmware -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="padPressure" title="Pressure" options="receive public">
+			<MidiMessage status="#B0" address="#16"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- DISPLAY TEXT CELLS: TEXT -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- row 1, column 1-3 -->
+		<Control name="textCell[0]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[1]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[2]" type="textdisplay" options="transmit public"/>
+
+		<!-- row 2, column 1-3 -->
+		<Control name="textCell[3]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[4]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[5]" type="textdisplay" options="transmit public"/>
+
+		<!-- center row 3 + 4 -->
+		<Control name="textCell[6]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[7]" type="textdisplay" options="transmit public"/>
+
+		<!-- row 5, column 1-3 -->
+		<Control name="textCell[8]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[9]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[10]" type="textdisplay" options="transmit public"/>
+
+		<!-- row 6, column 1-3 -->
+		<Control name="textCell[11]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[12]" type="textdisplay" options="transmit public"/>
+		<Control name="textCell[13]" type="textdisplay" options="transmit public"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- DISPLAY TEXT CELLS: COLOR -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- row 1, column 1-3 -->
+		<Control name="textColor[0]" type="rgb" options="transmit"/>
+		<Control name="textColor[1]" type="rgb" options="transmit"/>
+		<Control name="textColor[2]" type="rgb" options="transmit"/>
+
+		<!-- row 2, column 1-3 -->
+		<Control name="textColor[3]" type="rgb" options="transmit"/>
+		<Control name="textColor[4]" type="rgb" options="transmit"/>
+		<Control name="textColor[5]" type="rgb" options="transmit"/>
+
+		<!-- center row 3 + 4 -->
+		<Control name="textColor[6]" type="rgb" options="transmit"/>
+		<Control name="textColor[7]" type="rgb" options="transmit"/>
+
+		<!-- row 5, column 1-3 -->
+		<Control name="textColor[8]" type="rgb" options="transmit"/>
+		<Control name="textColor[9]" type="rgb" options="transmit"/>
+		<Control name="textColor[10]" type="rgb" options="transmit"/>
+
+		<!-- row 6, column 1-3 -->
+		<Control name="textColor[11]" type="rgb" options="transmit"/>
+		<Control name="textColor[12]" type="rgb" options="transmit"/>
+		<Control name="textColor[13]" type="rgb" options="transmit"/>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- DISPLAY TEXT CELLS: ALIGNMENT -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- row 1, column 1-3 -->
+		<Control name="textAlign[0]" type="fader" options="transmit"/>
+		<Control name="textAlign[1]" type="fader" options="transmit"/>
+		<Control name="textAlign[2]" type="fader" options="transmit"/>
+
+		<!-- row 2, column 1-3 -->
+		<Control name="textAlign[3]" type="fader" options="transmit"/>
+		<Control name="textAlign[4]" type="fader" options="transmit"/>
+		<Control name="textAlign[5]" type="fader" options="transmit"/>
+
+		<!-- center row 3 + 4 -->
+		<Control name="textAlign[6]" type="fader" options="transmit"/>
+		<Control name="textAlign[7]" type="fader" options="transmit"/>
+
+		<!-- row 5, column 1-3 -->
+		<Control name="textAlign[8]" type="fader" options="transmit"/>
+		<Control name="textAlign[9]" type="fader" options="transmit"/>
+		<Control name="textAlign[10]" type="fader" options="transmit"/>
+
+		<!-- row 6, column 1-3 -->
+		<Control name="textAlign[11]" type="fader" options="transmit"/>
+		<Control name="textAlign[12]" type="fader" options="transmit"/>
+		<Control name="textAlign[13]" type="fader" options="transmit"/>
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- REMOTE CONTROL SECTIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Sections>
+		<GenericSection name="main" rows="2" columns="4">
+			<!-- top row -->
+			<Slot control="knob[0]" row="0" column="0"/>
+			<Slot control="knob[1]" row="0" column="1"/>
+			<Slot control="knob[2]" row="0" column="2"/>
+			<Slot control="knob[3]" row="0" column="3"/>
+			<!-- bottom row -->
+			<Slot control="knob[4]" row="1" column="0"/>
+			<Slot control="knob[5]" row="1" column="1"/>
+			<Slot control="knob[6]" row="1" column="2"/>
+			<Slot control="knob[7]" row="1" column="3"/>
+		</GenericSection>
+	</Sections>
+
+	<!-- ******************************************************************************************** -->
+	<!-- TEMPLATES -->
+	<!-- ******************************************************************************************** -->
+
+	<Templates>
+
+		<Template name="CommandScreenMapping">
+			<!-- use screen parameters -->
+			<foreach variable="$i" count="14">
+				<String control="textCell[$i]" param="textCellText[$i]"/>
+			</foreach>
+
+			<!-- illuminate button LEDS on pressed state -->
+			<foreach variable="$i" count="6">
+				<Value control="lcdButtonLED[$i]" param="ledPressed[$i]"/>
+			</foreach>
+		</Template>
+
+		<!-- Include to follow track color on display -->
+		<Template name="ShowFocusTrackColor">
+			<PlainValue control="textColor[7]" param="yellowColor"/>
+		</Template>
+
+		<!-- Include to follow track name on display -->
+		<Template name="ShowFocusTrackName">
+			<String control="textCell[7]" param="focusTrackLabel"/>
+			<PlainValue control="textColor[7]" param="yellowColor"/>
+		</Template>
+
+		<!-- 
+			Assign center text params to title and value of most recent
+			controlled control link parameter. Use an on/off switch parameter
+			to toggle the assignment. The on/off state is managed by the
+			component script in onIdle() and triggered via generic mapping
+			param invocation. Defined template to have this as an optional
+			per-page configuration option.
+		-->
+		<Template name="ControlLinkOverlay">
+			<ParamVariant param="controlLinkOverlayEnabled">
+				<Group value="0"/>
+				<Group value="1">
+					<String control="textCell[6]" param="controlLinkTitle"/>
+					<String control="textCell[7]" param="controlLinkValue"/>
+				</Group>
+			</ParamVariant>
+		</Template>
+
+		<!-- Show focus preset name (requires control surface to be selected as focus device) -->
+		<Template name="PresetOverlay">
+			<Invoke control="wheelKnob" onReceive="onWheelKnobReceive"/>
+			<ParamVariant param="presetOverlayEnabled">
+				<Group value="0"/>
+				<Group value="1">
+					<String control="textCell[7]" param="focusPresetText"/>
+					<PlainValue control="textColor[7]" param="yellowColor"/>
+					<using device="Editor">
+						<ParamInvoke param="focusPresetName" onChanged="onFocusPresetNameChanged"/>
+					</using>
+				</Group>
+			</ParamVariant>
+		</Template>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TEMPLATE: BrowserOverlay -->
+		<!-- ******************************************************************************************** -->
+
+		<Template name="BrowserOverlay">
+			<!-- Combine multiple focus node information into a single one. -->
+			<using device="device:///Browser">
+				<ParamInvoke param="focusNodeParent" onActivate="onActivateBrowserParamInvoke" onChanged="onBrowserNodeParamChanged"/>
+				<ParamInvoke param="focusNode" onActivate="onActivateBrowserParamInvoke" onChanged="onBrowserNodeParamChanged"/>
+				<ParamInvoke param="focusNodeExpandable" onActivate="onActivateBrowserParamInvoke" onChanged="onBrowserNodeParamChanged"/>
+			</using>
+			<!-- Detail: Display hint that browser is not open. -->
+			<PlainValue control="textColor[7]" param="yellowColor"/>
+			<ParamVariant using="device:///WindowManager" param="Browser">
+				<Group value="0">
+					<String control="textCell[7]" param="browserPending"/>
+				</Group>
+				<Group value="1">
+					<String control="textCell[7]" param="browserFocusNode"/>
+				</Group>
+			</ParamVariant>
+		</Template>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TEMPLATE: BrowserOverlay -->
+		<!-- ******************************************************************************************** -->
+
+		<Template name="StepControlOverlay">
+
+			<!-- Shift press causes additional overlays that should be prioritizied. -->
+			<ParamVariant using="@global" param="shiftModifier" strict="true">
+				<Group value="0">
+					<using device="device:///FocusStepEdit">
+						<!-- Cancel overlay timeout immediately if active status ends. -->
+						<ParamInvoke param="active" onChanged="onStepFocusActiveChanged"/>
+
+						<!-- Engage if focus step selected. -->
+						<ParamVariant param="active" strict="true">
+							<Group value="1">
+								<Relative control="knob[4]" param="velocity"/>
+								<Relative control="knob[5]" param="repeat"/>
+								<Relative control="knob[6]" param="delay"/>
+								<Relative control="knob[7]" param="probability"/>
+								<String control="textCell[6]" param="title"/>
+
+								<!-- Trigger step params overlay 'enabled' status. -->
+								<ParamInvoke param="value" onChanged="onStepParamEdited"/>
+
+								<!-- Overlay on/off status. -->
+								<ParamVariant using="@global" param="stepFocusOverlayEnabled">
+									<Group>
+										<using device="@global">
+											<String control="textCell[6]" param="stepFocusOverlayTitle"/>
+											<String control="textCell[7]" param="stepFocusOverlayHint"/>
+										</using>
+									</Group>
+									<Group>
+										<String control="textCell[7]" param="value"/>
+									</Group>
+								</ParamVariant>
+							</Group>
+						</ParamVariant>
+					</using>
+				</Group>
+			</ParamVariant>
+		</Template>
+
+	</Templates>
+
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+		<!-- CONSTANTS -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Modes -->
+		<define name="$DEFAULT_MODE" value="0"/>
+		<define name="$SONG_MODE" value="1"/>
+		<define name="$INSTRUMENT_MODE" value="2"/>
+		<define name="$EDITOR_MODE_NONE" value="3"/>
+		<define name="$EDITOR_MODE_AUDIO" value="4"/>
+		<define name="$EDITOR_MODE_PART" value="5"/>
+		<define name="$EDITOR_MODE_PATTERN" value="6"/>
+		<define name="$USER_MODE" value="7"/>
+
+		<!-- Pad Workflows -->
+		<define name="$KEYBOARD_PLAY" value="0"/>
+		<define name="$SEQUENCER" value="1"/>
+		<define name="$STEPFOCUS" value="2"/>
+
+		<!-- Function Pad Modes -->
+		<define name="$FUNCTIONPAD_MODE_PITCHBEND" value="0"/>
+		<define name="$FUNCTIONPAD_MODE_BREATHMOD" value="1"/>
+
+		<!-- Touchstrip Modes -->
+		<define name="$TOUCHSTRIP_MODE_PITCHBEND" value="0"/>
+		<define name="$TOUCHSTRIP_MODE_MODWHEEL" value="1"/>
+		<define name="$TOUCHSTRIP_MODE_CONTROLLINK" value="2"/>
+		<define name="$TOUCHSTRIP_MODE_EXPRESSION" value="3"/>
+		<define name="$TOUCHSTRIP_MODE_BREATHCONTROL" value="4"/>
+		<define name="$TOUCHSTRIP_MODE_NOTEREPEAT" value="5"/>
+		<define name="$TOUCHSTRIP_MODE_CHANNELVOLUME" value="6"/>
+		<define name="$TOUCHSTRIP_MODE_CHANNELPAN" value="7"/>
+
+		<!-- Sampler control mode -->
+		<define name="$SAMPLER_CONTROL_MODE_NONE" value="0"/>
+		<define name="$SAMPLER_CONTROL_MODE_IMPACT" value="1"/>
+		<define name="$SAMPLER_CONTROL_MODE_SAMPLEONE" value="2"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- PAD SECTIONS -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Main: 32x pads music input, enabled on workflow == 0 -->
+		<PadSection name="PadSectionMainElement" rows="2" roles="musicinput">
+			<ParamVariant param="padWorkflow">
+				<Group value="$KEYBOARD_PLAY">
+					<!-- bottom row -->
+					<foreach variable="$i" count="16">
+						<Pad control="pad[0][$i]">
+							<Value control="padLED[0][$i]" param="state"/>
+							<PlainValue control="padLEDColor[0][$i]" param="color"/>
+						</Pad>
+					</foreach>
+					<!-- top row -->
+					<foreach variable="$j" count="16">
+						<Pad control="pad[1][$j]">
+							<Value control="padLED[1][$j]" param="state"/>
+							<PlainValue control="padLEDColor[1][$j]" param="color"/>
+						</Pad>
+					</foreach>
+				</Group>
+				<!-- Dual mode, disable this -->
+				<Group value ="$SEQUENCER, $STEPFOCUS"/>
+			</ParamVariant>
+		</PadSection>
+
+		<!-- Dual: 16x pads music input (top row), enabled on workflow == 1 -->
+		<PadSection name="PadSectionDualMusic" rows="1" roles="musicinput">
+			<ParamVariant param="padWorkflow">
+				<!-- 32 pads mode, disable this -->
+				<Group value="$KEYBOARD_PLAY"/>
+				<Group value="$SEQUENCER, $STEPFOCUS">
+					<foreach variable="$i" count="16">
+						<Pad control="pad[1][$i]">
+							<Value control="padLED[1][$i]" param="state"/>
+							<PlainValue control="padLEDColor[1][$i]" param="color"/>
+						</Pad>
+					</foreach>
+				</Group>
+			</ParamVariant>
+		</PadSection>
+
+		<!-- Dual: 16x pads step sequencing or step controls (lower row), enabled on workflow == 1 or 2 -->
+		<PadSection name="PadSectionDualStep" rows="1" roles="stepedit stepfocus">
+			<ParamVariant param="padWorkflow">
+				<!-- 32 pads mode, disable this -->
+				<Group value="$KEYBOARD_PLAY"/>
+				<Group value="$SEQUENCER, $STEPFOCUS">
+					<foreach variable="$j" count="16">
+						<Pad control="pad[0][$j]">
+							<Value control="padLED[0][$j]" param="state"/>
+							<PlainValue control="padLEDColor[0][$j]" param="color"/>
+						</Pad>
+					</foreach>
+				</Group>
+			</ParamVariant>
+		</PadSection>
+
+		<UserCommandSection name="UserCommands" pages="8" localize="false">
+			<foreach variable="$i" count="6">
+				<UserCommand control="lcdUserButton[$i]"/>
+			</foreach>
+		</UserCommandSection>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping name="GenericMapping">
+			<Bank onActivate="onGenericMappingBankActivate">
+
+				<!-- Control Link, knob assignments for devices. -->
+				<foreach variable="$knobIndex" count="8">
+					<Strip name="knob[$knobIndex]" onActivate="onGenericMappingStripActivateByKnob($knobIndex)">
+						<!-- Enable for shift off only, knobs are reserved for global controls on shift enabled. -->
+						<ParamVariant using="@global" param="shiftModifier">
+							<Group value="0">
+								<!-- Bypass Control Link knob assignments when step focus parameters are edited -->
+								<ParamVariant using="@global" param="stepFocusOverlayEnabled" strict="true">
+									<Group value="0">
+										<!-- Don't set to above to not interfere with step focus overlay. -->
+										<Relative control="knob[$knobIndex]" param="value"/>
+										<!-- Param name is cached and retrieved in component script via knobIndex. -->
+										<ParamInvoke param="value" onChanged="onGenericMappingParamValueChangedByKnob($knobIndex)" options="string"/>
+									</Group>
+								</ParamVariant>
+							</Group>
+							<Group value="1"/>
+						</ParamVariant>
+					</Strip>
+				</foreach>
+
+
+				<Strip name="padPressure">
+					<Value control="padPressure" param="value" options="above"/>
+				</Strip>
+
+				<Strip name="controlLinkTouchStrip" onActivate="onGenericMappingStripActivateByTouchStrip">
+					<!-- Can be mapped in any touch strip mode as its delegated. -->
+					<Value control="controlLinkTouchStrip" param="value" options="above"/>
+					<ParamVariant using="@global" param="touchStripMode">
+						<!-- Explicitly set all other modes to no-mapping -->
+						<Group value="
+							$TOUCHSTRIP_MODE_PITCHBEND,
+							$TOUCHSTRIP_MODE_MODWHEEL,
+							$TOUCHSTRIP_MODE_EXPRESSION,
+							$TOUCHSTRIP_MODE_BREATHCONTROL,
+							$TOUCHSTRIP_MODE_CHANNELVOLUME,
+							$TOUCHSTRIP_MODE_CHANNELPAN,
+							$TOUCHSTRIP_MODE_NOTEREPEAT
+						"/>
+						<Group value="$TOUCHSTRIP_MODE_CONTROLLINK">
+							<!-- Use multi LED strip behaviour for the controlled parameter. -->
+							<Value control="touchStripMultiLED" param="value"/>
+							<ParamInvoke param="value" onChanged="onGenericMappingParamValueChangedByStrip" options="string"/>
+						</Group>
+					</ParamVariant>
+				</Strip>
+
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+
+			<!-- Keep mapping permanent active to not retrigger sustain messages with each activation. -->
+			<!-- To disable the generator do not map receiving controls to sustain. -->
+			<Value control="sustainEventGenerator" param="sustain"/>
+
+			<!-- on/off switch for control link overlays -->
+			<ParamReset param="controlLinkOverlayEnabled" timeout="1500"/>
+
+			<!-- show focus preset name temporarily -->
+			<ParamReset param="presetOverlayEnabled" timeout="1500"/>
+
+			<!-- show step controlled parameter temporarily -->
+			<ParamReset param="stepFocusOverlayEnabled" timeout="1000"/>
+
+			<!-- Sync pattern editor drum or melodic mode -->
+			<using device="device:///PatternEdit">
+				<ParamInvoke param="drumMode" onActivate="onActivateDrumModeParamInvoke" onChanged="onDrumModeChanged"/>
+			</using>
+
+			<!-- Sync autofill bank colors. -->
+			<using device="Editor/Paging">
+				<ParamInvoke param="pageNumber" onChanged="onPagingPageNumberChanged"/>
+			</using>
+
+			<!-- ******************************************************************************************** -->
+			<!-- Touchstrip Modes -->
+			<!-- ******************************************************************************************** -->
+
+			<ParamVariant param="touchStripMode">
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: pitchbend -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_PITCHBEND">
+					<PlainValue control="touchStrip" param="pitchBendValue"/>
+					<Value control="pitchBendEventGenerator" param="pitchBendValue"/>
+					<Value control="touchStripSingleLED" param="pitchBendValue"/>
+					<Invoke control="sustainTouch" onReceive="onTouchStripTouched"/>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: modulation -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_MODWHEEL">
+					<PlainValue control="touchStrip" param="modulationValue"/>
+					<Value control="modulationEventGenerator" param="modulationValue"/>
+					<Value control="touchStripMultiLED" param="modulationValue"/>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: expression -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_EXPRESSION">
+					<PlainValue control="touchStrip" param="expressionValue"/>
+					<Value control="expressionEventGenerator" param="expressionValue"/>
+					<!-- no bug, use same LED behaviour as for modulation -->
+					<Value control="touchStripMultiLED" param="expressionValue"/>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: breath control -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_BREATHCONTROL">
+					<PlainValue control="touchStrip" param="breathControlValue"/>
+					<Value control="breathControlEventGenerator" param="breathControlValue"/>
+					<!-- no bug, use same LED behaviour as for modulation -->
+					<Value control="touchStripMultiLED" param="breathControlValue"/>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: note repeat -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_NOTEREPEAT">
+					<!-- Light up LEDs if repeater is active only to reflect rate param is controllable  -->
+					<ParamVariant using="device:///NoteRepeater" param="active">
+						<Group value="0">
+							<foreach variable="$i" count="25">
+								<Value control="stripLED[$i]" param="stripOffLED"/>
+							</foreach>
+						</Group>
+						<Group value="1">
+							<foreach variable="$i" count="25">
+								<Value control="stripLED[$i]" param="onLED"/>
+							</foreach>
+						</Group>
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: channel volume -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_CHANNELVOLUME">
+					<!-- 
+							Needs to be here to have an explicit 'no mapping'. Otherwise, switching back
+							and forth between channel and control link will not clear the control link
+							specific mapping (use strict option?).
+					 -->
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: channel pan -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_CHANNELPAN">
+					<!-- 
+							Needs to be here to have an explicit 'no mapping'. Otherwise, switching back
+							and forth between channel and control link will not clear the control link
+							specific mapping (use strict option?).
+					 -->
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- touchStripMode: control link -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$TOUCHSTRIP_MODE_CONTROLLINK">
+					<!-- Forward to control link representing touch strip control. -->
+					<Delegate control="touchStrip" control2="controlLinkTouchStrip"/>
+				</Group>
+
+			</ParamVariant>
+
+			<!-- ******************************************************************************************** -->
+			<!-- Pad + / - -->
+			<!-- ******************************************************************************************** -->
+
+			<ParamVariant param="padWorkflow">
+
+				<!-- ******************************************************************************************** -->
+				<!-- padWorkflow 0: keyboard play -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$KEYBOARD_PLAY">
+
+					<!-- colors for intensity display -->
+					<Value control="padPlusLED" param="onLED"/>
+					<PlainValue control="padPlusLEDColor" param="padPlusColor"/>
+					<Value control="padMinusLED" param="onLED"/>
+					<PlainValue control="padMinusLEDColor" param="padMinusColor"/>
+
+					<ParamVariant param="functionPadsMode">
+
+						<!-- ******************************************************************************************** -->
+						<!-- functionPadsMode: pitchbend -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="$FUNCTIONPAD_MODE_PITCHBEND">
+							<PlainValue control="padPlus" param="pitchBendValue"/>
+							<PlainValue control="padMinus" param="pitchBendValue"/>
+							<Value control="pitchBendEventGenerator" param="pitchBendValue"/>
+							<ParamInvoke param="pitchBendValue" onChanged="onPitchBendParamChanged"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- functionPadsMode: breath control (+) and modulation (-) -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="$FUNCTIONPAD_MODE_BREATHMOD">
+							<!-- (+) -->
+							<PlainValue control="padPlus" param="breathControlValue"/>
+							<Value control="breathControlEventGenerator" param="breathControlValue"/>
+							<ParamInvoke param="breathControlValue" onChanged="onBreathControlParamChanged"/>
+							<!-- (-) -->
+							<PlainValue control="padMinus" param="modulationValue"/>
+							<Value control="modulationEventGenerator" param="modulationValue"/>
+							<ParamInvoke param="modulationValue" onChanged="onModulationParamChanged"/>
+						</Group>
+
+					</ParamVariant>
+
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- padWorkflow 1: Enable pad section modifiers that affect step input -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$SEQUENCER">
+					<!-- accents -->
+					<Invoke control="padPlus" onReceive="onSequencerPadPlusPressed"/>
+					<Value control="padPlusLED" param="onLED"/>
+					<PlainValue control="padPlusLEDColor" param="plusModifierLED"/>
+					<!-- step binding -->
+					<Invoke control="padMinus" onReceive="onSequencerPadMinusPressed"/>
+					<Value control="padMinusLED" param="onLED"/>
+					<PlainValue control="padMinusLEDColor" param="minusModifierLED"/>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- padWorkflow 2: No function in this mode, dim. -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$STEPFOCUS">
+					<Value control="padPlusLED" param="onLED"/>
+					<PlainValue control="padPlusLEDColor" param="dimmedButtonColor"/>
+					<Value control="padMinusLED" param="onLED"/>
+					<PlainValue control="padMinusLEDColor" param="dimmedButtonColor"/>
+				</Group>
+			</ParamVariant>
+
+			<!-- Arrow Buttons -->
+			<Status control="arrowUpButton" control2="arrowUpButtonLED"/>
+			<Status control="arrowDownButton" control2="arrowDownButtonLED"/>
+			<Status control="arrowLeftButton" control2="arrowLeftButtonLED"/>
+			<Status control="arrowRightButton" control2="arrowRightButtonLED"/>
+
+			<Status control="wheelLeftButton" control2="wheelLeftButtonLED"/>
+			<Status control="wheelRightButton" control2="wheelRightButtonLED"/>
+
+			<!-- default parameters for feeding the screen -->
+			<foreach variable="$i" count="14">
+				<String control="textCell[$i]" param="textCellText[$i]"/>
+				<PlainValue control="textColor[$i]" param="textCellColor[$i]"/>
+				<PlainValue control="textAlign[$i]" param="textCellAlign[$i]"/>
+			</foreach>
+
+			<!-- shift -->
+			<Toggle control="shiftButton" param="shiftModifier" options="nonlatching"/>
+			<Value control="shiftButtonLED" param="shiftModifier"/>
+
+			<Invoke control="songModeButton" onReceive="onSongModeButtonPressed"/>
+			<Invoke control="instrumentModeButton" onReceive="onInstrumentModeButtonPressed"/>
+			<Invoke control="editorModeButton" onReceive="onEditorModeButtonPressed"/>
+			<Invoke control="userModeButton" onReceive="onUserModeButtonPressed"/>
+
+			<!-- States are script controlled as they are not 1:1 aligned with modes -->
+			<Value control="songModeButtonLED" param="modeLED0"/>
+			<Value control="instrumentModeButtonLED" param="modeLED1"/>
+			<Value control="editorModeButtonLED" param="modeLED2"/>
+			<Value control="userModeButtonLED" param="modeLED3"/>
+
+			<!-- Page left/right in to current mode -->
+			<Invoke control="wheelLeftButton" onReceive="onWheelLeftButtonPressed"/>
+			<Invoke control="wheelRightButton" onReceive="onWheelRightButtonPressed"/>
+
+			<!-- ******************************************************************************************** -->
+			<!-- Global Shift Modifier -->
+			<!-- ******************************************************************************************** -->
+
+			<ParamVariant param="shiftModifier">
+
+				<!-- ******************************************************************************************** -->
+				<!-- shiftModifier: OFF -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="0">
+
+					<!-- Navigation controls. -->
+					<Command control="arrowUpButton" command.category="Navigation" command.name="Up" options="autorepeat"/>
+					<Command control="arrowDownButton" command.category="Navigation" command.name="Down" options="autorepeat"/>
+					<Command control="arrowLeftButton" command.category="Navigation" command.name="Left" options="autorepeat"/>
+					<Command control="arrowRightButton" command.category="Navigation" command.name="Right" options="autorepeat"/>
+
+					<!-- Bank buttons: control either banks or octaves -->
+					<ParamVariant param="keyboardModeEngaged">
+
+						<!-- ******************************************************************************************** -->
+						<!-- keyboardModeEngaged OFF: drum bank based instrument -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="Banks">
+							<ParamVariant param="padWorkflow">
+
+								<!-- ******************************************************************************************** -->
+								<!-- padWorkflow: Keyboard/drums play with 32 pads - pretend 4 over 8 banks, switch in pairs  -->
+								<!-- ******************************************************************************************** -->
+
+								<Group value="$KEYBOARD_PLAY">
+									<!-- Control bank param. -->
+									<Radio control="bankButton[0]" param="bank" value="0"/>
+									<Radio control="bankButton[1]" param="bank" value="0"/>
+									<Radio control="bankButton[2]" param="bank" value="1"/>
+									<Radio control="bankButton[3]" param="bank" value="1"/>
+									<Radio control="bankButton[4]" param="bank" value="2"/>
+									<Radio control="bankButton[5]" param="bank" value="2"/>
+									<Radio control="bankButton[6]" param="bank" value="3"/>
+									<Radio control="bankButton[7]" param="bank" value="3"/>
+
+									<!-- Dimmed colors. -->
+									<foreach variable="$i" count="8">
+										<Value control="bankButtonLED[$i]" param="dimmedLED"/>
+										<PlainValue control="bankButtonLEDColor[$i]" param="bankColor[$i]"/>
+									</foreach>
+
+									<!-- Illuminated state, in pairs. -->
+									<ParamVariant param="bank">
+										<Group value="0">
+											<Value control="bankButtonLED[0]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[0]" param="whiteColor"/>
+											<Value control="bankButtonLED[1]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[1]" param="whiteColor"/>
+										</Group>
+										<Group value="1">
+											<Value control="bankButtonLED[2]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[2]" param="whiteColor"/>
+											<Value control="bankButtonLED[3]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[3]" param="whiteColor"/>
+										</Group>
+										<Group value="2">
+											<Value control="bankButtonLED[4]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[4]" param="whiteColor"/>
+											<Value control="bankButtonLED[5]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[5]" param="whiteColor"/>
+										</Group>
+										<Group value="3">
+											<Value control="bankButtonLED[6]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[6]" param="whiteColor"/>
+											<Value control="bankButtonLED[7]" param="onLED"/>
+											<PlainValue control="bankButtonLEDColor[7]" param="whiteColor"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+
+								<!-- ******************************************************************************************** -->
+								<!-- padWorkflow: Sequencing: 16 play pads, 16 step pads (8 banks)  -->
+								<!-- ******************************************************************************************** -->
+
+								<Group value="$SEQUENCER, $STEPFOCUS">
+									<!-- Control bank param -->
+									<foreach variable="$i" count="8">
+										<Radio control="bankButton[$i]" param="bank" value="$i"/>
+									</foreach>
+
+									<!-- Dimmed colors -->
+									<foreach variable="$i" count="8">
+										<PlainValue control="bankButtonLEDColor[$i]" param="bankColor[$i]"/>
+									</foreach>
+
+									<!-- Pressed state -->
+									<ParamVariant param="bank">
+										<foreach variable="$i" count="8">
+											<Group value="$i">
+												<Value control="bankButtonLED[$i]" param="onLED"/>
+												<PlainValue control="bankButtonLEDColor[$i]" param="whiteColor"/>
+											</Group>
+										</foreach>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- keyboardModeEngaged ON: keyboard mode based instrument -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="1" name="Octaves">
+
+							<!-- Control octave param, bank A button is used for sustain, octave=0 is set from bank B button -->
+							<Group name="Set Octave Group">
+								<Radio control="bankButton[1]" param="octave" value="0"/>
+								<Radio control="bankButton[2]" param="octave" value="1"/>
+								<Radio control="bankButton[3]" param="octave" value="2"/>
+								<Radio control="bankButton[4]" param="octave" value="3"/>
+								<Radio control="bankButton[5]" param="octave" value="4"/>
+								<Radio control="bankButton[6]" param="octave" value="5"/>
+								<Radio control="bankButton[7]" param="octave" value="6"/>
+							</Group>
+
+							<!-- Bank A button -->
+							<Value control="bankButtonLED[0]" param="onLED"/>
+							<Value control="bankButton[0]" param="sustain"/>
+							<ParamVariant param="sustain">
+								<Group value="0">
+									<PlainValue control="bankButtonLEDColor[0]" param="editModeButtonColor"/>
+								</Group>
+								<Group value="1">
+									<PlainValue control="bankButtonLEDColor[0]" param="whiteColor"/>
+								</Group>
+							</ParamVariant>
+
+							<!-- Bank B to H buttons -->
+							<foreach variable="$i" start="1" count="7">
+								<PlainValue control="bankButtonLEDColor[$i]" param="dimmedButtonColor"/>
+								<Value control="bankButtonLED[$i]" param="onLED"/>
+							</foreach>
+
+							<!-- Illuminate in respect to current octave -->
+							<ParamVariant param="octave">
+								<Group value="0">
+									<Value control="bankButtonLED[1]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[1]" param="focusTrackColor"/>
+								</Group>
+								<Group value="1">
+									<Value control="bankButtonLED[2]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[2]" param="focusTrackColor"/>
+								</Group>
+								<Group value="2">
+									<Value control="bankButtonLED[3]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[3]" param="focusTrackColor"/>
+								</Group>
+								<Group value="3">
+									<Value control="bankButtonLED[4]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[4]" param="focusTrackColor"/>
+								</Group>
+								<Group value="4">
+									<Value control="bankButtonLED[5]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[5]" param="focusTrackColor"/>
+								</Group>
+								<Group value="5">
+									<Value control="bankButtonLED[6]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[6]" param="focusTrackColor"/>
+								</Group>
+								<Group value="6">
+									<Value control="bankButtonLED[7]" param="onLED"/>
+									<PlainValue control="bankButtonLEDColor[7]" param="focusTrackColor"/>
+								</Group>
+							</ParamVariant>
+						</Group>
+
+					</ParamVariant>
+
+					<!-- 
+						Browse Control Link (knob) pages when 'User' button is pressed.
+						
+						Paging status and prev/next button assignments are setup via alias parameters to
+						resolve the issue that when user mode is not yet engaged, the user mode XML tree
+						activation will cause mappings for display text and navigation buttons defined 
+						here to be overwritten. They would then only become active if the user mode button
+						is pressed a second time (i.e. user button pressed when already in user mode).
+						
+						See user mode XML tree for alias parameters.
+					-->
+					<Variant control="userModeButton" strict="true">
+						<Group value="1">
+							<!-- Set target page via bank button. -->
+							<using device="Editor/Paging">
+								<Radio control="bankButton[0]" param="pageNumber" value="1"/>
+								<Radio control="bankButton[1]" param="pageNumber" value="2"/>
+								<Radio control="bankButton[2]" param="pageNumber" value="3"/>
+								<Radio control="bankButton[3]" param="pageNumber" value="4"/>
+								<Radio control="bankButton[4]" param="pageNumber" value="5"/>
+								<Radio control="bankButton[5]" param="pageNumber" value="6"/>
+								<Radio control="bankButton[6]" param="pageNumber" value="7"/>
+								<Radio control="bankButton[7]" param="pageNumber" value="8"/>
+							</using>
+							<!-- Colors are replaced in script. -->
+							<foreach variable="$i" count="8">
+								<PlainValue control="bankButtonLEDColor[$i]" param="controlLinkPageColor[$i]"/>
+								<Value control="bankButtonLED[$i]" param="onLED"/>
+							</foreach>
+						</Group>
+					</Variant>
+
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- shiftModifier: ON -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="1">
+
+					<!-- Navigation: extend -->
+					<Command control="arrowUpButton" command.category="Navigation" command.name="Up Extend" options="autorepeat"/>
+					<Command control="arrowDownButton" command.category="Navigation" command.name="Down Extend" options="autorepeat"/>
+					<Command control="arrowLeftButton" command.category="Navigation" command.name="Left Extend" options="autorepeat"/>
+					<Command control="arrowRightButton" command.category="Navigation" command.name="Right Extend" options="autorepeat"/>
+
+					<!-- Control presets -->
+					<Command control="wheelKnob" command.category="Presets" command.name="Next" command2.category="Presets" command2.name="Previous"/>
+
+
+					<!-- Global knob controls: top = MoveLoop VZoom LoopStart Base, bottom = Playhead HZoom LoopEnd Nudge -->
+					<Command control="knob[0]" command.category="Transport" command.name="Shift Loop" command2.category="Transport" command2.name="Shift Loop Backwards"/>
+					<using device="device:///TransportPanel">
+						<Relative control="knob[2]" param="loopStart"/>
+						<Relative control="knob[6]" param="loopEnd"/>
+						<Relative control="knob[4]" param="primaryTime"/>
+					</using>
+					<Command control="knob[5]" command.category="Zoom" command.name="Zoom In" command2.category="Zoom" command2.name="Zoom Out"/>
+					<Command control="knob[1]" command.category="Zoom" command.name="Zoom In Vertical" command2.category="Zoom" command2.name="Zoom Out Vertical"/>
+					<Command control="knob[3]" command.category="Quantize" command.name="Next Base" command2.category="Quantize" command2.name="Previous Base"/>
+					<Command control="knob[7]" command.category="Edit" command.name="Nudge" command2.category="Edit" command2.name="Nudge Back"/>
+
+					<!-- ******************************************************************************************** -->
+					<!-- Bank button global controls overlay -->
+					<!-- ******************************************************************************************** -->
+
+					<foreach variable="$i" count="14">
+						<PlainValue control="textColor[$i]" param="deactivatedColor"/>
+					</foreach>
+					<!-- Perma-illuminate these, change color if pressed -->
+					<foreach variable="$i" count="8">
+						<Value control="bankButton[$i]" param="bankButtonPressed[$i]"/>
+						<Value control="bankButtonLED[$i]" param="onLED"/>
+					</foreach>
+					<foreach variable="$i" count="8">
+						<ParamVariant param="bankButtonPressed[$i]">
+							<Group value="0">
+								<PlainValue control="bankButtonLEDColor[$i]" param="editModeButtonColor"/>
+							</Group>
+							<Group value="1">
+								<PlainValue control="bankButtonLEDColor[$i]" param="whiteColor"/>
+							</Group>
+						</ParamVariant>
+					</foreach>
+					<!-- Show button mapping hint on screen, centered. -->
+					<String control="textCell[6]" param="editHintTopRow"/>
+					<PlainValue control="textColor[6]" param="whiteColor"/>
+					<String control="textCell[7]" param="editHintBottomRow"/>
+					<PlainValue control="textColor[7]" param="whiteColor"/>
+
+					<Command control="bankButton[0]" command.category="View" command.name="Toggle Floating Windows"/>
+					<Command control="bankButton[1]" command.category="Edit" command.name="Select All on Tracks"/>
+					<Command control="bankButton[2]" command.category="Edit" command.name="Copy"/>
+					<Command control="bankButton[3]" command.category="Edit" command.name="Duplicate"/>
+					<Command control="bankButton[4]" command.category="Edit" command.name="Redo"/>
+					<Command control="bankButton[5]" command.category="Track" command.name="Recall Retrospective Recording"/>
+					<Command control="bankButton[6]" command.category="Edit" command.name="Paste"/>
+					<Command control="bankButton[7]" command.category="Edit" command.name="Delete"/>
+
+					<!-- Toggle external device editor. -->
+					<using device="Editor">
+						<Toggle control="userModeButton" param="open"/>
+						<Value control="userModeButtonLED" param="open"/>
+					</using>
+
+					<include template="PresetOverlay"/>
+
+				</Group>
+
+			</ParamVariant>
+
+			<!-- ******************************************************************************************** -->
+			<!-- MODE / PAGE MAPPINGS -->
+			<!-- ******************************************************************************************** -->
+
+			<ParamVariant param="displayMode">
+
+				<!-- Mode: Default -->
+				<Group value="$DEFAULT_MODE">
+					<!-- Not in use -->
+				</Group>
+
+				<!-- Mode: Song -->
+				<Group value="$SONG_MODE">
+					<ParamVariant param="songModePageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: SONG / TRANSPORT -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="Transport">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackColor"/>
+
+							<!-- User request: also use as 'tap tempo' over just selecting the tempo param. -->
+							<Command control="lcdButton[0]" command.category="Transport" command.name="Tap Tempo"/>
+
+							<!-- Lock on buttons -->
+							<Group>
+								<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Wheel controls -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="1,2,4,5,6"/>
+										<Group value="0">
+											<Value control="lcdButtonLED[0]" param="onLED"/>
+											<using device="device:///TransportPanel">
+												<Relative control="wheelKnob" param="tempo"/>
+											</using>
+										</Group>
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<Command control="wheelKnob" command.category="Marker" command.name="Goto Next Marker" command2.category="Marker" command2.name="Goto Previous Marker"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<!-- Sync parameter values, cell titles are complementary set in component script -->
+							<using device="device:///TransportPanel">
+								<String control="textCell[3]" param="tempo"/>
+								<String control="textCell[7]" param="primaryTime"/>
+							</using>
+
+							<Command control="lcdButton[1]" command.category="Transport" command.name="Loop Selection" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[2]" command.category="Zoom" command.name="Zoom to Loop" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[2]" param="ledPressed[2]"/>
+
+							<Command control="lcdButton[4]" command.category="Marker" command.name="Insert" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<using device="device:///MusicRecordOptions">
+								<Toggle control="lcdButton[5]" param="inputQuantize"/>
+								<Value control="lcdButtonLED[5]" param="inputQuantize"/>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: SONG / CONSOLE -->
+						<!-- ******************************************************************************************** -->
+
+						<!-- See MixerConsole device for additional mapping. -->
+						<Group value="1" name="Console">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Volume control is locked when on this page, so perma-illuminate this -->
+							<Value control="lcdButtonLED[2]" param="onLED"/>
+
+							<using device="device:///WindowManager">
+								<Toggle control="lcdButton[0]" param="Console"/>
+								<Value control="lcdButtonLED[0]" param="Console"/>
+								<Toggle control="lcdButton[1]" param="Inspector"/>
+								<Value control="lcdButtonLED[1]" param="Inspector"/>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: SONG / ARRANGER -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="2" name="Arranger">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on button 5 -->
+							<Group>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+								<Radio control="lcdButton[5]" param="lcdButtonPressed" value="5" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Wheel controls -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,2,3,6"/>
+										<Group value="4">
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+											<Command control="wheelKnob" command.category="Zoom" command.name="Zoom In" command2.category="Zoom" command2.name="Zoom Out"/>
+										</Group>
+										<Group value="5">
+											<Value control="lcdButtonLED[5]" param="onLED"/>
+											<Command control="wheelKnob"	command.category="Arranger" command.name="Goto Next Section" command2.category="Arranger" command2.name="Goto Previous Section"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<!-- With each button, trigger the LED state and also the assigned command -->
+							<Invoke control="lcdButton[0]" onReceive="onToggleArranger"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Command control="lcdButton[1]" command.category="Edit" command.name="Duplicate" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[2]" command.category="Arranger" command.name="Delete Range" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[2]" param="ledPressed[2]"/>
+
+							<Command control="lcdButton[3]" command.category="Arranger" command.name="Add Arranger Section from Selection" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: SONG / EFFECTS -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="3" name="Effects">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on button 2 -->
+							<Group>
+								<!-- Devices left/right -->
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6" options="toggle"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Wheel controls -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+										<Group value="1">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+										<Group value="2">
+											<Command control="wheelKnob" command.category="Devices" command.name="Next Device in Rack" command2.category="Devices" command2.name="Previous Device in Rack"/>
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+										</Group>
+										<Group value="3">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+										<Group value="4">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+										<Group value="5">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+										<Group value="6">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<!-- Command LED syncs with the browser on/off state (not the effects tab in particular). -->
+							<Command control="lcdButton[0]" command.category="Browser" command.name="Show Effects" onActivate="onActivateCommand"/>
+							<using device="device:///WindowManager">
+								<Value control="lcdButtonLED[0]" param="Browser"/>
+							</using>
+
+							<Command control="lcdButton[1]" command.category="Console" command.name="Show Channel Editor" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Invoke control="lcdButton[3]" onReceive="onLoadButtonPressed"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[4]" command.category="Navigation" command.name="Back" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<Command control="lcdButton[5]" command.category="Navigation" command.name="Enter" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<include template="BrowserOverlay"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+					</ParamVariant>
+				</Group>
+
+				<Group value="$INSTRUMENT_MODE">
+					<ParamVariant param="instrumentModePageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: INSTRUMENT / BROWSE -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="page1">
+							<include template="CommandScreenMapping"/>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+
+									<!-- No wheel controls. -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,2,3,4,5,6"/>
+									</ParamVariant>
+
+									<!-- Browser window on/off -->
+									<using device="device:///WindowManager">
+										<ParamVariant param="Browser">
+											<Group value="0"/>
+											<Group value="1">
+												<Command control="wheelKnob" command.category="Navigation" command.name="Next" command2.category="Navigation" command2.name="Previous"/>
+											</Group>
+										</ParamVariant>
+									</using>
+								</Group>
+							</ParamVariant>
+
+							<!-- Command LED syncs with the browser on/off state (not the effects tab in particular). -->
+							<Command control="lcdButton[0]" command.category="Browser" command.name="Show Instruments" onActivate="onActivateCommand"/>
+							<using device="device:///WindowManager">
+								<Value control="lcdButtonLED[0]" param="Browser"/>
+							</using>
+
+							<Invoke control="lcdButton[1]" onReceive="onShowInstrumentEditor"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[2]" command.category="Console" command.name="Show Note FX Editor" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[2]" param="ledPressed[2]"/>
+
+							<Invoke control="lcdButton[3]" onReceive="onLoadButtonPressed"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[4]" command.category="Navigation" command.name="Back" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<Command control="lcdButton[5]" command.category="Navigation" command.name="Enter" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<include template="BrowserOverlay"/>
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: INSTRUMENT / TRACK -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="1" name="events">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[5]" param="lcdButtonPressed" value="5" offvalue="6" options="toggle"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Wheel controls. -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,2,3,4,6">
+										</Group>
+										<Group value="5">
+											<Value control="lcdButtonLED[5]" param="onLED"/>
+											<Command control="wheelKnob"
+												command.category="Event" command.name="Extend by Grid"
+												command2.category="Event" command2.name="Shorten by Grid"
+											/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<Invoke control="lcdButton[0]" onReceive="onAddChorder"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Invoke control="lcdButton[1]" onReceive="onAddArpeggiator"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[2]" command.category="Event" command.name="Merge Events" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[2]" param="ledPressed[2]"/>
+
+							<Command control="lcdButton[3]" command.category="Instrument Parts" command.name="Insert Pattern" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[4]" command.category="Instrument Parts" command.name="Insert Instrument Part" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: INSTRUMENT / PERFORMANCE CONFIG -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="2" name="performanceconfig">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+								<Radio control="lcdButton[1]" param="lcdButtonPressed" value="1" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="2,5,6"/>
+										<Group value="0">
+											<Value control="lcdButtonLED[0]" param="onLED"/>
+											<Relative control="wheelKnob" param="touchStripMode"/>
+										</Group>
+										<Group value="1">
+											<Value control="lcdButtonLED[1]" param="onLED"/>
+											<Relative control="wheelKnob" param="functionPadsMode"/>
+										</Group>
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<using device="device:///NoteRepeater">
+												<Relative control="wheelKnob" param="rate"/>
+											</using>
+										</Group>
+										<Group value="4">
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+											<using device="device:///NoteRepeater">
+												<Relative control="wheelKnob" param="gate"/>
+											</using>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<String control="textCell[3]" param="touchStripModeTitle"/>
+							<String control="textCell[4]" param="functionPadsModeTitle"/>
+
+							<!-- Control note repeater params in lower row. -->
+							<using device="device:///NoteRepeater">
+								<!-- lcdButton[2]-->
+								<Toggle control="lcdButton[2]" param="active"/>
+								<Value control="lcdButtonLED[2]" param="active"/>
+								<!-- lcdButton[5]-->
+								<Toggle control="lcdButton[5]" param="pressureHandling"/>
+								<Value control="lcdButtonLED[5]" param="pressureHandling"/>
+								<!-- other -->
+								<String control="textCell[11]" param="rate"/>
+								<String control="textCell[12]" param="gate"/>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: INSTRUMENT / PAD CONFIG -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="3" name="padconfig">
+							<include template="ShowFocusTrackName"/>
+
+							<ParamVariant param="keyboardModeEngaged">
+								<!-- drums mode: restrict access to musical functions, gray out options -->
+								<Group value="0">
+									<PlainValue control="textColor[0]" param="deactivatedColor"/>
+									<PlainValue control="textColor[1]" param="deactivatedColor"/>
+									<PlainValue control="textColor[2]" param="deactivatedColor"/>
+									<PlainValue control="textColor[3]" param="deactivatedColor"/>
+									<PlainValue control="textColor[4]" param="deactivatedColor"/>
+									<PlainValue control="textColor[5]" param="deactivatedColor"/>
+									<PlainValue control="textColor[8]" param="deactivatedColor"/>
+									<PlainValue control="textColor[9]" param="deactivatedColor"/>
+									<PlainValue control="textColor[11]" param="deactivatedColor"/>
+									<PlainValue control="textColor[12]" param="deactivatedColor"/>
+								</Group>
+								<!-- keyboard mode: all musical functions available -->
+								<Group value="1">
+									<Group>
+										<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+										<Radio control="lcdButton[1]" param="lcdButtonPressed" value="1" offvalue="6"/>
+										<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+										<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+										<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+									</Group>
+								</Group>
+							</ParamVariant>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0">
+											<Value control="lcdButtonLED[0]" param="onLED"/>
+											<Relative control="wheelKnob" param="padLayout"/>
+										</Group>
+										<Group value="1">
+											<Value control="lcdButtonLED[1]" param="onLED"/>
+											<Relative control="wheelKnob" param="scale"/>
+										</Group>
+										<Group value="2">
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+											<Relative control="wheelKnob" param="rootOffset"/>
+										</Group>
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<Relative control="wheelKnob" param="octave"/>
+										</Group>
+										<Group value="4">
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+											<Relative control="wheelKnob" param="padOffset"/>
+										</Group>
+										<Group value="5,6"/>
+									</ParamVariant>
+
+								</Group>
+							</ParamVariant>
+
+							<!-- Parameter values, titles set via script -->
+							<String control="textCell[3]" param="padLayoutTitle"/>
+							<String control="textCell[4]" param="scaleName"/>
+							<String control="textCell[5]" param="rootOffsetTitle"/>
+							<String control="textCell[11]" param="octaveTitle"/>
+							<String control="textCell[12]" param="padOffset"/>
+
+							<Toggle control="lcdButton[5]" param="fullVelocityMode"/>
+							<Value control="lcdButtonLED[5]" param="fullVelocityMode"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- PAGE: SAMPLER CONTROL -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="4" name="sampler">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+							<include template="StepControlOverlay"/>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier" strict="true">
+								<Group value="0">
+									<ParamVariant param="samplerControlMode" strict="true">
+
+										<!-- ************************************************************* -->
+										<!-- No sampler in focus. -->
+										<!-- ************************************************************* -->
+
+										<Group value="$SAMPLER_CONTROL_MODE_NONE">
+											<!-- Show hint that no sampler is in focus, show gray button text. -->
+											<String control="textCell[7]" param="noSamplerHint"/>
+											<!-- Make button cell texts appear disabled. -->
+											<foreach variable="$i" count="6">
+												<PlainValue control="textColor[$i]" param="deactivatedColor"/>
+											</foreach>
+											<foreach variable="$i" start="8" count="6">
+												<PlainValue control="textColor[$i]" param="deactivatedColor"/>
+											</foreach>
+										</Group>
+
+										<!-- ************************************************************* -->
+										<!-- Impact in focus. -->
+										<!-- ************************************************************* -->
+
+										<Group value="$SAMPLER_CONTROL_MODE_IMPACT">
+											<!-- Lock on parameters -->
+											<Group>
+												<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+												<Radio control="lcdButton[1]" param="lcdButtonPressed" value="1" offvalue="6"/>
+												<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+												<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+											</Group>
+											<!-- Make button cell texts appear enabled. -->
+											<foreach variable="$i" count="6">
+												<PlainValue control="textColor[$i]" param="whiteColor"/>
+											</foreach>
+											<foreach variable="$i" start="8" count="6">
+												<PlainValue control="textColor[$i]" param="whiteColor"/>
+											</foreach>
+											<!-- Wheel knob switch. -->
+											<ParamVariant param="lcdButtonPressed" strict="true">
+												<Group value="0">
+													<Value control="lcdButtonLED[0]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerWheelZoom"/>
+												</Group>
+												<Group value="1">
+													<Value control="lcdButtonLED[1]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerWheelScroll"/>
+												</Group>
+												<Group value="3">
+													<Value control="lcdButtonLED[3]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerLoopStartMove"/>
+												</Group>
+												<Group value="4">
+													<Value control="lcdButtonLED[4]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerLoopEndMove"/>
+												</Group>
+											</ParamVariant>
+											<!-- Buttons -->
+											<Invoke control="lcdButton[2]" onReceive="onSamplerCopy"/>
+											<Invoke control="lcdButton[3]" onReceive="onSamplerScrollToLoopStart"/>
+											<Invoke control="lcdButton[4]" onReceive="onSamplerScrollToLoopEnd"/>
+											<Invoke control="lcdButton[5]" onReceive="onSamplerPaste"/>
+											<!-- LED pressed states for non-lock-on buttons. -->
+											<Value control="lcdButton[2]" param="ledPressed[2]"/>
+											<Value control="lcdButton[5]" param="ledPressed[5]"/>
+										</Group>
+
+										<!-- ************************************************************* -->
+										<!-- SampleOne in focus. -->
+										<!-- ************************************************************* -->
+
+										<Group value="$SAMPLER_CONTROL_MODE_SAMPLEONE">
+											<!-- Lock on parameters -->
+											<Group>
+												<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+												<Radio control="lcdButton[1]" param="lcdButtonPressed" value="1" offvalue="6"/>
+												<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+												<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+												<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+												<Radio control="lcdButton[5]" param="lcdButtonPressed" value="5" offvalue="6"/>
+											</Group>
+											<!-- Make button cell texts appear enabled. -->
+											<foreach variable="$i" count="6">
+												<PlainValue control="textColor[$i]" param="whiteColor"/>
+											</foreach>
+											<foreach variable="$i" start="8" count="6">
+												<PlainValue control="textColor[$i]" param="whiteColor"/>
+											</foreach>
+											<!-- Wheel knob switch. -->
+											<ParamVariant param="lcdButtonPressed" strict="true">
+												<Group value="0">
+													<Value control="lcdButtonLED[0]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerWheelZoom"/>
+												</Group>
+												<Group value="1">
+													<Value control="lcdButtonLED[1]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerWheelScroll"/>
+												</Group>
+												<Group value="2">
+													<Value control="lcdButtonLED[2]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerSampleStartMove"/>
+												</Group>
+												<Group value="3">
+													<Value control="lcdButtonLED[3]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerLoopStartMove"/>
+												</Group>
+												<Group value="4">
+													<Value control="lcdButtonLED[4]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerLoopEndMove"/>
+												</Group>
+												<Group value="5">
+													<Value control="lcdButtonLED[5]" param="onLED"/>
+													<Invoke control="wheelKnob" onReceive="onSamplerSampleEndMove"/>
+												</Group>
+											</ParamVariant>
+											<!-- Buttons -->
+											<Invoke control="lcdButton[2]" onReceive="onSamplerScrollToSampleStart"/>
+											<Invoke control="lcdButton[3]" onReceive="onSamplerScrollToLoopStart"/>
+											<Invoke control="lcdButton[4]" onReceive="onSamplerScrollToLoopEnd"/>
+											<Invoke control="lcdButton[5]" onReceive="onSamplerScrollToSampleEnd"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- EDITOR MODE 'NONE' -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$EDITOR_MODE_NONE">
+					<ParamVariant param="editorModeNonePageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'NONE', PAGE 1 -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="page1">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- EDITOR MODE 'AUDIO' -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$EDITOR_MODE_AUDIO">
+					<ParamVariant param="editorModeAudioPageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'AUDIO', PAGE 1 -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="page1">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,3,5,6"/>
+										<Group value="2">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next Event" command2.category="Navigation" command2.name="Previous Event"/>
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+										</Group>
+										<Group value="4">
+											<Command control="wheelKnob" command.category="Navigation" command.name="Next Hotspot" command2.category="Navigation" command2.name="Previous Hotspot"/>
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<Command control="lcdButton[0]" command.category="Audio" command.name="Send To new Impact" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Invoke control="lcdButton[1]" onReceive="onPlayFromSelection"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[3]" command.category="Audio" command.name="Create Crossfades" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[5]" command.category="Edit" command.name="Split" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'AUDIO', PAGE 2 -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="1" name="page2">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6" options="toggle"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,3,4,5,6"/>
+										<Group value="2">
+											<Command control="wheelKnob" command.category="Audio" command.name="Increase Volume Fine" command2.category="Audio" command2.name="Decrease Volume Fine"/>
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<Command control="lcdButton[0]" command.category="Audio" command.name="Send To new SampleOne" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Command control="lcdButton[1]" command.category="Audio" command.name="Reverse Audio" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[3]" command.category="Audio" command.name="Remove Crossfades" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[4]" command.category="Event" command.name="Merge Events" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<Command control="lcdButton[5]" command.category="Event" command.name="Split at Grid" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- EDITOR MODE 'PART' -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$EDITOR_MODE_PART">
+					<ParamVariant param="editorModeMusicPageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'PART', PAGE 1 -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="partpage1">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+								<Radio control="lcdButton[5]" param="lcdButtonPressed" value="5" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,6"/>
+										<Group value="2">
+											<Command control="wheelKnob" command.category="Quantize" command.name="Next Base" command2.category="Quantize" command2.name="Previous Base"/>
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+										</Group>
+										<Group value="3">
+											<Command control="wheelKnob" command.category="Edit" command.name="Nudge Up" command2.category="Edit" command2.name="Nudge Down"/>
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+										</Group>
+										<Group value="4">
+											<Command control="wheelKnob" command.category="Edit" command.name="Nudge" command2.category="Edit" command2.name="Nudge Back"/>
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+										</Group>
+										<Group value="5">
+											<!-- Increment or decrement velocity by 10 -->
+											<Command control="wheelKnob" command.category="Musical Functions" command.name="Velocity" command.args="Mode=0;AddValue=0.1"
+												command2.category="Musical Functions" command2.name="Velocity" command2.args="Mode=0;AddValue=-0.1"/>
+											<Value control="lcdButtonLED[5]" param="onLED"/>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<Command control="lcdButton[0]" command.category="Event" command.name="Quantize" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Command control="lcdButton[1]" command.category="Edit" command.name="Toggle Snap" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'PART', PAGE 2 -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="1" name="partpage2">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Humanize, args from equivalent macro -->
+							<Command
+								control="lcdButton[0]"
+								command.category="Musical Functions"
+								command.name="Humanize"
+								command.args="VelocityFrom=-0.1500000059604644775390625;VelocityTo=0.1500000059604644775390625;NoteStartFrom=-0.0625;NoteStartTo=0.0625"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Command control="lcdButton[1]" command.category="Event" command.name="Restore Timing" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[2]" command.category="Event" command.name="Split at Grid" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[2]" param="ledPressed[2]"/>
+
+							<Command control="lcdButton[3]" command.category="Event" command.name="Extend to Part End" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[3]" param="ledPressed[3]"/>
+
+							<Command control="lcdButton[4]" command.category="Musical Functions" command.name="Repeat Notes to Part End" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[4]" param="ledPressed[4]"/>
+
+							<Command control="lcdButton[5]" command.category="Instrument Parts" command.name="Explode Pitches to Tracks" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- EDITOR MODE 'PATTERN' -->
+				<!-- ******************************************************************************************** -->
+
+				<Group value="$EDITOR_MODE_PATTERN">
+					<ParamVariant param="editorModePatternPageIndex">
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'PATTERN', PAGE 1 (variations) -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="0" name="page1">
+
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+							<include template="StepControlOverlay"/>
+
+							<!-- TODO: testing template for pattern editing -->
+							<using device="device:///PatternEdit">
+								<Value control="recordButtonLED" param="recordActive"/>
+								<Toggle control="recordButton" param="recordActive"/>
+							</using>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+								<Radio control="lcdButton[5]" param="lcdButtonPressed" value="5" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,6"/>
+										<Group value="2">
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+											<Command control="wheelKnob" command.category="Pattern" command.name="Next Variation"
+															 command2.category="Pattern" command2.name="Previous Variation"/>
+										</Group>
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<using device="device:///PatternEdit">
+												<Relative control="wheelKnob" param="patternSteps"/>
+											</using>
+										</Group>
+										<Group value="4">
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+											<using device="device:///PatternEdit">
+												<Relative control="wheelKnob" param="patternResolution"/>
+											</using>
+										</Group>
+										<Group value="5">
+											<Value control="lcdButtonLED[5]" param="onLED"/>
+											<using device="device:///PatternEdit">
+												<Relative control="wheelKnob" param="patternSwing"/>
+											</using>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<Command control="lcdButton[0]" command.category="Pattern" command.name="New Variation" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[0]" param="ledPressed[0]"/>
+
+							<Command control="lcdButton[1]" command.category="Pattern" command.name="Duplicate Variation" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<using device="device:///PatternEdit">
+								<String control="textCell[11]" param="patternSteps"/>
+								<String control="textCell[12]" param="patternResolution"/>
+								<String control="textCell[13]" param="patternSwing"/>
+							</using>
+
+							<using device="device:///PatternBank">
+								<String control="textCell[5]" param="variationTitle"/>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'PATTERN', PAGE 2 (lanes) -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="1" name="page2">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+							<include template="StepControlOverlay"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+								<Radio control="lcdButton[4]" param="lcdButtonPressed" value="4" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="0,1,5,6"/>
+										<!-- shift lane left / right -->
+										<Group value="2">
+											<Command control="wheelKnob"
+															 command.category="Pattern" command.name="Shift Lane"
+															 command2.category="Pattern" command2.name="Shift Lane Back"
+															 onActivate="onActivateCommand"/>
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+										</Group>
+										<!-- lane steps -->
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<using device="device:///PatternEdit">
+												<Relative control="wheelKnob" param="focusKeySteps"/>
+											</using>
+										</Group>
+										<!-- lane resolution -->
+										<Group value="4">
+											<Value control="lcdButtonLED[4]" param="onLED"/>
+											<using device="device:///PatternEdit">
+												<Relative control="wheelKnob" param="focusKeyResolution"/>
+											</using>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<!--
+									Toggle pattern editor melodic/drum mode. Note that a mode change is triggered
+									through 'drumModeRequest' over 'drumMode'. LCD button LED is synchronized via
+									<Status>. Note there already is a global <ParamInvoke> used to synchronize
+									the screen display title for "Melodic" and "Drums" via patternModeTitle.
+							-->
+							<using device="device:///PatternEdit">
+								<Toggle control="lcdButton[0]" param="drumModeRequest"/>
+							</using>
+							<Status control="lcdButton[0]" control2="lcdButtonLED[0]"/>
+							<String control="textCell[3]" param="patternModeTitle"/>
+
+							<Command control="lcdButton[1]" command.category="Pattern" command.name="Set Every 4th Step" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[1]" param="ledPressed[1]"/>
+
+							<Command control="lcdButton[5]" command.category="Pattern" command.name="Clear Lane" onActivate="onActivateCommand"/>
+							<Value control="lcdButton[5]" param="ledPressed[5]"/>
+
+							<using device="device:///PatternEdit">
+								<String control="textCell[7]" param="focusKeyPitchName"/>
+								<String control="textCell[11]" param="focusKeySteps"/>
+								<String control="textCell[12]" param="focusKeyResolution"/>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+						<!-- ******************************************************************************************** -->
+						<!-- EDITOR MODE 'PATTERN', PAGE 3 (step control) -->
+						<!-- ******************************************************************************************** -->
+
+						<Group value="2" name="page3">
+							<include template="CommandScreenMapping"/>
+							<include template="ShowFocusTrackName"/>
+
+							<!-- Lock on parameters -->
+							<Group>
+								<Radio control="lcdButton[0]" param="lcdButtonPressed" value="0" offvalue="6"/>
+								<Radio control="lcdButton[1]" param="lcdButtonPressed" value="1" offvalue="6"/>
+								<Radio control="lcdButton[2]" param="lcdButtonPressed" value="2" offvalue="6"/>
+								<Radio control="lcdButton[3]" param="lcdButtonPressed" value="3" offvalue="6"/>
+							</Group>
+
+							<!-- Require shift to not be engaged so it can used for global wheel controls -->
+							<ParamVariant param="shiftModifier">
+								<Group value="0">
+									<!-- Switch for wheel controlled parameter -->
+									<ParamVariant param="lcdButtonPressed">
+										<Group value="4,5,6"/>
+										<!-- velocity -->
+										<Group value="0">
+											<Value control="lcdButtonLED[0]" param="onLED"/>
+											<using device="device:///FocusStepEdit">
+												<Relative control="wheelKnob" param="velocity"/>
+											</using>
+										</Group>
+										<!-- repeat -->
+										<Group value="1">
+											<Value control="lcdButtonLED[1]" param="onLED"/>
+											<using device="device:///FocusStepEdit">
+												<Relative control="wheelKnob" param="repeat"/>
+											</using>
+										</Group>
+										<!-- delay -->
+										<Group value="2">
+											<Value control="lcdButtonLED[2]" param="onLED"/>
+											<using device="device:///FocusStepEdit">
+												<Relative control="wheelKnob" param="delay"/>
+											</using>
+										</Group>
+										<!-- probability -->
+										<Group value="3">
+											<Value control="lcdButtonLED[3]" param="onLED"/>
+											<using device="device:///FocusStepEdit">
+												<Relative control="wheelKnob" param="probability"/>
+											</using>
+										</Group>
+									</ParamVariant>
+								</Group>
+							</ParamVariant>
+
+							<using device="device:///FocusStepEdit">
+								<ParamVariant param="active">
+									<!-- active = false -->
+									<Group>
+										<using device="@global">
+											<!-- placeholder: no step selected-->
+											<String control="textCell[7]" param="selectStep"/>
+											<String control="textCell[3]" param="noStepParam"/>
+											<String control="textCell[4]" param="noStepParam"/>
+											<String control="textCell[5]" param="noStepParam"/>
+											<String control="textCell[11]" param="noStepParam"/>
+										</using>
+									</Group>
+									<!-- active = true -->
+									<Group>
+										<String control="textCell[3]" param="velocity"/>
+										<String control="textCell[4]" param="repeat"/>
+										<String control="textCell[5]" param="delay"/>
+										<String control="textCell[11]" param="probability"/>
+										<String control="textCell[7]" param="title"/>
+									</Group>
+								</ParamVariant>
+							</using>
+
+							<include template="ControlLinkOverlay"/>
+						</Group>
+
+
+					</ParamVariant>
+				</Group>
+
+				<!-- ******************************************************************************************** -->
+				<!-- USER MODE, PAGE 1 -->
+				<!-- ******************************************************************************************** -->
+
+				<!-- Mode: User -->
+				<Group value="$USER_MODE">
+
+					<include template="CommandScreenMapping"/>
+
+					<!-- Split up commandTitle param value to screen text parameters. -->
+					<foreach variable="$i" count="6">
+						<using device="UserCommandSection0/Command$i">
+							<ParamInvoke param="commandTitle" onActivate="onUserCommandTitleActivate($i)"/>
+							<ParamInvoke param="commandTitle" onChanged="onUserCommandTitleChanged($i)"/>
+						</using>
+					</foreach>
+
+					<!-- Swap user commands and Control Link page status on user button press -->
+					<String control="textCell[6]" param="pagingStatusAlias"/>
+					<Push control="wheelLeftButton" param="prevPageAlias"/>
+					<Push control="wheelRightButton" param="nextPageAlias"/>
+
+					<!-- trigger virtual user buttons through hardware controls delegate -->
+					<!-- note these apply to all user pages so no page switch required -->
+					<foreach variable="$i" count="6">
+						<Delegate control="lcdButton[$i]" control2="lcdUserButton[$i]"/>
+						<Value control="lcdButton[$i]" param="ledPressed[$i]"/>
+						<Value control="lcdButtonLED[$i]" param="ledPressed[$i]"/>
+					</foreach>
+
+					<!-- Show current Control Link focus at screen center. -->
+					<using device="Editor">
+						<ParamInvoke param="focusDeviceName" onChanged="onFocusDeviceNameChanged"/>
+					</using>
+
+					<!--
+						Show Control Link focus hint in different text color but preserve white
+						as text color when the quick button overlay is shown, i.e. shift is engaged.
+					-->
+					<String control="textCell[7]" param="controlLinkUserTitle"/>
+					<ParamVariant param="shiftModifier" strict="true">
+						<Group value="0">
+							<ParamVariant param="isFocusMapping" strict="true">
+								<Group value="1">
+									<PlainValue control="textColor[7]" param="yellowColor"/>
+								</Group>
+							</ParamVariant>
+						</Group>
+					</ParamVariant>
+
+					<include template="ControlLinkOverlay"/>
+				</Group>
+			</ParamVariant>
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+		<!-- INSTRUMENT TRACK MAPPINGS -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MusicTrackDevice" name="MusicTrackMapping">
+			<Bank target="FocusChannel" name="FocusChannelMapping">
+				<!-- Synced to controls via alias params, see script. -->
+				<Strip onConnect="onFocusChannelChanged"/>
+			</Bank>
+			<Bank target="FocusInstrument" name="FocusInstrumentMapping">
+				<!-- Detect sampler device for sampler controls. -->
+				<Strip onConnect="onFocusInstrumentChanged"/>
+			</Bank>
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerConsoleMapping">
+
+			<ScrollBank target="FollowBank" pagesize="1" name="MixerFollowBank">
+				<Strip onConnect="onFollowBankChanged">
+
+					<!-- 
+						Touch strip reassignments are required to be applied through a change of the touch strip 
+						mode param as it ensures that the LED controls are reset/refreshed when changing between
+						single and multi dot LED modes. Therefore, use a workaround here and change the mode parameter
+						through shiftButton script function, then apply the mapping wrt to the mode param value.
+					-->
+					<Invoke control="shiftButton" onReceive="onShiftButtonPressed"/>
+					<ParamVariant using="@global" param="touchStripMode">
+						<Group value="$TOUCHSTRIP_MODE_PITCHBEND, $TOUCHSTRIP_MODE_MODWHEEL, $TOUCHSTRIP_MODE_EXPRESSION,
+									  $TOUCHSTRIP_MODE_BREATHCONTROL, $TOUCHSTRIP_MODE_NOTEREPEAT, $TOUCHSTRIP_MODE_CONTROLLINK"/>
+						<Group value="$TOUCHSTRIP_MODE_CHANNELVOLUME">
+							<Value control="touchStrip" param="volume"/>
+							<!-- Use touch based begin/end edit for improved volume automation recording timing. -->
+							<Touch control="sustainTouch" param="volume"/>
+							<Value control="touchStripMultiLED" param="volume"/>
+						</Group>
+						<Group value="$TOUCHSTRIP_MODE_CHANNELPAN">
+							<Value control="touchStrip" param="pan"/>
+							<!-- Use touch based begin/end edit for improved pan automation recording timing. -->
+							<Touch control="sustainTouch" param="pan"/>
+							<Value control="touchStripSingleLED" param="pan"/>
+						</Group>
+					</ParamVariant>
+
+					<!-- Additional mapping for song mode 'console' page -->
+					<ParamVariant using="@global" param="displayMode">
+						<Group value="$SONG_MODE">
+							<ParamVariant using="@global" param="songModePageIndex">
+								<Group value="0"/>
+								<Group value="1" name="Console">
+
+									<!-- No lock on required -->
+									<Relative control="wheelKnob" param="volume"/>
+
+									<Toggle control="lcdButton[3]" param="solo"/>
+									<Value control="lcdButtonLED[3]" param="solo"/>
+									<Toggle control="lcdButton[4]" param="mute"/>
+									<Value control="lcdButtonLED[4]" param="mute"/>
+									<Toggle control="lcdButton[5]" param="recordArmed"/>
+									<Value control="lcdButtonLED[5]" param="recordArmed"/>
+									<String control="textCell[5]" param="volume"/>
+								</Group>
+								<Group value="2"/>
+								<Group value="3"/>
+							</ParamVariant>
+						</Group>
+					</ParamVariant>
+
+				</Strip>
+			</ScrollBank>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<ParamVariant using="@global" param="shiftModifier">
+				<Group name="Shift Off">
+					<Command control="playButton" command.category="Transport" command.name="Toggle Start"/>
+					<Value control="playButtonLED" param="start"/>
+
+					<Command control="stopButton" command.category="Transport" command.name="Stop"/>
+					<Value control="stopButtonLED" param="stop"/>
+
+					<Value control="recordButtonLED" param="record"/>
+					<Toggle control="recordButton" param="record"/>
+				</Group>
+
+				<Group name="Shift On">
+					<Command control="playButton" command.category="Transport" command.name="Toggle Loop"/>
+					<Value control="playButtonLED" param="loop"/>
+
+					<Command control="stopButton" command.category="Edit" command.name="Undo"/>
+					<Value control="stopButtonLED" param="stop"/>
+
+					<Command control="recordButton" command.category="File" command.name="Save"/>
+					<Value control="recordButtonLED" param="record"/>
+
+				</Group>
+			</ParamVariant>
+
+			<ParamVariant param="loop">
+				<Group name="loop off">
+					<using device="@global">
+						<PlainValue control="playButtonLEDColor" param="playButtonColor"/>
+					</using>
+				</Group>
+				<Group name="loop on">
+					<using device="@global">
+						<PlainValue control="playButtonLEDColor" param="loopButtonColor"/>
+					</using>
+				</Group>
+			</ParamVariant>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- NOTE REPEAT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping name="NoteRepeatElement" device="NoteRepeater" onConnect="onConnectNoteRepeat">
+
+			<!-- Handle activation triggered from inside studio one or somewhere else. -->
+			<ParamInvoke param="active" onChanged="onActivateNoteRepeat"/>
+			<!-- Configure pad section for spread mode if engaged. -->
+			<ParamInvoke param="spread" onChanged="onSpreadModeChanged"/>
+
+			<!-- Avoid touch strip remappings when the repeater is disabled. -->
+			<ParamVariant param="active">
+				<Group value="0"/>
+				<Group value="1">
+					<ParamVariant using="@global" param="touchStripMode">
+						<!-- skip non-repeater modes -->
+						<Group value="$TOUCHSTRIP_MODE_PITCHBEND, $TOUCHSTRIP_MODE_MODWHEEL, $TOUCHSTRIP_MODE_EXPRESSION,
+									  $TOUCHSTRIP_MODE_BREATHCONTROL, $TOUCHSTRIP_MODE_CHANNELVOLUME, $TOUCHSTRIP_MODE_CHANNELPAN,
+									  $TOUCHSTRIP_MODE_CONTROLLINK"/>
+						<Group value="$TOUCHSTRIP_MODE_NOTEREPEAT">
+							<!-- Set rate via touch strip if the touch strip is configured to note repeat. -->
+							<!-- See touchStripMode switch for repeater activation on touch. -->
+							<PlainValue control="touchStrip" param="rate"/>
+						</Group>
+					</ParamVariant>
+				</Group>
+			</ParamVariant>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- METRONOME MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			<ParamVariant using="@global" param="shiftModifier">
+				<Group name="Shift Off">
+					<Toggle control="clickButton" param="clickOn"/>
+					<Value control="clickButtonLED" param="clickOn"/>
+				</Group>
+				<Group name="Shift On">
+					<Toggle control="clickButton" param="precount"/>
+					<Value control="clickButtonLED" param="precount"/>
+				</Group>
+			</ParamVariant>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

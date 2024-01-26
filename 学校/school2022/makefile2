@@ -1,0 +1,11 @@
+bunkatu2.exe : 9g5main.obj 9g5gobai.obj 9g5jubai.obj
+	bcc32 -ebunkatu7.exe 9g5main.obj 9g5gobai.obj 9g5jubai.obj
+main.obj : 9g5main.c
+		bcc32 -c 9g5main.c
+gobai.obj : 9g5gobai.c
+		bcc32 -c 9g5gobai.c
+jubai.obj : 9g5jubai.c
+		bcc32 -c 9g5jubai.c
+
+clean :
+	del *.obj *.tds

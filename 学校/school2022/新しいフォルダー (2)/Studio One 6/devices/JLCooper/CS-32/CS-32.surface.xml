@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" options="receive">
+			<MidiMessage status="Controller" address="0" channel="15"/>
+		</Control>	
+		<Control name="fader[1]" options="receive">
+			<MidiMessage status="Controller" address="1" channel="15"/>
+		</Control>	
+		<Control name="fader[2]" options="receive">
+			<MidiMessage status="Controller" address="2" channel="15"/>
+		</Control>	
+		<Control name="fader[3]" options="receive">
+			<MidiMessage status="Controller" address="3" channel="15"/>
+		</Control>	
+		<Control name="fader[4]" options="receive">
+			<MidiMessage status="Controller" address="4" channel="15"/>
+		</Control>	
+		<Control name="fader[5]" options="receive">
+			<MidiMessage status="Controller" address="5" channel="15"/>
+		</Control>	
+		<Control name="fader[6]" options="receive">
+			<MidiMessage status="Controller" address="6" channel="15"/>
+		</Control>	
+		<Control name="fader[7]" options="receive">
+			<MidiMessage status="Controller" address="7" channel="15"/>
+		</Control>	
+		<Control name="fader[8]" options="receive">
+			<MidiMessage status="Controller" address="8" channel="15"/>
+		</Control>	
+		<Control name="fader[9]" options="receive">
+			<MidiMessage status="Controller" address="9" channel="15"/>
+		</Control>	
+		<Control name="fader[10]" options="receive">
+			<MidiMessage status="Controller" address="10" channel="15"/>
+		</Control>	
+		<Control name="fader[11]" options="receive">
+			<MidiMessage status="Controller" address="11" channel="15"/>
+		</Control>	
+		<Control name="fader[12]" options="receive">
+			<MidiMessage status="Controller" address="12" channel="15"/>
+		</Control>	
+		<Control name="fader[13]" options="receive">
+			<MidiMessage status="Controller" address="13" channel="15"/>
+		</Control>	
+		<Control name="fader[14]" options="receive">
+			<MidiMessage status="Controller" address="14" channel="15"/>
+		</Control>	
+		<Control name="fader[15]" options="receive">
+			<MidiMessage status="Controller" address="15" channel="15"/>
+		</Control>	
+		<Control name="fader[16]" options="receive">
+			<MidiMessage status="Controller" address="16" channel="15"/>
+		</Control>	
+		<Control name="fader[17]" options="receive">
+			<MidiMessage status="Controller" address="17" channel="15"/>
+		</Control>	
+		<Control name="fader[18]" options="receive">
+			<MidiMessage status="Controller" address="18" channel="15"/>
+		</Control>	
+		<Control name="fader[19]" options="receive">
+			<MidiMessage status="Controller" address="19" channel="15"/>
+		</Control>	
+		<Control name="fader[20]" options="receive">
+			<MidiMessage status="Controller" address="20" channel="15"/>
+		</Control>	
+		<Control name="fader[21]" options="receive">
+			<MidiMessage status="Controller" address="21" channel="15"/>
+		</Control>	
+		<Control name="fader[22]" options="receive">
+			<MidiMessage status="Controller" address="22" channel="15"/>
+		</Control>	
+		<Control name="fader[23]" options="receive">
+			<MidiMessage status="Controller" address="23" channel="15"/>
+		</Control>	
+		<Control name="fader[24]" options="receive">
+			<MidiMessage status="Controller" address="24" channel="15"/>
+		</Control>	
+		<Control name="fader[25]" options="receive">
+			<MidiMessage status="Controller" address="25" channel="15"/>
+		</Control>	
+		<Control name="fader[26]" options="receive">
+			<MidiMessage status="Controller" address="26" channel="15"/>
+		</Control>	
+		<Control name="fader[27]" options="receive">
+			<MidiMessage status="Controller" address="27" channel="15"/>
+		</Control>	
+		<Control name="fader[28]" options="receive">
+			<MidiMessage status="Controller" address="28" channel="15"/>
+		</Control>	
+		<Control name="fader[29]" options="receive">
+			<MidiMessage status="Controller" address="29" channel="15"/>
+		</Control>	
+		<Control name="fader[30]" options="receive">
+			<MidiMessage status="Controller" address="30" channel="15"/>
+		</Control>	
+		<Control name="fader[31]" options="receive">
+			<MidiMessage status="Controller" address="31" channel="15"/>
+		</Control>	
+		
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x MUTE BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="muteButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="0" channel="13"/>
+		</Control>	
+		<Control name="muteButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="1" channel="13"/>
+		</Control>	
+		<Control name="muteButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="2" channel="13"/>
+		</Control>	
+		<Control name="muteButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="3" channel="13"/>
+		</Control>	
+		<Control name="muteButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="4" channel="13"/>
+		</Control>	
+		<Control name="muteButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="5" channel="13"/>
+		</Control>	
+		<Control name="muteButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="6" channel="13"/>
+		</Control>	
+		<Control name="muteButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="7" channel="13"/>
+		</Control>	
+		<Control name="muteButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="8" channel="13"/>
+		</Control>	
+		<Control name="muteButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="9" channel="13"/>
+		</Control>	
+		<Control name="muteButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="10" channel="13"/>
+		</Control>	
+		<Control name="muteButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="11" channel="13"/>
+		</Control>	
+		<Control name="muteButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="12" channel="13"/>
+		</Control>	
+		<Control name="muteButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="13" channel="13"/>
+		</Control>	
+		<Control name="muteButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="14" channel="13"/>
+		</Control>	
+		<Control name="muteButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="15" channel="13"/>
+		</Control>	
+		<Control name="muteButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="16" channel="13"/>
+		</Control>	
+		<Control name="muteButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="17" channel="13"/>
+		</Control>	
+		<Control name="muteButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="18" channel="13"/>
+		</Control>	
+		<Control name="muteButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="19" channel="13"/>
+		</Control>	
+		<Control name="muteButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="20" channel="13"/>
+		</Control>	
+		<Control name="muteButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="21" channel="13"/>
+		</Control>	
+		<Control name="muteButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="22" channel="13"/>
+		</Control>	
+		<Control name="muteButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="23" channel="13"/>
+		</Control>	
+		<Control name="muteButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="24" channel="13"/>
+		</Control>	
+		<Control name="muteButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="25" channel="13"/>
+		</Control>	
+		<Control name="muteButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="26" channel="13"/>
+		</Control>	
+		<Control name="muteButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="27" channel="13"/>
+		</Control>	
+		<Control name="muteButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="28" channel="13"/>
+		</Control>	
+		<Control name="muteButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="29" channel="13"/>
+		</Control>	
+		<Control name="muteButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="30" channel="13"/>
+		</Control>	
+		<Control name="muteButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="31" channel="13"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x SOLO BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="soloButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="64" channel="13"/>
+		</Control>	
+		<Control name="soloButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="65" channel="13"/>
+		</Control>	
+		<Control name="soloButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="66" channel="13"/>
+		</Control>	
+		<Control name="soloButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="67" channel="13"/>
+		</Control>	
+		<Control name="soloButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="68" channel="13"/>
+		</Control>	
+		<Control name="soloButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="69" channel="13"/>
+		</Control>	
+		<Control name="soloButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="70" channel="13"/>
+		</Control>	
+		<Control name="soloButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="71" channel="13"/>
+		</Control>	
+		<Control name="soloButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="72" channel="13"/>
+		</Control>	
+		<Control name="soloButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="73" channel="13"/>
+		</Control>	
+		<Control name="soloButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="74" channel="13"/>
+		</Control>	
+		<Control name="soloButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="75" channel="13"/>
+		</Control>	
+		<Control name="soloButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="76" channel="13"/>
+		</Control>	
+		<Control name="soloButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="77" channel="13"/>
+		</Control>	
+		<Control name="soloButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="78" channel="13"/>
+		</Control>	
+		<Control name="soloButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="79" channel="13"/>
+		</Control>	
+		<Control name="soloButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="80" channel="13"/>
+		</Control>	
+		<Control name="soloButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="81" channel="13"/>
+		</Control>	
+		<Control name="soloButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="82" channel="13"/>
+		</Control>	
+		<Control name="soloButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="83" channel="13"/>
+		</Control>	
+		<Control name="soloButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="84" channel="13"/>
+		</Control>	
+		<Control name="soloButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="85" channel="13"/>
+		</Control>	
+		<Control name="soloButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="86" channel="13"/>
+		</Control>	
+		<Control name="soloButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="87" channel="13"/>
+		</Control>	
+		<Control name="soloButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="88" channel="13"/>
+		</Control>	
+		<Control name="soloButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="89" channel="13"/>
+		</Control>	
+		<Control name="soloButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="90" channel="13"/>
+		</Control>	
+		<Control name="soloButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="91" channel="13"/>
+		</Control>	
+		<Control name="soloButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="92" channel="13"/>
+		</Control>	
+		<Control name="soloButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="93" channel="13"/>
+		</Control>	
+		<Control name="soloButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="94" channel="13"/>
+		</Control>	
+		<Control name="soloButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="95" channel="13"/>
+		</Control>	
+		
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x PAN BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="panButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="0" channel="14"/>
+		</Control>	
+		<Control name="panButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="1" channel="14"/>
+		</Control>	
+		<Control name="panButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="2" channel="14"/>
+		</Control>	
+		<Control name="panButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="3" channel="14"/>
+		</Control>	
+		<Control name="panButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="4" channel="14"/>
+		</Control>	
+		<Control name="panButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="5" channel="14"/>
+		</Control>	
+		<Control name="panButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="6" channel="14"/>
+		</Control>	
+		<Control name="panButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="7" channel="14"/>
+		</Control>	
+		<Control name="panButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="8" channel="14"/>
+		</Control>	
+		<Control name="panButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="9" channel="14"/>
+		</Control>	
+		<Control name="panButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="10" channel="14"/>
+		</Control>	
+		<Control name="panButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="11" channel="14"/>
+		</Control>	
+		<Control name="panButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="12" channel="14"/>
+		</Control>	
+		<Control name="panButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="13" channel="14"/>
+		</Control>	
+		<Control name="panButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="14" channel="14"/>
+		</Control>	
+		<Control name="panButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="15" channel="14"/>
+		</Control>	
+		<Control name="panButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="16" channel="14"/>
+		</Control>	
+		<Control name="panButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="17" channel="14"/>
+		</Control>	
+		<Control name="panButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="18" channel="14"/>
+		</Control>	
+		<Control name="panButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="19" channel="14"/>
+		</Control>	
+		<Control name="panButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="20" channel="14"/>
+		</Control>	
+		<Control name="panButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="21" channel="14"/>
+		</Control>	
+		<Control name="panButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="22" channel="14"/>
+		</Control>	
+		<Control name="panButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="23" channel="14"/>
+		</Control>	
+		<Control name="panButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="24" channel="14"/>
+		</Control>	
+		<Control name="panButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="25" channel="14"/>
+		</Control>	
+		<Control name="panButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="26" channel="14"/>
+		</Control>	
+		<Control name="panButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="27" channel="14"/>
+		</Control>	
+		<Control name="panButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="28" channel="14"/>
+		</Control>	
+		<Control name="panButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="29" channel="14"/>
+		</Control>	
+		<Control name="panButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="30" channel="14"/>
+		</Control>	
+		<Control name="panButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="31" channel="14"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x ARM BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="armButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="32" channel="13"/>
+		</Control>	
+		<Control name="armButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="33" channel="13"/>
+		</Control>	
+		<Control name="armButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="34" channel="13"/>
+		</Control>	
+		<Control name="armButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="35" channel="13"/>
+		</Control>	
+		<Control name="armButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="36" channel="13"/>
+		</Control>	
+		<Control name="armButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="37" channel="13"/>
+		</Control>	
+		<Control name="armButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="38" channel="13"/>
+		</Control>	
+		<Control name="armButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="39" channel="13"/>
+		</Control>	
+		<Control name="armButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="40" channel="13"/>
+		</Control>	
+		<Control name="armButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="41" channel="13"/>
+		</Control>	
+		<Control name="armButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="42" channel="13"/>
+		</Control>	
+		<Control name="armButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="43" channel="13"/>
+		</Control>	
+		<Control name="armButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="44" channel="13"/>
+		</Control>	
+		<Control name="armButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="45" channel="13"/>
+		</Control>	
+		<Control name="armButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="46" channel="13"/>
+		</Control>	
+		<Control name="armButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="47" channel="13"/>
+		</Control>	
+		<Control name="armButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="48" channel="13"/>
+		</Control>	
+		<Control name="armButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="49" channel="13"/>
+		</Control>	
+		<Control name="armButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="50" channel="13"/>
+		</Control>	
+		<Control name="armButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="51" channel="13"/>
+		</Control>	
+		<Control name="armButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="52" channel="13"/>
+		</Control>	
+		<Control name="armButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="53" channel="13"/>
+		</Control>	
+		<Control name="armButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="54" channel="13"/>
+		</Control>	
+		<Control name="armButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="55" channel="13"/>
+		</Control>	
+		<Control name="armButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="56" channel="13"/>
+		</Control>	
+		<Control name="armButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="57" channel="13"/>
+		</Control>	
+		<Control name="armButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="58" channel="13"/>
+		</Control>	
+		<Control name="armButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="59" channel="13"/>
+		</Control>	
+		<Control name="armButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="60" channel="13"/>
+		</Control>	
+		<Control name="armButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="61" channel="13"/>
+		</Control>	
+		<Control name="armButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="62" channel="13"/>
+		</Control>	
+		<Control name="armButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="63" channel="13"/>
+		</Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x LOCATE BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="locateButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="96" channel="13"/>
+		</Control>	
+		<Control name="locateButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="97" channel="13"/>
+		</Control>	
+		<Control name="locateButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="98" channel="13"/>
+		</Control>	
+		<Control name="locateButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="99" channel="13"/>
+		</Control>	
+		<Control name="locateButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="100" channel="13"/>
+		</Control>	
+		<Control name="locateButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="101" channel="13"/>
+		</Control>	
+		<Control name="locateButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="102" channel="13"/>
+		</Control>	
+		<Control name="locateButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="103" channel="13"/>
+		</Control>	
+		<Control name="locateButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="104" channel="13"/>
+		</Control>	
+		<Control name="locateButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="105" channel="13"/>
+		</Control>	
+		<Control name="locateButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="106" channel="13"/>
+		</Control>	
+		<Control name="locateButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="107" channel="13"/>
+		</Control>	
+		<Control name="locateButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="108" channel="13"/>
+		</Control>	
+		<Control name="locateButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="109" channel="13"/>
+		</Control>	
+		<Control name="locateButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="110" channel="13"/>
+		</Control>	
+		<Control name="locateButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="111" channel="13"/>
+		</Control>	
+		<Control name="locateButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="112" channel="13"/>
+		</Control>	
+		<Control name="locateButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="113" channel="13"/>
+		</Control>	
+		<Control name="locateButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="114" channel="13"/>
+		</Control>	
+		<Control name="locateButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="115" channel="13"/>
+		</Control>	
+		<Control name="locateButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="116" channel="13"/>
+		</Control>	
+		<Control name="locateButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="117" channel="13"/>
+		</Control>	
+		<Control name="locateButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="118" channel="13"/>
+		</Control>	
+		<Control name="locateButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="119" channel="13"/>
+		</Control>	
+		<Control name="locateButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="120" channel="13"/>
+		</Control>	
+		<Control name="locateButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="121" channel="13"/>
+		</Control>	
+		<Control name="locateButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="122" channel="13"/>
+		</Control>	
+		<Control name="locateButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="123" channel="13"/>
+		</Control>	
+		<Control name="locateButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="124" channel="13"/>
+		</Control>	
+		<Control name="locateButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="125" channel="13"/>
+		</Control>	
+		<Control name="locateButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="126" channel="13"/>
+		</Control>	
+		<Control name="locateButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="127" channel="13"/>
+		</Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- 32 x TRACK SELECT BUTTON  -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="trackButton[0]" options="transmit receive">
+			<MidiMessage status="Controller" address="32" channel="14"/>
+		</Control>	
+		<Control name="trackButton[1]" options="transmit receive">
+			<MidiMessage status="Controller" address="33" channel="14"/>
+		</Control>	
+		<Control name="trackButton[2]" options="transmit receive">
+			<MidiMessage status="Controller" address="34" channel="14"/>
+		</Control>	
+		<Control name="trackButton[3]" options="transmit receive">
+			<MidiMessage status="Controller" address="35" channel="14"/>
+		</Control>	
+		<Control name="trackButton[4]" options="transmit receive">
+			<MidiMessage status="Controller" address="36" channel="14"/>
+		</Control>	
+		<Control name="trackButton[5]" options="transmit receive">
+			<MidiMessage status="Controller" address="37" channel="14"/>
+		</Control>	
+		<Control name="trackButton[6]" options="transmit receive">
+			<MidiMessage status="Controller" address="38" channel="14"/>
+		</Control>	
+		<Control name="trackButton[7]" options="transmit receive">
+			<MidiMessage status="Controller" address="39" channel="14"/>
+		</Control>	
+		<Control name="trackButton[8]" options="transmit receive">
+			<MidiMessage status="Controller" address="40" channel="14"/>
+		</Control>	
+		<Control name="trackButton[9]" options="transmit receive">
+			<MidiMessage status="Controller" address="41" channel="14"/>
+		</Control>	
+		<Control name="trackButton[10]" options="transmit receive">
+			<MidiMessage status="Controller" address="42" channel="14"/>
+		</Control>	
+		<Control name="trackButton[11]" options="transmit receive">
+			<MidiMessage status="Controller" address="43" channel="14"/>
+		</Control>	
+		<Control name="trackButton[12]" options="transmit receive">
+			<MidiMessage status="Controller" address="44" channel="14"/>
+		</Control>	
+		<Control name="trackButton[13]" options="transmit receive">
+			<MidiMessage status="Controller" address="45" channel="14"/>
+		</Control>	
+		<Control name="trackButton[14]" options="transmit receive">
+			<MidiMessage status="Controller" address="46" channel="14"/>
+		</Control>	
+		<Control name="trackButton[15]" options="transmit receive">
+			<MidiMessage status="Controller" address="47" channel="14"/>
+		</Control>	
+		<Control name="trackButton[16]" options="transmit receive">
+			<MidiMessage status="Controller" address="48" channel="14"/>
+		</Control>	
+		<Control name="trackButton[17]" options="transmit receive">
+			<MidiMessage status="Controller" address="49" channel="14"/>
+		</Control>	
+		<Control name="trackButton[18]" options="transmit receive">
+			<MidiMessage status="Controller" address="50" channel="14"/>
+		</Control>	
+		<Control name="trackButton[19]" options="transmit receive">
+			<MidiMessage status="Controller" address="51" channel="14"/>
+		</Control>	
+		<Control name="trackButton[20]" options="transmit receive">
+			<MidiMessage status="Controller" address="52" channel="14"/>
+		</Control>	
+		<Control name="trackButton[21]" options="transmit receive">
+			<MidiMessage status="Controller" address="53" channel="14"/>
+		</Control>	
+		<Control name="trackButton[22]" options="transmit receive">
+			<MidiMessage status="Controller" address="54" channel="14"/>
+		</Control>	
+		<Control name="trackButton[23]" options="transmit receive">
+			<MidiMessage status="Controller" address="55" channel="14"/>
+		</Control>	
+		<Control name="trackButton[24]" options="transmit receive">
+			<MidiMessage status="Controller" address="56" channel="14"/>
+		</Control>	
+		<Control name="trackButton[25]" options="transmit receive">
+			<MidiMessage status="Controller" address="57" channel="14"/>
+		</Control>	
+		<Control name="trackButton[26]" options="transmit receive">
+			<MidiMessage status="Controller" address="58" channel="14"/>
+		</Control>	
+		<Control name="trackButton[27]" options="transmit receive">
+			<MidiMessage status="Controller" address="59" channel="14"/>
+		</Control>	
+		<Control name="trackButton[28]" options="transmit receive">
+			<MidiMessage status="Controller" address="60" channel="14"/>
+		</Control>	
+		<Control name="trackButton[29]" options="transmit receive">
+			<MidiMessage status="Controller" address="61" channel="14"/>
+		</Control>	
+		<Control name="trackButton[30]" options="transmit receive">
+			<MidiMessage status="Controller" address="62" channel="14"/>
+		</Control>	
+		<Control name="trackButton[31]" options="transmit receive">
+			<MidiMessage status="Controller" address="63" channel="14"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 6 x ENCODER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="SEND1/P1" options="receive public">
+			<MidiMessage status="Controller" address="67" channel="15"/>
+		</Control>	
+
+		<Control name="knob[1]" title="SEND2/P2" options="receive public">
+			<MidiMessage status="Controller" address="68" channel="15"/>
+		</Control>	
+		
+		<Control name="knob[2]" title="SEND3/P3" options="receive public">
+			<MidiMessage status="Controller" address="69" channel="15"/>
+		</Control>	
+
+		<Control name="knob[3]" title="SEND4/P4" options="receive public">
+			<MidiMessage status="Controller" address="64" channel="15"/>
+		</Control>	
+
+		<Control name="knob[4]" title="SEND5/P5" options="receive public">
+			<MidiMessage status="Controller" address="65" channel="15"/>
+		</Control>	
+
+		<Control name="knob[5]" title="SEND6/P6" options="receive public">
+			<MidiMessage status="Controller" address="66" channel="15"/>
+		</Control>	
+		
+        <!-- ******************************************************************************************** -->
+        <!-- 4 x CURSOR BUTTON -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="cursorup" options="receive">
+			<MidiMessage status="Controller" address="82" channel="14"/>
+		</Control>	
+
+		<Control name="cursordown" options="receive">
+			<MidiMessage status="Controller" address="83" channel="14"/>
+		</Control>	
+
+		<Control name="cursorleft" options="receive">
+			<MidiMessage status="Controller" address="84" channel="14"/>
+		</Control>	
+
+		<Control name="cursorright" options="receive">
+			<MidiMessage status="Controller" address="85" channel="14"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- FOOT SWITCH -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="footSwitch" title="Foot Switch" options="receive public">
+			<MidiMessage status="Controller" address="86" channel="15"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="rewindButton" options="receive">
+			<MidiMessage status="Controller" address="75" channel="14"/>
+		</Control>	
+
+		<Control name="playButton" options="receive">
+			<MidiMessage status="Controller" address="76" channel="14"/>
+		</Control>	
+
+		<Control name="ffButton" options="receive">
+			<MidiMessage status="Controller" address="77" channel="14"/>
+		</Control>	
+
+		<Control name="stopButton" options="receive">
+			<MidiMessage status="Controller" address="78" channel="14"/>
+		</Control>	
+
+		<Control name="recordButton" options="receive">
+			<MidiMessage status="Controller" address="79" channel="14"/>
+		</Control>	
+
+		<Control name="recordLED" options="transmit">
+			<MidiMessage status="Controller" address="79" channel="14"/>
+		</Control>	
+
+		
+        <!-- ******************************************************************************************** -->
+        <!-- F BUTTONS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="shift" options="receive">
+			<MidiMessage status="Controller" address="65" channel="14"/>
+		</Control>	
+
+		<Control name="F1" options="receive">
+			<MidiMessage status="Controller" address="66" channel="14"/>
+		</Control>	
+
+		<Control name="F2" options="receive">
+			<MidiMessage status="Controller" address="67" channel="14"/>
+		</Control>	
+
+		<Control name="F3" options="receive">
+			<MidiMessage status="Controller" address="68" channel="14"/>
+		</Control>	
+
+		<Control name="F4" options="receive">
+			<MidiMessage status="Controller" address="69" channel="14"/>
+		</Control>	
+		<Control name="F5" options="receive">
+			<MidiMessage status="Controller" address="70" channel="14"/>
+		</Control>	
+
+		<Control name="F6" options="receive">
+			<MidiMessage status="Controller" address="71" channel="14"/>
+		</Control>	
+
+		<Control name="F7" options="receive">
+			<MidiMessage status="Controller" address="72" channel="14"/>
+		</Control>	
+
+		<Control name="F8" options="receive">
+			<MidiMessage status="Controller" address="73" channel="14"/>
+		</Control>	
+
+		<Control name="F9" options="receive">
+			<MidiMessage status="Controller" address="74" channel="14"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- WHEEL+BUTTONS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="scrubButton" options="transmit receive">
+			<MidiMessage status="Controller" address="80" channel="14"/>
+		</Control>	
+
+		<Control name="shuttleButton" options="transmit receive">
+			<MidiMessage status="Controller" address="81" channel="14"/>
+		</Control>	
+
+		<Control name="wheel" options="receive">
+			<MidiMessage status="Controller" address="96" channel="15" options="reversed"/>
+		</Control>	
+
+	</Controls>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			<Command control="F1" command.category="View"    command.name="Toggle Optional Views"/>		
+			<Command control="F2" command.category="View"    command.name="Editor"/>
+			<Command control="F3" command.category="View"    command.name="Console"/>
+			<Command control="F4" command.category="View"    command.name="Inspector"/>
+			<Command control="F5" command.category="Browser" command.name="Show Instruments"/>
+			<Command control="F6" command.category="Browser" command.name="Show Effects"/>
+			<Command control="F7" command.category="Browser" command.name="Show Pool"/>
+			<Command control="F8" command.category="Browser" command.name="Show Files"/>
+			<Command control="F9" command.category="View"    command.name="Browser"/>
+			
+			<Command control="cursorup" command.category="Navigation" command.name="Up"/>
+			<Command control="cursordown" command.category="Navigation" command.name="Down"/>
+			<Command control="cursorleft" command.category="Navigation" command.name="Left"/>
+			<Command control="cursorright" command.category="Navigation" command.name="Right"/>
+
+			<Command control="locateButton[0]" command.category="Marker" command.name="Recall Marker 1"/>
+			<Command control="locateButton[1]" command.category="Marker" command.name="Recall Marker 2"/>
+			<Command control="locateButton[2]" command.category="Marker" command.name="Recall Marker 3"/>
+			<Command control="locateButton[3]" command.category="Marker" command.name="Recall Marker 4"/>
+			<Command control="locateButton[4]" command.category="Marker" command.name="Recall Marker 5"/>
+			<Command control="locateButton[5]" command.category="Marker" command.name="Recall Marker 6"/>
+			<Command control="locateButton[6]" command.category="Marker" command.name="Recall Marker 7"/>
+			<Command control="locateButton[7]" command.category="Marker" command.name="Recall Marker 8"/>
+			<Command control="locateButton[8]" command.category="Marker" command.name="Recall Marker 9"/>
+			<Command control="locateButton[9]" command.category="Marker" command.name="Recall Marker 10"/>
+			<Command control="locateButton[10]" command.category="Marker" command.name="Recall Marker 11"/>
+			<Command control="locateButton[11]" command.category="Marker" command.name="Recall Marker 12"/>
+			<Command control="locateButton[12]" command.category="Marker" command.name="Recall Marker 13"/>
+			<Command control="locateButton[13]" command.category="Marker" command.name="Recall Marker 14"/>
+			<Command control="locateButton[14]" command.category="Marker" command.name="Recall Marker 15"/>
+			<Command control="locateButton[15]" command.category="Marker" command.name="Recall Marker 16"/>
+			<Command control="locateButton[16]" command.category="Marker" command.name="Recall Marker 17"/>
+			<Command control="locateButton[17]" command.category="Marker" command.name="Recall Marker 18"/>
+			<Command control="locateButton[18]" command.category="Marker" command.name="Recall Marker 19"/>
+			<Command control="locateButton[19]" command.category="Marker" command.name="Recall Marker 20"/>
+			<Command control="locateButton[20]" command.category="Marker" command.name="Recall Marker 21"/>
+			<Command control="locateButton[21]" command.category="Marker" command.name="Recall Marker 22"/>
+			<Command control="locateButton[22]" command.category="Marker" command.name="Recall Marker 23"/>
+			<Command control="locateButton[23]" command.category="Marker" command.name="Recall Marker 24"/>
+			<Command control="locateButton[24]" command.category="Marker" command.name="Recall Marker 25"/>
+			<Command control="locateButton[25]" command.category="Marker" command.name="Recall Marker 26"/>
+			<Command control="locateButton[26]" command.category="Marker" command.name="Recall Marker 27"/>
+			<Command control="locateButton[27]" command.category="Marker" command.name="Recall Marker 28"/>
+			<Command control="locateButton[28]" command.category="Marker" command.name="Recall Marker 29"/>
+			<Command control="locateButton[29]" command.category="Marker" command.name="Recall Marker 30"/>
+			<Command control="locateButton[30]" command.category="Marker" command.name="Recall Marker 31"/>
+			<Command control="locateButton[31]" command.category="Marker" command.name="Recall Marker 32"/>
+			
+			
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole">
+			<PlacementBank target="RemoteBank" pagesize="32">
+				<!-- The Channel Strips -->
+				<foreach variable="$channel" count="32">
+					<Strip> 
+						<Variant control="panButton[$channel]">
+							<!-- PAN: OFF -->
+							<Group>
+								<Value control="fader[$channel]" param="volume"/>
+							</Group>
+							<!-- PAN: ON -->
+							<Group>
+								<Value control="fader[$channel]" param="pan"/>
+							</Group>
+						</Variant>
+						<Value control="soloButton[$channel]"  param="solo"/>
+						<Value control="muteButton[$channel]"  param="mute"/>
+						<Value control="armButton[$channel]"   param="recordArmed"/>
+						<Value control="trackButton[$channel]" param="selected"/>
+					</Strip>
+				</foreach>
+			</PlacementBank>
+		</DeviceMapping>
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+			<Relative control="wheel" param="freeCursorTime"/>
+
+			<Toggle control="playButton"    param="start"/>
+			<Toggle control="stopButton"    param="stop"/>
+			<Toggle control="recordButton"  param="record"/>
+			<Toggle control="footSwitch"    param="record"/>
+			<Value  control="recordLED"     param="record"/>
+			<Touch  control="rewindButton"  param="rewind"/>
+			<Touch  control="ffButton"      param="fastForward"/>
+		</DeviceMapping>
+
+	</Mappings>
+</ControlSurface>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Music.KeySwitchList name="UACC KS" >
+	<Attributes folder="1" name="Long (sustain)" color="FFD89D00" useNameForVariations="1">
+		<Attributes name="Generic" color="FFDD6105" id="0" activation="note0.1"/>
+		<Attributes name="Alternative" color="FFD89D00" id="1" activation="note0.2"/>
+		<Attributes name="Octave" color="FFE9C400" id="2" activation="note0.3"/>
+		<Attributes name="Octave muted" color="FFE9C400" id="3" activation="note0.4"/>
+		<Attributes name="Small (1/2)" color="FFFFBE0D" id="4" activation="note0.5"/>
+		<Attributes name="Small muted" color="FFFFBE0D" id="5" activation="note0.6"/>
+		<Attributes name="Muted" color="FFFFAC0D" id="6" activation="note0.7"/>
+		<Attributes name="Soft (flaut/hollow)" color="FFFF6D0A" id="7" activation="note0.8"/>
+		<Attributes name="Hard (cuivre/overb)" color="FFF53407" id="8" activation="note0.9"/>
+		<Attributes name="Harmonic" color="FFBC2807" id="9" activation="note0.10"/>
+		<Attributes name="Tremolo/flutter" color="FFD89D00" id="10" activation="note0.11"/>
+		<Attributes name="Tremolo muted" color="FFD89D00" id="11" activation="note0.12"/>
+		<Attributes name="Tremolo soft/low" color="FFD89D00" id="12" activation="note0.13"/>
+		<Attributes name="Tremolo hard/high" color="FFFFAC0D" id="13" activation="note0.14"/>
+		<Attributes name="Tremolo muted low" color="FFFFAC0D" id="14" activation="note0.15"/>
+		<Attributes name="Vibrato (molto/vib)" color="FFFF6D0A" id="15" activation="note0.16"/>
+		<Attributes name="Higher (sul tasto/bells up)" color="FFF53407" id="16" activation="note0.17"/>
+		<Attributes name="Lower (sul pont)" color="FFBC2807" id="17" activation="note0.18"/>
+		<Attributes name="Lower muted" color="FFBC2807" id="18" activation="note0.19"/>
+	</Attributes>
+	<Attributes folder="1" name="Legato" color="FF85E100" useNameForVariations="1">
+		<Attributes name="Generic" color="FF85E100" id="19" activation="note0.20"/>
+		<Attributes name="Alternative" color="FF51D361" id="20" activation="note0.21"/>
+		<Attributes name="Octave" color="FF3CAF66" id="21" activation="note0.22"/>
+		<Attributes name="Octave muted" color="FF3CAF66" id="22" activation="note0.23"/>
+		<Attributes name="Small" color="FF5EA854" id="23" activation="note0.24"/>
+		<Attributes name="Small muted" color="FF5EA854" id="24" activation="note0.25"/>
+		<Attributes name="Muted" color="FF85E100" id="25" activation="note0.26"/>
+		<Attributes name="Soft" color="FF51D361" id="26" activation="note0.27"/>
+		<Attributes name="Hard" color="FF3CAF66" id="27" activation="note0.28"/>
+		<Attributes name="Harmonic" color="FF5EA854" id="28" activation="note0.29"/>
+		<Attributes name="Tremolo" color="FF69A17F" id="29" activation="note0.30"/>
+		<Attributes name="Slow (port/gliss)" color="FF4B831F" id="30" activation="note0.31"/>
+		<Attributes name="Fast" color="FF4B831F" id="31" activation="note0.32"/>
+		<Attributes name="Run" color="FF04C97A" id="32" activation="note0.33"/>
+		<Attributes name="Detaché" color="FF3CAF66" id="33" activation="note0.34"/>
+		<Attributes name="Higher" color="FF5EA854" id="34" activation="note0.35"/>
+		<Attributes name="Lower" color="FF69A17F" id="35" activation="note0.36"/>
+	</Attributes>
+	<Attributes folder="1" name="Short" color="FF473FFF" useNameForVariations="1">
+		<Attributes name="Generic" color="FF0D0DFF" id="36" activation="note0.40"/>
+		<Attributes name="Alternative" color="FF3057FF" id="37" activation="note0.42"/>
+		<Attributes name="Very short (spicc)" color="FF4848D2" id="38" activation="note0.42"/>
+		<Attributes name="Very short soft" color="FF4848D2" id="39" activation="note0.43"/>
+		<Attributes name="Leisurely (stacc)" color="FF473FFF" id="40" activation="note0.44"/>
+		<Attributes name="Octave" color="FF473FFF" id="41" activation="note0.45"/>
+		<Attributes name="Octave muted" color="FF473FFF" id="42" activation="note0.46"/>
+		<Attributes name="Muted" color="FF4848D2" id="43" activation="note0.47"/>
+		<Attributes name="Soft (brush/feather)" color="FF8D56FF" id="44" activation="note0.48"/>
+		<Attributes name="Hard (dig)" color="FF5C00FF" id="45" activation="note0.49"/>
+		<Attributes name="Tenuto" color="FF775DD4" id="46" activation="note0.50"/>
+		<Attributes name="Tenuto soft" color="FF775DD4" id="47" activation="note0.51"/>
+		<Attributes name="Marcato" color="FF775DD4" id="48" activation="note0.52"/>
+		<Attributes name="Marcato soft" color="FF775DD4" id="49" activation="note0.53"/>
+		<Attributes name="Marcato hard" color="FF775DD4" id="50" activation="note0.54"/>
+		<Attributes name="Marcato long" color="FF775DD4" id="51" activation="note0.55"/>
+		<Attributes name="Plucked (pizzicato)" color="FF6062D9" id="52" activation="note0.56"/>
+		<Attributes name="Plucked hard (bartok)" color="FF775DD4" id="53" activation="note0.57"/>
+		<Attributes name="Struck (col legno)" color="FF473FFF" id="54" activation="note0.58"/>
+		<Attributes name="Higher" color="FF7FB3DB" id="55" activation="note0.59"/>
+		<Attributes name="Lower" color="FF8C89CE" id="56" activation="note0.60"/>
+		<Attributes name="Harmonic" color="FF4848D2" id="57" activation="note0.61"/>
+	</Attributes>
+	<Attributes folder="1" name="Decorative" color="FF00E0FB" useNameForVariations="1">
+		<Attributes name="Trill (minor 2nd)" color="FF7CDFCE" id="58" activation="note0.70"/>
+		<Attributes name="Trill (major 2nd)" color="FF7CDFCE" id="59" activation="note0.71"/>
+		<Attributes name="Trill (minor 3rd)" color="FF7CDFCE" id="60" activation="note0.72"/>
+		<Attributes name="Trill (major 3rd)" color="FF7CDFCE" id="61" activation="note0.73"/>
+		<Attributes name="Trill (perfect 4th)" color="FF7CDFCE" id="62" activation="note0.74"/>
+		<Attributes name="Multitongue" color="FF6DE8EA" id="63" activation="note0.75"/>
+		<Attributes name="Multitongue muted" color="FF6DE8EA" id="64" activation="note0.76"/>
+		<Attributes name="Synced - 120 bpm (rem/trill)" color="FF2FB1FF" id="65" activation="note0.80"/>
+		<Attributes name="Synced - 150 bpm (trem/trill)" color="FF2FB1FF" id="66" activation="note0.81"/>
+		<Attributes name="Synced - 180 bpm (trem/trill)" color="FF2FB1FF" id="67" activation="note0.82"/>
+	</Attributes>
+	<Attributes folder="1" name="Phrases &amp; Dynamics" color="FFA244A6" useNameForVariations="1">
+		<Attributes name="FX 1" color="FFA63065" id="68" activation="note0.90"/>
+		<Attributes name="FX 2" color="FFA63065" id="69" activation="note0.91"/>
+		<Attributes name="FX 3" color="FFA63065" id="70" activation="note0.92"/>
+		<Attributes name="FX 4" color="FFA63065" id="71" activation="note0.93"/>
+		<Attributes name="FX 5" color="FFA63065" id="72" activation="note0.94"/>
+		<Attributes name="FX 6" color="FFA63065" id="73" activation="note0.95"/>
+		<Attributes name="FX 7" color="FFA63065" id="74" activation="note0.96"/>
+		<Attributes name="FX 8" color="FFA63065" id="75" activation="note0.97"/>
+		<Attributes name="FX 9" color="FFA63065" id="76" activation="note0.98"/>
+		<Attributes name="FX 10" color="FFA63065" id="77" activation="note0.99"/>
+		<Attributes name="Up (rips &amp; runs)" color="FFC746CC" id="78" activation="note0.100"/>
+		<Attributes name="Down (falls &amp; runs)" color="FFA244A6" id="79" activation="note0.101"/>
+		<Attributes name="Crescendo" color="FFC746CC" id="80" activation="note0.102"/>
+		<Attributes name="Decrescendo" color="FFA244A6" id="81" activation="note0.103"/>
+		<Attributes name="Arc" color="FF6B2EE6" id="82" activation="note0.104"/>
+		<Attributes name="Slides" color="FFC42E7B" id="83" activation="note0.105"/>
+	</Attributes>
+	<Attributes folder="1" name="Various" color="FF3057FF" useNameForVariations="1">
+		<Attributes name="Disco up (rips)" color="FF6E04B3" id="84" activation="note0.110"/>
+		<Attributes name="Disco down (falls)" color="FF0423C7" id="85" activation="note0.111"/>
+		<Attributes name="Single string (Sul C/G/etc.)" color="FFE6E6E6" id="86" activation="note0.112"/>
+	</Attributes>
+</Music.KeySwitchList>

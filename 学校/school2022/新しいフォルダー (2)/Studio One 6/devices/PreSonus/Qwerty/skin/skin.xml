@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+	<Resources>
+		
+		<ColorScheme name="Main">
+			<ColorScheme.Color name="QWERTYBordercolor" 			color="hsl(0,0,4)" saturation="5" luminance="3" huefixed="true" invertedvalue="10"/>
+			<ColorScheme.Color name="QWERTYBackcolor"				color="hsl(204,4,14)" saturation="5" luminance="6:6" slcombined="true" invertedvalue="23"/>
+			
+			<ColorScheme.Color name="QWERTYControlBackcolor"		color="hsl(204,4,20)" saturation="5" luminance="6:6" slcombined="true" invertedvalue="28"/>
+			<ColorScheme.Color name="QWERTYControlBottomBackcolor"	color="hsl(204,4,40)" saturation="5" luminance="6:6" slcombined="true" invertedvalue="40"/>
+			<ColorScheme.Color name="QWERTYFocusTextColor"			color="hsl(204,54,60)" saturation="5" luminance="5" slcombined="true" huefixed="true" invertedvalue="70"/>
+			<ColorScheme.Color name="QWERTYFocusBackcolor" 			color="hsl(204,4,4)" saturation="5" luminance="3" invertedvalue="10"/>
+		</ColorScheme>
+		
+		<Image name="AtlasKeys" url="AtlasKeys.png"/>
+		<ImagePart name="KeyBlack"	image="AtlasKeys" size="0,0,40,80" frames="normal normalOn" tile="stretch-xy" margin="16,10,16,10"/>
+		<ImagePart name="KeyWhite"	image="AtlasKeys" size="40,0,40,80" frames="normal normalOn"/>
+		
+		<Image name="QWERTYOnOffIcon"		url="OnOffIcon.png" frames="normal normalOn"/>
+		
+		<Image name="QWERTYKeyboardHorizontal"	url="KeyboardHorizontal.png"/>
+		<ImagePart name="QWERTYWheelHandle"			image="QWERTYKeyboardHorizontal"  size="26,0,26,16"/>
+		<ImagePart name="QWERTYWheelBkg"				image="QWERTYKeyboardHorizontal"  size="0,0,26,67"/>
+		
+		<ShapeImage name="QWERTYBackground" url="QWERTYBackgroundShape"/>
+		<ShapeImage name="QWERTYFocusBackground" 		url="QWERTYFocusBackgroundShape"/>
+		<ShapeImage name="QWERTYControlCellBackground"	url="QWERTYControlCellBackgroundShape"/>
+		<ShapeImage name="QWERTYBendModBackground"		url="QWERTYBendModBackgroundShape"/>
+		
+		<ShapeImage name="TestArrow" url="TestArrowShape"/>
+		<ShapeImage name="QWERTYSelectBoxButton"		url="QWERTYSelectBoxButtonShape" frames="embedded"/>
+	</Resources>
+	
+	<Shapes>
+		<Shape name="QWERTYBackgroundShape" style="scale">
+			<Rectangle style="fill stroke" size="0,0,100,100" Brush.color="@Main.QWERTYBackcolor" Pen.color="Main.QWERTYBordercolor" Pen.width="8"/>
+		</Shape>
+		<Shape name="QWERTYBendModBackgroundShape" size="0,0,70,100">
+			<Rectangle style="fill stroke tiled" size="0,0,70,100" Brush.color="@Main.QWERTYControlBackcolor" Pen.color="@Main.QWERTYControlBackcolor" radius="3"/>
+			<Rectangle style="fill stroke tiled" size="0,80,70,20" Brush.color="@Main.QWERTYControlBottomBackcolor" Pen.color="@Main.QWERTYControlBottomBackcolor" radius="3"/>
+			<Rectangle style="fill tiled" size="0,80,70,10" Brush.color="@Main.QWERTYControlBottomBackcolor"/>
+		</Shape>
+		<Shape name="QWERTYControlCellBackgroundShape" size="0,0,70,100">
+			<Rectangle style="fill stroke tiled" size="0,0,70,100" Brush.color="@Main.QWERTYControlBackcolor" Pen.color="@Main.QWERTYControlBackcolor" radius="3"/>
+			<Rectangle style="fill stroke tiled" size="0,80,70,20" Brush.color="@Main.QWERTYControlBottomBackcolor" Pen.color="@Main.QWERTYControlBottomBackcolor" radius="3"/>
+			<Rectangle style="fill tiled" size="0,80,70,10" Brush.color="@Main.QWERTYControlBottomBackcolor"/>
+		</Shape>
+		<Shape name="QWERTYFocusBackgroundShape" style="scale">
+			<Rectangle style="fill tiled" size="0,0,20,20" Brush.color="@Main.QWERTYFocusBackcolor" radius="2"/>
+		</Shape>
+		<Shape name="TestArrowShape">
+			<Triangle style="fill" point1="0,0" point2="10,5" point3="0,10" Brush.color="hsl(0,0,60)"/>
+		</Shape>
+		
+		<Shape name="QWERTYSelectBoxButtonShape">
+			<Shape name="normal" size="0,0,13,6">
+				<Triangle style="fill" point1="0,1" point2="8,1" point3="4,6" Brush.color="hsl(0,0,100,40)"/>
+			</Shape>
+		</Shape>
+	</Shapes>
+	
+	<Styles>
+		
+		<Style name="KeyBlack">
+			<Image name="background"	image="KeyBlack"/>
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Align name="textalign"	align="center"/>
+			<Color name="textcolor"	color="hsl(0,0,80)"/>
+			<Color name="textcolor.on"	color="hsl(210,100,60)"/>
+			<Metric name="padding.left" value="4"/>
+			<Metric name="padding.top" value="2"/>
+			<Metric name="padding.right" value="7"/>
+			<Metric name="padding.bottom" value="7"/>
+		</Style>
+		<Style name="KeyWhite" inherit="KeyBlack">
+			<Image name="background"	image="KeyWhite"/>
+			<Color name="textcolor"	color="hsl(0,0,10)"/>
+		</Style>
+		
+		<Style name="KeyArrow" inherit="KeyBlack">
+			<Font name="textfont" themeid="PresonusUI" size="19"/>
+			<Align name="textalign"	align="left"/>
+			<?platform win?>
+			<Metric name="padding.left" value="11"/>
+			<?platform mac?>
+			<Metric name="padding.left" value="9"/>
+			<?platform?>
+			<Metric name="padding.top" value="1"/>
+			<Metric name="padding.right" value="2"/>
+			<Metric name="padding.bottom" value="7"/>
+		</Style>
+		<Style name="KeyArrowR" inherit="KeyArrow">
+			<Align name="textalign"	align="right"/>
+			<Metric name="padding.left" value="2"/>
+			<?platform win?>
+			<Metric name="padding.right" value="13"/>
+			<?platform mac?>
+			<Metric name="padding.right" value="11"/>
+			<?platform?>
+		</Style>
+		<Style name="KeySustain" inherit="KeyArrow">
+			<?platform win?>
+			<Font name="textfont" themeid="PresonusUI" size="19"/>
+			<Metric name="padding.bottom" value="10"/>
+			<?platform mac?>
+			<Font name="textfont" themeid="PresonusUI" size="16"/>
+			<Metric name="padding.bottom" value="7"/>
+			<?platform?>
+			<Metric name="padding.left" value="8"/>
+		</Style>
+
+		<Style name="KeySustainText" inherit="KeySustain">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Align name="textalign"	align="right"/>
+			<?platform win?>
+			<Metric name="padding.right" value="13"/>
+			<?platform mac?>
+			<Metric name="padding.right" value="11"/>
+			<?platform?>
+			<Metric name="padding.bottom" value="8"/>
+		</Style>
+		
+		<Style name="QWERTYWheelSlider">
+			<Image name="vHandle" image="QWERTYWheelHandle"/>
+			<Image name="vBack"   image="QWERTYWheelBkg"/>
+		</Style>
+		
+		<Style name="QWERTYFocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="@Main.QWERTYFocusTextColor"/>
+			<Image name="background" 	image="QWERTYFocusBackground"/>
+			<Metric name="padding.left"	value="10"/>
+			<Metric name="padding.right" value="10"/>
+			<Align name="textalign"	align="center"/>
+		</Style>
+		
+		
+		<Style name="QWERTYOnOffIcon">
+			<Image name="icon"	image="QWERTYOnOffIcon"/>
+			<!--			<Metric name="padding.bottom"	value="4"/>-->
+		</Style>
+		
+		<Style name="QWERTYLabel" inherit="Standard.Label">
+		</Style>
+		
+		<Style name="QWERTYOctave" inherit="QWERTYFocusText">
+			<Font name="textfont" themeid="PresonusUI" size="16"/>
+			<Color name="textcolor" color="hsl(0,0,100,50)"/>
+		</Style>
+		<Style name="QWERTYOctaveOn" inherit="QWERTYFocusText">
+			<Font name="textfont" themeid="PresonusUI" size="16"/>
+			<Color name="textcolor" color="hsl(59,100,83)"/>
+		</Style>
+		
+		<Style name="QWERTYText">
+			<Font name="textfont" themeid="PresonusUI" size="10"/>
+			<Color name="backcolor"	color="@Main.QWERTYControlBackcolor"/>
+			<Color name="textcolor" color="@Main.LabelColor.Secondary.NoInvert"/>
+		</Style>
+		<Style name="QWERTYValueText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="backcolor"	color="@Main.QWERTYControlBottomBackcolor"/>
+			<Color name="textcolor" color="@Main.LabelColor.NoInvert"/>
+		</Style>
+		<Style name="QWERTYValueTextDimmed">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="backcolor"	color="@Main.QWERTYControlBottomBackcolor"/>
+			<Color name="textcolor" color="hsl(0,0,100,50)"/>
+		</Style>
+		
+		<Style name="QWERTYChannelSelectBox" inherit="Standard.SelectBox">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,80)"/>
+			<Image name="button"    image="QWERTYSelectBoxButton"/>
+		</Style>
+		<Style name="QWERTYChannelSelectBoxDimmed" inherit="Standard.SelectBox">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,100,50)"/>
+			<Image name="button"    image="QWERTYSelectBoxButton"/>
+		</Style>
+		<Style name="QWERTYDimmedText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,100,50)"/>
+		</Style>
+		
+	</Styles>
+	
+	<Forms>
+		<!-- ******************************************************************************************** -->
+		<!-- COMPUTER KEYBOARD EDITOR -->
+		<!-- ******************************************************************************************** -->
+		
+		<Form name="ComputerKeyboard" image="QWERTYBackground" width="674" height="165">
+			
+			<using controller="Keyboard">
+				<View name="KeyboardControl"/> <!-- hidden view to power on when editor opens -->
+				
+				<View name="KeyArray" size="94,50" attach="left top"/>
+				<Vertical margin="10" spacing="5" attach="all">
+					<Horizontal margin="0" spacing="0">
+						<Space width="2"/>
+					
+						<ImageView style="QWERTYFocusText" height="26">
+							<Horizontal margin="3" spacing="0" width="650">
+								<define param="enabled" title="">
+									<View name="skin:///Devices/SurfaceEditorToggle" size="0,0,36,20" tooltip="Power On/Off" attach="vcenter">
+										<Toggle name="enabled" size="0,0,36,20" style="QWERTYOnOffIcon"/>
+									</View>
+								</define>
+								
+								<Space width="50"/>
+								<Variant name="enabled">
+									<SelectBox name="octave" width="90" height="20" options="hidefocus transparent" style="QWERTYChannelSelectBoxDimmed"/>
+									<SelectBox name="octave" width="90" height="20" options="hidefocus transparent" style="QWERTYChannelSelectBox"/>
+								</Variant>
+								<Space attach="fill left right"/>
+								<Variant name="enabled">
+									<ValueBox name="velocity" width="65" height="20" options="transparent" style="QWERTYValueTextDimmed"/>
+									<ValueBox name="velocity" width="65" height="20" options="transparent" style="QWERTYValueText"/>
+								</Variant>
+							</Horizontal>
+						</ImageView>
+						
+					</Horizontal>
+					
+					<Horizontal size="0,0" margin="5" spacing="2" attach="left top">
+						<View name="BendMod"/>
+						<Space width="500"/>
+						<View name="VelocitySlider"/>
+					</Horizontal>
+				</Vertical>
+
+			</using>
+		</Form>
+		
+		
+		<Form name="VelocitySlider" width="70" height="100" image="QWERTYControlCellBackground">
+			<define param="velocity"><View name="skin:///Devices/SurfaceEditorSlider" size="20,10,28,60" tooltip="Velocity, control with arrow keys (Up/Down)" attach="left"/></define>
+			<Label title="Velocity" size="0,81,70,18" options="transparent fittext" style="QWERTYValueText"/>
+		</Form>
+		
+		<Form name="BendMod" width="70" height="100" image="QWERTYBendModBackground">
+			<Horizontal size="10,6" margin="0" spacing="7">
+				<Slider	name="pitchBend" tooltip="Pitchbend" size="0,0,26,67" options="vertical" style="QWERTYWheelSlider"/>
+				<Slider	name="modulation" tooltip="Modulation" size="0,0,26,67" options="vertical" style="QWERTYWheelSlider"/>
+			</Horizontal>
+			<Label title="Bend  Mod" size="0,81,70,18" options="transparent fittext" style="QWERTYValueText"/>
+		</Form>
+		
+		<Form name="KeyArray">
+			<Vertical spacing="2">
+				<Horizontal margin="0" spacing="-3">
+					<Toggle name="octaveDown"	size="0,0,40,40" title="&#x2190;" options="fontoffset" style="KeyArrow" tooltip="Octave Down"/>
+					<Toggle name="octaveUp"		size="0,0,40,40" title="&#x2192;" options="fontoffset" style="KeyArrowR" tooltip="Octave Up"/>
+					<Space width="10"/>
+					<Space width="32"/>
+					<Toggle name="@keys[1]" title="2" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Toggle name="@keys[3]" title="3" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Space width="40"/>
+					<Toggle name="@keys[6]" title="5" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Toggle name="@keys[8]" title="6" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Toggle name="@keys[10]" title="7" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Space width="40"/>
+					<Toggle name="@keys[13]" title="9" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+					<Toggle name="@keys[15]" title="0" width="40" height="40" options="fontoffset" style="KeyBlack"/>
+				</Horizontal>
+				<Horizontal margin="0" spacing="-3">
+					<Toggle name="sustain" title="&#x21E5;" width="80" height="40" options="fontoffset" style="KeySustain" tooltip="Sustain">
+						<Toggle name="sustain" title="Sustain" width="80" height="40" options="fontoffset transparent" style="KeySustainText" tooltip="Sustain"/>
+					</Toggle>
+					<Space width="20"/>
+					<Toggle name="@keys[0]" titlename="@labels[0]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[2]" titlename="@labels[2]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[4]" titlename="@labels[4]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[5]" titlename="@labels[5]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[7]" titlename="@labels[7]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[9]" titlename="@labels[9]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[11]" titlename="@labels[11]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[12]" titlename="@labels[12]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[14]" titlename="@labels[14]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+					<Toggle name="@keys[16]" titlename="@labels[16]" width="40" height="40" options="fontoffset" style="KeyWhite"/>
+				</Horizontal>
+				<Horizontal margin="0" spacing="1">
+<!--					<Label title="Sustain" size="0,81,70,18" options="transparent fittext" style="QWERTYDimmedText"/>-->
+				</Horizontal>
+			</Vertical>
+		</Form>
+		
+	</Forms>
+</Skin>

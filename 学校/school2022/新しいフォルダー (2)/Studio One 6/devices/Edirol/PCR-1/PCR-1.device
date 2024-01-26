@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Edirol"
+	name="PCR-1"
+	
+	classID="{BCB09242-F02F-4410-A7C4-EB6644A6ED20}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="PCR-1.surface.xml"
+	
+	imageFile="PCR-1.png"
+	textFile="PCR-1.txt"
+	/>

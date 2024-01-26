@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Keyfax"
+	name="Phatboy"
+	
+	classID="{F510474B-72F0-4ce1-98B6-A4092046B001}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="Phatboy.surface.xml"
+	
+	imageFile="Phatboy.png"
+	textFile="Phatboy.txt"
+	/>

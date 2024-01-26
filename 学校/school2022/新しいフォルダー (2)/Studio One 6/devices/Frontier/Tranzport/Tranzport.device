@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Frontier"
+	name="TranzPort"
+	
+	classID="{C5C0608A-E247-4451-8583-98D4CBEEB864}"
+	category="Surface"
+	
+	nativeCode="JSControlSurfaceDevice"
+	classFile="TranzportMidiDevice.js"
+	classFile.functionName="createTranzportDeviceInstance"
+	
+	surfaceFile="Tranzport.surface.xml"
+	scriptFile="TranzportComponent.js"
+	scriptFile.functionName="createTranzportComponentInstance"
+
+	imageFile="Tranzport.png"
+	textFile="Tranzport.txt"
+
+	detectorPortName="TranzPort"
+/>

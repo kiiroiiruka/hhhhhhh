@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Peavey"
+	name="StudioMix"
+	
+	classID="{9E3B21DC-1AF4-4a05-B610-CB6F624B5320}"
+	category="Surface"
+	
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="StudioMix.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="StudioMix.png"
+	textFile="StudioMix.txt"
+	/>

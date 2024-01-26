@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Create Content"/>
+	<Attribute id="Document:SubTitle" value="Create a podcast with or without video"/>
+	<Attribute id="Document:Description" value="Record and produce online content such as audiobooks, voice-over and podcasts - with or without video."/>
+	<Attribute id="Document:Template" value="Create Content.data"/>
+	<Attribute id="Document:DocumentEventHandler" value="{1EEF7646-946E-4E84-8880-0A5A67C89E2B}"/>
+	<Attribute id="Document:Icon" value="icons/CreateContent.svg"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.AudioEditing"/>
+	<Attribute id="Document:MenuPriority" value="40"/>
+	<Attribute id="Document:Options" value="defaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Content erstellen"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Einen Podcast mit oder ohne Video erstellen"/>
+		<Attribute id="Document:LocalizedDescription" value="Aufnehmen und Produzieren von Online-Content wie Hörbücher, Podcasts oder Begleitkommentare - mit oder ohne Video."/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Crear contenido"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Crear un podcast con o sin vídeo"/>
+		<Attribute id="Document:LocalizedDescription" value="Grabe y produzca contenidos en línea, como audiolibros, voice-over y podcasts, con o sin vídeo."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Créer du contenu"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Créer un podcast avec ou sans vidéo"/>
+		<Attribute id="Document:LocalizedDescription" value="Enregistrer et produire du contenu en ligne comme des livres audio, des voix off et des podcasts avec ou sans vidéo."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Crea contenuto"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Crea un Podcast con o senza video"/>
+		<Attribute id="Document:LocalizedDescription" value="Registra e produci contenuti online come audiolibri, voice-over e podcast con o senza video."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="コンテンツを作成"/>
+		<Attribute id="Document:LocalizedSubTitle" value="ビデオあり/なしのポッドキャストを作成"/>
+		<Attribute id="Document:LocalizedDescription" value="オーディオブック、ボイスオーバー、ポッドキャストなどのオンラインコンテンツ（ビデオあり/なし）を録音、制作しましょう"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="콘텐츠 만들기"/>
+		<Attribute id="Document:LocalizedSubTitle" value="비디오 포함/비포함 팟캐스트 만들기"/>
+		<Attribute id="Document:LocalizedDescription" value="오디오북, 보이스오버, 팟캐스트 등의 온라인 콘텐츠를 영상을 포함하거나 포함하지 않은 형식으로 레코딩하여 제작"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Criar Conteúdo"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Criar um podcast com ou sem vídeo"/>
+		<Attribute id="Document:LocalizedDescription" value="Grave e produza conteúdo online como livros em áudio, dublagens e entrevistas, com ou sem vídeo."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="创建内容"/>
+		<Attribute id="Document:LocalizedSubTitle" value="创建一个有或没有视频的播客"/>
+		<Attribute id="Document:LocalizedDescription" value="录制和制作在线内容，如有声读物、配音和播客--有或没有视频。"/>
+	<?language?>
+
+</DocumentTemplate>

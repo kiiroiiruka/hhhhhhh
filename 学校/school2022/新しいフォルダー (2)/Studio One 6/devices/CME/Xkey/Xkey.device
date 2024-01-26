@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="CME"
+	name="Xkey"
+	
+	classID="{5866E0A0-9F39-4CAC-A371-72F7E98306C7}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	
+	imageFile="Xkey.png"
+	textFile="Xkey.txt"
+	
+	detectorPortName="Xkey,Xkey37"
+	
+	/>

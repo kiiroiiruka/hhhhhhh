@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="X-Session Pro"
+	
+	classID="{88A03FD5-73F0-47bf-B7FC-CF133E87ECDC}"
+	category="Surface"
+	
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="X-Session Pro.xml"
+	
+	imageFile="X-Session Pro.png"
+	textFile="X-Session Pro.txt"
+	/>

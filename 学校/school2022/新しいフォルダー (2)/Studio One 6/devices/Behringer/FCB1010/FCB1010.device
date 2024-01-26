@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Behringer"
+	name="FCB1010"
+
+	classID="{9C9341F6-2102-4233-92E7-BC5147F21CEE}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="FCB1010.surface.xml"
+
+	imageFile="FCB1010.png"
+	textFile="FCB1010.txt"
+
+	skinFile="skin/"
+	formName="FCB1010"
+/>

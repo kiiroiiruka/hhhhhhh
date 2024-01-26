@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Keystation Pro 88"
+	
+	classID="{A36EF150-A004-4a1d-B6FD-617101EEE171}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="KSPro88.surface.xml"
+	
+	imageFile="KSPro88.png"
+	textFile="KSPro88.txt"
+	/>

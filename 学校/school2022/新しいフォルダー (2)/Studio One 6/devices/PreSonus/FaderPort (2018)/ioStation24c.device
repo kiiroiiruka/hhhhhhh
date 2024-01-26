@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="ioStation 24c"
+	
+	classID="{4C899680-C5BF-4514-9F7D-5A71E4EA831A}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+	classFile="Shared/FP2MidiDevice.js"
+	classFile.functionName="createFP2DeviceInstance"
+	
+	surfaceFile="Shared/FP2.surface.xml"
+	scriptFile="Shared/FP2Component.js"
+	scriptFile.functionName="createFP2ComponentInstance"
+	
+	imageFile="ioStation 24c/ioStation24c.png"
+	textFile="ioStation 24c/ioStation24c.txt"
+
+	skinFile="ioStation 24c/skin/"
+	formName="FaderPort2"
+
+	detectorPortName="ioStation 24c"
+	hostDataFile="ioStation 24c/ioStation24c.surfacedata"
+/>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Native Instruments"
+	name="Komplete Kontrol S"
+	
+	classID="{3975D10A-7AB7-4E7C-82D6-BCD868F20DC1}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	surfaceFile="Keyboard/KompleteKontrolS.surface.xml"
+
+	detectorPortName="Komplete Kontrol - 1,KOMPLETE KONTROL S88 MK2,KOMPLETE KONTROL S61 MK2,KOMPLETE KONTROL S49 MK2,KOMPLETE KONTROL S25 MK2"
+	imageFile="Shared/KompleteKontrolSMk2.png"
+	textFile="Keyboard/KompleteKontrol.txt"
+	hostDataFile="Keyboard/KompleteKontrolS.surfacedata"
+
+	skinFile="Shared/skin/"
+	formName="KompleteKontrol_S"
+/>

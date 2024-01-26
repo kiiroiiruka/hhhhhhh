@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="CME"
+	name="UF-New Series"
+	
+	classID="{AAB89470-4F14-4170-BEFF-13C24EEB6EFF}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="UF-New.surface.xml"
+	
+	imageFile="UF50.png"
+	textFile="UF-New.txt"
+/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="KORG"
+	name="nanoKONTROL"
+	
+	classID="{35F2A30D-070D-4ca0-97C3-1D2C6FCF11F1}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="nanoKONTROL.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="nanoKONTROL.png"
+	textFile="nanoKONTROL.txt"
+/>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstallManifest>
+	<InstallFile>
+		 <ExcludedApp id="studioapp.free"/>
+		 <RequiredApp id="studioapp.*" minVersion="6.0.0.0" maxVersion="*"/>
+		 <RequiredFramework id="ccl-abi" minVersion="21" maxVersion="21"/>
+  </InstallFile>	
+</InstallManifest>

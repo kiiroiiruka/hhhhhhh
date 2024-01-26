@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!--  16 x FADER -->
+        <!-- ******************************************************************************************** -->
+		<Control name="fader[0]" title="Fader 1" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="0"/>
+		</Control>	
+		
+		<Control name="fader[1]" title="Fader 2" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="1"/>
+		</Control>	
+		
+		<Control name="fader[2]" title="Fader 3" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="2"/>
+		</Control>	
+
+		<Control name="fader[3]" title="Fader 4" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="3"/>
+		</Control>	
+
+		<Control name="fader[4]" title="Fader 5" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="4"/>
+		</Control>	
+
+		<Control name="fader[5]" title="Fader 6" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="5"/>
+		</Control>	
+
+		<Control name="fader[6]" title="Fader 7" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="6"/>
+		</Control>	
+
+		<Control name="fader[7]" title="Fader 8" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="7"/>
+		</Control>	
+
+		<Control name="fader[8]" title="Fader 9" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="8"/>
+		</Control>	
+
+		<Control name="fader[9]" title="Fader 10" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="9"/>
+		</Control>	
+
+		<Control name="fader[10]" title="Fader 11" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="10"/>
+		</Control>	
+
+		<Control name="fader[11]" title="Fader 12" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="11"/>
+		</Control>	
+
+		<Control name="fader[12]" title="Fader 13" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="12"/>
+		</Control>	
+
+		<Control name="fader[13]" title="Fader 14" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="13"/>
+		</Control>
+		
+		<Control name="fader[14]" title="Fader 15" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="14"/>
+		</Control>
+		
+		<Control name="fader[15]" title="Fader 16" options="receive public" type="fader">
+			<MidiMessage status="Controller" address="7" channel="15"/>
+		</Control>
+		
+	</Controls>
+	
+</ControlSurface>

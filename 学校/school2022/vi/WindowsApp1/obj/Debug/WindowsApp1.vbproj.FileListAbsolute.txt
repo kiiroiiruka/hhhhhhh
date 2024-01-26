@@ -1,0 +1,12 @@
+U:\school2022\vi\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+U:\school2022\vi\WindowsApp1\bin\Debug\WindowsApp1.exe
+U:\school2022\vi\WindowsApp1\bin\Debug\WindowsApp1.pdb
+U:\school2022\vi\WindowsApp1\bin\Debug\WindowsApp1.xml
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.exe
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.xml
+U:\school2022\vi\WindowsApp1\obj\Debug\WindowsApp1.pdb

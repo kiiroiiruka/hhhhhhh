@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="AKAI"
+	name="MPD26"
+	
+	classID="{23BF2DC5-1F44-43fc-9CB6-D09537E59BF5}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MPD26.surface.xml"
+	
+	imageFile="MPD26.png"
+	textFile="MPD26.txt"
+/>

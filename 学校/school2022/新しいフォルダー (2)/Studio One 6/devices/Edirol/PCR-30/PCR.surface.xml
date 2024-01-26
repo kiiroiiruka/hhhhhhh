@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="control[0]" title="R1" options="receive public">
+			<MidiMessage status="Controller" address="#4A"/>
+		</Control>	
+		
+		<Control name="control[1]" title="R2" options="receive public">
+			<MidiMessage status="Controller" address="#47"/>
+		</Control>	
+
+		<Control name="control[2]" title="R3" options="receive public">
+			<MidiMessage status="Controller" address="#4C"/>
+		</Control>	
+
+		<Control name="control[3]" title="R4" options="receive public">
+			<MidiMessage status="Controller" address="#4D"/>
+		</Control>	
+
+		<Control name="control[4]" title="R5" options="receive public">
+			<MidiMessage status="Controller" address="#4E"/>
+		</Control>	
+
+		<Control name="control[5]" title="R6" options="receive public">
+			<MidiMessage status="RPN" address="2"/>
+		</Control>	
+
+		<Control name="control[6]" title="R7" options="receive public">
+			<MidiMessage status="RPN" address="1"/>
+		</Control>	
+
+		<Control name="control[7]" title="R8" options="receive public">
+			<MidiMessage status="Controller" address="#0A"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 8 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="S1" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#05"/>
+		</Control>	
+		
+		<Control name="fader[1]" title="S2" type="fader" options="receive public">
+			<MidiMessage status="AfterTouch"/>
+		</Control>	
+
+		<Control name="fader[2]" title="S3" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#49"/>
+		</Control>	
+
+		<Control name="fader[3]" title="S4" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#4B"/>
+		</Control>	
+
+		<Control name="fader[4]" title="S5" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#48"/>
+		</Control>	
+
+		<Control name="fader[5]" title="S6" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#5D"/>
+		</Control>	
+
+		<Control name="fader[6]" title="S7" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#5B"/>
+		</Control>	
+
+		<Control name="fader[7]" title="S8" type="fader" options="receive public">
+			<MidiMessage status="Controller" address="#07"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 6 x  BUTTONS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button[0]" title="B3" type="button" options="receive public">
+			<MidiMessage status="Controller" address="#41"/>
+		</Control>	
+
+		<Control name="button[1]" title="B4" type="button" options="receive">
+			<MidiMessage status="Controller" address="#7F"/>
+		</Control>	
+
+		<Control name="button[2]" title="B5" type="button" options="receive">
+			<MidiMessage status="Controller" address="#7E"/>
+		</Control>
+        <!-- Real Time STOP -->
+		<Control name="button[4]" title="L1" options="receive">
+			<MidiMessage status="#FC"/>
+		</Control>	
+        <!-- Real Time START -->
+		<Control name="button[5]" title="L2" options="receive">
+			<MidiMessage status="#FA"/>
+		</Control>	
+        <!-- Real Time CONTINUE -->
+		<Control name="button[6]" title="L3" options="receive">
+			<MidiMessage status="#FB"/>
+		</Control>	
+	</Controls>
+
+</ControlSurface>

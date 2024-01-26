@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>	
+    <Resources>
+        <Image name="MackieBG" 		url="mackie_hui_bg.png"/>   
+		<Image name="MackieButton"	url="HUIButton.png"	frames="normal pressed"/>		
+	</Resources>	
+	<Styles>		
+		<Style name="MDisplayText">
+            <Font name="textfont" themeid="PresonusUI" size="11" style="bold"/>
+            <Align name="textalign" align="hcenter"/>
+			<Color name="textcolor" color="#5c9dcc"/>
+        </Style>		
+		
+		<Style name="MDisplayTextSmall" inherit="MDisplayText">
+            <Font name="textfont" themeid="PresonusUI" size="10"/>
+        </Style>
+		
+		<Style name="Text">
+			<Font  name="textfont"   themeid="PresonusUI" size="10"/>
+			<Color name="textcolor"  color="black" />
+		</Style>
+	</Styles>
+	
+	<Forms>
+        <!-- ******************************************************************************************** -->
+	    <!-- MACKIE HUI EDITOR -->
+	    <!-- ******************************************************************************************** -->
+
+		<Form name="MackieHUI" width="650" height="180" image="MackieBG" datatarget="ControlSurface/Editor/ControlList">
+			<using controller="ControlSurface/Editor">
+				<View size="32,39,590,125">
+					<Horizontal margin="0" spacing="4" >
+						<!-- CHANNEL STRIPS -->
+						<foreach variable="$index" count="8">
+							<Vertical margin="0" spacing="6">
+								<using controller="textCell[$index]">
+									<TextBox name="controlValue" width="70" height="16" options="transparent fittext composited" style="MDisplayText"/>
+								</using>
+								<using controller="editorCell[$index]">
+									<TextBox name="controlValue" width="70" height="16" options="transparent fittext composited" style="MDisplayTextSmall"/>
+								</using>
+							</Vertical>
+						</foreach>
+					</Horizontal>
+					<Horizontal size="40,70,550,24" spacing="49" margin="0">
+					<using controller="F1">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F2">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F3">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F4">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F5">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F6">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F7">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>						
+					<using controller="F8">
+						<Button  name="controlValue"	image="MackieButton"	width="25"	height="24"/>
+					</using>
+				</Horizontal>				
+				
+				<Horizontal size="0,99,590,18" spacing="2" margin="0">
+					<using controller="F1">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F2">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F3">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F4">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F5">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F6">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F7">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>						
+					<using controller="F8">
+						<TextBox  name="paramTitle"	style="Text"	options="transparent fittext composited"	width="72"	height="18"/>
+					</using>
+				</Horizontal>
+				</View>
+			</using>
+		</Form>
+	</Forms>
+</Skin>

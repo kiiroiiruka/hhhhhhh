@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<Files>
+		<File url="MackieShared.surface.xml"/>
+	</Files>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<include template="PlugControlMapping"/>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			<include template="ChannelStripAliasMapping"/>
+		</Global>
+        
+		<!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+
+			<!-- 8 Channel Strips -->
+			<PlacementBank target="RemoteBank" pagesize="8" name="ChannelBankElement">			
+				<include template="AllChannelStrips"/>
+			</PlacementBank>
+						
+			<!-- Selected channel -->
+			<ScrollBank target="FollowBank" pagesize="1" name="FocusBankElement">
+				<Strip onConnect="onConnectFocusChannel">				
+					<include template="FocusChannelInsertsAndSends"/>
+				</Strip>
+			</ScrollBank>
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

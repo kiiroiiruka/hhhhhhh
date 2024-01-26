@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SurfaceData surfaceID="{45D10559-C951-4D5E-ADA0-F86A6D9F591F}" revision="1">
+	<SurfaceDeviceAssignment deviceID="{7AB144CA-3F02-427D-BA9A-58A7AF476234}" friendlyName="UserCommandAssignment">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="commandSection0.command0" value="View|Inspector"/>
+				<Association key="commandSection0.command1" value="View|Editor"/>
+				<Association key="commandSection0.command2" value="View|Console"/>
+				<Association key="commandSection0.command3" value="View|Browser"/>
+				<Association key="commandSection0.command4" value="Transport|Record"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+</SurfaceData>

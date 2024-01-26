@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Native Instruments"
+	name="Komplete Kontrol DAW"
+	
+	classID="{7CAE15FA-04E8-41CB-9FAE-E3F96490D956}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+	classFile="DAW/KompleteKontrolMIDIDevice.js"
+	classFile.functionName="createKompleteKontrolDeviceInstance"
+	
+	surfaceFile="DAW/KompleteKontrol.surface.xml"
+	scriptFile="DAW/KompleteKontrolComponent.js"
+	scriptFile.functionName="createKompleteKontrolComponentInstance"
+		
+	detectorPortName="Komplete Kontrol DAW - 1,Komplete Kontrol A DAW,Komplete Kontrol M DAW"
+	imageFile="Shared/KompleteKontrolDAW.png"
+	textFile="DAW/KompleteKontrolDAW.txt"
+	
+	skinFile="Shared/skin/"
+	formName="KompleteKontrol_DAW"
+/>

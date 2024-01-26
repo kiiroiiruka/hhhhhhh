@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ControlSurface>
+
+		<Controls>
+
+				<!-- Rotarys R1 to R9 -->
+				<Control name="Encoder[0]" title="[R1]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#10"/>
+				</Control>
+				<Control name="Encoder[1]" title="[R2]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#10"/>
+				</Control>
+				<Control name="Encoder[2]" title="[R3]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="2" address="#10"/>
+				</Control>
+				<Control name="Encoder[3]" title="[R4]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="3" address="#10"/>
+				</Control>
+				<Control name="Encoder[4]" title="[R5]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="4" address="#10"/>
+				</Control>
+				<Control name="Encoder[5]" title="[R6]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="5" address="#10"/>
+				</Control>
+				<Control name="Encoder[6]" title="[R7]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="6" address="#10"/>
+				</Control>
+				<Control name="Encoder[7]" title="[R8]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="7" address="#10"/>
+				</Control>
+				<Control name="Encoder[8]" title="[R9]" type="knob" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#12"/>
+				</Control>
+
+				<!-- Pads / Buttons A1 to B9 -->
+				<Control name="ButtonA[0]" title="[A1]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#50"/>
+				</Control>
+				<Control name="ButtonA[1]" title="[A2]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#50"/>
+				</Control>
+				<Control name="ButtonA[2]" title="[A3]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="2" address="#50"/>
+				</Control>
+				<Control name="ButtonA[3]" title="[A4]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="3" address="#50"/>
+				</Control>
+				<Control name="ButtonA[4]" title="[A5]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="4" address="#50"/>
+				</Control>
+				<Control name="ButtonA[5]" title="[A6]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="5" address="#50"/>
+				</Control>
+				<Control name="ButtonA[6]" title="[A7]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="6" address="#50"/>
+				</Control>
+				<Control name="ButtonA[7]" title="[A8]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="7" address="#50"/>
+				</Control>
+				<Control name="ButtonA[8]" title="[A9]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#53"/>
+				</Control>
+				<Control name="ButtonB[0]" title="[B1]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#51"/>
+				</Control>
+				<Control name="ButtonB[1]" title="[B2]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#51"/>
+				</Control>
+				<Control name="ButtonB[2]" title="[B3]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="2" address="#51"/>
+				</Control>
+				<Control name="ButtonB[3]" title="[B4]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="3" address="#51"/>
+				</Control>
+				<Control name="ButtonB[4]" title="[B5]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="4" address="#51"/>
+				</Control>
+				<Control name="ButtonB[5]" title="[B6]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="5" address="#51"/>
+				</Control>
+				<Control name="ButtonB[6]" title="[B7]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="6" address="#51"/>
+				</Control>
+				<Control name="ButtonB[7]" title="[B8]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="7" address="#51"/>
+				</Control>
+				<Control name="ButtonB[8]" title="[B9]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#53"/>
+				</Control>
+
+				<!-- Sliders S1 to S9 -->
+				<Control name="Slider[0]" title="[S1]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#11"/>
+				</Control>
+				<Control name="Slider[1]" title="[S2]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#11"/>
+				</Control>
+				<Control name="Slider[2]" title="[S3]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="2" address="#11"/>
+				</Control>
+				<Control name="Slider[3]" title="[S4]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="3" address="#11"/>
+				</Control>
+				<Control name="Slider[4]" title="[S5]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="4" address="#11"/>
+				</Control>
+				<Control name="Slider[5]" title="[S6]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="5" address="#11"/>
+				</Control>
+				<Control name="Slider[6]" title="[S7]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="6" address="#11"/>
+				</Control>
+				<Control name="Slider[7]" title="[S8]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="7" address="#11"/>
+				</Control>
+				<Control name="Slider[8]" title="[S9]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#12"/>
+				</Control>
+
+				<!-- Cross Fader H1 -->
+				<Control name="Crossfader1" title="[H1]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#13"/>
+				</Control>
+				<!-- Cross Fader H2 -->
+				<Control name="Crossfader2" title="[H2]" type="fader" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#13"/>
+				</Control>
+				
+				<!-- Buttons C1 to C3 -->
+				<Control name="ButtonC[0]" title="[C1]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="0" address="#52"/>
+				</Control>
+				<Control name="ButtonC[1]" title="[C2]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="1" address="#52"/>
+				</Control>
+				<Control name="ButtonC[2]" title="[C3]" type="button" options="receive public">
+					<MidiMessage status="#B0" channel="2" address="#52"/>
+				</Control>
+
+				<!-- PCR Value Encoder-->
+				<Control name="dial" title="[VALUE]" type="relative" options="receive">
+					<MidiMessage status="#B0" channel="8" address="#53" options="signed"/>
+				</Control>
+
+				<!-- PCR V-Link Transport Controls -->
+				<Control name="RTZButton" title="[L1]" type="button" options="receive">
+					<MidiMessage status="#B0" channel="8" address="#52"/>
+				</Control>
+				<Control name="stopButton" title="[L2]" type="button" options="receive">
+					<MidiMessage status="#B0" channel="13" address="#52"/>
+				</Control>
+				<Control name="playButton" title="[L3]" type="button" options="receive">
+					<MidiMessage status="#B0" channel="14" address="#52"/>
+				</Control>
+				<Control name="recordButton" title="[L4]" type="button" options="receive">
+					<MidiMessage status="#B0" channel="10" address="#52"/>
+				</Control>
+
+		</Controls>
+
+    <!-- ******************************************************************************************** -->
+    <!-- SURFACE MAPPINGS -->
+    <!-- ******************************************************************************************** -->
+
+
+	<Mappings>
+		
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+
+			<Command control="ButtonC[0]"  command.category="Event"             command.name="Quantize"/>
+			<Command control="ButtonC[1]"  command.category="Edit"              command.name="Delete"/>
+			<Command control="ButtonC[2]"  command.category="Track"             command.name="Solo"/>
+		
+		</Global>
+        
+		
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+        <DeviceMapping device="TransportPanel">
+
+          
+
+		<!--	<Relative control="dial" param="freeCursorTime"/> -->
+
+            <Toggle control="playButton"   param="start"/>
+            <Toggle control="stopButton"   param="stop"/>
+            <Toggle control="recordButton" param="record"/>
+            <Touch  control="RTZButton"    param="returnToZero"/>
+
+        </DeviceMapping>
+
+    </Mappings>
+
+</ControlSurface>

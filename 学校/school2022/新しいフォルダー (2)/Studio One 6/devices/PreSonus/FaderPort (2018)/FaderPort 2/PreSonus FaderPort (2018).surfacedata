@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SurfaceData surfaceID="{D69AA983-2E81-447B-AA92-A11F53987681}" revision="1">
+	<SurfaceDeviceAssignment deviceID="{11111111-1111-1111-1111-111111111111}" friendlyName="static">
+		<List x:id="pages">
+			<SurfaceAssignmentPage>
+				<Association key="footSwitch" value="param:///CommandTable/Transport.Record"/>
+				<Association key="masterButton" value="param:///CommandTable/View.Inspector"/>
+				<Association key="clickButton" value="param:///CommandTable/View.Editor"/>
+				<Association key="sectionButton" value="param:///CommandTable/View.Console"/>
+				<Association key="markerButton" value="param:///CommandTable/View.Browser"/>
+			</SurfaceAssignmentPage>
+		</List>
+	</SurfaceDeviceAssignment>
+</SurfaceData>

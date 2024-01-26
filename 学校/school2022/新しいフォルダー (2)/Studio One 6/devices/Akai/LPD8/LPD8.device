@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="AKAI"
+	name="LPD8"
+	
+	classID="{5DA74756-14D4-46ea-AA18-226FDFC4AB9E}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="LPD8.surface.xml"
+	
+	imageFile="LPD8.png"
+	textFile="LPD8.txt"
+	
+/>

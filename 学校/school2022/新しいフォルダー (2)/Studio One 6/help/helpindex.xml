@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpCatalog>
+  <HelpReference id="OfflineActivation" file="Offline Activation Guide.pdf" dest="OfflineActivation" />
+  <HelpReference id="FaderPort" file="FaderPort Series - Studio One Guide.pdf" dest="FaderPort" />
+</HelpCatalog>

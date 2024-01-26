@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="ATOM"
+	
+	classID="{A1A967C3-516A-49FE-96DB-7B535DAB9888}"
+	category="Keyboard"
+	nativeCode="JSKeyboardDevice"
+	classFile="ATOM/ATOMMidiDevice.js"
+	classFile.functionName="createATOMDeviceInstance"
+	
+	surfaceFile="ATOM/ATOM.surface.xml"
+	scriptFile="ATOM/ATOMComponent.js"
+	scriptFile.functionName="createATOMComponentInstance"
+		
+	imageFile="ATOM/ATOM.png"
+	textFile="ATOM/ATOM.txt"
+	
+	skinFile="ATOM/skin/"
+	formName="Atom"
+	
+	focusMappingPageCount="4"
+	globalMappingPageCount="4"
+	
+	detectorPortName="ATOM"
+	hostDataFile="ATOM/ATOM.surfacedata"
+/>

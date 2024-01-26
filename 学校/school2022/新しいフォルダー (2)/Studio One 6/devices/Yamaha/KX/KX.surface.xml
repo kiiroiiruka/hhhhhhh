@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+<!-- No Filter for the CCs so that they can be passed through to the Plugins. Use DAW Remote to Control Studio One! -->	
+	
+</ControlSurface>

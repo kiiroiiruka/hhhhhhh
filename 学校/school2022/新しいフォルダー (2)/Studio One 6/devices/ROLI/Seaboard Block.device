@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="ROLI"
+	name="Seaboard Block"
+	
+	classID="{5D2EC35A-05DA-4162-8E62-2D8063DC9E52}"
+	category="Keyboard"
+	nativeCode="KeyboardDevice"
+	mpeDevice="1"
+	
+	surfaceFile=""
+		
+	imageFile="Seaboard Block.png"
+	textFile="Seaboard Block.txt"
+	
+	skinFile=""
+	formName=""
+	
+	detectorPortName="Seaboard Block"
+	hostDataFile=""
+/>

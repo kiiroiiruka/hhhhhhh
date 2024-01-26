@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+	    <!-- ******************************************************************************************** -->
+        <!-- 6 x KNOBS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="K1" options="receive public">
+			<MidiMessage status="#B0" address="#03"/>
+		</Control>
+		<Control name="knob[1]" title="K2" options="receive public">
+			<MidiMessage status="#B0" address="#09"/>
+		</Control>
+		<Control name="knob[2]" title="K3" options="receive public">
+			<MidiMessage status="#B0" address="#0E"/>
+		</Control>
+		<Control name="knob[3]" title="K4" options="receive public">
+			<MidiMessage status="#B0" address="#0F"/>
+		</Control>
+		<Control name="knob[4]" title="K5" options="receive public">
+			<MidiMessage status="#B0" address="#10"/>
+		</Control>
+		<Control name="knob[5]" title="K6" options="receive public">
+			<MidiMessage status="#B0" address="#11"/>
+		</Control>
+	
+	    <!-- ******************************************************************************************** -->
+        <!-- 6 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="F1" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#14"/>
+		</Control>
+		<Control name="fader[1]" title="F2" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#15"/>
+		</Control>
+		<Control name="fader[2]" title="F3" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#16"/>
+		</Control>
+		<Control name="fader[3]" title="F4" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#17"/>
+		</Control>
+		<Control name="fader[4]" title="F5" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#18"/>
+		</Control>
+		<Control name="fader[5]" title="F6" type="fader" options="receive public">
+			<MidiMessage status="#B0" address="#19"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+        <!-- TRANSPORT BUTTONS -->
+        <!-- ******************************************************************************************** -->
+	
+		<Control name="rewindButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="5"/>
+		</Control>
+		<Control name="ffButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="4"/>
+		</Control>
+		<Control name="stopButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="1"/>
+		</Control>
+		<Control name="playButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="2"/>
+		</Control>		
+		<Control name="deferedPlayButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="3"/>
+		</Control>		
+		<Control name="recordButton" type="trigger" options="receive">
+			<MidiMessage status="MMC" address="6"/>
+		</Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<Command control="playButton"			command.category="Transport" command.name="Start"/>
+			<Command control="deferedPlayButton"	command.category="Transport" command.name="Start"/>
+			<Command control="stopButton"			command.category="Transport" command.name="Stop"/>
+			<Command control="recordButton"			command.category="Transport" command.name="Record"/>
+			<Command control="rewindButton"			command.category="Transport" command.name="Rewind"/>
+			<Command control="ffButton"				command.category="Transport" command.name="Forward"/>
+			
+		</DeviceMapping>
+		
+	</Mappings>
+
+</ControlSurface>

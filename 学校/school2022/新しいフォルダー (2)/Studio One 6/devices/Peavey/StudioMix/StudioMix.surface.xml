@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 18 x ENCODER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="encoderA[0]" title="1" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="500" options="reversed"/>
+		</Control>	
+		
+		<Control name="encoderA[1]" title="2" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="501" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[2]" title="3" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="502" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[3]" title="4" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="503" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[4]" title="5" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="504" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[5]" title="6" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="505" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[6]" title="7" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="506" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[7]" title="8" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="507" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderA[8]" title="M" options="receive public" type="relative">
+			<MidiMessage status="NRPN" address="4500" options="reversed"/>
+		</Control>	
+		
+		<Control name="encoderB[0]" title="Enc B1" options="receive">
+			<MidiMessage status="NRPN" address="1500" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[1]" title="Enc B2" options="receive">
+			<MidiMessage status="NRPN" address="1501" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[2]" title="Enc B3" options="receive">
+			<MidiMessage status="NRPN" address="1502" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[3]" title="Enc B4" options="receive">
+			<MidiMessage status="NRPN" address="1503" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[4]" title="Enc B5" options="receive">
+			<MidiMessage status="NRPN" address="1504" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[5]" title="Enc B6" options="receive">
+			<MidiMessage status="NRPN" address="1505" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[6]" title="Enc B7" options="receive">
+			<MidiMessage status="NRPN" address="1506" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[7]" title="Enc B8" options="receive">
+			<MidiMessage status="NRPN" address="1507" options="reversed"/>
+		</Control>	
+
+		<Control name="encoderB[8]" title="Enc BM" options="receive">
+			<MidiMessage status="NRPN" address="4501" options="reversed"/>
+		</Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- 9 x BUTTON -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button[0]" title="B1" options="receive">
+			<MidiMessage status="NRPN" address="2500" resolution="2" options="reversed"/>
+		</Control>	
+		
+		<Control name="button[1]" title="B2" options="receive">
+			<MidiMessage status="NRPN" address="2501" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[2]" title="B3" options="receive">
+			<MidiMessage status="NRPN" address="2502" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[3]" title="B4" options="receive">
+			<MidiMessage status="NRPN" address="2503" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[4]" title="B5" options="receive">
+			<MidiMessage status="NRPN" address="2504" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[5]" title="B6" options="receive">
+			<MidiMessage status="NRPN" address="2505" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[6]" title="B7" options="receive">
+			<MidiMessage status="NRPN" address="2506" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[7]" title="B8" options="receive">
+			<MidiMessage status="NRPN" address="2507" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="button[8]" title="BM" options="receive">
+			<MidiMessage status="NRPN" address="4502" resolution="2" options="reversed"/>
+		</Control>			
+
+	    <!-- ******************************************************************************************** -->
+        <!-- 9 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="Fader 1" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3500" channel="15"/>
+		</Control>	
+		
+		<Control name="fader[1]" title="Fader 2" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3501" channel="15"/>
+		</Control>	
+
+		<Control name="fader[2]" title="Fader 3" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3502" channel="15"/>
+		</Control>	
+
+		<Control name="fader[3]" title="Fader 4" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3503" channel="15"/>
+		</Control>	
+
+		<Control name="fader[4]" title="Fader 5" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3504" channel="15"/>
+		</Control>	
+
+		<Control name="fader[5]" title="Fader 6" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3505" channel="15"/>
+		</Control>	
+
+		<Control name="fader[6]" title="Fader 7" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3506" channel="15"/>
+		</Control>	
+
+		<Control name="fader[7]" title="Fader 8" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="3507" channel="15"/>
+		</Control>	
+
+		<Control name="masterFader" title="Fader M" options="receive transmit nofeedback">
+			<MidiMessage status="NRPN" address="4503" channel="15"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- 5 x AUX BUTTON -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="auxButton[0]" title="Button 1" options="receive">
+			<MidiMessage status="NRPN" address="5000" resolution="2" options="reversed"/>
+		</Control>	
+		
+		<Control name="auxButton[1]" title="Button 2" options="receive">
+			<MidiMessage status="NRPN" address="5001" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="auxButton[2]" title="Button 3" options="receive">
+			<MidiMessage status="NRPN" address="5002" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="auxButton[3]" title="Button 4" options="receive">
+			<MidiMessage status="NRPN" address="5003" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="auxButton[4]" title="Button 5" options="receive">
+			<MidiMessage status="NRPN" address="5004" resolution="2" options="reversed"/>
+		</Control>	
+
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT BUTTONS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="rewindButton" title="Rewind" options="receive">
+			<MidiMessage status="NRPN" address="6000" resolution="2" options="reversed"/>
+		</Control>	
+		
+		<Control name="ffButton" title="FF" options="receive">
+			<MidiMessage status="NRPN" address="6001" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="playButton" title="Play" options="receive">
+			<MidiMessage status="NRPN" address="6003" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="stopButton" title="Stop" options="receive">
+			<MidiMessage status="NRPN" address="6002" resolution="2" options="reversed"/>
+		</Control>	
+
+		<Control name="recordButton" title="Record" options="receive">
+			<MidiMessage status="NRPN" address="6004" resolution="2" options="reversed"/>
+		</Control>
+		
+		<Control name="mmcButton" title="Internal/MMC" options="receive">
+			<MidiMessage status="NRPN" address="6005" resolution="2" options="reversed"/>
+		</Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- WHEEL AND SHUTTLE-->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="wheel" title="Jog" options="receive">
+			<MidiMessage status="NRPN" address="7000" options="reversed"/>
+		</Control>	
+		
+		<Control name="shuttle" title="Shuttle" options="receive">
+			<MidiMessage status="NRPN" address="7001" options="reversed"/>
+		</Control>
+		
+	</Controls>	
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+ 		<!-- ******************************************************************************************** -->
+        <!-- WINDOW MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="WindowManager">
+
+			<Toggle control="auxButton[0]" param="MixerConsole"/>
+
+		</DeviceMapping>
+		
+		<!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole">
+			<PlacementBank target="RemoteBank" pagesize="8">
+				<!-- The Channel Strips -->
+				<foreach variable="$channel" count="8">
+					<Strip> 
+						<Value    control="fader[$channel]"    param="volume"/>
+						<Relative control="encoderB[$channel]" param="pan"/>
+						<Toggle   control="button[$channel]"   param="recordArmed"/>
+					</Strip>
+				</foreach>
+				<ScrollButton control="auxButton[3]" direction="pageleft"/>
+				<ScrollButton control="auxButton[4]" direction="pageright"/>	
+			</PlacementBank>
+			
+			<!-- Master Strip -->
+			<Bank target="MasterBank">
+				<Strip>
+					<Value  control="masterFader" param="volume"/>
+					<Toggle control="button[8]"   param="mute"/>				
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->		
+
+		<DeviceMapping device="TransportPanel">
+		
+			<Relative control="wheel"      param="freeCursorTime"/>
+		
+			<Toggle control="mmcButton"    param="loop"/>
+
+			<Touch control="ffButton"      param="fastForward"/>
+				
+			<Touch control="rewindButton"  param="rewind"/>
+			
+			<Toggle control="stopButton"   param="stop"/>
+			
+			<Toggle control="playButton"   param="start"/>
+			
+			<Toggle control="recordButton" param="record"/>							
+
+		</DeviceMapping>
+	</Mappings>		
+		
+</ControlSurface>

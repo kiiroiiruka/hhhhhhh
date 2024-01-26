@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- FADER/ENCODER/FOOTSWITCH -->
+        <!-- ******************************************************************************************** -->
+
+		<!-- Note: Fader and Encoder are using custom MIDI handlers provided by the native code back-end. -->
+		<Control name="fader" title="Fader" type="fader" options="receive transmit public"/>
+		
+		<Control name="encoder" title="Encoder" type="relative" options="receive public"/>
+
+		<Control name="faderTouch" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="127" resolution="2"/>
+		</Control>
+
+		<Control name="footSwitch" title="Footswitch" type="button" options="receive public">
+			<MidiMessage status="PolyPressure" address="126" resolution="2"/>
+		</Control>
+		
+		<!-- Virtual display for FaderPort editor -->
+		<Control name="faderDisplay" title="Display" type="textdisplay" options="transmit public"/>
+
+		<!-- ******************************************************************************************** -->
+        <!-- BUTTONS -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="punchButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="1" resolution="2"/>
+		</Control>
+
+		<Control name="shiftButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="2" resolution="2"/>
+		</Control>
+
+		<Control name="rewindButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="3" resolution="2"/>
+		</Control>
+
+		<Control name="ffButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="4" resolution="2"/>
+		</Control>
+
+		<Control name="stopButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="5" resolution="2"/>
+		</Control>
+		
+		<Control name="playButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="6" resolution="2"/>
+		</Control>
+
+		<Control name="recordButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="7" resolution="2"/>
+		</Control>
+
+		<Control name="recordArmButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="16" resolution="2"/>
+		</Control>
+
+		<Control name="soloButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="17" resolution="2"/>
+		</Control>
+
+		<Control name="muteButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="18" resolution="2"/>
+		</Control>
+
+		<Control name="loopButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="15" resolution="2"/>
+		</Control>
+
+		<Control name="leftButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="19" resolution="2"/>
+		</Control>
+
+		<Control name="bankButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="20" resolution="2"/>
+		</Control>
+
+		<Control name="rightButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="21" resolution="2"/>
+		</Control>
+
+		<Control name="touchButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#08" resolution="2"/>
+		</Control>
+
+		<Control name="writeButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#09" resolution="2"/>
+		</Control>
+
+		<Control name="readButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#0A" resolution="2"/>
+		</Control>
+
+		<Control name="offButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#17" resolution="2"/>
+		</Control>
+
+		<Control name="userButton" title="User Button"  type="trigger" options="receive public">
+			<MidiMessage status="PolyPressure" address="#00" resolution="2"/>
+		</Control>
+
+		<Control name="mixButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#0B" resolution="2"/>
+		</Control>
+
+		<Control name="projButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#0C" resolution="2"/>
+		</Control>		
+
+ 		<Control name="trnsButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#0D" resolution="2"/>
+		</Control>		
+
+		<Control name="undoButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#0E" resolution="2"/>
+		</Control>
+
+ 		<Control name="outputButton" type="trigger" options="receive">
+			<MidiMessage status="PolyPressure" address="#16" resolution="2"/>
+		</Control>		
+
+        <!-- ******************************************************************************************** -->
+        <!-- LEDs -->
+        <!-- ******************************************************************************************** -->
+
+ 		<Control name="recordLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="0" resolution="2"/>
+		</Control>
+
+ 		<Control name="playLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="1" resolution="2"/>
+		</Control>
+
+ 		<Control name="stopLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="2" resolution="2"/>
+		</Control>
+
+ 		<Control name="ffLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="3" resolution="2"/>
+		</Control>
+
+ 		<Control name="rewindLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="4" resolution="2"/>
+		</Control>
+
+		<Control name="shiftLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="5" resolution="2"/>
+		</Control>
+
+		<Control name="punchLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="6" resolution="2"/>
+		</Control>
+
+		<Control name="loopLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="8" resolution="2"/>
+		</Control>
+
+		<Control name="touchLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="15" resolution="2"/>
+		</Control>
+
+		<Control name="readLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#0D" resolution="2"/>
+		</Control>
+		
+		<Control name="writeLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#0E" resolution="2"/>
+		</Control>
+
+		<Control name="offLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#10" resolution="2"/>
+		</Control>
+
+		<Control name="bankLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="19" resolution="2"/>
+		</Control>
+
+		<Control name="muteLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="21" resolution="2"/>
+		</Control>
+
+		<Control name="soloLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="22" resolution="2"/>
+		</Control>
+
+		<Control name="recordArmLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="23" resolution="2"/>
+		</Control>
+
+		<Control name="userLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="7" resolution="2"/>
+		</Control>
+
+		<Control name="mixLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#0C" resolution="2"/>
+		</Control>
+
+		<Control name="projLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#0B" resolution="2"/>
+		</Control>		
+
+ 		<Control name="trnsLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#0A" resolution="2"/>
+		</Control>		
+
+		<Control name="undoLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#09" resolution="2"/>
+		</Control>
+
+ 		<Control name="outputLED" options="transmit">
+			<MidiMessage status="PolyPressure" address="#11" resolution="2"/>
+		</Control>		
+
+	</Controls>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- TEMPLATE DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Templates>
+	
+		<!-- ******************************************************************************************** -->
+        <!-- CHANNEL STRIP TEMPLATE -->
+        <!-- ******************************************************************************************** -->
+
+		<Template name="ChannelStrip">
+			<String control="faderDisplay" param="label"/> <!-- virtual channel label -->
+		
+			<Value control="fader" param="volume"/>
+			<Touch control="faderTouch" param="volume"/>
+			
+			<Variant control="shiftButton" options="lock" statusled="shiftLED">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Relative control="encoder" param="pan"/>				
+				</Group>
+				<!-- [Shift] pressed -->
+				<Group>
+
+				</Group>
+			</Variant>
+			
+			<Toggle control="muteButton" param="mute" options="momentary"/>
+			<Value  control="muteLED"    param="mute"/>
+			
+			<Toggle control="soloButton" param="solo" options="momentary"/>
+			<Value  control="soloLED"    param="solo"/>
+
+			<Toggle control="recordArmButton" param="recordArmed"/>
+			<Value  control="recordArmLED"    param="recordArmed"/>
+			
+			<!-- Automation Mode -->
+			<Radio control="readButton"  param="automationMode" value="1" options="toggle"/>
+			<Radio control="readLED"     param="automationMode" value="1"/>
+
+			<Radio control="writeButton" param="automationMode" value="4" options="toggle"/>
+			<Radio control="writeLED"    param="automationMode" value="4"/>
+
+			<Radio control="touchButton" param="automationMode" value="2" options="toggle"/>
+			<Radio control="touchLED"    param="automationMode" value="2"/>
+		</Template>
+
+	</Templates>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<Strip name="fader">
+					<Value control="fader" param="value" options="above"/>
+					<Touch control="faderTouch" param="value" options="above"/>
+				</Strip>
+				
+				<Strip name="encoder">
+					<Variant control="shiftButton" statusled="shiftLED" options="lock">
+						<!-- [Shift] not pressed -->
+						<Group>
+					<Relative control="encoder" param="value" options="above"/>
+						</Group>
+					
+						<!-- [Shift] pressed -->
+						<Group>
+			
+						</Group>
+					</Variant>
+				</Strip>
+				
+				<Strip name="userButton">
+					<Variant control="shiftButton" statusled="shiftLED" options="lock">
+						<!-- [Shift] not pressed -->
+						<Group>
+					<Toggle control="userButton" param="value" options="above"/>
+					<Value control="userLED" param="value" options="above"/>
+						</Group>
+					
+						<!-- [Shift] pressed -->
+						<Group>
+			
+						</Group>
+					</Variant>
+				</Strip>
+				
+				<Strip name="footSwitch">
+					<Value control="footSwitch" param="value" options="above"/>
+				</Strip>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+        <!-- GLOBAL MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<Global>
+			<Variant control="shiftButton" options="lock" statusled="shiftLED">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Command control="undoButton" command.category="Edit" command.name="Undo"/>	
+				</Group>
+				
+				<!-- [Shift] pressed -->
+				<Group>
+					<Command control="undoButton" command.category="Edit" command.name="Redo"/>
+				</Group>
+			</Variant>
+
+			<!-- Fader Mode (fader is turned on/off by firmware!) -->
+			<Variant control="offButton" statusled="offLED" options="lock"/>
+			
+			<!-- Interaction with FaderPort script code: -->
+			<Radio control="bankButton" param="bankList" value="1" options="toggle"/>
+			<Radio control="bankLED" param="bankList" value="1"/>
+			<Radio control="outputButton" param="bankList" value="2" options="toggle"/>
+			<Radio control="outputLED" param="bankList" value="2"/>
+
+		</Global>
+        
+        <!-- ******************************************************************************************** -->
+        <!-- WINDOW MAPPING -->
+        <!-- ******************************************************************************************** -->
+		
+		<DeviceMapping>
+			<using device="device:///WindowManager">
+				<Toggle control="mixButton" param="Console"/>
+				<Value control="mixLED" param="Console"/>
+
+				<Toggle control="projButton" param="Editor"/>
+				<Value control="projLED" param="Editor"/>
+				
+				<Toggle control="trnsButton" param="Browser"/>
+				<Value control="trnsLED" param="Browser"/>
+			</using>
+		</DeviceMapping>
+
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<ScrollBank target="FollowBank" pagesize="8" name="ChannelBankElement">
+				<!-- The Channel Strip -->
+				<Strip> 
+					<include template="ChannelStrip"/>
+				</Strip>
+
+				<Variant control="shiftButton" statusled="shiftLED" options="lock">
+					<!-- [Shift] not pressed -->
+					<Group>
+						<ScrollButton control="leftButton"  direction="stepleft"/>
+						<ScrollButton control="rightButton" direction="stepright"/>
+					</Group>
+					
+					<!-- [Shift] pressed -->
+					<Group>
+						<Command control="leftButton"  command.category="Navigation" command.name="Previous Track"/>
+						<Command control="rightButton" command.category="Navigation" command.name="Next Track"/>
+					</Group>
+				</Variant>
+			</ScrollBank>
+			<Variant control="shiftButton" statusled="shiftLED" options="lock">
+				<!-- [Shift] not pressed -->
+				<Group>
+			<Toggle control="userButton"   param="anySolo"/>
+			<Value  control="userLED"      param="anySolo"/>			
+				</Group>
+					
+				<!-- [Shift] pressed -->
+				<Group>
+			
+				</Group>
+			</Variant>
+	
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+				
+			<Toggle control="playButton"   param="start"/>
+			<Value  control="playLED"      param="start"/>
+						
+			<Toggle control="stopButton"   param="stop"/>
+			<Value  control="stopLED"      param="stop"/>
+			
+			<Toggle control="recordButton" param="record"/>
+			<Toggle control="footSwitch"   param="record"/>	
+			<Value  control="recordLED"    param="record"/>
+
+			<Value  control="punchLED"     param="punch"/>
+
+			<Value  control="loopLED"      param="loop"/>
+
+			<Value control="ffLED"         param="fastForward"/>
+			<Value control="rewindLED"     param="rewind"/>
+			
+			<Variant control="shiftButton" options="lock" statusled="shiftLED">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Touch control="ffButton" param="fastForward"/>
+					
+					<Variant control="stopButton">
+						<Touch control="rewindButton" param="rewind"/>
+						<Push  control="rewindButton" param="returnToZero"/> <!-- [Stop] + [Rewind] = Return To Zero -->
+					</Variant>
+
+					<Toggle control="punchButton" param="punch"/>
+					<Toggle control="loopButton" param="loop"/>
+				</Group>
+				
+				<!-- [Shift] pressed -->
+				<Group>
+					<Command control="loopButton"   command.category="Marker"    command.name="Insert"/>
+					<Command control="punchButton"  command.category="Marker"    command.name="Goto Previous Marker"/>
+					<Command control="userButton"   command.category="Marker"    command.name="Goto Next Marker"/>
+					<Command control="rewindButton" command.category="Transport" command.name="Goto Loop Start"/>
+					<Command control="ffButton"     command.category="Transport" command.name="Goto Loop End"/>
+					<!-- Use pan encoder for timeline positioning when shift is on -->
+					<Relative control="encoder" param="freeCursorTime"/>
+				</Group>
+			</Variant>
+		</DeviceMapping>
+
+	</Mappings>
+</ControlSurface>

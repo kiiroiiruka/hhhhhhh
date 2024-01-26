@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 12 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="1 A" options="receive public" type="knob"> <MidiMessage status="Controller" address="24"/> </Control>
+		<Control name="knob[1]" title="High A" options="receive public" type="knob"> <MidiMessage status="Controller" address="27"/> </Control>
+		<Control name="knob[2]" title="High B" options="receive public" type="knob"> <MidiMessage status="Controller" address="34"/> </Control>
+		<Control name="knob[3]" title="1 B" options="receive public" type="knob"> <MidiMessage status="Controller" address="31"/> </Control>
+		<Control name="knob[4]" title="2 A" options="receive public" type="knob"> <MidiMessage status="Controller" address="25"/> </Control>
+		<Control name="knob[5]" title="Mid A" options="receive public" type="knob"> <MidiMessage status="Controller" address="28"/> </Control>
+		<Control name="knob[6]" title="Mid B" options="receive public" type="knob"> <MidiMessage status="Controller" address="35"/> </Control>
+		<Control name="knob[7]" title="2 B" options="receive public" type="knob"> <MidiMessage status="Controller" address="32"/> </Control>
+		<Control name="knob[8]" title="3 A" options="receive public" type="knob"> <MidiMessage status="Controller" address="26"/> </Control>
+		<Control name="knob[9]" title="Low A" options="receive public" type="knob"> <MidiMessage status="Controller" address="29"/> </Control>
+		<Control name="knob[10]" title="Low B" options="receive public" type="knob"> <MidiMessage status="Controller" address="36"/> </Control>
+		<Control name="knob[11]" title="3 B" options="receive public" type="knob"> <MidiMessage status="Controller" address="33"/> </Control>
+
+
+        <!-- ******************************************************************************************** -->
+        <!-- 4 x FADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[0]" title="Pitch A" options="receive public" type="fader"> <MidiMessage status="Controller" address="12"/> </Control>
+		<Control name="fader[1]" title="Volume A" options="receive public" type="fader"> <MidiMessage status="Controller" address="11"/> </Control>
+		<Control name="fader[2]" title="Volume B" options="receive public" type="fader"> <MidiMessage status="Controller" address="14"/> </Control>
+		<Control name="fader[3]" title="Pitch B" options="receive public" type="fader"> <MidiMessage status="Controller" address="15"/> </Control>
+
+
+        <!-- ******************************************************************************************** -->
+        <!-- 10 x BUTTON -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="button[0]" title="Left A" options="receive public" type="trigger"> <MidiMessage status="#90" address="46"/> </Control>
+		<Control name="button[1]" title="Right A" options="receive public" type="trigger"> <MidiMessage status="#90" address="43"/> </Control>
+		<Control name="button[2]" title="Left B" options="receive public" type="trigger"> <MidiMessage status="#90" address="56"/> </Control>
+		<Control name="button[3]" title="Right B" options="receive public" type="trigger"> <MidiMessage status="#90" address="57"/> </Control>
+		<Control name="button[4]" title="Play A" options="receive public" type="trigger"> <MidiMessage status="#90" address="70"/> </Control>
+		<Control name="button[5]" title="Cue A" options="receive public" type="trigger"> <MidiMessage status="#90" address="58"/> </Control>
+		<Control name="button[6]" title="Play B" options="receive public" type="trigger"> <MidiMessage status="#90" address="69"/> </Control>
+		<Control name="button[7]" title="Cue B" options="receive public" type="trigger"> <MidiMessage status="#90" address="59"/> </Control>
+		<Control name="button[8]" title="Phone A" options="receive public" type="trigger"> <MidiMessage status="#90" address="44"/> </Control>
+		<Control name="button[9]" title="Phone B" options="receive public" type="trigger"> <MidiMessage status="#90" address="45"/> </Control>
+
+        <!-- ******************************************************************************************** -->
+        <!-- CROSSFADER -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="fader[4]" title="X-Fader" options="receive public" type="fader"> <MidiMessage status="Controller" address="17"/> </Control>
+		<Control name="fader[5]" title="Inv X-Fader" options="receive public" type="fader"> <MidiMessage status="Controller" address="20"/> </Control>
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+		<!-- ******************************************************************************************** -->
+        <!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+        <!-- ******************************************************************************************** -->
+
+		<!--
+		<GenericMapping>
+			<Bank>
+				<Strip name="knob[0]">
+						<Value control="knob[0]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[1]">
+						<Value control="knob[1]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[2]">
+						<Value control="knob[2]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[3]">
+						<Value control="knob[3]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[4]">
+						<Value control="knob[4]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[5]">
+						<Value control="knob[5]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[6]">
+						<Value control="knob[6]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[7]">
+						<Value control="knob[7]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[8]">
+						<Value control="knob[8]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[9]">
+						<Value control="knob[9]" param="value" options="above"/>
+				</Strip>				
+				<Strip name="knob[10]">
+						<Value control="knob[10]" param="value" options="above"/>
+				</Strip>
+				<Strip name="knob[11]">
+						<Value control="knob[11]" param="value" options="above"/>
+				</Strip>				
+
+				<Strip name="fader[0]">
+						<Value control="fader[0]" param="value" options="above"/>
+				</Strip>
+				<Strip name="fader[1]">
+						<Value control="fader[1]" param="value" options="above"/>
+				</Strip>				
+				<Strip name="fader[2]">
+						<Value control="fader[2]" param="value" options="above"/>
+				</Strip>
+				<Strip name="fader[3]">
+						<Value control="fader[2]" param="value" options="above"/>
+				</Strip>
+				
+				<Strip name="button[0]">
+						<Toggle control="button[0]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[1]">
+						<Toggle control="button[1]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[2]">
+						<Toggle control="button[2]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[3]">
+						<Toggle control="button[3]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[4]">
+						<Toggle control="button[4]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[5]">
+						<Toggle control="button[5]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[6]">
+						<Toggle control="button[6]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[7]">
+						<Toggle control="button[7]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[8]">
+						<Toggle control="button[8]" param="value" options="above"/>
+				</Strip>
+				<Strip name="button[9]">
+						<Toggle control="button[9]" param="value" options="above"/>
+				</Strip>
+				
+				<Strip name="fader[4]">
+						<Value control="fader[4]" param="value" options="above"/>
+				</Strip>
+				<Strip name="fader[5]">
+						<Value control="fader[5]" param="value" options="above"/>
+				</Strip>
+
+			</Bank>
+		</GenericMapping>
+		-->
+		
+        <!-- ******************************************************************************************** -->
+        <!-- MIXER MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole">
+
+		</DeviceMapping>
+		
+        <!-- ******************************************************************************************** -->
+        <!-- TRANSPORT MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+		</DeviceMapping>
+		
+		<!-- ******************************************************************************************** -->
+        <!-- METRONOME MAPPING -->
+        <!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

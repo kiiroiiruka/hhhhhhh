@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaInformation>
+	<Attribute id="Package:ID" value="presonus.studioone.soundcloud.$platform"/>
+	<Attribute id="Package:Name" value="SoundCloud Support"/>
+	<Attribute id="Package:Description" value="Support for SoundCloud uploads and downloads"/>
+	<Attribute id="Package:Version" value="3.0.0.$revision"/>
+	<Attribute id="Package:Vendor" value="PreSonus Software Ltd."/>
+	<Attribute id="Package:Website" value="https://www.presonus.software"/>
+	
+	<?language de?>
+	<Attribute id="Package:LocalizedName" value="SoundCloud-Unterstützung"/>
+	<Attribute id="Package:LocalizedDescription" value="Unterstützung von Uploads und Downloads über SoundCloud"/>
+	<?language es?>
+	<Attribute id="Package:LocalizedName" value="Soporte SoundCloud"/>
+	<Attribute id="Package:LocalizedDescription" value="Soporte para subidas y descargas SoundCloud"/>
+	<?language fr?>
+	<Attribute id="Package:LocalizedName" value="Prise en charge de SoundCloud"/>
+	<Attribute id="Package:LocalizedDescription" value="Prise en charge des transferts bilatéraux avec SoundCloud"/>
+	<?language ja?>	
+	<Attribute id="Package:LocalizedName" value="SoundCloud対応"/>
+	<Attribute id="Package:LocalizedDescription" value="SoundCloudアップロードとダウンロード対応"/>
+	<?language pt?>	
+	<Attribute id="Package:LocalizedName" value="Suporte SoundCloud"/>
+	<Attribute id="Package:LocalizedDescription" value="Suporte a downloads e uploads para o SoundCloud"/>	
+	<?language zh?>	
+	<Attribute id="Package:LocalizedName" value="支持SoundCloud"/>
+	<Attribute id="Package:LocalizedDescription" value="支持SoundCloud上传及下载"/>
+	<?language?>
+</MetaInformation>

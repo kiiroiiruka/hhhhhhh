@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SurfaceData surfaceID="{5E5EB1BD-D2EC-45B6-88B5-71F1FE12D5CB}">
+	<SurfaceDeviceAssignment deviceID="{22222222-2222-2222-2222-222222222222}" friendlyName="Channel Controls">
+		<Association key="vpot[0]" value="AudioChannelMacroControlSet/float-1"/>
+		<Association key="recordButton[0]" value="AudioChannelMacroControlSet/bool-1"/>
+		<Association key="recordButton[1]" value="AudioChannelMacroControlSet/bool-2"/>
+		<Association key="recordButton[2]" value="AudioChannelMacroControlSet/bool-3"/>
+		<Association key="recordButton[3]" value="AudioChannelMacroControlSet/bool-4"/>
+		<Association key="recordButton[4]" value="AudioChannelMacroControlSet/bool-5"/>
+		<Association key="recordButton[5]" value="AudioChannelMacroControlSet/bool-6"/>
+		<Association key="recordButton[6]" value="AudioChannelMacroControlSet/bool-7"/>
+		<Association key="recordButton[7]" value="AudioChannelMacroControlSet/bool-8"/>
+		<Association key="vpot[1]" value="AudioChannelMacroControlSet/float-2"/>
+		<Association key="vpot[2]" value="AudioChannelMacroControlSet/float-3"/>
+		<Association key="vpot[3]" value="AudioChannelMacroControlSet/float-4"/>
+		<Association key="vpot[4]" value="AudioChannelMacroControlSet/float-5"/>
+		<Association key="vpot[5]" value="AudioChannelMacroControlSet/float-6"/>
+		<Association key="vpot[6]" value="AudioChannelMacroControlSet/float-7"/>
+		<Association key="vpot[7]" value="AudioChannelMacroControlSet/float-8"/>
+	</SurfaceDeviceAssignment>
+	<SurfaceDeviceAssignment deviceID="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}" friendlyName="Multi Instrument">
+		<Association key="vpot[0]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-1"/>
+		<Association key="vpot[1]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-2"/>
+		<Association key="vpot[2]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-3"/>
+		<Association key="vpot[3]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-4"/>
+		<Association key="vpot[4]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-5"/>
+		<Association key="vpot[5]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-6"/>
+		<Association key="vpot[6]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-7"/>
+		<Association key="vpot[7]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/float-8"/>
+		<Association key="recordButton[0]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-1"/>
+		<Association key="recordButton[1]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-2"/>
+		<Association key="recordButton[2]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-3"/>
+		<Association key="recordButton[3]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-4"/>
+		<Association key="recordButton[4]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-5"/>
+		<Association key="recordButton[5]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-6"/>
+		<Association key="recordButton[6]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-7"/>
+		<Association key="recordButton[7]" value="{B9D410AD-E47D-495E-8AEE-10D2B2987CC7}/bool-8"/>
+	</SurfaceDeviceAssignment>
+</SurfaceData>

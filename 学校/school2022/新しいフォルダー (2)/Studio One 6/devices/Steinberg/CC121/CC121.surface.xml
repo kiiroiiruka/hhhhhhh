@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- FADER/ENCODERS -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="fader" title="Fader" type="fader" options="receive transmit">
+			<MidiMessage status="#E0" channel="0"/>
+		</Control>
+
+		<Control name="faderTouch" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#68"/>
+		</Control>
+
+		<Control name="pan" title="Pan" type="relative" options="receive">
+			<MidiMessage status="#B0" address="#10" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[0]" title="EQ 1 Q" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#20" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[1]" title="EQ 2 Q" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#21" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[2]" title="EQ 3 Q" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#22" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[3]" title="EQ 4 Q" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#23" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[4]" title="EQ 1 F" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#30" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[5]" title="EQ 2 F" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#31" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[6]" title="EQ 3 F" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#32" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[7]" title="EQ 4 F" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#33" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[8]" title="EQ 1 G" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#40" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[9]" title="EQ 2 G" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#41" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[10]" title="EQ 3 G" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#42" options="signed plain"/>
+		</Control>
+
+		<Control name="eqKnob[11]" title="EQ 4 G" type="relative" options="receive public pageable">
+			<MidiMessage status="#B0" address="#43" options="signed plain"/>
+		</Control>
+
+		<Control name="valueKnob" title="Value" type="relative" options="receive public">
+			<MidiMessage status="#B0" address="#50" options="signed plain"/>
+		</Control>
+
+		<Control name="AIKnob" title="AI Knob" type="relative" options="receive">
+			<MidiMessage status="#B0" address="#3C" options="signed plain"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- BUTTONS/FOOTSWITCH -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="recordArmButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#00"/>
+		</Control>
+
+		<Control name="soloButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#08"/>
+		</Control>
+
+		<Control name="muteButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#10"/>
+		</Control>
+
+		<Control name="leftButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#30"/>
+		</Control>
+
+		<Control name="rightButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#31"/>
+		</Control>
+
+		<Control name="eButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#33"/>
+		</Control>
+
+		<Control name="fButton[0]" type="trigger" options="receive public">
+			<MidiMessage status="#90" address="#36"/>
+		</Control>
+
+		<Control name="fButton[1]" type="trigger" options="receive public">
+			<MidiMessage status="#90" address="#37"/>
+		</Control>
+
+		<Control name="fButton[2]" type="trigger" options="receive public">
+			<MidiMessage status="#90" address="#38"/>
+		</Control>
+
+		<Control name="fButton[3]" type="trigger" options="receive public">
+			<MidiMessage status="#90" address="#39"/>
+		</Control>
+
+		<Control name="valueButton" type="trigger" options="receive ">
+			<MidiMessage status="#90" address="#3A"/>
+		</Control>
+
+		<Control name="readButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#4A"/>
+		</Control>
+
+		<Control name="writeButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#4B"/>
+		</Control>
+
+		<Control name="loopButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#56"/>
+		</Control>
+
+		<Control name="startButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#58"/>
+		</Control>
+
+		<Control name="endButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5A"/>
+		</Control>
+
+		<Control name="rewindButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5B"/>
+		</Control>
+
+		<Control name="ffButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5C"/>
+		</Control>
+
+		<Control name="stopButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5D"/>
+		</Control>
+
+		<Control name="playButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5E"/>
+		</Control>
+
+		<Control name="recordButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5F"/>
+		</Control>
+
+		<Control name="eqButton[0]" title="EQ 1" type="trigger" options="receive public pageable">
+			<MidiMessage status="#90" address="#70"/>
+		</Control>
+
+		<Control name="eqButton[1]" title="EQ 2" type="trigger" options="receive public pageable">
+			<MidiMessage status="#90" address="#71"/>
+		</Control>
+
+		<Control name="eqButton[2]" title="EQ 3" type="trigger" options="receive public pageable">
+			<MidiMessage status="#90" address="#72"/>
+		</Control>
+
+		<Control name="eqButton[3]" title="EQ 4" type="trigger" options="receive public pageable">
+			<MidiMessage status="#90" address="#73"/>
+		</Control>
+
+		<Control name="eqTypeButton" title="EQ Type" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#74"/>
+		</Control>
+
+		<Control name="allBypassButton" title="All Bypass" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#75"/>
+		</Control>
+
+		<Control name="jogButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#76"/>
+		</Control>
+
+		<Control name="lockButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#77"/>
+		</Control>
+
+		<Control name="inputMonitorButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#78"/>
+		</Control>
+
+		<Control name="openVSTiButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#79"/>
+		</Control>
+
+		<Control name="footSwitch" title="FSW" type="button" options="receive public">
+			<MidiMessage status="#90" address="#3B"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- LEDs -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="recordArmLED" options="transmit">
+			<MidiMessage status="#90" address="#00"/>
+		</Control>
+
+		<Control name="soloLED" options="transmit">
+			<MidiMessage status="#90" address="#08"/>
+		</Control>
+
+		<Control name="muteLED" options="transmit">
+			<MidiMessage status="#90" address="#10"/>
+		</Control>
+
+		<Control name="leftLED" options="transmit">
+			<MidiMessage status="#90" address="#30"/>
+		</Control>
+
+		<Control name="rightLED" options="transmit">
+			<MidiMessage status="#90" address="#31"/>
+		</Control>
+
+		<Control name="eLED" options="transmit">
+			<MidiMessage status="#90" address="#33"/>
+		</Control>
+
+		<Control name="fButtonLED[0]" options="transmit">
+			<MidiMessage status="#90" address="#36"/>
+		</Control>
+
+		<Control name="fButtonLED[1]" options="transmit">
+			<MidiMessage status="#90" address="#37"/>
+		</Control>
+
+		<Control name="fButtonLED[2]" options="transmit">
+			<MidiMessage status="#90" address="#38"/>
+		</Control>
+
+		<Control name="fButtonLED[3]" options="transmit">
+			<MidiMessage status="#90" address="#39"/>
+		</Control>
+
+		<Control name="readLED" options="transmit">
+			<MidiMessage status="#90" address="#4A"/>
+		</Control>
+
+		<Control name="writeLED" options="transmit">
+			<MidiMessage status="#90" address="#4B"/>
+		</Control>
+
+		<Control name="loopLED" options="transmit">
+			<MidiMessage status="#90" address="#56"/>
+		</Control>
+
+		<Control name="rewindLED" options="transmit">
+			<MidiMessage status="#90" address="#5B"/>
+		</Control>
+
+		<Control name="ffLED" options="transmit">
+			<MidiMessage status="#90" address="#5C"/>
+		</Control>
+
+		<Control name="playLED" options="transmit">
+			<MidiMessage status="#90" address="#5E"/>
+		</Control>
+
+		<Control name="recordLED" options="transmit">
+			<MidiMessage status="#90" address="#5F"/>
+		</Control>
+
+		<Control name="eqButtonLED[0]" options="transmit">
+			<MidiMessage status="#90" address="#70"/>
+		</Control>
+
+		<Control name="eqButtonLED[1]" options="transmit">
+			<MidiMessage status="#90" address="#71"/>
+		</Control>
+
+		<Control name="eqButtonLED[2]" options="transmit">
+			<MidiMessage status="#90" address="#72"/>
+		</Control>
+
+		<Control name="eqButtonLED[3]" options="transmit">
+			<MidiMessage status="#90" address="#73"/>
+		</Control>
+
+		<Control name="eqTypeLED" options="transmit">
+			<MidiMessage status="#90" address="#74"/>
+		</Control>
+
+		<Control name="allBypassLED" options="transmit">
+			<MidiMessage status="#90" address="#75"/>
+		</Control>
+
+		<Control name="jogLED" options="transmit">
+			<MidiMessage status="#90" address="#76"/>
+		</Control>
+
+		<Control name="lockLED" options="transmit">
+			<MidiMessage status="#90" address="#77"/>
+		</Control>
+
+		<Control name="inputMonitorLED" options="transmit">
+			<MidiMessage status="#90" address="#78"/>
+		</Control>
+
+		<Control name="openVSTiLED" options="transmit">
+			<MidiMessage status="#90" address="#79"/>
+		</Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- REMOTE CONTROL SECTIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Sections>
+		<GenericSection name="main" rows="3" columns="4">
+			<!-- Q Row -->
+			<Slot control="eqKnob[0]" row="0" column="0"/>
+			<Slot control="eqKnob[1]" row="0" column="1"/>
+			<Slot control="eqKnob[2]" row="0" column="2"/>
+			<Slot control="eqKnob[3]" row="0" column="3"/>
+			<!-- F Row -->
+			<Slot control="eqKnob[4]" row="1" column="0"/>
+			<Slot control="eqKnob[5]" row="1" column="1"/>
+			<Slot control="eqKnob[6]" row="1" column="2"/>
+			<Slot control="eqKnob[7]" row="1" column="3"/>
+			<!-- G Row -->
+			<Slot control="eqKnob[8]" row="2" column="0"/>
+			<Slot control="eqKnob[9]" row="2" column="1"/>
+			<Slot control="eqKnob[10]" row="2" column="2"/>
+			<Slot control="eqKnob[11]" row="2" column="3"/>
+		</GenericSection>
+		<GenericSection name="mainbuttons" rows="1" columns="4">
+			<foreach variable="$i" count="4">
+				<Slot control="eqButton[$i]" row="0" column="$i"/>
+			</foreach>
+		</GenericSection>
+	</Sections>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- Value Knob Modes -->
+		<define name="$KNOB_MODE_ZOOM_X" value="0"/>
+		<define name="$KNOB_MODE_ZOOM_Y" value="1"/>
+		<define name="$KNOB_MODE_ZOOM_DATA" value="2"/>
+		<define name="$KNOB_MODE_PRESET" value="3"/>
+
+		<!-- Knob Precisions -->
+		<define name="$KNOB_PRECISION_MODIFIER" value="60"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank onConnect="onGenericMappingBankConnect">
+				<!-- EQ Encoders 3x4 -->
+				<foreach variable="$i" count="12">
+					<Strip name="eqKnob[$i]">
+						<Relative control="eqKnob[$i]" param="value" precision="$KNOB_PRECISION_MODIFIER"/>
+					</Strip>
+				</foreach>
+				<!-- EQ Buttons -->
+				<foreach variable="$i" count="4">
+					<Strip name="eqButton[$i]">
+						<Toggle control="eqButton[$i]" param="value"/>
+						<Value control="eqButtonLED[$i]" param="value"/>
+					</Strip>
+				</foreach>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- RECENT PARAM MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<!--
+			AI Knob default function: control recent parameter value. Must be overwritten with cursor control
+			when 'Jog' is engaged. Note there is no need to have a <Variant> switch on jogButton here.
+		-->
+		<RecentParamMapping options="locked">
+			<Relative control="AIKnob" param="value" precision="$KNOB_PRECISION_MODIFIER"/>
+		</RecentParamMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- USER COMMAND BUTTONS MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<UserCommandSection name="UserCommands" pages="1">
+			<!-- Trigger commands when valueButton is not pressed. If valueButton is pressed
+				 the function buttons are used to switch between value button modes. -->
+			<Variant control="valueButton" strict="true">
+				<Group value="0">
+					<foreach variable="$i" count="4">
+						<UserCommand control="fButton[$i]"/>
+					</foreach>
+				</Group>
+			</Variant>
+			<UserCommand control="footSwitch"/>
+		</UserCommandSection>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+
+			<Command control="eButton" command.category="Console" command.name="Show Channel Editor"/>
+			<Command control="openVSTiButton" command.category="Console" command.name="Show Instrument Editor"/>
+
+			<!-- Value Knob Modes -->
+			<define name="$KNOB_MODE_ZOOM_X" value="0"/>
+			<define name="$KNOB_MODE_ZOOM_Y" value="1"/>
+			<define name="$KNOB_MODE_ZOOM_DATA" value="2"/>
+			<define name="$KNOB_MODE_PRESET_NAV" value="3"/>
+
+			<Variant control="valueButton" strict="true">
+				<!-- Value knob not pressed. -->
+				<Group value="0">
+					<ParamVariant param="valueKnobMode" strict="true">
+						<Group value="$KNOB_MODE_ZOOM_X">
+							<Command control="valueKnob"
+								command.category="Zoom" command.name="Zoom In"
+								command2.category="Zoom" command2.name="Zoom Out"
+							/>
+						</Group>
+						<Group value="$KNOB_MODE_ZOOM_Y">
+							<Command control="valueKnob"
+								command.category="Zoom" command.name="Zoom In Vertical"
+								command2.category="Zoom" command2.name="Zoom Out Vertical"
+							/>
+						</Group>
+						<Group value="$KNOB_MODE_ZOOM_DATA">
+							<Command control="valueKnob"
+								command.category="Zoom" command.name="Data Zoom In"
+								command2.category="Zoom" command2.name="Data Zoom Out"
+							/>
+						</Group>
+						<Group value="$KNOB_MODE_PRESET_NAV">
+							<Command control="valueKnob"
+								command.category="Presets" command.name="Next"
+								command2.category="Presets" command2.name="Previous"
+							/>
+						</Group>
+					</ParamVariant>
+				</Group>
+				<!-- Value knob pressed. -->
+				<Group value="1">
+					<!-- Set value knob mode. -->
+					<foreach variable="$i" count="4">
+						<Radio control="fButton[$i]" param="valueKnobMode" value="$i"/>
+					</foreach>
+					<!-- Browse Control Link pages. -->
+					<using device="Editor/Paging">
+						<Relative control="valueKnob" param="pageNumber"/>
+					</using>
+				</Group>
+			</Variant>
+
+			<!-- Make function buttons always show current value knob mode. -->
+			<ParamVariant param="valueKnobMode" strict="true">
+				<Group value="$KNOB_MODE_ZOOM_X">
+					<Value control="fButtonLED[0]" param="onLED"/>
+				</Group>
+				<Group value="$KNOB_MODE_ZOOM_Y">
+					<Value control="fButtonLED[1]" param="onLED"/>
+				</Group>
+				<Group value="$KNOB_MODE_ZOOM_DATA">
+					<Value control="fButtonLED[2]" param="onLED"/>
+				</Group>
+				<Group value="$KNOB_MODE_PRESET_NAV">
+					<Value control="fButtonLED[3]" param="onLED"/>
+				</Group>
+			</ParamVariant>
+
+			<!-- Lock button function: lock in AI Knob recent parameter. -->
+			<Toggle control="lockButton" param="lockEncoder"/>
+			<Value control="lockLED" param="lockEncoder"/>
+
+			<!-- LED pressed states. -->
+			<Status control="eButton" control2="eLED"/>
+			<Status control="openVSTiButton" control2="openVSTiLED"/>
+
+			<!-- Bypass all inserts for focus channel. -->
+			<Toggle control="allBypassButton" param="bypassAlias"/>
+			<Value control="allBypassLED" param="bypassAlias"/>
+
+			<!-- Toggle external device editor. -->
+			<using device="Editor">
+				<Toggle control="eqTypeButton" param="open"/>
+				<Value control="eqTypeLED" param="open"/>
+			</using>
+
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<ScrollBank target="FollowBank" pagesize="1" name="FollowBankElement">
+				<Strip onConnect="onConnectFocusChannel">
+					<Value control="fader" param="volume"/>
+					<Touch control="faderTouch" param="volume"/>
+
+					<Relative control="pan" param="pan" precision="$KNOB_PRECISION_MODIFIER"/>
+
+					<Toggle control="muteButton" param="mute" options="momentary"/>
+					<Value control="muteLED" param="mute"/>
+
+					<Toggle control="soloButton" param="solo" options="momentary"/>
+					<Value control="soloLED" param="solo"/>
+
+					<Toggle control="inputMonitorButton" param="monitor"/>
+					<Value control="inputMonitorLED" param="monitor"/>
+
+					<Toggle control="recordArmButton" param="recordArmed"/>
+					<Value control="recordArmLED" param="recordArmed"/>
+
+					<!-- Automation Mode -->
+					<Radio control="readButton" param="automationMode" value="1" options="toggle"/>
+					<Radio control="readLED" param="automationMode" value="1"/>
+					<Radio control="writeButton" param="automationMode" value="4" options="toggle"/>
+					<Radio control="writeLED" param="automationMode" value="4"/>
+				</Strip>
+				<Group>
+					<ScrollButton control="leftButton" direction="stepleft"/>
+					<ScrollButton control="rightButton" direction="stepright"/>
+				</Group>
+			</ScrollBank>
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+			<Toggle control="playButton" param="start"/>
+			<Value control="playLED" param="start"/>
+
+			<Toggle control="stopButton" param="stop"/>
+
+			<Toggle control="recordButton" param="record"/>
+			<Value control="recordLED" param="record"/>
+
+			<Toggle control="loopButton" param="loop"/>
+			<Value control="loopLED" param="loop"/>
+
+			<Touch control="ffButton" param="fastForward"/>
+			<Touch control="rewindButton" param="rewind"/>
+
+			<Command control="startButton" command.category="Transport" command.name="Goto Loop Start"/>
+			<Command control="endButton" command.category="Transport" command.name="Goto Loop End"/>
+
+			<!-- AI Knob: control transport cursor when 'Jog' is engaged, recent param otherwise (see RecentParamMapping). -->
+			<Variant control="jogButton" options="lock" statusled="jogLED" strict="true">
+				<Group value="1">
+					<Relative control="AIKnob" param="freeCursorTime" precision="$KNOB_PRECISION_MODIFIER"/>
+				</Group>
+			</Variant>
+		</DeviceMapping>
+
+	</Mappings>
+</ControlSurface>

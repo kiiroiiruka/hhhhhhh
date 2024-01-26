@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- general modes, keep in sync with FPComponents.js -->
+		<define name="$TRACK_MODE" value="0"/>
+		<define name="$PLUG_MODE" value="1"/>
+		<define name="$SEND_MODE" value="2"/>
+		<define name="$PAN_MODE" value="3"/>
+		<define name="$TIME_MODE" value="4"/>
+		<define name="$CUE_MODE" value="5"/>
+		<define name="$INPUT_GAIN_MODE" value="6"/>
+		<define name="$MACRO_MODE" value="7"/>
+
+		<!-- navigation modes, keep in sync with FPComponents.js, index 6 left out intentionally -->
+		<define name="$NAV_DEFAULT_MODE" value="0"/> <!-- button: none, pseudo mode -->
+		<define name="$NAV_CHANNEL_MODE" value="1"/> <!-- button: "Channel"-->
+		<define name="$NAV_ZOOM_MODE" value="2"/> <!-- button: "Zoom" -->
+		<define name="$NAV_SCROLL_MODE" value="3"/> <!-- button: "Scroll" -->
+		<define name="$NAV_BANK_MODE" value="4"/> <!-- button: "Bank"-->
+		<define name="$NAV_MASTER_MODE" value="5"/> <!-- button: "Master" -->
+		<!-- no assignment for button: "Click" -->
+		<define name="$NAV_SECTION_MODE" value="7"/> <!-- button: "Section" -->
+		<define name="$NAV_MARKER_MODE" value="8"/> <!-- button: "Marker" -->
+		<define name="$NAV_PAGING_MODE" value="9"/> <!-- button: none, pseudo mode -->
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank onConnect="onConnectPlugMapping">
+
+				<foreach variable="$ch" count="$FADER_COUNT">
+					<Strip name="fader[$ch]" onConnect="onConnectPlugControl($ch)"/>
+				</foreach>
+
+				<foreach variable="$ch" count="$FADER_COUNT">
+					<Strip name="selectButton[$ch]" onConnect="onConnectPlugControl($ch)"/>
+				</foreach>
+
+				<Strip name="F1"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F1" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F2"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F2" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F3"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F3" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F4"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F4" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F5"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F5" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F6"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F6" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F7"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F7" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="F8"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="F8" param="value" options="above"/></ParamVariant></Strip>
+
+				<Strip name="touchButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="touchButton" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="writeButton"><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="writeButton" param="value" options="above"/></ParamVariant></Strip>
+				<Strip name="readButton" ><ParamVariant using="@global" param="shiftModifier"><Group/><Toggle control="readButton"  param="value" options="above"/></ParamVariant></Strip>
+
+				<Strip name="footSwitch">
+					<Value control="footSwitch" param="value" options="above"/>
+				</Strip>
+
+			</Bank>
+		</GenericMapping>
+
+		<RecentParamMapping onConnect="onConnectRecentParam"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING (script interaction) -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+
+			<ParamVariant param="shiftModifier">
+				<Toggle control="armButton" param="armMode"/>
+				<Command control="armButton" command.category="Track" command.name="Arm All Audio Tracks"/>
+			</ParamVariant>
+			<Value control="armLED" param="armMode"/>
+
+			<foreach variable="$ch" count="$FADER_COUNT">
+				<PlainValue control="displayMode[$ch]" param="displayMode$ch"/>
+
+				<String control="textCell[$ch][0]" param="display$chLine0"/>
+				<String control="textCell[$ch][1]" param="display$chLine1"/>
+				<String control="textCell[$ch][2]" param="display$chLine2"/>
+				<String control="textCell[$ch][3]" param="display$chLine3"/>
+
+				<Value control="valueBar[$ch]" param="displayValue$ch"/>
+
+				<Value control="fader[$ch]" param="faderValue$ch"/>
+				<Touch control="faderTouch[$ch]" param="faderValue$ch"/>
+				<Invoke control="faderTouch[$ch]" onReceive="onFaderTouched($ch)"/>
+
+				<ParamVariant param="armMode">
+					<Group>
+						<Invoke control="selectButton[$ch]" onReceive="onSelectButtonBeginMode($ch)" priority="-1"/> <!-- called before toggling -->
+						<Toggle control="selectButton[$ch]" param="selectValue$ch"/>
+						<Invoke control="selectButton[$ch]" onReceive="onSelectButtonPressed($ch)" priority="1"/> <!-- called after toggling -->
+						<Value control="selectLED[$ch]" param="selectValue$ch"/>
+						<PlainValue control="selectLEDColor[$ch]" param="selectColor$ch"/>
+					</Group>
+					<Group>
+						<Toggle control="selectButton[$ch]" param="armValue$ch"/>
+						<Value  control="selectLED[$ch]"    param="armValue$ch"/>
+						<PlainValue control="selectLEDColor[$ch]" param="recordArmColor"/>
+					</Group>
+				</ParamVariant>
+			</foreach>
+
+			<Relative control="Encoder" param="encoderValue"/>
+			<DefaultValue control="PushEncoder" param="pushEncoderValue"/> <!-- toggles for audio click on/off -->
+			<Invoke control="Encoder" onReceive="onEncoderInput" priority="1"/> <!-- called after relative input -->
+
+			<Value control="timeCodeOverlay" param="timeCodeMode"/>
+			<PlainValue control="linkLEDColor" param="linkColor"/>
+			<PlainValue control="bypassLEDColor" param="bypassColor"/>
+			<PlainValue control="macroLEDColor" param="macroColor"/>
+
+			<Toggle control="shiftButtonLeft" param="shiftModifier" options="momentary" timeout="250"/>
+			<Toggle control="shiftButtonRight" param="shiftModifier" options="momentary" timeout="250"/>
+			<!-- Sync 'shift pressed' modifier for fader touch reset. -->
+			<Invoke control="shiftButtonLeft" onReceive="onShiftButtonPressed"/>
+			<Invoke control="shiftButtonRight" onReceive="onShiftButtonPressed"/>
+			<Value control="shiftButtonLeftLED" param="shiftModifier"/>
+			<Value control="shiftButtonRightLED" param="shiftModifier"/>
+
+			<ParamVariant param="shiftModifier">
+				<Toggle control="linkButton" param="linkMode"/>
+				<Toggle control="linkButton" param="lockEncoder"/>
+			</ParamVariant>
+			<Value control="linkLED" param="linkMode"/>
+
+			<ParamVariant param="shiftModifier">
+				<Radio control="trackButton" param="assignMode" value="$TRACK_MODE"/>
+				<Radio control="trackButton" param="assignMode" value="$TIME_MODE"/>
+			</ParamVariant>
+			<Radio control="trackLED" param="assignMode" value="0"/>
+			<Invoke control="trackButton" onReceive="onTrackButtonPressed" priority="-1"/> <!-- called before radio selection -->
+
+			<ParamVariant param="shiftModifier">
+			<Radio control="pluginButton" param="assignMode" value="$PLUG_MODE"/>
+				<!-- En-/disable autofill mode -->
+				<using device="Editor/Paging">
+					<Radio control="pluginButton" param="pagingMode" value="2" offvalue="1" options="toggle"/>
+				</using>
+			</ParamVariant>
+			<Radio control="pluginLED" param="assignMode" value="$PLUG_MODE"/>
+			<!-- called before radio selection -->
+			<Invoke control="pluginButton" onReceive="onPlugButtonPressed" priority="-1"/>
+
+			<ParamVariant param="shiftModifier">
+				<Radio control="sendButton" param="assignMode" value="$SEND_MODE"/>
+				<Radio control="sendButton" param="assignMode" value="$CUE_MODE"/>
+			</ParamVariant>
+			<Radio control="sendLED" param="assignMode" value="$SEND_MODE"/> <!-- Do not highlight the send LED when in Cue mix mode. -->
+			<Invoke control="sendButton" onReceive="onSendButtonPressed" priority="-1"/> <!-- called before radio selection -->
+
+			<!-- shift off: pan, shift on: input gain-->
+			<ParamVariant param="shiftModifier">
+				<Radio control="panButton" param="assignMode" value="$PAN_MODE"/>
+				<Radio control="panButton" param="assignMode" value="$INPUT_GAIN_MODE"/>
+			</ParamVariant>
+			<Radio control="panLED" param="assignMode" value="$PAN_MODE"/>
+			<Invoke control="panButton" onReceive="onPanButtonPressed" priority="-1"/>  <!-- called before radio selection -->
+
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<Radio control="macroButton" param="assignMode" value="$MACRO_MODE" options="toggle" offvalue="0"/>
+					<Radio control="macroLED" param="assignMode" value="$MACRO_MODE"/>
+				</Group>
+				<Command control="macroButton" command.category="Console" command.name="Show Channel Editor"/>
+			</ParamVariant>
+
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<Radio control="AudioButton"    param="bankList" value="0"/> <!-- Audio -->
+					<Radio control="VIButton"       param="bankList" value="1"/> <!-- Synths -->
+					<Radio control="BusButton"      param="bankList" value="2"/> <!-- Bus -->
+					<Radio control="VCAButton"      param="bankList" value="3"/> <!-- VCA -->
+					<Radio control="AllButton"      param="bankList" value="4"/> <!-- All -->
+				</Group>
+				<Group>
+					<Radio control="AudioButton"    param="bankList" value="5"/> <!-- Inputs -->
+					<Radio control="VIButton"       param="bankList" value="6"/> <!-- Aux -->
+					<Radio control="BusButton"      param="bankList" value="7"/> <!-- Outputs -->
+					<Radio control="VCAButton"      param="bankList" value="8"/> <!-- FX -->
+					<Radio control="AllButton"      param="bankList" value="9"/> <!-- User -->
+				</Group>
+			</ParamVariant>
+
+			<Radio control="AudioButtonLED" param="bankIndicator" value="0"/>
+			<Radio control="VIButtonLED"    param="bankIndicator" value="1"/>
+			<Radio control="BusButtonLED"   param="bankIndicator" value="2"/>
+			<Radio control="VCAButtonLED"   param="bankIndicator" value="3"/>
+			<Radio control="AllButtonLED"   param="bankIndicator" value="4"/>
+
+			<PlainValue control="AudioButtonLEDColor" param="bankColor"/>
+			<PlainValue control="VIButtonLEDColor"    param="bankColor"/>
+			<PlainValue control="BusButtonLEDColor"   param="bankColor"/>
+			<PlainValue control="VCAButtonLEDColor"   param="bankColor"/>
+			<PlainValue control="AllButtonLEDColor"   param="bankColor"/>
+
+			<Status control="Prev" control2="PrevLED"/>
+			<Status control="Next" control2="NextLED"/>
+
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<Radio control="F1" param="bigEncoderMode" value="$NAV_CHANNEL_MODE" options="toggle" offvalue="0"/> <!-- kChannelMode -->
+					<Radio control="F2" param="bigEncoderMode" value="$NAV_ZOOM_MODE" options="toggle" offvalue="0"/> <!-- kZoomMode -->
+					<Radio control="F3" param="bigEncoderMode" value="$NAV_SCROLL_MODE" options="toggle" offvalue="0"/> <!-- kScrollMode -->
+					<Radio control="F4" param="bigEncoderMode" value="$NAV_BANK_MODE" options="toggle" offvalue="0"/> <!-- kBankMode -->
+					<Radio control="F5" param="bigEncoderMode" value="$NAV_MASTER_MODE" options="toggle" offvalue="0"/> <!-- kMasterMode -->
+					<Radio control="F7" param="bigEncoderMode" value="$NAV_SECTION_MODE" options="toggle" offvalue="0"/> <!-- kSectionMode -->
+					<Radio control="F8" param="bigEncoderMode" value="$NAV_MARKER_MODE" options="toggle" offvalue="0"/> <!-- kMarkerMode -->
+				</Group>
+				<Group/> <!-- radio selection is disabled while Shift is pressed -->
+			</ParamVariant>
+
+			<!-- required for feature 'on F-control pressed, return to track mode when in 'edit plugin' mode. -->
+			<Invoke control="F1" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<Invoke control="F2" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<Invoke control="F3" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<Invoke control="F4" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<!-- skipped F6, do not retun on 'click' -->
+			<Invoke control="F5" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<Invoke control="F7" onReceive="onFunctionButtonPressed" priority="-1"/>
+			<Invoke control="F8" onReceive="onFunctionButtonPressed" priority="-1"/>
+
+			<Radio control="F1LED" param="bigEncoderMode" value="$NAV_CHANNEL_MODE"/> <!-- kChannelMode -->
+			<Radio control="F2LED" param="bigEncoderMode" value="$NAV_ZOOM_MODE"/> <!-- kZoomMode -->
+			<Radio control="F3LED" param="bigEncoderMode" value="$NAV_SCROLL_MODE"/> <!-- kScrollMode -->
+			<Radio control="F4LED" param="bigEncoderMode" value="$NAV_BANK_MODE"/> <!-- kBankMode -->
+			<Radio control="F5LED" param="bigEncoderMode" value="$NAV_MASTER_MODE"/> <!-- kMasterMode -->
+			<Radio control="F7LED" param="bigEncoderMode" value="$NAV_SECTION_MODE"/> <!-- kSectionMode -->
+			<Radio control="F8LED" param="bigEncoderMode" value="$NAV_MARKER_MODE"/> <!-- kMarkerMode -->
+
+			<ParamVariant param="bigEncoderMode">
+
+				<!-- kNavigationMode -->
+				<Group value="$NAV_DEFAULT_MODE">
+					<Command control="Prev" command.category="Navigation" command.name="Left" options="autorepeat"/>
+					<Command control="Next" command.category="Navigation" command.name="Right" options="autorepeat"/>
+					<Command control="PushEncoderBig" command.category="Navigation" command.name="Enter"/>
+					<Command control="EncoderBig"	command.category="Navigation" command.name="Down" 
+													command2.category="Navigation" command2.name="Up"/>
+				</Group>
+
+				<!-- kChannelMode and kBankMode -->
+				<Group value="$NAV_CHANNEL_MODE, $NAV_BANK_MODE">
+					<Invoke control="Prev" onReceive="onPrevButtonPressed"/>
+					<Invoke control="Next" onReceive="onNextButtonPressed"/>
+					<Invoke control="PushEncoderBig" onReceive="onBigEncoderPushed"/>
+					<Command control="EncoderBig"	command.category="Console" command.name="Next Channel"
+													command2.category="Console" command2.name="Previous Channel"/>
+				</Group>
+
+				<!-- kZoomMode -->
+				<Group value="$NAV_ZOOM_MODE">
+					<Command control="Prev" command.category="Zoom" command.name="Zoom Out Vertical" options="autorepeat"/>
+					<Command control="Next" command.category="Zoom" command.name="Zoom In Vertical" options="autorepeat"/>
+					<Command control="EncoderBig"	command.category="Zoom" command.name="Zoom In" 
+													command2.category="Zoom" command2.name="Zoom Out"/>
+					<Command control="PushEncoderBig" command.category="Zoom" command.name="Undo Zoom"/>
+				</Group>
+
+				<!-- kScrollMode -->
+				<Group value="$NAV_SCROLL_MODE">
+					<Command control="Prev" command.category="Navigation" command.name="Previous Track" options="autorepeat"/>
+					<Command control="Next" command.category="Navigation" command.name="Next Track" options="autorepeat"/>
+					<Command control="PushEncoderBig" command.category="View" command.name="Fit Timeline to Contents"/>
+					<using device="device:///TransportPanel">
+						<Relative control="EncoderBig" param="freeCursorTime"/>
+					</using>
+				</Group>
+
+				<!-- kMasterMode -->
+				<Group value="$NAV_MASTER_MODE">
+					<Invoke control="Prev" onReceive="onPrevButtonPressed"/>
+					<Invoke control="Next" onReceive="onNextButtonPressed"/>
+					<using device="device:///MixerConsole">
+						<Bank target="MasterBank" name="MasterBankElement">
+							<Strip>
+								<Relative control="EncoderBig" param="volume"/>
+								<DefaultValue control="PushEncoderBig" param="volume"/>
+							</Strip>
+						</Bank>
+					</using>
+				</Group>
+
+				<!-- kSectionMode -->
+				<Group value="$NAV_SECTION_MODE">
+					<Command control="Prev" command.category="Arranger" command.name="Goto Previous Section" options="autorepeat"/>
+					<Command control="Next" command.category="Arranger" command.name="Goto Next Section" options="autorepeat"/>
+					<!-- Push currently unassigned -->
+					<Command control="EncoderBig"	command.category="Edit" command.name="Nudge" 
+													command2.category="Edit" command2.name="Nudge Back"/>
+				</Group>
+
+				<!-- kMarkerMode -->
+				<Group value="$NAV_MARKER_MODE">
+					<Command control="Prev" command.category="Marker" command.name="Goto Previous Marker" options="autorepeat"/>
+					<Command control="Next" command.category="Marker" command.name="Goto Next Marker" options="autorepeat"/>
+					<Command control="PushEncoderBig" command.category="Marker" command.name="Insert"/>
+					<using device="device:///TransportPanel">
+						<Relative control="EncoderBig" param="freeCursorTime"/>
+					</using>
+				</Group>
+
+				<!-- kPageSelectMode -->
+				<Group value="$NAV_PAGING_MODE">
+					<using device="Editor/Paging">
+						<Push control="Prev" param="prevPage"/>
+						<Push control="Next" param="nextPage"/>
+					</using>
+					<Command control="PushEncoderBig" command.category="Marker" command.name="Insert"/>
+					<using device="device:///TransportPanel">
+						<Relative control="EncoderBig" param="freeCursorTime"/>
+					</using>
+				</Group>
+
+			</ParamVariant>
+
+			<!-- Automation Mode + Bypass -->
+			<ParamVariant param="shiftModifier">
+				<Group>
+					<Toggle control="bypassButton"  param="bypassAlias"/>
+					<Value control="bypassLED"  	param="bypassAlias"/>
+
+					<Radio control="latchButton" param="autoModeAlias" value="3" options="toggle"/>
+					<Radio control="latchLED"    param="autoModeAlias" value="3"/>
+					<!--
+					<Radio control="trimButton"  param="autoModeAlias" value="5" options="toggle"/>
+					<Radio control="trimLED"     param="autoModeAlias" value="5"/>
+					-->
+					<Radio control="offButton"   param="autoModeAlias" value="0" options="toggle"/>
+					<Radio control="offLED"      param="autoModeAlias" value="0"/>
+
+					<Radio control="readButton"  param="autoModeAlias" value="1" options="toggle"/>
+					<Radio control="readLED"     param="autoModeAlias" value="1"/>
+
+					<Radio control="touchButton" param="autoModeAlias" value="2" options="toggle"/>
+					<Radio control="touchLED"    param="autoModeAlias" value="2"/>
+
+					<Radio control="writeButton" param="autoModeAlias" value="4" options="toggle"/>
+					<Radio control="writeLED"    param="autoModeAlias" value="4"/>
+
+					<PlainValue control="latchLEDColor" param="autoLatchColor"/>
+					<PlainValue control="trimLEDColor"  param="autoTrimColor"/>
+					<PlainValue control="offLEDColor"   param="autoOffColor"/>
+
+					<PlainValue control="touchLEDColor" param="autoTouchColor"/>
+					<PlainValue control="writeLEDColor" param="autoWriteColor"/>
+					<PlainValue control="readLEDColor"  param="autoReadColor"/>
+				</Group>
+
+				<Group>
+					<using device="device:///FXMaster">
+						<Toggle control="bypassButton"  param="bypassAll"/>
+						<Value control="bypassLED"  	param="bypassAll"/>
+					</using>
+
+					<Command control="latchButton" command.category="File" command.name="Save"/>
+					<Command control="trimButton"  command.category="Edit" command.name="Redo"/>
+					<Command control="offButton"   command.category="Edit" command.name="Undo"/>
+
+					<Status control="latchButton" control2="latchLED"/>
+					<Status control="trimButton" control2="trimLED"/>
+					<Status control="offButton" control2="offLED"/>
+
+					<Status control="touchButton" control2="touchLED"/>
+					<Status control="writeButton" control2="writeLED"/>
+					<Status control="readButton" control2="readLED"/>
+
+					<PlainValue control="latchLEDColor" param="shiftColor"/>
+					<PlainValue control="trimLEDColor" param="shiftColor"/>
+					<PlainValue control="offLEDColor" param="shiftColor"/>
+
+					<PlainValue control="touchLEDColor" param="shiftColor"/>
+					<PlainValue control="writeLEDColor" param="shiftColor"/>
+					<PlainValue control="readLEDColor"  param="shiftColor"/>
+				</Group>
+			</ParamVariant>
+
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<!-- 8 Channel Strips -->
+			<PlacementBank target="RemoteAllBank" pagesize="$FADER_COUNT" name="ChannelBankElement">
+
+				<foreach variable="$ch" count="$FADER_COUNT">
+					<Strip onConnect="onConnectChannel($ch)">
+
+						<Toggle control="soloButton[$ch]" param="solo" options="momentary"/>
+						<Value  control="soloLED[$ch]" param="solo"/>
+
+						<Toggle control="muteButton[$ch]" param="mute" options="momentary"/>
+						<Value  control="muteLED[$ch]" param="mute"/>
+
+						<Value control="stereo[$ch]"    param="stereo"/>
+						<Value control="meter[$ch][0]"  param="level1"/>
+						<Value control="meter[$ch][1]"  param="level2"/>
+						<Value control="reduction[$ch]" param="reduction"/>
+
+						<Bank target="Sends" name="SendsBankElement">
+							<foreach variable="$sendIndex" count="$FADER_COUNT">
+								<Strip onConnect="onConnectChannelSend($ch,$sendIndex)"/>
+							</foreach>
+						</Bank>
+
+						<Bank target="CueMix" name="CuesBankElement">
+							<foreach variable="$cueIndex" count="$FADER_COUNT">
+								<Strip onConnect="onConnectChannelCue($ch,$cueIndex)"/>
+							</foreach>
+						</Bank>
+
+					</Strip>
+				</foreach>
+
+			</PlacementBank>
+
+			<!-- Selected channel -->
+			<ScrollBank target="FollowBank" pagesize="1" name="FocusBankElement">
+
+				<Strip onConnect="onConnectFocusChannel">
+
+					<!-- Macro controls -->
+					<Bank target="MacroControls" name="MacroBankElement">
+						<!-- float cells -->
+						<foreach variable="$controlIndex" count="$FADER_COUNT">
+							<Strip onConnect="onConnectChannelMacroControl($controlIndex)"/>
+						</foreach>
+						<!-- bool cells -->
+						<foreach variable="$controlIndex" count="$FADER_COUNT">
+							<Strip onConnect="onConnectChannelMacroControl($controlIndex)"/>
+						</foreach>
+					</Bank>
+
+					<!-- Inserts -->
+					<Bank target="Inserts" name="InsertsBankElement">
+						<foreach variable="$insertIndex" count="$FADER_COUNT">
+							<Strip onConnect="onConnectFocusChannelInsert($insertIndex)"/>
+						</foreach>
+					</Bank>
+
+					<!-- Sends -->
+					<Bank target="Sends" name="SendsBankElement">
+						<foreach variable="$sendIndex" count="$FADER_COUNT">
+							<Strip onConnect="onConnectFocusChannelSend($sendIndex)"/>
+						</foreach>
+					</Bank>
+
+					<!-- Cues -->
+					<Bank target="CueMix" name="CuesBankElement">
+						<foreach variable="$cueIndex" count="$FADER_COUNT">
+							<Strip onConnect="onConnectFocusChannelCue($cueIndex)"/>
+						</foreach>
+					</Bank>
+
+				</Strip>
+			</ScrollBank>
+
+			<Toggle control="soloClearButton"  param="anySolo"/>
+			<Value  control="soloClearLED"     param="anySolo"/>
+			<Toggle control="muteClearButton"  param="anyMute"/>
+			<Value  control="muteClearLED"     param="anyMute"/>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel" name="TransportMapping">
+
+			<Toggle control="footSwitch" param="record"/>
+
+			<Segmented control="timeCode" param="primaryTime"/>
+			<PlainValue control="timeCodeFormat" param="primaryTimeFormat"/>
+
+			<!-- <Toggle control="loopButton" param="loop"/> -->
+			<Command control="loopButton" command.category="Transport" command.name="Toggle Loop"/>
+			<Value control="loopLED"     param="loop"/>
+
+			<!-- <Toggle control="playButton"  param="start"/> -->
+			<Command control="playButton" command.category="Transport" command.name="Toggle Start" command.args="Pause=1"/>
+			<Value control="playLED"      param="start"/>
+
+			<!-- <Toggle control="stopButton"  param="stop"/> -->
+			<Command control="stopButton" command.category="Transport" command.name="Stop"/>
+			<Value control="stopLED"      param="stop"/>
+
+			<Value control="recordLED"    param="record"/>
+			<Value control="ffLED"        param="fastForward"/>
+			<Value control="rewindLED"    param="rewind"/>
+
+			<Variant control="rewindButton">
+				<Touch control="ffButton" param="fastForward"/>
+				<Push  control="ffButton" param="returnToZero"/> <!-- [Fast Forward] + [Rewind] = Return To Zero -->
+			</Variant>
+
+			<Touch control="rewindButton"  param="rewind"/>
+			<Toggle control="recordButton" param="record"/>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- METRONOME MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+			<ParamVariant using="@global" param="shiftModifier">
+				<Toggle control="F6" param="clickOn"/>
+			</ParamVariant>
+			<Value control="F6LED" param="clickOn"/>
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

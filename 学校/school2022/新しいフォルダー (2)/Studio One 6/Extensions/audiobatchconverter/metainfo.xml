@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaInformation>
+	<Attribute id="Package:ID" value="presonus.studioone.audiobatchconverter.$platform"/>
+	<Attribute id="Package:ShortID" value="audiobatchconverter"/>
+	<Attribute id="Package:Name" value="Audio Batch Converter"/>
+	<Attribute id="Package:Description" value="Audio Processing and File Conversion Tool"/>
+	<Attribute id="Package:Version" value="1.0.0.$revision"/>
+	<Attribute id="Package:Vendor" value="PreSonus Software Ltd."/>
+	<Attribute id="Package:Website" value="https://www.presonus.software"/>
+
+	<!-- This extension isn't visible directly. User needs to download, install, and activate via "audiobatchproduct". -->	
+	<Attribute id="Extension:Hidden" value="1"/>
+	<Attribute id="Licenser:PurchasedItem" value="1"/>
+	<Attribute id="Licenser:ProductID" value="presonus.studioone.audiobatchproduct"/>
+</MetaInformation>

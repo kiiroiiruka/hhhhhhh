@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="ESI"
+	name="Xjam"
+
+	classID="{6F0C0C1F-909C-4925-A127-C3A7597751A8}"
+	category="Keyboard"
+
+	nativeCode="KeyboardDevice"
+	surfaceFile="Xjam.surface.xml"
+
+	imageFile="Xjam.png"
+	textFile="Xjam.txt"
+
+	skinFile="skin/"
+	formName="Xjam"
+
+	detectorReceivePortName="Xjam"
+/>

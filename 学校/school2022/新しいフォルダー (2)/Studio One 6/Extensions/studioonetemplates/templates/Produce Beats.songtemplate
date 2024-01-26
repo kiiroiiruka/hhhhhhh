@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Produce Beats"/>
+	<Attribute id="Document:SubTitle" value="Build a new beat from scratch"/>
+	<Attribute id="Document:Description" value="Start building a beat from scratch with Patterns using virtual instruments for drums, bass and chords."/>
+	<Attribute id="Document:DocumentEventHandler" value="{229708D1-8918-4FA0-A0F2-0C5A1BA9F87A}"/>
+	<Attribute id="Document:Template" value="Produce Beats.data"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.Complete"/>
+	<Attribute id="Document:Icon" value="icons/ProduceBeats.svg"/>
+	<Attribute id="Document:MenuPriority" value="30"/>
+	<Attribute id="Document:Options" value="DefaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Beats produzieren"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Produzieren Sie einen Beat von Anfang an"/>
+		<Attribute id="Document:LocalizedDescription" value="Produzieren Sie einen Beat von Anfang an mit Patterns erzeugt aus virtuellen Instrumten für Drums, Bass und Akkorde"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Producir ritmos"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Construir un nuevo ritmo desde cero"/>
+		<Attribute id="Document:LocalizedDescription" value="Empiece a construir un ritmo desde cero con Patterns utilizando instrumentos virtuales para la batería, el bajo y los acordes."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Produire des beats"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Créer un nouveau beat à partir de zéro"/>
+		<Attribute id="Document:LocalizedDescription" value="Commencer à construire un beat à partir de zéro avec des patterns en utilisant des instruments virtuels pour la batterie, la basse et les accords."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Produci Beats"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Costruisci un nuovo ritmo"/>
+		<Attribute id="Document:LocalizedDescription" value="Inizia a costruire un ritmo con i Patterns, utilizzando strumenti virtuali per batteria, basso e accordi."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="ビートを生成"/>
+		<Attribute id="Document:LocalizedSubTitle" value="新しいビートをゼロから構築"/>
+		<Attribute id="Document:LocalizedDescription" value="ドラム、ベース、コードにバーチャルインストゥルメントを使用したパターンを用いてゼロからビートを構築しましょう。"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="비트 제작"/>
+		<Attribute id="Document:LocalizedSubTitle" value="새로운 비트 작성"/>
+		<Attribute id="Document:LocalizedDescription" value="가상악기 드럼, 베이스, 코드 패턴을 이용하여 새로운 비트제작 시작"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Produzir Batidas"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Construir nova batida do zero"/>
+		<Attribute id="Document:LocalizedDescription" value="Começar uma batida do zero com Padrões usando instrumentos virtuais para bateria, baixo e acordes."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="制造节拍"/>
+		<Attribute id="Document:LocalizedSubTitle" value="从头开始建立一个新的节拍"/>
+		<Attribute id="Document:LocalizedDescription" value="从头开始建立一个节拍，带有使用虚拟鼓、贝斯和和弦的 Pattern。"/>
+	<?language?>
+
+</DocumentTemplate>

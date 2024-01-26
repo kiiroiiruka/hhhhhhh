@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<!-- ******************************************************************************************** -->
+	<!-- ATOM SQ Device Definition -->
+	<!-- Copyright (c) 2019 PreSonus Software Ltd. -->
+	<!-- ******************************************************************************************** -->
+
+	<DeviceDefinition
+	vendor="PreSonus"
+	name="ATOM SQ"
+
+	classID="{DED30111-D88D-4CAF-BE44-7786CCDB4AA9}"
+	category="Keyboard"
+	nativeCode="JSKeyboardDevice"
+	deviceScriptFile="ATOM SQ/ATOMSQMidiDevice.js"
+	deviceScriptFile.functionName="createATOMSQDeviceInstance"
+
+	surfaceFile="ATOM SQ/ATOM SQ.surface.xml"
+	componentScriptFile="ATOM SQ/ATOMSQComponent.js"
+	componentScriptFile.functionName="createATOMSQComponentInstance"
+
+	focusMappingPageCount="8"
+	globalMappingPageCount="8"
+	autoMappingSupported="1"
+
+	imageFile="ATOM SQ/ATOM SQ.png"
+	textFile="ATOM SQ/ATOM SQ.txt"
+	
+	skinFile="ATOM SQ/skin/"
+	formName="Atom SQ"
+
+	detectorPortName="ATM SQ"
+	hostDataFile="ATOM SQ/ATOM SQ.surfacedata"
+/>

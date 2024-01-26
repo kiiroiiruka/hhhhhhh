@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="AKAI"
+	name="MPKmini"
+	
+	classID="{83B2BD06-5212-4378-AC7A-1D7C390256B4}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MPKmini.surface.xml"
+	
+	imageFile="MPKmini.png"
+	textFile="MPKmini.txt"
+	
+/>

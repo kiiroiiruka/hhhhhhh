@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!--  16 x DIAL -->
+        <!-- ******************************************************************************************** -->
+		<Control name="dial[0]" title="Dial 1" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="0"/>
+		</Control>	
+		
+		<Control name="dial[1]" title="Dial 2" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="1"/>
+		</Control>	
+		
+		<Control name="dial[2]" title="Dial 3" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="2"/>
+		</Control>	
+
+		<Control name="dial[3]" title="Dial 4" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="3"/>
+		</Control>	
+
+		<Control name="dial[4]" title="Dial 5" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="4"/>
+		</Control>	
+
+		<Control name="dial[5]" title="Dial 6" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="5"/>
+		</Control>	
+
+		<Control name="dial[6]" title="Dial 7" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="6"/>
+		</Control>	
+
+		<Control name="dial[7]" title="Dial 8" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="7"/>
+		</Control>	
+
+		<Control name="dial[8]" title="Dial 9" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="8"/>
+		</Control>	
+
+		<Control name="dial[9]" title="Dial 10" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="9"/>
+		</Control>	
+
+		<Control name="dial[10]" title="Dial 11" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="10"/>
+		</Control>	
+
+		<Control name="dial[11]" title="Dial 12" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="11"/>
+		</Control>	
+
+		<Control name="dial[12]" title="Dial 13" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="12"/>
+		</Control>	
+
+		<Control name="dial[13]" title="Dial 14" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="13"/>
+		</Control>
+		
+		<Control name="dial[14]" title="Dial 15" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="14"/>
+		</Control>
+		
+		<Control name="dial[15]" title="Dial 16" options="receive public">
+			<MidiMessage status="Controller" address="7" channel="15"/>
+		</Control>
+		
+	</Controls>
+	
+</ControlSurface>

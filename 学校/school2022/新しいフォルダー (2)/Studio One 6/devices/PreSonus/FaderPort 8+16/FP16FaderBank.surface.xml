@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Faders 9-16 -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="fader[8]" title="Fader 9" cell="8" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="8"/> </Control>
+		<Control name="fader[9]" title="Fader 10" cell="9" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="9"/> </Control>
+		<Control name="fader[10]" title="Fader 11" cell="10" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="10"/> </Control>
+		<Control name="fader[11]" title="Fader 12" cell="11" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="11"/> </Control>
+		<Control name="fader[12]" title="Fader 13" cell="12" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="12"/> </Control>
+		<Control name="fader[13]" title="Fader 14" cell="13" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="13"/> </Control>
+		<Control name="fader[14]" title="Fader 15" cell="14" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="14"/> </Control>
+		<Control name="fader[15]" title="Fader 16" cell="15" type="fader" options="transmit receive public pageable"> <MidiMessage status="#E0" channel="15"/> </Control>
+
+		<Control name="faderTouch[8]" type="trigger" options="receive"> <MidiMessage status="#90" address="#70"/> </Control>
+		<Control name="faderTouch[9]" type="trigger" options="receive"> <MidiMessage status="#90" address="#71"/> </Control>
+		<Control name="faderTouch[10]" type="trigger" options="receive"> <MidiMessage status="#90" address="#72"/> </Control>
+		<Control name="faderTouch[11]" type="trigger" options="receive"> <MidiMessage status="#90" address="#73"/> </Control>
+		<Control name="faderTouch[12]" type="trigger" options="receive"> <MidiMessage status="#90" address="#74"/> </Control>
+		<Control name="faderTouch[13]" type="trigger" options="receive"> <MidiMessage status="#90" address="#75"/> </Control>
+		<Control name="faderTouch[14]" type="trigger" options="receive"> <MidiMessage status="#90" address="#76"/> </Control>
+		<Control name="faderTouch[15]" type="trigger" options="receive"> <MidiMessage status="#90" address="#77"/> </Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Buttons + LEDs 9-16 -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Solo -->
+
+		<Control name="soloButton[8]" type="trigger" options="receive"> <MidiMessage status="#90" address="#50"/> </Control>
+		<Control name="soloButton[9]" type="trigger" options="receive"> <MidiMessage status="#90" address="#51"/> </Control>
+		<Control name="soloButton[10]" type="trigger" options="receive"> <MidiMessage status="#90" address="#52"/> </Control>
+		<Control name="soloButton[11]" type="trigger" options="receive"> <MidiMessage status="#90" address="#58"/> </Control>
+		<Control name="soloButton[12]" type="trigger" options="receive"> <MidiMessage status="#90" address="#54"/> </Control>
+		<Control name="soloButton[13]" type="trigger" options="receive"> <MidiMessage status="#90" address="#55"/> </Control>
+		<Control name="soloButton[14]" type="trigger" options="receive"> <MidiMessage status="#90" address="#59"/> </Control>
+		<Control name="soloButton[15]" type="trigger" options="receive"> <MidiMessage status="#90" address="#57"/> </Control>
+
+		<Control name="soloLED[8]" options="transmit"> <MidiMessage status="#90" address="#50"/> </Control>
+		<Control name="soloLED[9]" options="transmit"> <MidiMessage status="#90" address="#51"/> </Control>
+		<Control name="soloLED[10]" options="transmit"> <MidiMessage status="#90" address="#52"/> </Control>
+		<Control name="soloLED[11]" options="transmit"> <MidiMessage status="#90" address="#58"/> </Control>
+		<Control name="soloLED[12]" options="transmit"> <MidiMessage status="#90" address="#54"/> </Control>
+		<Control name="soloLED[13]" options="transmit"> <MidiMessage status="#90" address="#55"/> </Control>
+		<Control name="soloLED[14]" options="transmit"> <MidiMessage status="#90" address="#59"/> </Control>
+		<Control name="soloLED[15]" options="transmit"> <MidiMessage status="#90" address="#57"/> </Control>
+
+		<!-- Mute -->
+
+		<Control name="muteButton[8]" type="trigger" options="receive"> <MidiMessage status="#90" address="#78"/> </Control>
+		<Control name="muteButton[9]" type="trigger" options="receive"> <MidiMessage status="#90" address="#79"/> </Control>
+		<Control name="muteButton[10]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7A"/> </Control>
+		<Control name="muteButton[11]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7B"/> </Control>
+		<Control name="muteButton[12]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7C"/> </Control>
+		<Control name="muteButton[13]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7D"/> </Control>
+		<Control name="muteButton[14]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7E"/> </Control>
+		<Control name="muteButton[15]" type="trigger" options="receive"> <MidiMessage status="#90" address="#7F"/> </Control>
+
+		<Control name="muteLED[8]" options="transmit"> <MidiMessage status="#90" address="#78"/> </Control>
+		<Control name="muteLED[9]" options="transmit"> <MidiMessage status="#90" address="#79"/> </Control>
+		<Control name="muteLED[10]" options="transmit"> <MidiMessage status="#90" address="#7A"/> </Control>
+		<Control name="muteLED[11]" options="transmit"> <MidiMessage status="#90" address="#7B"/> </Control>
+		<Control name="muteLED[12]" options="transmit"> <MidiMessage status="#90" address="#7C"/> </Control>
+		<Control name="muteLED[13]" options="transmit"> <MidiMessage status="#90" address="#7D"/> </Control>
+		<Control name="muteLED[14]" options="transmit"> <MidiMessage status="#90" address="#7E"/> </Control>
+		<Control name="muteLED[15]" options="transmit"> <MidiMessage status="#90" address="#7F"/> </Control>
+
+		<!-- Select -->
+
+		<Control name="selectButton[8]" title="Button 9" cell="8" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#07"/> </Control>
+		<Control name="selectButton[9]" title="Button 10" cell="9" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#21"/> </Control>
+		<Control name="selectButton[10]" title="Button 11" cell="10" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#22"/> </Control>
+		<Control name="selectButton[11]" title="Button 12" cell="11" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#23"/> </Control>
+		<Control name="selectButton[12]" title="Button 13" cell="12" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#24"/> </Control>
+		<Control name="selectButton[13]" title="Button 14" cell="13" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#25"/> </Control>
+		<Control name="selectButton[14]" title="Button 15" cell="14" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#26"/> </Control>
+		<Control name="selectButton[15]" title="Button 16" cell="15" type="trigger" options="receive public pageable"> <MidiMessage status="#90" address="#27"/> </Control>
+
+		<Control name="selectLEDColor[8]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#07"/> </Control>
+		<Control name="selectLEDColor[9]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#21"/> </Control>
+		<Control name="selectLEDColor[10]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#22"/> </Control>
+		<Control name="selectLEDColor[11]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#23"/> </Control>
+		<Control name="selectLEDColor[12]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#24"/> </Control>
+		<Control name="selectLEDColor[13]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#25"/> </Control>
+		<Control name="selectLEDColor[14]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#26"/> </Control>
+		<Control name="selectLEDColor[15]" type="rgb" options="transmit"> <Handler class="ColorLEDHandler" address="#27"/> </Control>
+
+
+		<Control name="selectLED[8]" options="transmit"> <MidiMessage status="#90" address="#07"/> </Control>
+		<Control name="selectLED[9]" options="transmit"> <MidiMessage status="#90" address="#21"/> </Control>
+		<Control name="selectLED[10]" options="transmit"> <MidiMessage status="#90" address="#22"/> </Control>
+		<Control name="selectLED[11]" options="transmit"> <MidiMessage status="#90" address="#23"/> </Control>
+		<Control name="selectLED[12]" options="transmit"> <MidiMessage status="#90" address="#24"/> </Control>
+		<Control name="selectLED[13]" options="transmit"> <MidiMessage status="#90" address="#25"/> </Control>
+		<Control name="selectLED[14]" options="transmit"> <MidiMessage status="#90" address="#26"/> </Control>
+		<Control name="selectLED[15]" options="transmit"> <MidiMessage status="#90" address="#27"/> </Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Scribble strips 9-16 -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="displayMode[8]" options="transmit"/>
+		<Control name="displayMode[9]" options="transmit"/>
+		<Control name="displayMode[10]" options="transmit"/>
+		<Control name="displayMode[11]" options="transmit"/>
+		<Control name="displayMode[12]" options="transmit"/>
+		<Control name="displayMode[13]" options="transmit"/>
+		<Control name="displayMode[14]" options="transmit"/>
+		<Control name="displayMode[15]" options="transmit"/>
+
+		<!-- up to 4 lines per display -->
+
+		<Control name="textCell[8][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[9][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[10][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[11][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[12][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[13][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[14][0]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[15][0]" type="textdisplay" options="transmit"/>
+
+		<Control name="textCell[8][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[9][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[10][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[11][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[12][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[13][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[14][1]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[15][1]" type="textdisplay" options="transmit"/>
+
+		<Control name="textCell[8][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[9][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[10][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[11][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[12][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[13][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[14][2]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[15][2]" type="textdisplay" options="transmit"/>
+
+		<Control name="textCell[8][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[9][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[10][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[11][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[12][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[13][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[14][3]" type="textdisplay" options="transmit"/>
+		<Control name="textCell[15][3]" type="textdisplay" options="transmit"/>
+
+		<Control name="valueBar[8]" options="transmit"/>
+		<Control name="valueBar[9]" options="transmit"/>
+		<Control name="valueBar[10]" options="transmit"/>
+		<Control name="valueBar[11]" options="transmit"/>
+		<Control name="valueBar[12]" options="transmit"/>
+		<Control name="valueBar[13]" options="transmit"/>
+		<Control name="valueBar[14]" options="transmit"/>
+		<Control name="valueBar[15]" options="transmit"/>
+
+		<Control name="meter[8][0]" options="transmit fastupdate"/>
+		<Control name="meter[8][1]" options="transmit fastupdate"/>
+		<Control name="meter[9][0]" options="transmit fastupdate"/>
+		<Control name="meter[9][1]" options="transmit fastupdate"/>
+		<Control name="meter[10][0]" options="transmit fastupdate"/>
+		<Control name="meter[10][1]" options="transmit fastupdate"/>
+		<Control name="meter[11][0]" options="transmit fastupdate"/>
+		<Control name="meter[11][1]" options="transmit fastupdate"/>
+		<Control name="meter[12][0]" options="transmit fastupdate"/>
+		<Control name="meter[12][1]" options="transmit fastupdate"/>
+		<Control name="meter[13][0]" options="transmit fastupdate"/>
+		<Control name="meter[13][1]" options="transmit fastupdate"/>
+		<Control name="meter[14][0]" options="transmit fastupdate"/>
+		<Control name="meter[14][1]" options="transmit fastupdate"/>
+		<Control name="meter[15][0]" options="transmit fastupdate"/>
+		<Control name="meter[15][1]" options="transmit fastupdate"/>
+
+		<Control name="stereo[8]" options="transmit"/>
+		<Control name="stereo[9]" options="transmit"/>
+		<Control name="stereo[10]" options="transmit"/>
+		<Control name="stereo[11]" options="transmit"/>
+		<Control name="stereo[12]" options="transmit"/>
+		<Control name="stereo[13]" options="transmit"/>
+		<Control name="stereo[14]" options="transmit"/>
+		<Control name="stereo[15]" options="transmit"/>
+
+		<Control name="reduction[8]" options="transmit fastupdate"/>
+		<Control name="reduction[9]" options="transmit fastupdate"/>
+		<Control name="reduction[10]" options="transmit fastupdate"/>
+		<Control name="reduction[11]" options="transmit fastupdate"/>
+		<Control name="reduction[12]" options="transmit fastupdate"/>
+		<Control name="reduction[13]" options="transmit fastupdate"/>
+		<Control name="reduction[14]" options="transmit fastupdate"/>
+		<Control name="reduction[15]" options="transmit fastupdate"/>
+
+	</Controls>
+
+</ControlSurface>

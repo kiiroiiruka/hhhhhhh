@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Access"
+	name="VirusTI Remote"
+	
+	classID="{ED5C1D06-4926-4856-954B-8E9E16B0036D}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="VirusTIremote.surface.xml"
+	
+	imageFile="VirusTIpolar.png"
+	textFile="VirusTIremote.txt"
+/>

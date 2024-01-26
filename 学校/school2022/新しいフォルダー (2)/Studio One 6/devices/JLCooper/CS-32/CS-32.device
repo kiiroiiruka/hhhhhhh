@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="JLCooper"
+	name="CS-32"
+	
+	classID="{55C7C206-E288-4440-BF94-4CAB3A7408CD}"
+	category="Surface"
+	
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="CS-32.surface.xml"
+	surfacePlacementSize="32"
+	
+	imageFile="CS-32.png"
+	/>

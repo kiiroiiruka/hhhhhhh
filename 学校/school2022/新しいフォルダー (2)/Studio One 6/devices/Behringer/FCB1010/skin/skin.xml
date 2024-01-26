@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+	<Forms>
+
+		<!-- ******************************************************************************************** -->
+		<!-- FCB1010 -->
+		<!-- ******************************************************************************************** -->
+
+		<Form name="FCB1010" size="0,0,530,264" datatarget="ControlSurface/Editor/ControlList" style="Standard.DeviceSurfaceBackground">
+			<using controller="ControlSurface/Editor">
+				<Vertical margin="5" spacing="0" attach="all">
+
+					<!-- Focus device. -->
+					<Horizontal margin="5" spacing="0" attach="left right">
+						<Space width="2"/>
+						<TextBox name="focusDeviceFullName" width="504" height="26" style="Standard.DeviceSurfaceFocusText" attach="left right"/>
+					</Horizontal>
+
+					<!-- Control list, rearranged. -->
+					<Vertical margin="5" spacing="2" attach="all">
+						<!-- Top row. -->
+						<Horizontal margin="0" spacing="2" attach="all">
+							<Space width="3"/>
+							<foreach variable="$i" count="5" start="5">
+								<using controller="encoderButton[$i]">
+									<View name="skin:///Devices/SurfaceControlItem"/>
+								</using>
+							</foreach>
+							<foreach variable="$i" count="2" start="0">
+								<using controller="footswitch[$i]">
+									<View name="skin:///Devices/SurfaceControlItem"/>
+								</using>
+							</foreach>
+						</Horizontal>
+						<!-- Bottom row. -->
+						<Horizontal margin="0" spacing="2" attach="all">
+							<Space width="3"/>
+							<foreach variable="$i" count="5" start="0">
+								<using controller="encoderButton[$i]">
+									<View name="skin:///Devices/SurfaceControlItem"/>
+								</using>
+							</foreach>
+							<foreach variable="$i" count="2" start="0">
+								<using controller="pedal[$i]">
+									<View name="skin:///Devices/SurfaceControlItem"/>
+								</using>
+							</foreach>
+						</Horizontal>
+					</Vertical>
+
+				</Vertical>
+			</using>
+		</Form>
+
+	</Forms>
+</Skin>

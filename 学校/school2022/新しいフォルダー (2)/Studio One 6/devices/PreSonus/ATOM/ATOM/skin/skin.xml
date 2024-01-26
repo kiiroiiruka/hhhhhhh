@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Resources -->
+	<!-- ******************************************************************************************** -->
+
+	<Resources>
+		<Image name="AtomBackground" url="images/Atom.png"/>
+		<ShapeImage name="AtomKnobArrowDec" url="AtomKnobArrowDecShape" frames="embedded"/>
+		<ShapeImage name="AtomKnobArrowInc" url="AtomKnobArrowIncShape" frames="embedded"/>
+		<Image name="AtomPadAtlas" url="images/AtomDevicePads.png"/>
+		<ImagePart name="AtomPadBackground" image="AtomPadAtlas" size="5,5,90,95" tile="stretch-xy" margin="30,30,30,30"/>
+		<ImagePart name="AtomPadOverlay" image="AtomPadAtlas" size="105,5,106,102" tile="stretch-xy" margin="30,30,30,30"/>
+		<ImagePart name="AtomPadColorBackground" image="AtomPadAtlas" size="5,105,90,95" tile="stretch-xy" margin="30,30,30,30"/>
+		<Image name="AtomAtlas" url="images/AtomAtlas.png"/>
+		<ImagePart name="AtomPagePushButton" size="80,0,40,80" image="AtomAtlas" frames="normalOn pressed normal disabled" tile="tile-xy" margin="16,7,16,7"/>
+		<ImagePart name="AtomPagePreviousIcon" size="0,80,60,20" image="AtomAtlas" frames="h: normal pressed disabled"/>
+		<ImagePart name="AtomPageNextIcon" size="60,80,60,20" image="AtomAtlas" frames="h: normal pressed disabled"/>
+	</Resources>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Shapes -->
+	<!-- ******************************************************************************************** -->
+
+	<Shapes>
+		<Shape name="AtomKnobArrowIncShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="2,0" point2="8,3" point3="2,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+		<Shape name="AtomKnobArrowDecShape">
+			<Shape name="normal" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,60)"/>
+			</Shape>
+			<Shape name="mouseover" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,90)"/>
+			</Shape>
+			<Shape name="pressed" size="0,0,28,20">
+				<Triangle style="fill" point1="20,3" point2="26,0" point3="26,6" Brush.color="hsl(0,0,100)"/>
+			</Shape>
+		</Shape>
+	</Shapes>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Styles -->
+	<!-- ******************************************************************************************** -->
+
+	<Styles>
+		<Style name="AtomBackcolor">
+			<Color name="backcolor" color="hsl(0,0,4)"/>
+		</Style>
+		<Style name="AtomPadBackcolor">
+			<Color name="backcolor" color="hsl(210,3,12)"/>
+		</Style>
+		<Style name="CommandPageBackcolor">
+			<Color name="backcolor" color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="AtomText">
+			<Font name="textfont" themeid="PresonusUI" size="11"/>
+			<Color name="textcolor" color="hsl(0,0,90)"/>
+		</Style>
+		<Style name="FocusText">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+		</Style>
+		<Style name="DropDownStyle">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(204,40,65)"/>
+			<Color name="backcolor"	color="hsl(0,0,15)"/>
+		</Style>
+		<Style name="AtomPadText" textoptions="wordbreak">
+			<Font name="textfont" themeid="PresonusUI" size="11" style="bold"/>
+			<Align name="textalign"	align="center"/>
+			<Color name="textcolor" color="hsl(0,0,0)"/>
+			<Color name="textcolor.bright" color="hsl(0,0,90)"/>
+			<Metric name="textcolor.threshold"	value="0.31"/>
+		</Style>
+		<Style name="PadNumberStyle">
+			<Color name="backcolor"	color="hsl(0,0,15,90)"/>
+			<Font name="textfont" themeid="PresonusUI" size="11" style="bold"/>
+			<Color name="textcolor" color="hsl(0,0,35)"/>
+			<Color name="textcolor.alphablend" color="hsl(0,0,100,30)"/>
+		</Style>
+		<Style name="InactivePageStyle">
+			<Color name="backcolor"	color="hsl(0,0,15,90)"/>
+			<Font name="textfont" themeid="PresonusUI" size="10" style="bold"/>
+			<Color name="textcolor" color="hsl(0,0,25)"/>
+			<Color name="textcolor.alphablend" color="hsl(0,0,100,30)"/>
+		</Style>
+		<Style name="ActivePageStyle">
+			<Color name="backcolor"	color="hsl(0,0,15,90)"/>
+			<Font name="textfont" themeid="PresonusUI" size="10" style="bold"/>
+			<Color name="textcolor" color="hsl(183,100,56)"/>
+			<Color name="textcolor.alphablend" color="hsl(0,0,100,30)"/>
+		</Style>		
+		<Style name="PadBankNumberStyle">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(59,0,43)"/>
+		</Style>
+		<Style name="PadBankNumberActiveStyle">
+			<Font name="textfont" themeid="PresonusUI" size="12" style="bold"/>
+			<Color name="textcolor" color="hsl(183,100,56)"/>
+		</Style>
+		<Style name="AtomPadBackground">
+			<Image name="background" image="AtomPadBackground"/>
+		</Style>
+		<Style name="AtomPadOverlay">
+			<Image name="background" image="AtomPadOverlay"/>
+		</Style>
+		<Style name="AtomPadColorBox">
+			<Image name="background" image="AtomPadColorBackground"/>
+			<Color name="backcolor"	color="hsl(35,10,35)"/>
+		</Style>
+		<Style name="AtomPagePushButton">
+			<Metric name="buttonstyle" value="1"/>
+			<Image name="background" image="AtomPagePushButton"/>
+		</Style>
+	</Styles>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Forms -->
+	<!-- ******************************************************************************************** -->
+
+	<Forms>
+		<Form name="Atom" style="AtomBackcolor" options="colorize" width="463" height="410" datatarget="ControlSurface/Editor/ControlList">
+			<ImageView image="AtomBackground"/>
+			<ImageView size="5,149,449,255" options="colorize" style="AtomPadBackcolor"/>
+			<ImageView size="20,370,206,24" options="colorize" style="CommandPageBackcolor"/>
+
+			<using controller="ControlSurface/Editor">
+				<TextBox name="focusDeviceFullName" size="120,12,320,24" options="transparent" style="FocusText"/>
+
+				<using controller="Device">
+					<ComboBox name="scale" size="237,370,152,24" tooltip="Keyboard Mode Scale" style="DropDownStyle"/>
+					<ComboBox name="rootOffset" size="396,370,45,24" tooltip="Keyboard Mode Transposition" style="DropDownStyle"/>
+				</using>
+
+				<!-- Show current knobs Control Link page. -->
+				<using controller="Paging">
+					<Variant name="pageNumber">
+						<Null/>
+						<Horizontal size="202,52,150,13" margin="0" spacing="2" attach="hfit">
+							<Label title="1" width="13" height="13" style="ActivePageStyle" options="colorize"/>
+							<Label title="2" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="3" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="4" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+						</Horizontal>
+						<Horizontal size="202,52,150,13" margin="0" spacing="2" attach="hfit">
+							<Label title="1" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="2" width="13" height="13" style="ActivePageStyle" options="colorize"/>
+							<Label title="3" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="4" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+						</Horizontal>
+						<Horizontal size="202,52,150,13" margin="0" spacing="2" attach="hfit">
+							<Label title="1" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="2" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="3" width="13" height="13" style="ActivePageStyle" options="colorize"/>
+							<Label title="4" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+						</Horizontal>
+						<Horizontal size="202,52,150,13" margin="0" spacing="2" attach="hfit">
+							<Label title="1" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="2" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="3" width="13" height="13" style="InactivePageStyle" options="colorize"/>
+							<Label title="4" width="13" height="13" style="ActivePageStyle" options="colorize"/>
+						</Horizontal>
+					</Variant>
+				</using>
+
+				<Vertical size="16,52" margin="0" spacing="0">
+					<!-- Row 1: knobs. -->
+					<Horizontal size="12,0" margin="0" spacing="2" attach="left top">
+						<foreach variable="$i" start="0" count="4">
+							<View width="100" height="90">
+								<using controller="knob[$i]">
+									<UpDownButton name="controlValue" options="decrement transparent" size="22,10,28,55" icon="AtomKnobArrowDec"/>
+									<UpDownButton name="controlValue" options="increment transparent" size="50,10,28,55" icon="AtomKnobArrowInc"/>
+									<TextBox name="userAssignment" size="1,72,100,18" options="fittext transparent nocontextmenu" style="AtomText"/>
+								</using>
+							</View>
+						</foreach>
+					</Horizontal>
+					<Space height="20"/>
+
+					<!-- Row 2: pad commands in setup mode. -->
+					<using controller="../PadSection0/Handler1">
+						<Table margin="0" spacing="2" columns="4">
+							<foreach variable="$i" in="4 5 6 7 0 1 2 3">
+								<View width="106" height="102">
+									<using controller="PadCommand$i">
+										<Button name="" style="AtomPadBackground" options="" size="0,0,106,102"/>
+										<Variant name="commandTitle" size="0,0,106,102">
+											<TextBox name="padNumber" size="11,11,18,18" style="PadNumberStyle"/>
+											<View>
+												<ColorBox name="commandColor" style="AtomPadColorBox" size="0,0,106,102">
+													<SelectBox name="commandColor" size="0,0,106,102" options="transparent hidetext hidefocus ignorekeys hidebutton nocontextmenu"/>
+													<TextBox name="padNumber" colorname="commandColor" size="11,11,18,18" style="PadNumberStyle"/>
+												</ColorBox>
+												<ImageView size="0,0,106,102" style="AtomPadOverlay"/>
+											</View>
+										</Variant>
+										<TextBox name="commandTitle" size="10,32,85,42" colorname="commandColor" options="fittext transparent nocontextmenu multiline" style="AtomPadText"/>
+									</using>
+								</View>
+							</foreach>
+						</Table>
+						<Space height="4"/>
+
+						<!-- Row 3: Pad commands active bank. -->
+						<Horizontal size="7,0" margin="0" spacing="5" attach="hfit">
+							<Label title="Commands" style="FocusText"/>
+							<Button name="prevPage" width="20" height="20" style="AtomPagePushButton" icon="AtomPagePreviousIcon" tooltip="Previous Commands Page" options="hidefocus"/>
+							<Variant name="pageIndex">
+								<!-- Page 1 selected -->
+								<Horizontal  margin="0" spacing="5" attach="hfit">
+									<Label title="1" style="PadBankNumberActiveStyle"/>
+									<Label title="2" style="PadBankNumberStyle"/>
+									<Label title="3" style="PadBankNumberStyle"/>
+									<Label title="4" style="PadBankNumberStyle"/>
+								</Horizontal>
+								<!-- Page 2 selected -->
+								<Horizontal margin="0" spacing="5" attach="hfit">
+									<Label title="1" style="PadBankNumberStyle"/>
+									<Label title="2" style="PadBankNumberActiveStyle"/>
+									<Label title="3" style="PadBankNumberStyle"/>
+									<Label title="4" style="PadBankNumberStyle"/>
+								</Horizontal>
+								<!-- Page 3 selected -->
+								<Horizontal margin="0" spacing="5" attach="hfit">
+									<Label title="1" style="PadBankNumberStyle"/>
+									<Label title="2" style="PadBankNumberStyle"/>
+									<Label title="3" style="PadBankNumberActiveStyle"/>
+									<Label title="4" style="PadBankNumberStyle"/>
+								</Horizontal>
+								<!-- Page 4 selected -->
+								<Horizontal margin="0" spacing="5" attach="hfit">
+									<Label title="1" style="PadBankNumberStyle"/>
+									<Label title="2" style="PadBankNumberStyle"/>
+									<Label title="3" style="PadBankNumberStyle"/>
+									<Label title="4" style="PadBankNumberActiveStyle"/>
+								</Horizontal>
+							</Variant>
+							<Button name="nextPage" width="20" height="20" style="AtomPagePushButton" icon="AtomPageNextIcon" tooltip="Next Commands Page" options="hidefocus"/>
+						</Horizontal>
+					</using>
+				</Vertical>
+			</using>
+
+		</Form>
+	</Forms>
+</Skin>

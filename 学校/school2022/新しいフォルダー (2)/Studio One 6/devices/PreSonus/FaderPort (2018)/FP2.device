@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="FaderPort (2018)"
+	
+	classID="{D69AA983-2E81-447B-AA92-A11F53987681}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+	classFile="Shared/FP2MidiDevice.js"
+	classFile.functionName="createFP2DeviceInstance"
+	
+	surfaceFile="Shared/FP2.surface.xml"
+	scriptFile="Shared/FP2Component.js"
+	scriptFile.functionName="createFP2ComponentInstance"
+	
+	imageFile="FaderPort 2/FP2.png"
+	textFile="FaderPort 2/FP2.txt"
+
+	skinFile="FaderPort 2/skin/"
+	formName="FaderPort2"
+
+	detectorPortName="PreSonus FP2"
+	hostDataFile="FaderPort 2/PreSonus FaderPort (2018).surfacedata"
+/>

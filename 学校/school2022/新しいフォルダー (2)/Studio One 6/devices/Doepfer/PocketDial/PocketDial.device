@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Doepfer"
+	name="Pocket Dial"
+	
+	classID="{48902842-30C7-4008-8E8B-3FFF35B03B56}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="PocketDial.surface.xml"
+	
+	imageFile="PocketDial.png"
+	textFile="PocketDial.txt"
+	/>

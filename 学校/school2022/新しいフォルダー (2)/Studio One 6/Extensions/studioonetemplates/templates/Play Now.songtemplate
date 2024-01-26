@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplate>
+	<Attribute id="Document:Title" value="Play Now"/>
+	<Attribute id="Document:SubTitle" value="Play piano, synth, guitar or drums"/>
+	<Attribute id="Document:Description" value="Play a single instrument and capture ideas for your next song."/>
+	<Attribute id="Document:TemplateHandler" value="{86A76D26-00A2-4E34-B23F-AABEE27DDEF2}"/>
+	<Attribute id="Document:DocumentEventHandler" value="{CA400982-6E98-4620-B20E-D582582212A2}"/>
+	<Attribute id="Document:Icon" value="icons/PlayNow.svg"/>
+	<Attribute id="Document:CustomizationID" value="PreSonus.StudioOne.Customization.Basic"/>
+	<Attribute id="Document:MenuPriority" value="10"/>
+	<Attribute id="Document:Options" value="DefaultIO"/>
+
+	<?language de?>
+		<Attribute id="Document:LocalizedTitle" value="Jetzt spielen"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Piano, Synth, Gitarre oder Drums spielen"/>
+		<Attribute id="Document:LocalizedDescription" value="Ein Einzelinstrument spielen und Ideen für den nächsten Song festhalten"/>
+	<?language es?>
+		<Attribute id="Document:LocalizedTitle" value="Reproducir ahora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Toque el piano, el sintetizador, la guitarra o la batería"/>
+		<Attribute id="Document:LocalizedDescription" value="Toque un solo instrumento y capture ideas para su próxima canción."/>
+	<?language fr?>
+		<Attribute id="Document:LocalizedTitle" value="Jouer maintenant"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Jouer du piano, du synthé, de la guitare ou de la batterie"/>
+		<Attribute id="Document:LocalizedDescription" value="Jouer d'un seul instrument et capturer l'inspiration pour votre prochain morceau."/>
+	<?language it?>
+		<Attribute id="Document:LocalizedTitle" value="Suona Ora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Suona piano, synth, chitarra o batteria"/>
+		<Attribute id="Document:LocalizedDescription" value="Suona un singolo strumento e cattura le idee per la tua prossima song."/>
+	<?language ja?>
+		<Attribute id="Document:LocalizedTitle" value="今すぐ再生"/>
+		<Attribute id="Document:LocalizedSubTitle" value="ピアノ、シンセ、ギター、ドラムを演奏"/>
+		<Attribute id="Document:LocalizedDescription" value="1つの楽器を演奏して、次の曲のアイデアをキャプチャしましょう。"/>
+	<?language ko?>
+		<Attribute id="Document:LocalizedTitle" value="지금 재생"/>
+		<Attribute id="Document:LocalizedSubTitle" value="피아노, 신스, 기타 또는 드럼 연주"/>
+		<Attribute id="Document:LocalizedDescription" value="단일 악기를 연주하면서 다음 송의 아이디어 캡처"/>
+	<?language pt?>
+		<Attribute id="Document:LocalizedTitle" value="Tocar Agora"/>
+		<Attribute id="Document:LocalizedSubTitle" value="Toque piano, siintetizador, violão ou bateria."/>
+		<Attribute id="Document:LocalizedDescription" value="Toque um instrumento e capture ideias para sua próxima música."/>
+	<?language zh?>
+		<Attribute id="Document:LocalizedTitle" value="即刻播放"/>
+		<Attribute id="Document:LocalizedSubTitle" value="播放钢琴、合成器、吉他或鼓"/>
+		<Attribute id="Document:LocalizedDescription" value="演奏一种乐器，为您的下一首歌捕捉灵感。"/>
+	<?language?>
+
+</DocumentTemplate>

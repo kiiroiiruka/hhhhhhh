@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="Qwerty Keyboard"
+	
+	classID="{A2BCC3CA-AC91-433f-8884-C2F5E6429581}"
+	category="Keyboard"
+	nativeCode="ComputerKeyboardDevice"
+	nonMidiDevice="1"
+	
+	imageFile="QwertyKeyboard.png"
+	textFile="QwertyKeyboard.txt"
+	
+	skinFile="skin/"
+	formName="ComputerKeyboard"
+	/>

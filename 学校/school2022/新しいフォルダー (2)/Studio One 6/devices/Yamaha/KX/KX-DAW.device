@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Yamaha"
+	name="KX DAW Remote"
+	
+	classID="{2AAF6E71-F85D-40ee-A237-11066B323F5E}"
+	category="Surface"
+	
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="KX-DAW.surface.xml"
+	
+	imageFile="KX-DAW.png"
+	textFile="KX-DAW.txt"
+/>

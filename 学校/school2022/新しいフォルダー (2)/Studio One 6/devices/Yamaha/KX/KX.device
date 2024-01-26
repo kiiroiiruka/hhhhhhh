@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Yamaha"
+	name="KX"
+	
+	classID="{B869C324-08AC-43d4-88D3-8AAE40914512}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="KX.surface.xml"
+	
+	imageFile="KX.png"
+	textFile="KX.txt"
+/>

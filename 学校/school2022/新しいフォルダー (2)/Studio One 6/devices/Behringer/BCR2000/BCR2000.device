@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Behringer"
+	name="BCR2000"
+	
+	classID="{BD651C18-227E-43c1-BF0A-16FC7A2BA998}"
+	category="Surface"
+
+	nativeCode="ControlSurfaceDevice"
+	surfaceFile="BCR2000.surface.xml"
+	surfacePlacementSize="8"
+	
+	imageFile="BCR2000.png"
+	textFile="BCR2000.txt"
+	/>

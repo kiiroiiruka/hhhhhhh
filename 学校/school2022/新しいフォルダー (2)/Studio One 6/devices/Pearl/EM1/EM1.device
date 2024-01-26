@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Pearl"
+	name="EM1 malletSTATION"
+	
+	classID="{ADB27996-2A48-4079-871C-1569C69A2AEE}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	
+	imageFile="EM1.png"
+	textFile="EM1.txt"
+	
+	detectorPortName="malletStation"
+	
+	/>

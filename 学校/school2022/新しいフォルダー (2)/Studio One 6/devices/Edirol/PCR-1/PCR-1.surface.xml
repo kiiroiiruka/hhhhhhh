@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+        <!-- ******************************************************************************************** -->
+        <!-- 16 x KNOB -->
+        <!-- ******************************************************************************************** -->
+
+		<Control name="knob[0]" title="R1" options="receive public">
+			<MidiMessage status="Controller" address="#4A"/>
+		</Control>	
+		
+		<Control name="knob[1]" title="R2" options="receive public">
+			<MidiMessage status="Controller" address="#47"/>
+		</Control>	
+
+		<Control name="knob[2]" title="R3" options="receive public">
+			<MidiMessage status="Controller" address="#4C"/>
+		</Control>	
+
+		<Control name="knob[3]" title="R4" options="receive public">
+			<MidiMessage status="Controller" address="#4D"/>
+		</Control>	
+
+		<Control name="knob[4]" title="R5" options="receive public">
+			<MidiMessage status="Controller" address="#4E"/>
+		</Control>	
+
+		<Control name="knob[5]" title="R6" options="receive public">
+			<MidiMessage status="RPN" address="2"/>
+		</Control>	
+
+		<Control name="knob[6]" title="R7" options="receive public">
+			<MidiMessage status="RPN" address="1"/>
+		</Control>	
+
+		<Control name="knob[7]" title="R8" options="receive public">
+			<MidiMessage status="Controller" address="#0A"/>
+		</Control>	
+
+		<Control name="knob[8]" title="S1" options="receive public">
+			<MidiMessage status="Controller" address="#05"/>
+		</Control>	
+		
+		<Control name="knob[9]" title="S2" options="receive public">
+			<MidiMessage status="AfterTouch"/>
+		</Control>	
+
+		<Control name="knob[10]" title="S3" options="receive public">
+			<MidiMessage status="Controller" address="#49"/>
+		</Control>	
+
+		<Control name="knob[11]" title="S4" options="receive public">
+			<MidiMessage status="Controller" address="#4B"/>
+		</Control>	
+
+		<Control name="knob[12]" title="S5" options="receive public">
+			<MidiMessage status="Controller" address="#48"/>
+		</Control>	
+
+		<Control name="knob[13]" title="S6" options="receive public">
+			<MidiMessage status="Controller" address="#5D"/>
+		</Control>	
+
+		<Control name="knob[14]" title="S7" options="receive public">
+			<MidiMessage status="Controller" address="#5B"/>
+		</Control>	
+
+		<Control name="knob[15]" title="S8" options="receive public">
+			<MidiMessage status="Controller" address="#07"/>
+		</Control>	
+
+	</Controls>
+
+</ControlSurface>

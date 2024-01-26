@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="PS-49"
+	
+	classID="{309E704C-B349-4E92-B412-9067DC7E0F60}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="PS-49.surface.xml"
+	
+	imageFile="PreSonus PS-49.png"
+	textFile="PreSonus PS-49.txt"
+	
+	detectorReceivePortName="PreSonus PS-49"
+	hostDataFile="PreSonus PS-49.surfacedata"
+	
+/>

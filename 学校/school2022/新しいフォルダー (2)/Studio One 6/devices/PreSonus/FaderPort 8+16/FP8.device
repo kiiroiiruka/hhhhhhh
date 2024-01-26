@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="PreSonus"
+	name="FaderPort 8"
+	
+	classID="{3C2B2278-2B10-4210-BD77-255864862328}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+	classFile="FPMidiDevice.js"
+	classFile.functionName="createFP8DeviceInstance"
+	
+	surfaceFile="FP8.surface.xml"
+	surfaceFile.variables="$FADER_COUNT=8;"
+	surfacePlacementSize="8"
+	scriptFile="FPComponent.js"
+	scriptFile.functionName="createFP8ComponentInstance"
+	
+	globalMappingPageCount="1"
+	autoMappingSupported="1"
+	
+	imageFile="FP8.png"
+	textFile="FP8.txt"
+		
+	skinFile="skin/"
+	formName="FaderPort8"
+		
+	detectorPortName="PreSonus FP8"
+	hostDataFile="PreSonus FaderPort 8.surfacedata"	
+	/>

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+	
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Mackie Controls - for S Mk1 series -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="MCULoopButton" title="REC" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#56" channel="#00"/>
+		</Control>
+		<Control name="MCURewindButton" title="RWD" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5B" channel="#00"/>
+		</Control>
+		<Control name="MCUForwardButton" title="FFW" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5C" channel="#00"/>
+		</Control>
+		<Control name="MCUPlayButton" title="Play" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5E" channel="#00"/>
+		</Control>
+		<Control name="MCURecordButton" title="REC" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5F" channel="#00"/>
+		</Control>
+		<Control name="MCUStopButton" title="Stop" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5D" channel="#00"/>
+		</Control>
+		<Control name="MCULoopButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#56"/>
+		</Control>
+		<Control name="MCURewindButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#5B"/>
+		</Control>
+		<Control name="MCUForwardButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#5C"/>
+		</Control>
+		<Control name="MCUStopButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#5D"/>
+		</Control>
+		<Control name="MCUPlayButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#5E"/>
+		</Control>
+		<Control name="MCURecordButtonLED" options="transmit">
+			<MidiMessage status="#90" address="#5F"/>
+		</Control>
+		
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x LevelControl -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackVolumeAdjust[0]" title="Knob 1" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#50" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[1]" title="Knob 2" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#51" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[2]" title="Knob 3" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#52" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[3]" title="Knob 4" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#53" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[4]" title="Knob 5" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#54" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[5]" title="Knob 6" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#55" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[6]" title="Knob 7" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#56" options="complement plain"/>
+		</Control>
+		<Control name="TrackVolumeAdjust[7]" title="Knob 8" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#57" options="complement plain"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x LevelFeedback -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackVolume[0]" options="transmit"/>
+		<Control name="TrackVolume[1]" options="transmit"/>
+		<Control name="TrackVolume[2]" options="transmit"/>
+		<Control name="TrackVolume[3]" options="transmit"/>
+		<Control name="TrackVolume[4]" options="transmit"/>
+		<Control name="TrackVolume[5]" options="transmit"/>
+		<Control name="TrackVolume[6]" options="transmit"/>
+		<Control name="TrackVolume[7]" options="transmit"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x PanControl -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackPanAdjust[0]" title="Knob 1" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#58" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[1]" title="Knob 2" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#59" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[2]" title="Knob 3" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5A" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[3]" title="Knob 4" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5B" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[4]" title="Knob 5" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5C" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[5]" title="Knob 6" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5D" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[6]" title="Knob 7" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5E" options="complement plain"/>
+		</Control>
+		<Control name="TrackPanAdjust[7]" title="Knob 8" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#5F" options="complement plain"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- 8 x PanFeedback -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackPan[0]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#58"/>
+		</Control>
+		<Control name="TrackPan[1]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#59"/>
+		</Control>
+		<Control name="TrackPan[2]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5A"/>
+		</Control>
+		<Control name="TrackPan[3]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5B"/>
+		</Control>
+		<Control name="TrackPan[4]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5C"/>
+		</Control>
+		<Control name="TrackPan[5]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5D"/>
+		</Control>
+		<Control name="TrackPan[6]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5E"/>
+		</Control>
+		<Control name="TrackPan[7]" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#5F"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!--  Buttons above display, for track selection w/o combination of mute/solo -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackSelectButton[0]" options="receive"/>
+		<Control name="TrackSelectButton[1]" options="receive"/>
+		<Control name="TrackSelectButton[2]" options="receive"/>
+		<Control name="TrackSelectButton[3]" options="receive"/>
+		<Control name="TrackSelectButton[4]" options="receive"/>
+		<Control name="TrackSelectButton[5]" options="receive"/>
+		<Control name="TrackSelectButton[6]" options="receive"/>
+		<Control name="TrackSelectButton[7]" options="receive"/>
+
+		<Control name="TrackMuteSelect[0]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[1]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[2]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[3]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[4]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[5]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[6]" type="button" options="receive"/>
+		<Control name="TrackMuteSelect[7]" type="button" options="receive"/>
+
+		<Control name="TrackSoloSelect[0]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[1]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[2]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[3]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[4]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[5]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[6]" type="button" options="receive"/>
+		<Control name="TrackSoloSelect[7]" type="button" options="receive"/>
+
+
+		<!-- ******************************************************************************************** -->
+		<!--  Virtual Encoders -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- big encoder in MIDI mode-->
+		<Control name="MoveTransport" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#34" options="complement plain"/>
+		</Control>
+
+		<!-- big encoder: S Mk2: select track via left/right, M/A series: select track by up/down -->
+		<Control name="PrevNextTrack" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#30" options="complement plain"/>
+		</Control>
+
+		<!-- big encoder: S Mk2: select clip via up/down, M/A series: select track by left/right -->
+		<Control name="PrevNextClip" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#32" options="complement plain"/>
+		</Control>
+
+		<!-- browse mixer banks, S series Mk2 only (A/M series expects host to sync banks) -->
+		<Control name="PrevNextBank" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#31" options="complement plain"/>
+		</Control>
+
+		<!-- note this is a single control for otherwise two LEDs -->
+		<Control name="PrevNextBankLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#31"/>
+		</Control>
+
+		<!-- note this is a single control for otherwise two LEDs - S-series MK2 4D encoder in Mixer mode -->
+		<Control name="PrevNextTrackLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#30"/>
+		</Control>
+
+		<!-- note this is a single control for otherwise two LEDs - S-series MK2 4D encoder in Mixer mode -->
+		<Control name="PrevNextClipLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#32"/>
+		</Control>
+
+		<!-- btn 'loop' + big encoder -->
+		<Control name="MoveLoop" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#35" options="complement plain"/>
+		</Control>
+
+
+		<!-- ******************************************************************************************** -->
+		<!--  Meters -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="meter[0][0]" options="transmit fastupdate"/>
+		<Control name="meter[0][1]" options="transmit fastupdate"/>
+		<Control name="meter[1][0]" options="transmit fastupdate"/>
+		<Control name="meter[1][1]" options="transmit fastupdate"/>
+		<Control name="meter[2][0]" options="transmit fastupdate"/>
+		<Control name="meter[2][1]" options="transmit fastupdate"/>
+		<Control name="meter[3][0]" options="transmit fastupdate"/>
+		<Control name="meter[3][1]" options="transmit fastupdate"/>
+		<Control name="meter[4][0]" options="transmit fastupdate"/>
+		<Control name="meter[4][1]" options="transmit fastupdate"/>
+		<Control name="meter[5][0]" options="transmit fastupdate"/>
+		<Control name="meter[5][1]" options="transmit fastupdate"/>
+		<Control name="meter[6][0]" options="transmit fastupdate"/>
+		<Control name="meter[6][1]" options="transmit fastupdate"/>
+		<Control name="meter[7][0]" options="transmit fastupdate"/>
+		<Control name="meter[7][1]" options="transmit fastupdate"/>
+
+		<Control name="stereo[0]" options="transmit"/>
+		<Control name="stereo[1]" options="transmit"/>
+		<Control name="stereo[2]" options="transmit"/>
+		<Control name="stereo[3]" options="transmit"/>
+		<Control name="stereo[4]" options="transmit"/>
+		<Control name="stereo[5]" options="transmit"/>
+		<Control name="stereo[6]" options="transmit"/>
+		<Control name="stereo[7]" options="transmit"/>
+
+
+		<!-- ******************************************************************************************** -->
+		<!--  Track/Channel Status (host to Komplete Kontrol device) -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="TrackVolumeText[0]" options="transmit"/>
+		<Control name="TrackVolumeText[1]" options="transmit"/>
+		<Control name="TrackVolumeText[2]" options="transmit"/>
+		<Control name="TrackVolumeText[3]" options="transmit"/>
+		<Control name="TrackVolumeText[4]" options="transmit"/>
+		<Control name="TrackVolumeText[5]" options="transmit"/>
+		<Control name="TrackVolumeText[6]" options="transmit"/>
+		<Control name="TrackVolumeText[7]" options="transmit"/>
+
+		<Control name="TrackPanText[0]" options="transmit"/>
+		<Control name="TrackPanText[1]" options="transmit"/>
+		<Control name="TrackPanText[2]" options="transmit"/>
+		<Control name="TrackPanText[3]" options="transmit"/>
+		<Control name="TrackPanText[4]" options="transmit"/>
+		<Control name="TrackPanText[5]" options="transmit"/>
+		<Control name="TrackPanText[6]" options="transmit"/>
+		<Control name="TrackPanText[7]" options="transmit"/>
+
+		<Control name="TrackSelect[0]" options="transmit"/>
+		<Control name="TrackSelect[1]" options="transmit"/>
+		<Control name="TrackSelect[2]" options="transmit"/>
+		<Control name="TrackSelect[3]" options="transmit"/>
+		<Control name="TrackSelect[4]" options="transmit"/>
+		<Control name="TrackSelect[5]" options="transmit"/>
+		<Control name="TrackSelect[6]" options="transmit"/>
+		<Control name="TrackSelect[7]" options="transmit"/>
+
+		<Control name="TrackAvailable[0]" options="transmit"/>
+		<Control name="TrackAvailable[1]" options="transmit"/>
+		<Control name="TrackAvailable[2]" options="transmit"/>
+		<Control name="TrackAvailable[3]" options="transmit"/>
+		<Control name="TrackAvailable[4]" options="transmit"/>
+		<Control name="TrackAvailable[5]" options="transmit"/>
+		<Control name="TrackAvailable[6]" options="transmit"/>
+		<Control name="TrackAvailable[7]" options="transmit"/>
+
+		<Control name="TrackName[0]" options="transmit"/>
+		<Control name="TrackName[1]" options="transmit"/>
+		<Control name="TrackName[2]" options="transmit"/>
+		<Control name="TrackName[3]" options="transmit"/>
+		<Control name="TrackName[4]" options="transmit"/>
+		<Control name="TrackName[5]" options="transmit"/>
+		<Control name="TrackName[6]" options="transmit"/>
+		<Control name="TrackName[7]" options="transmit"/>
+
+		<Control name="TrackMute[0]" options="transmit"/>
+		<Control name="TrackMute[1]" options="transmit"/>
+		<Control name="TrackMute[2]" options="transmit"/>
+		<Control name="TrackMute[3]" options="transmit"/>
+		<Control name="TrackMute[4]" options="transmit"/>
+		<Control name="TrackMute[5]" options="transmit"/>
+		<Control name="TrackMute[6]" options="transmit"/>
+		<Control name="TrackMute[7]" options="transmit"/>
+
+		<Control name="TrackSolo[0]" options="transmit"/>
+		<Control name="TrackSolo[1]" options="transmit"/>
+		<Control name="TrackSolo[2]" options="transmit"/>
+		<Control name="TrackSolo[3]" options="transmit"/>
+		<Control name="TrackSolo[4]" options="transmit"/>
+		<Control name="TrackSolo[5]" options="transmit"/>
+		<Control name="TrackSolo[6]" options="transmit"/>
+		<Control name="TrackSolo[7]" options="transmit"/>
+
+		<Control name="TrackArm[0]" options="transmit"/>
+		<Control name="TrackArm[1]" options="transmit"/>
+		<Control name="TrackArm[2]" options="transmit"/>
+		<Control name="TrackArm[3]" options="transmit"/>
+		<Control name="TrackArm[4]" options="transmit"/>
+		<Control name="TrackArm[5]" options="transmit"/>
+		<Control name="TrackArm[6]" options="transmit"/>
+		<Control name="TrackArm[7]" options="transmit"/>
+
+		<!-- ******************************************************************************************** -->
+		<!--  Buttons -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="Play"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#10"/>
+		</Control>
+		<Control name="Restart"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#11"/>
+		</Control>
+		<Control name="Rec"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#12"/>
+		</Control>
+		<Control name="Count-in"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#13"/>
+		</Control>
+		<Control name="Stop"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#14"/>
+		</Control>
+
+		<!-- Mk2 exclusive -->
+		<Control name="Clear"  type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#15"/>
+		</Control>
+		<Control name="Loop"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#16"/>
+		</Control>
+		<Control name="Metro"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#17"/>
+		</Control>
+		<Control name="Tempo"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#18"/>
+		</Control>
+
+		<!-- Mk2 exclusive -->
+		<Control name="Undo" title="UNDO" type="trigger" options="receive public">
+			<MidiMessage status="#B0" channel="#0F" address="#20"/>
+		</Control>
+		<Control name="Redo" title="REDO" type="trigger" options="receive public">
+			<MidiMessage status="#B0" channel="#0F" address="#21"/>
+		</Control>
+		<Control name="Quantize" title="QUANTIZE" type="trigger" options="receive public">
+			<MidiMessage status="#B0" channel="#0F" address="#22"/>
+		</Control>
+		<Control name="Auto"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#23"/>
+		</Control>
+
+		<!-- big encoder: button down, Mk2 exclusive -->
+		<Control name="PlayCurrentClip" title="Wheel Press" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#60"/>
+		</Control>
+
+		<!-- big encoder: shift + button down, Mk2 exclusive -->
+		<Control name="StopCurrentTrack"  title="Shift + Wheel Press"  type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#61"/>
+		</Control>
+
+		<!-- not yet implemented according to NI spec 1.9 -->
+		<Control name="PlayCurrentScene"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#62"/>
+		</Control>
+		<Control name="RecordSession"  type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#63"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!--  Selected Track Controls -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="EncoderTrackVolume" type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#64" options="complement plain"/>
+		</Control>
+
+		<Control name="EncoderTrackPan"  type="relative" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#65" options="complement plain"/>
+		</Control>
+
+		<!-- MIDI mode only -->
+		<Control name="MuteSelectedTrack" type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#66"/>
+		</Control>
+		<Control name="MuteSelectedTrackLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#66"/>
+		</Control>
+
+		<!-- MIDI mode only -->
+		<Control name="SoloSelectedTrack" type="button" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#67"/> 
+		</Control>
+		<Control name="SoloSelectedTrackLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#67"/>
+		</Control>
+
+		<Control name="SelectedTrackAvailable" options="transmit"/>
+		<Control name="TrackParameterControl" options="transmit"/>
+
+		<!-- ******************************************************************************************** -->
+		<!--  LEDs -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="playLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#10"/>
+		</Control>
+		<Control name="recLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#12"/>
+		</Control>
+		<Control name="count-inLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#13"/>
+		</Control>
+		<Control name="stopLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#14"/>
+		</Control>
+		<Control name="clearLED" options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#15"/>
+		</Control>
+		<Control name="loopLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#16"/>
+		</Control>
+		<Control name="metroLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#17"/>
+		</Control>
+		<Control name="tapTempoLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#18"/>
+		</Control>
+		<Control name="undoLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#20"/>
+		</Control>
+		<Control name="redoLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#21"/>
+		</Control>
+		<Control name="quantizeLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#22"/>
+		</Control>
+		<Control name="autoLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#23"/>
+		</Control>
+		<Control name="selectedTrackMuteLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#66"/>
+		</Control>
+		<Control name="selectedTrackSoloLED"  options="transmit">
+			<MidiMessage status="#B0" channel="#0F" address="#67"/>
+		</Control>
+
+		<Control name="selectButton[0]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#42"/>
+		</Control>
+		<Control name="selectButton[1]" ype="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#42"/>
+		</Control>
+		<Control name="selectButton[2]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#72"/>
+		</Control>
+		<Control name="selectButton[3]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#73"/>
+		</Control>
+		<Control name="selectButton[4]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#74"/>
+		</Control>
+		<Control name="selectButton[5]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#75"/>
+		</Control>
+		<Control name="selectButton[6]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#76"/>
+		</Control>
+		<Control name="selectButton[7]" type="trigger" options="receive">
+			<MidiMessage status="#B0" channel="#0F" address="#77"/>
+		</Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<Strip name="Undo">
+					<Toggle control="Undo" param="value" options="above"/>
+				</Strip>
+				<Strip name="Redo">
+					<Toggle control="Redo" param="value" options="above"/>
+				</Strip>
+				<Strip name="Quantize">
+					<Toggle control="Quantize" param="value" options="above"/>
+				</Strip>
+				<Strip name="PlayCurrentClip">
+					<Toggle control="PlayCurrentClip" param="value" options="above"/>
+				</Strip>
+				<Strip name="StopCurrentTrack">
+					<Toggle control="StopCurrentTrack" param="value" options="above"/>
+				</Strip>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+
+			<Command control="Undo" command.category="Edit" command.name="Undo"/>
+			<Command control="Redo" command.category="Edit" command.name="Redo"/>
+			<Command control="Quantize" command.category="Event" command.name="Quantize"/>
+			<Command control="Restart" command.category="Transport" command.name="Play from Loop Start"/>
+			<Command control="Tempo" command.category="Transport" command.name="Tap Tempo"/>
+
+			<!-- always on for readability, sync with availability of 'undo', 'quantize' or 'next/prev bank' not yet suported by Studio One -->
+			<Value control="undoLED" param="alwaysOnLED"/>
+			<Value control="quantizeLED" param="alwaysOnLED"/>
+			<Value control="PrevNextBankLED" param="alwaysOnLED"/>
+			<!-- required for NIHIA protocol version 3, does not illuminate otherwise -->
+			<Value control="tapTempoLED" param="alwaysOnLED"/>
+
+			<!-- always on for readability -->
+			<Value control="PrevNextTrackLED" param="alwaysOnLED"/>
+			<Value control="PrevNextClipLED" param="alwaysOnLED"/>
+
+			<Command control="PrevNextTrack"	command.category="Navigation" command.name="Next Track"
+							command2.category="Navigation" command2.name="Previous Track"/>
+
+			<Command control="PrevNextClip"	command.category="Navigation" command.name="Next Event"
+							command2.category="Navigation" command2.name="Previous Event"/>
+
+			<Command control="MoveLoop"	command.category="Transport" command.name="Shift Loop"
+							 command2.category="Transport" command2.name="Shift Loop Backwards"/>
+
+			<Command control="PlayCurrentClip" command.category="Transport" command.name="Play from Loop Start"/>
+			<Command control="StopCurrentTrack" command.category="Transport" command.name="Loop Selection"/>
+
+			<foreach variable="$channel" count="8">
+				<Value control="TrackAvailable[$channel]" param="trackAvailable$channel"/>
+			</foreach>
+
+			<!-- required for plugin mode support: monitor title of the selected track first instrument plugin parameter -->
+			<String control="TrackParameterControl" param="focusTrackInstrumentParameter"/>
+
+		</Global>
+
+		<!-- ******************************************************************************************** -->
+		<!-- INSTRUMENT TRACK MAPPINGS -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MusicTrackDevice" name="MusicTrackMapping">
+			<Bank target="FocusChannel">
+				<Strip>
+				</Strip>
+			</Bank>
+			<Bank target="FocusInstrument" name="FocusInstrumentMapping">
+				<Strip onConnect="onFocusInstrumentChanged">
+				</Strip>
+			</Bank>
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+
+			<ScrollBank target="FollowBank" pagesize="1"  name="MixerFollowBank">
+				<Strip onConnect="onFocusChannelChanged">
+					<Relative control="EncoderTrackVolume" precision="300" param="volume"/>
+					<Relative control="EncoderTrackPan" precision="200" param="pan"/>
+
+					<Toggle control="MuteSelectedTrack" param="mute"/>
+					<Toggle control="SoloSelectedTrack" param="solo"/>
+
+					<!-- mute/solo LEDs require a preceding 'selected track available' CC (0x68) to illuminate -->
+					<Toggle control="SelectedTrackAvailable" param="selected"/>
+					<Value control="MuteSelectedTrackLED" param="mute"/>
+					<Value control="SoloSelectedTrackLED" param="solo"/>
+
+					<!-- Not from spec, not supported in other DAWs -->
+					<DefaultValue control="Clear" param="volume"/>
+
+					<!-- Toggle between modes 'Read' (automation mode=1) and 'Touch' (automation mode=2) -->
+					<Radio control="Auto" param="automationMode" value="2" offvalue="1" options="toggle"/>
+					<!-- Light 'Auto' LED up on mode 'touch' only -->
+					<Radio control="autoLED" param="automationMode" value="2" offvalue="0"/>
+				</Strip>
+			</ScrollBank>
+
+			<!-- must be AllBank, otherwise the master channel is not displayed -->
+			<ScrollBank target="AllBank" pagesize="8" name="MixerBank">
+				<foreach variable="$channel" count="8">
+					<Strip onConnect="onConnectChannel($channel)">
+
+						<!-- Volume (Fader Lvl) -->
+						<Relative control="TrackVolumeAdjust[$channel]" precision="1000" param="volume"/>
+						<Value control="TrackVolume[$channel]" param="volume"/>
+
+						<!-- Track Pan -->
+						<Relative control="TrackPanAdjust[$channel]" precision="700" param="pan"/>
+						<Value control="TrackPan[$channel]" param="pan"/>
+
+						<!-- Sysex based, display synchronisation -->
+						<String control="TrackName[$channel]" param="label"/>
+						<String control="TrackVolumeText[$channel]" param="volume"/>
+						<String control="TrackPanText[$channel]" param="pan"/>
+						<!-- Inform device about track selection from host-->
+						<Toggle control="TrackSelect[$channel]" param="selected"/>
+						<!-- Track is selected from device selection button -->
+						<Toggle control="TrackSelectButton[$channel]" param="selected"/>
+
+						<!-- Mute -->
+						<Value control="TrackMute[$channel]" param="mute"/>
+						<Toggle control="TrackMuteSelect[$channel]" param="mute"/>
+
+						<!-- Solo -->
+						<Value control="TrackSolo[$channel]" param="solo"/>
+						<Toggle control="TrackSoloSelect[$channel]" param="solo"/>
+						<Value control="TrackArm[$channel]" param="recordArmed"/>
+
+						<!-- Meters -->
+						<Value control="stereo[$channel]"    param="stereo"/>
+						<Value control="meter[$channel][0]"  param="level1"/>
+						<Value control="meter[$channel][1]"  param="level2"/>
+					</Strip>
+				</foreach>
+
+				<ScrollButton control="PrevNextBank" direction="pageright" direction2="pageleft"/>
+
+			</ScrollBank>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+
+			<!-- Mackie Control -->
+			<Command control="MCUPlayButton" command.category="Transport" command.name="Start"/>
+			<Value control="MCUPlayButtonLED" param="start"/>
+			<Command control="MCUStopButton" command.category="Transport" command.name="Stop"/>
+			<Value control="MCUStopButtonLED" param="stop"/>
+			<Toggle control="MCURecordButton" param="record"/>
+			<Value control="MCURecordButtonLED" param="record"/>
+			<Toggle control="MCULoopButton" param="loop"/>
+			<Value control="MCULoopButtonLED" param="loop"/>
+			<Touch control="MCUForwardButton" param="fastForward"/>
+			<Value control="MCUForwardButtonLED" param="fastForward"/>
+			<Touch control="MCURewindButton" param="rewind"/>
+			<Value control="MCURewindButtonLED" param="rewind"/>
+
+			<!-- NIHIA -->
+			<Command control="Play" command.category="Transport" command.name="Start"/>
+			<Value control="playLED" param="start"/>
+			<Command control="Stop" command.category="Transport" command.name="Stop"/>
+			<Value control="stopLED" param="stop"/>
+			<Command control="Rec" command.category="Transport" command.name="Record"/>
+			<Value control="recLED" param="record"/>
+
+			<Toggle control="Loop"   param="loop"/>
+			<Value control="loopLED" param="loop"/>
+
+			<Relative control="MoveTransport" param="freeCursorTime"/>
+
+		</DeviceMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- METRONOME MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="Metronome">
+
+			<Toggle control="Metro" param="clickOn"/>
+			<Value control="metroLED" param="clickOn"/>
+
+			<Toggle control="Count-in" param="precount"/>
+			<Value control="count-inLED" param="precount"/>
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

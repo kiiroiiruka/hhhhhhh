@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Resources -->
+	<!-- ******************************************************************************************** -->
+
+	<Resources>
+		<Image name="XjamLogo" url="xjam.svg"/>
+	</Resources>
+
+	<!-- ******************************************************************************************** -->
+	<!-- Forms -->
+	<!-- ******************************************************************************************** -->
+
+	<Forms>
+		<Form name="Xjam" size="0,0,530,280" datatarget="ControlSurface/Editor/ControlList" style="Standard.DeviceSurfaceBackground">
+			<using controller="ControlSurface/Editor">
+				<Vertical margin="5" spacing="0" attach="all">
+
+					<!-- Focus device. -->
+					<Horizontal margin="5" spacing="0" attach="left right">
+						<Space width="2"/>
+						<TextBox name="focusDeviceFullName" width="504" height="26" style="Standard.DeviceSurfaceFocusText" attach="left right"/>
+					</Horizontal>
+					<Horizontal margin="0" spacing="0" attach="left right">
+						<Vertical margin="5" spacing="2" attach="all">
+							<ImageView image="XjamLogo" size="0,0,92,92"/>
+						</Vertical>
+
+						<Vertical margin="5" spacing="2" attach="all">
+							<!-- Control list top row. -->
+							<Horizontal margin="5" spacing="20" attach="all">
+								<Space width="5"/>
+								<foreach variable="$i" count="3" start="0">
+									<using controller="encoder[$i]">
+										<View name="skin:///Devices/SurfaceControlItem"/>
+									</using>
+								</foreach>
+							</Horizontal>
+							<!-- Control list bottom row. -->
+							<Horizontal margin="5" spacing="20" attach="all">
+								<Space width="5"/>
+								<foreach variable="$i" count="3" start="3">
+									<using controller="encoder[$i]">
+										<View name="skin:///Devices/SurfaceControlItem"/>
+									</using>
+								</foreach>
+							</Horizontal>
+						</Vertical>
+					</Horizontal>
+				</Vertical>
+			</using>
+		</Form>
+
+	</Forms>
+</Skin>

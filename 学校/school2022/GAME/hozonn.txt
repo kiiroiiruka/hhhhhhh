@@ -1,0 +1,112 @@
+import pgzrun
+import random
+
+WIDTH = 700
+HEIGHT= 490
+TITLE='aaaaaa'
+sukoa = 0 #左上に表示されるスコアの値の変数
+damtime= 0#ダメージ受けている間か、間じゃないか確認するやつ
+dd = []#敵がランダムに出てくれるようにここから敵画像ここから引っ張って来る
+gg = []#玉出すための入れ物
+g=0 #g=60で割って1秒間に１回球が出てくれるようにしてくれる
+kenn = Actor('daiya.png',topleft=(0,0))#kenn=プレイヤー
+daiya2 = Actor('box.png',topleft=(0,0))#kenn=プレイヤー
+dame = 3#←HP変数をdameにしHPを１０に
+
+
+def draw():
+    
+    global sukoa
+    
+    screen.fill((128,100,55))##画面の背景の色を調整
+    if damtime > 0:
+        daiya2.y=kenn.y
+        daiya2.x=kenn.x 
+        daiya2.draw()
+    else:
+        kenn.draw()
+
+    for i,obj in enumerate(dd):#enumerateでojjのFOR文を何個目に取り出したかの数字とセットで出力→「０；とら　１；かめ　２；犬」
+        obj.draw()
+        screen.draw.text(str(i),(obj.x,obj.y))#DDから何個目に取り出したかの数（i）の数を出てきた敵のそばに表示
+        
+    for i in gg:#ddに入れたTEKIの画像をiに入れる
+        i.draw()
+    if	dame>0:
+        if dame==1:
+            screen.draw.text("HP:"+str(dame),(300,0),owidth=1.5,color="RED",fontsize=40)
+        else:
+            screen.draw.text("HP:"+str(dame),(300,0),owidth=1.5,color="GREEN",fontsize=40)
+        screen.draw.text("SCORE:"+str(sukoa),(0,0),owidth=1.5,color="YELLOW",fontsize=40)#←画像と画像が重なったときにプログラムで下に画像出力された画像が表示されるので、隠れないように下に書いてる
+        #                              ↑
+        #+strで””の中のSCOREの右に（　　　）内の値を表示してくれる
+
+    if dame<1:
+        screen.clear()
+        screen.draw.text("GAME OVER!!!",(100,200),owidth=1.5,gcolor="BLUE",color="RED",fontsize=100)
+    if sukoa >= 50:#スコアが50まで行ったらクリア
+        if dame>0:
+            screen.clear()
+            screen.fill((30,30,100))##画面の背景の色を調整
+            screen.draw.text("GAME CLEAR!!!",(100,200),owidth=1.5,color="YELLOW",fontsize=100)
+          
+            
+            
+
+def update():
+        
+    global g,sukoa,dame
+    if dame>0 and sukoa<50:#ddにTEKIの画像入れて右の（）内の座標から表示させる
+        if g % 60 == 0:     #   　↓　　 ↓ｘ座　　↓ｙ座
+            dd.append(Actor('teki.png',(WIDTH,random.randrange(HEIGHT))))
+        g+= 1
+        print(g)#画面外にまだ敵がいるかを確認用、なくてもゲームは動く
+        for ddd in dd:#ddに入っている玉がなくなるまでFORぶんが続く
+            for ggg in gg:#←②
+                if ddd.colliderect(ggg):#dddとgggのどれかがぶつかった時
+                    dd.remove(ddd)#removeでぶつかったと玉を配列から消す、消すので画面から消える
+                    gg.remove(ggg)
+                    sukoa += 1
+                    break#IF起動したらブレイクが発動する仕組みで②のFOF文に入りなおす※
+
+        
+        global damtime
+        for obj in dd:
+            if kenn.colliderect(obj):#kennとobjがぶつかっているかいないか
+                if damtime==0:#==0でてきにぶつかったときにダメージを受け中でない普通の状態のとき
+                    dame -= 1
+                        
+                    damtime = 90#←これだとダメージ中はダメージ受ける
+                #damtime = 120#ダメージ中もダメージうけない
+        if damtime > 0:
+            damtime -=1
+
+        if keyboard.down:
+            kenn.y +=3
+        if keyboard.up:
+            kenn.y -=3
+        if keyboard.left:
+            kenn.x -=3
+        if keyboard.right:
+            kenn.x +=3
+            
+        for obj in gg:
+            obj.x +=1
+
+        for obj in dd:
+            obj.x -= 3
+            if obj.x<0 :#OBJの中の敵が右から左に画面を通りすぎたか判断
+                dd.remove(obj)#ラグらないように敵削除
+
+
+def on_key_down(key):
+
+    if key == keys.SPACE:
+        gg.append(Actor('tama.png',(kenn.x+30,kenn.y)))
+        
+   #dd.append(Actor('teki.png',(WIDTH,random.randrange(HEIGHT)))) #敵1
+    
+
+
+pgzrun.go()
+

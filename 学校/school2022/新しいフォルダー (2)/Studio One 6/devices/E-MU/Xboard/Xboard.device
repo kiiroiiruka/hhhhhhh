@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="E-MU"
+	name="Xboard"
+	
+	classID="{16BAC479-24D0-4e4e-A19B-323186220658}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="Xboard.surface.xml"
+	
+	imageFile="Xboard.png"
+	textFile="Xboard.txt"
+	/>

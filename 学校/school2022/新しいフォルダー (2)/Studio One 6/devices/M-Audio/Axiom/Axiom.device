@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="M-Audio"
+	name="Axiom"
+	
+	classID="{504ACFAA-D7C0-4d77-A805-F20718AD1090}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="Axiom.surface.xml"
+	
+	imageFile="Axiom.png"
+	textFile="Axiom.txt"
+	/>

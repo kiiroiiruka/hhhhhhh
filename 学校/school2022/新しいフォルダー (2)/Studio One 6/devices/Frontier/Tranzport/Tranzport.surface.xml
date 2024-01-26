@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControlSurface>
+
+	<!-- ******************************************************************************************** -->
+	<!-- CONTROL DEFINITIONS -->
+	<!-- ******************************************************************************************** -->
+
+	<Controls>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Buttons + LEDs -->
+		<!-- ******************************************************************************************** -->
+
+		<!-- Record Ready -->
+		<Control name="recordArmButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#00"/>
+		</Control>
+		<Control name="recordArmLED" options="transmit">
+			<MidiMessage status="#90" address="#00"/>
+		</Control>
+
+		<!-- Solo -->
+		<Control name="soloButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#08"/>
+		</Control>
+		<Control name="soloLED" options="transmit">
+			<MidiMessage status="#90" address="#08"/>
+		</Control>
+
+		<!-- Mute -->
+		<Control name="muteButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#10"/>
+		</Control>
+		<Control name="muteLED" options="transmit">
+			<MidiMessage status="#90" address="#10"/>
+		</Control>
+
+		<!-- Track  -->
+		<Control name="prevTrack" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#30"/>
+		</Control>
+		<Control name="nextTrack" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#31"/>
+		</Control>
+
+		<!-- Modifiers-->
+		<Control name="shiftButton"   type="trigger" options="receive">
+			<MidiMessage status="#90" address="#79"/>
+		</Control>
+
+		<!-- Utilities -->
+		<Control name="undoButton"   type="trigger" options="receive">
+			<MidiMessage status="#90" address="#4C"/>
+		</Control>
+
+		<!-- Transport -->
+		<Control name="addMarkerButton"  type="trigger" options="receive">
+			<MidiMessage status="#90" address="#52"/>
+		</Control>
+		<Control name="prevMarkerButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#54"/>
+		</Control>
+		<Control name="nextMarkerButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#55"/>
+		</Control>
+		<Control name="loopButton"       type="trigger" options="receive">
+			<MidiMessage status="#90" address="#56"/>
+		</Control>
+		<Control name="inButton"         type="trigger" options="receive">
+			<MidiMessage status="#90" address="#57"/>
+		</Control>
+		<Control name="outButton"        type="trigger" options="receive">
+			<MidiMessage status="#90" address="#58"/>
+		</Control>
+		<Control name="punchButton"      type="trigger" options="receive">
+			<MidiMessage status="#90" address="#78"/>
+		</Control>
+
+		<Control name="loopLED"    options="transmit">
+			<MidiMessage status="#90" address="#56"/>
+		</Control>
+		<Control name="punchLED"   options="transmit">
+			<MidiMessage status="#90" address="#78"/>
+		</Control>
+		<Control name="anySoloLED" options="transmit">
+			<MidiMessage status="#90" address="#73"/>
+		</Control>
+
+		<Control name="rewindButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5B"/>
+		</Control>
+		<Control name="ffButton"     type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5C"/>
+		</Control>
+		<Control name="stopButton"   type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5D"/>
+		</Control>
+		<Control name="playButton"   type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5E"/>
+		</Control>
+		<Control name="recordButton" type="trigger" options="receive">
+			<MidiMessage status="#90" address="#5F"/>
+		</Control>
+
+		<Control name="recordLED" options="transmit">
+			<MidiMessage status="#90" address="#5F"/>
+		</Control>
+		<Control name="footSwitch" options="receive">
+			<MidiMessage status="#90" address="#67"/>
+		</Control>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Displays -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="upperLeftText"  type="textdisplay" options="transmit"/>
+		<!-- Track Name Upper Left -->
+		<Control name="upperRightText" type="textdisplay" options="transmit"/>
+		<!-- Channel Volume Level Upper Right -->
+		<Control name="lowerText"      type="textdisplay" options="transmit"/>
+		<!-- Time Code Lower -->
+
+		<Control name="timeCode" options="transmit fastupdate"/>
+
+		<!-- ******************************************************************************************** -->
+		<!-- Jog/Scrub   + Foot Switch -->
+		<!-- ******************************************************************************************** -->
+
+		<Control name="wheel" type="relative" options="receive  public">
+			<MidiMessage status="#B0" address="#3C" options="signed plain"/>
+		</Control>
+
+	</Controls>
+
+	<!-- ******************************************************************************************** -->
+	<!-- SURFACE MAPPINGS -->
+	<!-- ******************************************************************************************** -->
+
+	<Mappings>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GENERIC MAPPING (used for "on the fly" control assignment) -->
+		<!-- ******************************************************************************************** -->
+
+		<GenericMapping>
+			<Bank>
+				<Strip name="wheel">
+					<Relative control="wheel" param="value" options="above"/>
+				</Strip>
+			</Bank>
+		</GenericMapping>
+
+		<!-- ******************************************************************************************** -->
+		<!-- GLOBAL MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<Global>
+			<Variant control="shiftButton">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Command control="undoButton" command.category="Edit" command.name="Undo"/>
+					<Command control="inButton"  command.category="Zoom" command.name="Zoom In"/>
+					<Command control="outButton" command.category="Zoom" command.name="Zoom Out"/>
+					<Command control="prevMarkerButton" command.category="Marker" command.name="Goto Previous Marker"/>
+					<Command control="nextMarkerButton" command.category="Marker" command.name="Goto Next Marker"/>
+					<Command control="addMarkerButton"  command.category="Marker" command.name="Insert"/>
+
+				</Group>
+
+				<!-- [Shift] pressed -->
+				<Group>
+					<Command control="undoButton"      command.category="Edit" command.name="Redo"/>
+					<Command control="inButton"        command.category="Zoom" command.name="Zoom In Vertical"/>
+					<Command control="outButton"       command.category="Zoom" command.name="Zoom Out Vertical"/>
+					<Command control="recordButton"    command.category="File" command.name="Save"/>
+					<Command control="muteButton"      command.category="Console" command.name="Global Mute"/>
+					<Command control="soloButton"      command.category="Console" command.name="Global Solo"/>
+					<Command control="addMarkerButton" command.category="Marker" command.name="Delete"/>
+				</Group>
+
+			</Variant>
+
+			<Command control="prevTrack"  command.category="Navigation" command.name="Previous Track"/>
+			<Command control="nextTrack"  command.category="Navigation" command.name="Next Track"/>
+
+			<Command control="footSwitch" command.category="Transport" command.name="Record"/>
+
+		</Global>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- MIXER MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<ScrollBank target="FollowBank" pagesize="1" name="MixerBank">
+				<!-- The Channel Strip -->
+				<Strip>
+					<Variant control="shiftButton">
+						<!-- [Shift] not pressed -->
+						<Group>
+							<Toggle control="muteButton" param="mute" options="momentary"/>
+							<Value  control="muteLED"    param="mute"/>
+
+							<Toggle control="soloButton" param="solo" options="momentary"/>
+							<Value  control="soloLED"    param="solo"/>
+
+							<Toggle control="recordArmButton" param="recordArmed"/>
+							<Value  control="recordArmLED"    param="recordArmed"/>
+						</Group>
+
+						<!-- [Shift] pressed -->
+						<Group>
+							<Relative control="wheel" param="volume"/>
+						</Group>
+
+					</Variant>
+					<String control="upperRightText" param="label"/>
+					<String control="upperLeftText" param="volume"/>
+				</Strip>
+			</ScrollBank>
+
+			<Value  control="anySoloLED"      param="anySolo"/>
+
+
+		</DeviceMapping>
+
+
+		<!-- ******************************************************************************************** -->
+		<!-- TRANSPORT MAPPING -->
+		<!-- ******************************************************************************************** -->
+
+		<DeviceMapping device="TransportPanel">
+			<String control="lowerText" param="primaryTime"/>
+
+
+			<!-- <Toggle control="cycleButton" param="loop"/> -->
+			<Command control="loopButton" command.category="Transport" command.name="Toggle Loop"/>
+			<Value control="loopLED"     param="loop"/>
+
+			<!-- <Toggle control="dropButton"  param="punch"/> -->
+			<Command control="punchButton" command.category="Transport" command.name="Autopunch"/>
+			<Value  control="punchLED"     param="punch"/>
+
+			<!-- <Toggle control="playButton"  param="start"/> -->
+			<Command control="playButton" command.category="Transport" command.name="Start"/>
+
+			<!-- <Toggle control="stopButton"  param="stop"/> -->
+			<Command control="stopButton" command.category="Transport" command.name="Stop"/>
+
+			<Variant control="shiftButton">
+				<!-- [Shift] not pressed -->
+				<Group>
+					<Relative control="wheel"       param="freeCursorTime"/>
+					<Toggle control="recordButton"  param="record"/>
+					<Touch  control="ffButton"      param="fastForward"/>
+					<Touch  control="rewindButton"  param="rewind"/>
+				</Group>
+
+				<!-- [Shift] pressed -->
+				<Group>
+
+				</Group>
+
+			</Variant>
+
+			<Value control="recordLED"     param="record"/>
+
+		</DeviceMapping>
+
+	</Mappings>
+
+</ControlSurface>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="Steinberg"
+	name="CC121"
+
+	classID="{45D10559-C951-4D5E-ADA0-F86A6D9F591F}"
+	category="Surface"
+
+	nativeCode="JSControlSurfaceDevice"
+	classFile="CC121MidiDevice.js"
+	classFile.functionName="createCC121DeviceInstance"
+	
+	surfaceFile="CC121.surface.xml"
+	scriptFile="CC121Component.js"
+	scriptFile.functionName="createCC121ComponentInstance"
+
+	imageFile="CC121.png"
+	textFile="CC121.txt"
+
+	focusMappingPageCount="4"
+	globalMappingPageCount="4"
+	autoMappingSupported="1"
+
+	skinFile="skin/"
+	formName="CC121"
+
+	detectorPortName="Steinberg CC121"
+	hostDataFile="CC121.surfacedata"
+/>

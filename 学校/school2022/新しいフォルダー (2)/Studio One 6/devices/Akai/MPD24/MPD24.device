@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceDefinition
+	vendor="AKAI"
+	name="MPD24"
+	
+	classID="{78331FA0-E053-45c7-A392-934C98857FCC}"
+	category="Keyboard"
+	
+	nativeCode="KeyboardDevice"
+	surfaceFile="MPD24.surface.xml"
+	
+	imageFile="MPD24.png"
+	textFile="MPD24.txt"
+	/>

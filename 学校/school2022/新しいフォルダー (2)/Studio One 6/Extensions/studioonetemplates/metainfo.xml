@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInformation>
+	<Attribute id="Package:ID" value="presonus.studioone.templates"/>
+	<Attribute id="Package:Name" value="Studio One Templates"/>
+	<Attribute id="Package:Description" value="Templates to get started with Studio One"/>
+	<Attribute id="Package:Version" value="1.0.0.0"/>
+	<Attribute id="Package:Vendor" value="PreSonus Software Ltd."/>
+	<Attribute id="Package:Website" value="https://www.presonus.software"/>
+
+	<?language de?>
+		<Attribute id="Package:LocalizedName" value="Studio One Templates"/>
+		<Attribute id="Package:LocalizedDescription" value="Templates für den Einstieg in Studio One"/>
+	<?language es?>
+		<Attribute id="Package:LocalizedName" value="Plantillas de Studio One"/>
+		<Attribute id="Package:LocalizedDescription" value="Plantillas para arrancar con Studio One"/>
+	<?language fr?>
+		<Attribute id="Package:LocalizedName" value="Modèles de Studio One"/>
+		<Attribute id="Package:LocalizedDescription" value="Modèles pour démarrer avec Studio One"/>
+	<?language it?>
+		<Attribute id="Package:LocalizedName" value="Template Studio One "/>
+		<Attribute id="Package:LocalizedDescription" value="Templates per iniziare con Studio One"/>
+	<?language ja?>
+		<Attribute id="Package:LocalizedName" value="Studio Oneテンプレート"/>
+		<Attribute id="Package:LocalizedDescription" value="Studio Oneを始めるためのテンプレート"/>
+	<?language ko?>
+		<Attribute id="Package:LocalizedName" value="스튜디오원 템플릿"/>
+		<Attribute id="Package:LocalizedDescription" value="스튜디오원 시작 템플릿"/>
+	<?language pt?>
+		<Attribute id="Package:LocalizedName" value="Templates do Studio One"/>
+		<Attribute id="Package:LocalizedDescription" value="Modelos para começar com o Studio One"/>
+	<?language zh?>
+		<Attribute id="Package:LocalizedName" value="Studio One 模板"/>
+		<Attribute id="Package:LocalizedDescription" value="使用 Studio One 模板开始"/>
+	<?language?>
+
+</MetaInformation>
