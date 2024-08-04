@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Map</title>
+  <style>
+    .map-container {
+      position: relative;
+      width: 100vw; /* 画面全体の幅に対応 */
+      height: 100vh; /* 画面全体の高さに対応 */
+      border: 1px solid black; /* マップの境界線 */
+    }
+    .map-tile {
+      position: absolute;
+    }
+    .cha {
+      position: absolute;
+    }
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+    .control-button {
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="map-container" id="mapContainer"></div>
+  <div class="controls">
+    <div class="control-button" id="left">←</div>
+    <div class="control-button" id="up">↑</div>
+    <div class="control-button" id="down">↓</div>
+    <div class="control-button" id="right">→</div>
+  </div>
+  <script>
+    const map1 = [
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 0, 1, 0, 1, 0, 0, 1],
+      [1, 0, 1, 0, 1, 0, 1, 0, 0, 1],
+      [1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 2],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ];
+
+    const map2 = [
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [3, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ];
+
+    const map_data = [map1, map2];
+    let map_position = 0;
+
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const tileSize = screenWidth / 10; // タイルサイズを画面幅に基づいて調整
+    const chaSize = tileSize * 0.6; // キャラクターサイズをタイルサイズに基づいて調整
+
+    const imagePath = "map1.jpg"; // マップタイル画像のパス
+    const chaPath = "start.jpg";  // キャラクター画像のパス
+
+    let x = 100; // キャラクターの初期X座標
+    let y = 100; // キャラクターの初期Y座標
+
+    // マップを描画する関数
+    function drawMap(mapData) {
+      const container = document.getElementById('mapContainer');
+      container.innerHTML = '';
+      for (let row = 0; row < mapData.length; row++) {
+        for (let col = 0; col < mapData[row].length; col++) {
+          if (mapData[row][col] === 1) {
+            const img = document.createElement('img');
+            img.src = imagePath;
+            img.className = 'map-tile';
+            img.style.width = `${tileSize}px`;
+            img.style.height = `${tileSize}px`;
+            img.style.top = `${row * tileSize}px`;
+            img.style.left = `${col * tileSize}px`;
+            container.appendChild(img);
+          }
+        }
+      }
+    }
+
+    // キャラクターが壁にぶつかるかどうかをチェックする関数
+    function isCollision(newX, newY) {
+      const startRow = Math.floor(newY / tileSize);
+      const endRow = Math.floor((newY + chaSize - 1) / tileSize);
+      const startCol = Math.floor(newX / tileSize);
+      const endCol = Math.floor((newX + chaSize - 1) / tileSize);
+      
+      for (let row = startRow; row <= endRow; row++) {
+        for (let col = startCol; col <= endCol; col++) {
+          if (map_data[map_position][row] && map_data[map_position][row][col] === 1) return true;
+          if (map_data[map_position][row] && map_data[map_position][row][col] === 2) {
+            map_position += 1; //マップ移動
+            x = 100; // キャラクターのX座標をリセット
+            y = 100; // キャラクターのY座標をリセット
+            drawMap(map_data[map_position]); // マップを描画
+            return true; // ドアと衝突
+          }
+          if (map_data[map_position][row] && map_data[map_position][row][col] === 3) {
+            map_position -= 1; //マップ移動
+            x = screenWidth - 1.5 * tileSize; // キャラクターのX座標をリセット
+            y = screenHeight - 1.5 * tileSize; // キャラクターのY座標をリセット
+            drawMap(map_data[map_position]); // マップを描画
+            return true; // ドアと衝突
+          }
+        }
+      }
+      return false;
+    }
+
+    // ゲームの状態を更新する関数
+    function update() {
+      const cha = document.getElementById('cha');
+      if (!cha) {
+        const newCha = document.createElement('img');
+        newCha.id = 'cha';
+        newCha.src = chaPath;
+        newCha.className = 'cha';
+        newCha.style.width = `${chaSize}px`;
+        newCha.style.height = `${chaSize}px`;
+        newCha.style.top = `${y}px`;
+        newCha.style.left = `${x}px`;
+        document.getElementById('mapContainer').appendChild(newCha);
+      } else {
+        let newX = x;
+        let newY = y;
+        if (key['a']) newX -= 1;
+        if (key['d']) newX += 1;
+        if (key['s']) newY += 1;
+        if (key['w']) newY -= 1;
+        if (!isCollision(newX, newY)) {
+          x = newX;
+          y = newY;
+        }
+        cha.style.top = `${y}px`;
+        cha.style.left = `${x}px`;
+      }
+      requestAnimationFrame(update);
+    }
+
+    const key = {};
+    window.addEventListener('keydown', e => key[e.key] = true);
+    window.addEventListener('keyup', e => key[e.key] = false);
+
+    drawMap(map1);
+    update();
+
+    // タッチスクリーン用のコントロール
+    document.getElementById('left').addEventListener('touchstart', () => key['a'] = true);
+    document.getElementById('left').addEventListener('touchend', () => key['a'] = false);
+
+    document.getElementById('up').addEventListener('touchstart', () => key['w'] = true);
+    document.getElementById('up').addEventListener('touchend', () => key['w'] = false);
+
+    document.getElementById('down').addEventListener('touchstart', () => key['s'] = true);
+    document.getElementById('down').addEventListener('touchend', () => key['s'] = false);
+
+    document.getElementById('right').addEventListener('touchstart', () => key['d'] = true);
+    document.getElementById('right').addEventListener('touchend', () => key['d'] = false);
+
+  </script>
+</body>
+</html>
